@@ -1,0 +1,47 @@
+/**
+ * Editor de contenido de WP
+ *
+ * @since 1.0.0
+ */
+
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+.editor-styles-wrapper {
+	font-family: var(--startwp--font-family--main);
+
+	h1,
+	.wp-block-post-title {
+		font-size: $fs-heading-1;
+	}
+	h2 {
+		font-size: $fs-heading-2;
+	}
+	h3 {
+		font-size: $fs-heading-3;
+	}
+	h4 {
+		font-size: $fs-heading-4;
+	}
+
+	.wp-block:where(:not([data-align])) {
+		max-width: var(--startwp--content-width--main, #{$main-width});
+		padding-right: 1rem;
+		padding-left: 1rem;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	iframe {
+		width: 100%;
+	}
+
+	.wp-block.wp-block-nextpage::before {
+		content: "";
+		display: table;
+		table-layout: fixed;
+		clear: both;
+		position: static;
+	}
+}

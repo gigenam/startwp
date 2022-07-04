@@ -1,0 +1,45 @@
+/**
+ * Ordenar columnas
+ */
+
+// @param $type El tipo de orden [ first | last | reset ].
+@mixin flexrow-order($type) {
+	@if ($type == "first") {
+		&-first {
+			order: -1;
+		}
+	}
+
+	@if ($type == "last") {
+		&-last {
+			order: 1;
+		}
+	}
+
+	@if ($type == "reset") {
+		&-reset {
+			order: inherit;
+		}
+	}
+}
+
+//
+// Flexbox
+// ----------------------------------------------
+.flexrow {
+	> .is-order {
+		@include flexrow-order("first");
+		@include flexrow-order("last");
+		@include flexrow-order("reset");
+
+		@each $key in map-keys($breakpoints) {
+			@include from($key) {
+				&-#{$key} {
+					@include flexrow-order("first");
+					@include flexrow-order("last");
+					@include flexrow-order("reset");
+				}
+			}
+		}
+	}
+}

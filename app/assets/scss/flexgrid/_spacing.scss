@@ -1,0 +1,86 @@
+/**
+ * Separaciones
+ */
+@use "sass:math";
+
+// Flexbox
+// ----------------------------------------------
+@mixin flex-gap() {
+	@for $i from 1 through $flexrow-columns {
+		&.cols-#{$i} > *:where(:not([class*="col-"])) {
+			max-width: calc(#{math.div(100%, $i)} - #{$flexrow-gap} + #{$flexrow-gap / $i});
+			margin-right: $flexrow-gap;
+		}
+
+		&.cols-#{$i} > *:nth-child(#{$i}n) {
+			margin-right: 0;
+		}
+
+		> .col-#{$i} {
+			flex-basis: calc(#{math.div(100%, $flexrow-columns) * $i} - #{$flexrow-gap});
+			margin-right: $flexrow-gap;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@each $key, $val in $breakpoints {
+		@include from($key) {
+			@for $i from 1 through $flexrow-columns {
+				&.cols-#{$key}-#{$i} > *:where(:not([class*="col-"])) {
+					max-width: calc(#{math.div(100%, $i)} - #{$flexrow-gap} + #{$flexrow-gap / $i});
+					margin-right: $flexrow-gap;
+				}
+
+				&.cols-#{$key}-#{$i} > *:nth-child(#{$i}n) {
+					margin-right: 0;
+				}
+
+				> .col-#{$key}-#{$i} {
+					flex-basis: calc(#{math.div(100%, $flexrow-columns) * $i} - #{$flexrow-gap});
+					margin-right: $flexrow-gap;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	// Columnas flexibles.
+	&.cols-flex > *,
+	> .col-flex {
+		margin-right: $flexrow-gap;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	@each $key, $val in $breakpoints {
+		@include from($key) {
+			&.cols-#{$key}-flex > *,
+			> .col-#{$key}-flex {
+				margin-right: $flexrow-gap;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.flexrow.has-gap {
+	margin-bottom: 0;
+
+	&[class*="cols-"] > *,
+	> [class*="col-"] {
+		margin-bottom: $flexrow-gap;
+	}
+
+	@include flex-gap();
+}

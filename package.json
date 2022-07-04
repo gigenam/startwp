@@ -1,0 +1,64 @@
+{
+	"name": "startwp",
+	"site": "http://localhost:8080/startwp",
+	"version": "1.0.0",
+	"description": "Un tema simple para iniciar la creación de otros proyectos",
+	"author": "Marcos Gigena",
+	"homepage": "https://github.com/gigenam/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gigenam/startwp",
+		"author": "gigenam"
+	},
+	"license": "GNU General Public License v2 or later",
+	"keywords": [
+		"wordpress",
+		"theme"
+	],
+	"main": "index.js",
+	"scripts": {
+		"help": "node index.js",
+		"start": "npm install && composer update && gulp updateThemeInfo && gulp build && node index.js",
+		"start:no-composer": "npm install && gulp updateThemeInfo && gulp build && node index.js",
+		"dev": "gulp dev",
+		"watch": "gulp watch",
+		"build": "gulp build --prod && gulp scripts"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.12.10",
+		"@babel/preset-env": "^7.12.11",
+		"@babel/register": "^7.12.10",
+		"@wordpress/eslint-plugin": "^7.4.0",
+		"babel-loader": "^8.2.2",
+		"eslint": "^7.17.0",
+		"browser-sync": "^2.26.13",
+		"event-stream": "^4.0.1",
+		"gulp": "^4.0.2",
+		"gulp-clean": "^0.4.0",
+		"gulp-css-url-adjuster": "^0.2.3",
+		"gulp-imagemin": "^6.2.0",
+		"gulp-merge-media-queries": "^0.2.1",
+		"gulp-postcss": "^8.0.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^5.0.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-string-replace": "^1.1.2",
+		"gulp-svg-sprite": "^1.5.0",
+		"gulp-wp-pot": "^2.5.0",
+		"sass": "^1.45.0",
+		"autoprefixer": "^9.8.0",
+		"cssnano": "^4.1.10",
+		"webpack-stream": "^5.2.1",
+		"yargs": "^15.3.1"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 3 versions",
+		"Firefox ESR"
+	],
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	}
+}

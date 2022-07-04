@@ -1,0 +1,70 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"layout": {
+			"contentSize": "1100px",
+			"wideSize": "1300px"
+		},
+		"color": {
+			"palette": [
+				{
+					"name": "Primario",
+					"slug": "primary",
+					"color": "var(--startwp--color--primary)"
+				},
+				{
+					"name": "Secundario",
+					"slug": "secondary",
+					"color": "var(--startwp--color--secondary)"
+				},
+				{
+					"name": "Destacado",
+					"slug": "accent",
+					"color": "var(--startwp--color--accent)"
+				},
+				{
+					"name": "Éxito",
+					"slug": "success",
+					"color": "var(--startwp--color--success)"
+				},
+				{
+					"name": "Advertencia",
+					"slug": "warning",
+					"color": "var(--startwp--color--warning)"
+				},
+				{
+					"name": "Error",
+					"slug": "error",
+					"color": "var(--startwp--color--error)"
+				}
+			]
+		},
+		"typography": {
+			"lineHeight": true,
+			"fontSizes": [
+				{
+					"size": "13px",
+					"slug": "small"
+				},
+				{
+					"size": "16px",
+					"slug": "medium"
+				},
+				{
+					"size": "24px",
+					"slug": "large"
+				},
+				{
+					"size": "36px",
+					"slug": "x-large"
+				},
+				{
+					"size": "46px",
+					"slug": "huge"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,313 @@
+/**
+ * Clases utilitarias para usos simples
+ *
+ * @since 1.0.0
+ */
+
+//
+// Textos para lectores de pantallas
+// ----------------------------------------------
+.screen-reader-text {
+	width: 1px;
+	height: 1px;
+	position: absolute !important; // Override: Forzar posición flotante.
+	overflow: hidden;
+	padding: 0;
+	margin: -1px;
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	word-wrap: normal !important; // Override: Forzar no romper textos.
+
+	&:focus {
+		display: block;
+		width: auto;
+		height: auto;
+		top: 5px;
+		left: 5px;
+		z-index: 100000;
+		padding: 15px 23px 14px;
+		line-height: normal;
+		color: #444;
+		background-color: #eee;
+		font-size: 1em;
+		text-decoration: none;
+		clip: auto !important; // Override: Forzar clip.
+		clip-path: none;
+	}
+}
+
+///
+// Limpiar elementos flotantes
+// ----------------------------------------------
+.clearfix {
+	@include clearfix();
+}
+
+.clearfix-before {
+	@include clearfix-before();
+}
+
+//
+// Posiciones
+// ----------------------------------------------
+.pos {
+	&-relative {
+		position: relative;
+	}
+
+	&-absolute {
+		position: absolute;
+	}
+
+	&-fixed {
+		position: fixed;
+	}
+}
+
+//
+// Alineación de textos
+// ----------------------------------------------
+.text {
+	&-right {
+		text-align: right;
+	}
+
+	&-center {
+		text-align: center;
+	}
+
+	&-left {
+		text-align: left;
+	}
+
+	&-justify {
+		text-align: justify;
+	}
+
+	// Clases compatibles con estilos RTL.
+	&-start {
+		text-align: start;
+	}
+
+	&-end {
+		text-align: end;
+	}
+}
+
+//
+// Alineación de bloques
+// ----------------------------------------------
+.alignleft {
+	float: left;
+	margin-right: rem(10);
+	margin-bottom: rem(10);
+}
+
+.alignright {
+	float: right;
+	margin-bottom: rem(10);
+	margin-left: rem(10);
+}
+
+.alignleft,
+.alignright {
+	max-width: 50%;
+}
+
+.aligncenter {
+	display: block;
+	margin-right: auto;
+	margin-bottom: rem(10);
+	margin-left: auto;
+}
+
+.alignwide {
+	width: calc(var(--startwp--content-width--main, #{$main-width}) + #{$padding-content * 4});
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.alignfull,
+.alignfull > * {
+	width: 100%;
+}
+
+//
+// Separaciones
+// ----------------------------------------------
+$separations: (
+	top: 0,
+	right: 0,
+	bottom: 0,
+	left: 0,
+);
+
+// Padding.
+.padding {
+	padding: $padding-content;
+
+	@each $key in map-keys($separations) {
+		&-#{$key} {
+			padding-#{$key}: $padding-content;
+
+			&-none {
+				padding-#{$key}: none;
+			}
+		}
+	}
+
+	&-v {
+		padding-top: $padding-content;
+		padding-bottom: $padding-content;
+	}
+
+	&-h {
+		padding-right: $padding-content;
+		padding-left: $padding-content;
+	}
+
+	&-none {
+		padding: 0;
+	}
+}
+
+// Margin.
+.margin {
+	margin: $margin-content;
+
+	@each $key in map-keys($separations) {
+		&-#{$key} {
+			margin-#{$key}: $margin-content;
+
+			&-auto {
+				margin-#{$key}: auto;
+			}
+
+			&-none {
+				margin-#{$key}: 0;
+			}
+		}
+	}
+
+	&-v {
+		margin-top: $margin-content;
+		margin-bottom: $margin-content;
+
+		&-auto {
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+	}
+
+	&-h {
+		margin-right: $margin-content;
+		margin-left: $margin-content;
+
+		&-auto {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
+	&-auto {
+		margin: auto;
+	}
+
+	&-none {
+		margin: 0;
+	}
+}
+
+//
+// Color de textos
+// ----------------------------------------------
+.has-foreground-color {
+	color: var(--startwp--color--foreground);
+}
+
+.has-background-color {
+	color: var(--startwp--color--background);
+}
+
+.has-primary-color {
+	color: var(--startwp--color--primary);
+}
+
+.has-secondary-color {
+	color: var(--startwp--color--secondary);
+}
+
+.has-accent-color {
+	color: var(--startwp--color--accent);
+}
+
+.has-success-color {
+	color: var(--startwp--color--success);
+}
+
+.has-warning-color {
+	color: var(--startwp--color--warning);
+}
+
+.has-error-color {
+	color: var(--startwp--color--error);
+}
+
+//
+// Color de fondo
+// ----------------------------------------------
+.has-foreground-background-color {
+	background-color: var(--startwp--color--foreground);
+}
+
+.has-background-background-color {
+	background-color: var(--startwp--color--background);
+}
+
+.has-primary-background-color {
+	background-color: var(--startwp--color--primary);
+}
+
+.has-secondary-background-color {
+	background-color: var(--startwp--color--secondary);
+}
+
+.has-accent-background-color {
+	background-color: var(--startwp--color--accent);
+}
+
+.has-success-background-color {
+	background-color: var(--startwp--color--success);
+}
+
+.has-warning-background-color {
+	background-color: var(--startwp--color--warning);
+}
+
+.has-error-background-color {
+	background-color: var(--startwp--color--error);
+}
+
+//
+// Tamaño de textos - Igual que theme.json
+// ----------------------------------------------
+.has-small-font-size {
+	font-size: 13px;
+}
+
+.has-medium-font-size {
+	font-size: 16px;
+}
+
+.has-large-font-size {
+	font-size: 24px;
+}
+
+.has-x-large-font-size {
+	font-size: 36px;
+}
+
+.has-huge-font-size {
+	font-size: 42px;
+}

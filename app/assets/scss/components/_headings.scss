@@ -1,0 +1,32 @@
+/**
+ * Títulos
+ *
+ * @since 1.0.0
+ */
+
+h1,
+.heading-1,
+.site-title,
+.entry-title--page,
+.entry-title--single {
+	font-size: $fs-heading-1;
+}
+
+h2,
+.heading-2 {
+	font-size: $fs-heading-2;
+}
+
+h3,
+.entry-title--blog,
+.heading-3 {
+	font-size: $fs-heading-3;
+}
+
+h4,
+.heading-4 {
+	font-size: $fs-heading-4;
+}
+
+// h5 y h6 no se usan de manera frecuente, pero se pueden agregar igual que arriba.
+// @see /assets/scss/abstracts/_variables.scss#L14

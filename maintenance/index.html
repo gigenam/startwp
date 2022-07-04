@@ -1,0 +1,89 @@
+<!--
+ * Página temporal / Próximamente
+ *
+ * @package startwp
+ * @since   1.0.0
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<!-- <link rel="shortcut icon" href="//site-name/maintenance/favicon.ico" type="image/icon"> -->
+	<title>Próximamente</title>
+	<style>
+		*, *::before, *::after {
+			box-sizing: inherit;
+			word-break: break-word;
+		}
+		html {
+			box-sizing: border-box;
+			font-size: 16px;
+			-webkit-text-size-adjust: 100%;
+		}
+		body {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+			min-height: 100vh;
+			margin: 0;
+			line-height: 1.5;
+			color: #333333;
+			background-color: #ffffff;
+			font-family: sans-serif;
+		}
+		a { color: #305cd4; font-weight: bold; }
+		a:not(:hover) { text-decoration: none; }
+		.main-container { padding: 5rem 1rem; }
+		.main-title {
+			margin-top: 0;
+			margin-bottom: 0;
+			line-height: 1.15;
+			font-size: 1.8em;
+		}
+		.main-container, .main-footer { text-align: center; }
+		.main-footer {
+			margin-top: auto;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			font-size: .9em;
+		}
+		.main-footer span {
+			display: block;
+			padding-bottom: .25em;
+		}
+		@media screen and (min-width: 640px) {
+			.main-container { padding: 7% 1rem; font-size: 1.2em; }
+			.main-title { font-size: 3.2rem; }
+			.main-footer span { font-size: 1.2rem; }
+		}
+	</style>
+</head>
+
+<body>
+	<main class="main-container">
+		<h1 class="heading main-title">Próximamente</h1>
+		<p class="main-description">
+			Estamos trabajando en nuestro nuevo sitio.<br>
+			Por favor volvé más tarde para ver todas las novedades.
+		</p>
+	</main>
+
+	<footer class="main-footer">
+		<p>
+			<span>
+				<a href="https://github.com/gigenam/startwp" target="_blank">StartWP</a> &copy; 2022
+			</span>
+			<a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html" target="_blank">
+				GNU General Public License
+			</a>
+		</p>
+	</footer>
+</body>
+
+</html>

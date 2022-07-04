@@ -1,0 +1,79 @@
+//
+// Variables generales
+//
+// @since 1.0.0
+//
+@use "sass:math";
+
+// Tamaños
+// ----------------------------------------------
+// Main content width.
+$main-width: 1100px; // Actualizar theme.json
+$narrow-width: 900px;
+
+// Títulos.
+$fs-heading-1: rem(46);
+$fs-heading-2: rem(36);
+$fs-heading-3: rem(28);
+$fs-heading-4: rem(22);
+$fs-heading-5: 1em;
+$fs-heading-6: rem(13);
+
+// Inputs.
+$input-width: rem(450);
+$input-height: rem(35);
+
+// Fuentes
+// ----------------------------------------------
+$ff-main: sans-serif;
+$ff-title: sans-serif;
+
+// Separaciones
+// ----------------------------------------------
+// Contenido.
+$padding-content: 0.7rem;
+$padding-content-half: math.div($padding-content, 2);
+$padding-content-doble: $padding-content * 2;
+
+$margin-content: 1rem;
+$margin-content-half: math.div($margin-content, 2);
+$margin-content-doble: $margin-content * 2;
+
+// Colores
+// ----------------------------------------------
+$color-text: #333333;
+$color-background: #ffffff;
+$color-primary: #305cd4;
+$color-secondary: #eaeaea;
+$color-accent: #343e55;
+$color-status: #fafcdd;
+$color-success: #2db656;
+$color-warning: #fec514;
+$color-error: #be4242;
+
+$link-hover: 0.85;
+
+// Bordes
+// ----------------------------------------------
+$border-radius: 4px;
+
+//
+// Variables CSS para uso global.
+// Incluida posibilidad de modificar con JS.
+//
+:root {
+	--startwp--color--foreground: #{$color-text};
+	--startwp--color--background: #{$color-background};
+	--startwp--color--primary: #{$color-primary};
+	--startwp--color--secondary: #{$color-secondary};
+	--startwp--color--accent: #{$color-accent};
+	--startwp--color--success: #{$color-success};
+	--startwp--color--warning: #{$color-warning};
+	--startwp--color--error: #{$color-error};
+	--startwp--color--shadow: rgba(#{hexToRGB($color-text)}, 0.2);
+	--startwp--color--white: #ffffff;
+	--startwp--color--black: #222222;
+	--startwp--font-family--main: #{$ff-main};
+	--startwp--font-family--title: #{$ff-title};
+	--startwp--gap--content: 1em;
+}

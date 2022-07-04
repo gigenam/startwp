@@ -1,0 +1,42 @@
+/**
+ * MetaSlider
+ *
+ * @link  https://wordpress.org/plugins/slide-anything/
+ * @since 1.0.0
+ */
+
+// Owl Carousel utiliza demasiados !important. Así que la mejor forma de evitar
+// problemas, además de hacer lo mismo, es ser más especifico con los selectores.
+.owl-carousel.sa_owl_theme {
+	// Estilos de flechas.
+	// Lo importante es dejar las clases definidas para hacer cualquier cambio
+	// a estas fácilmente, ya sea usando sprites u otras imágenes con diferentes
+	// estilos, colores, etc.
+	div.owl-nav {
+		button[class*="owl"] {
+			width: rem(40) !important;
+			height: rem(30) !important;
+			background: var(--startwp--color--background) img("sprites.svg#arrow") no-repeat center 75% / 80% !important;
+			opacity: 0.7 !important;
+
+			&:hover {
+				background-color: var(--startwp--color--background) !important;
+				opacity: 1 !important;
+			}
+		}
+
+		button.owl-prev {
+			transform: rotate(90deg);
+		}
+
+		button.owl-next {
+			transform: rotate(-90deg);
+		}
+	}
+
+	// Paginación.
+	div.owl-dots {
+		// Corrección menor de centrado.
+		bottom: -32px !important;
+	}
+}

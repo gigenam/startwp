@@ -1,0 +1,74 @@
+//
+// Funciones para valores re-utilizables/repetibles
+//
+// * rem().
+// * img().
+// * hexToRGB().
+// * border().
+//
+// @since 1.0.0
+//
+@use "sass:math";
+
+//
+// Pixels a REMs
+//
+// @param $pxValue     Tamaño a convertir en pixeles (solo números).
+// @param $defaultSize Define el tamaño de 1rem (por defecto 16px).
+// ----------------------------------------------
+@function rem($pxValue, $defaultSize: 16) {
+	@return #{math.div($pxValue, $defaultSize)}rem;
+	// Como usar:
+	// ----------------------------------------------
+	// selector {
+	//    font-size: rem(16);
+	// }
+}
+
+//
+// Images URLs
+//
+// @param $image Nombre de la imagen con extensión incluida.
+// ----------------------------------------------
+@function img($image) {
+	$urlImg: "../img/";
+	@return url($urlImg + $image);
+	// Como usar:
+	// ----------------------------------------------
+	// selector {
+	//    background-image: img('image.ext'); // *.ext == (jpg, png, gif, etc.)
+	// }
+}
+
+//
+// Hex color to RGB
+//
+// @param $hex Valor del color en hexadecimal.
+// ----------------------------------------------
+@function hexToRGB($hex) {
+	@return red($hex), green($hex), blue($hex);
+	// Como usar:
+	// ----------------------------------------------
+	// selector {
+	//    color: hexToRGB(#fff000);
+	// }
+}
+
+//
+// Borders
+//
+// @param $opacity Opacidad del color entre 0 y 1.
+// @param $color   Color del borde. Puede ser rgb o hex.
+// @param $with    Tamaño del borde.
+// @param $type    Tipo del borde. solid, dotted, etc.
+// ----------------------------------------------
+@function border($opacity: 0.15, $color: $color-text, $width: 1px, $type: solid) {
+	@return $width $type rgba($color, $opacity);
+	// Como usar:
+	// ----------------------------------------------
+	// selector {
+	//    border: border($opacity, $color, $width, $type);
+	//    // Para modificar valores en cualquier orden, agregar el nombre.
+	//    // Ej: border($color: white, $type: dotted);
+	// }
+}

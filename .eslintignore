@@ -1,0 +1,8 @@
+/node_modules/**
+/vendor/**
+/app/vendor/**
+/app/css/**
+/app/js/**
+/app/img/**
+/app/**/*.svg
+/app/**/*.xml

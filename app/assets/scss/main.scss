@@ -1,0 +1,32 @@
+/**
+ * Estilos principales
+ */
+
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/breakpoints";
+@import "abstracts/variables";
+
+@import "flexgrid/flexgrid";
+
+@import "base/normalize";
+@import "base/utilities";
+
+@import "components/alerts";
+@import "components/icons";
+@import "components/buttons";
+@import "components/menus";
+@import "components/headings";
+
+@import "layouts/header";
+@import "layouts/main-content";
+@import "layouts/posts";
+@import "layouts/footer";
+
+// TODO: Comentar en producción para ser usados solo cuando se necesitan.
+// @import "plugins/contact-form";
+// @import "plugins/metaslider";
+// @import "plugins/slide-anything";
+
+// Al final para prevenir sobre-escrituras y abuso de !important.
+@import "base/visibility";

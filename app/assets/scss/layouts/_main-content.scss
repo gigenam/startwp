@@ -1,0 +1,138 @@
+/**
+ * Contenido principal
+ *
+ * @since 1.0.0
+ */
+
+.site-main {
+	padding-top: $padding-content;
+	padding-bottom: $padding-content;
+
+	@include from(medium) {
+		padding-bottom: $padding-content * 3;
+	}
+}
+
+.wrapper {
+	> :where(:not(.alignfull, .alignwide, .alignright, .alignleft)) {
+		max-width: var(--startwp--content-width--main, #{$main-width});
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&:not(.is-narrow) > :where(:not(.alignfull, .alignwide, .alignright, .alignleft)) {
+		@include to(#{$main-width}) {
+			max-width: calc(100% - #{$padding-content * 2});
+		}
+	}
+
+	// Angosto.
+	&.is-narrow {
+		--startwp--content-width--main: #{$narrow-width};
+
+		@include to($narrow-width) {
+			> :where(:not(.alignfull, .alignwide, .alignright, .alignleft)) {
+				max-width: calc(100% - #{$padding-content * 2});
+			}
+		}
+	}
+}
+
+// Contenido de artículos
+// ----------------------------------------------
+.entry-content {
+	@include clearfix();
+}
+
+.page-links {
+	@include clearfix-before();
+}
+
+// Si la entrada o articulo tienen la imagen destacada publicada.
+.single-post-thumbnail {
+	.site-header {
+		margin-bottom: 0;
+	}
+	.site-main {
+		padding-top: 0;
+	}
+}
+
+// Blog y archivos
+// ----------------------------------------------
+.blog:where(:not(.page)),
+.archive,
+.search {
+	.site-main {
+		display: grid;
+		gap: var(--startwp--gap--content);
+		max-width: var(--startwp--content-width--main, #{$main-width});
+		padding-right: 0.5em;
+		padding-left: 0.5em;
+		margin-right: auto;
+		margin-left: auto;
+
+		@include from(medium) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.post,
+	.page {
+		overflow: hidden;
+		padding: $padding-content;
+		border: 1px solid var(--startwp--color--shadow);
+		border-radius: $border-radius;
+	}
+
+	.entry-thumbnail img {
+		margin: -#{$padding-content} -#{$padding-content} #{$padding-content} -#{$padding-content};
+		width: calc(100% + #{$padding-content * 2});
+		max-width: calc(100% + #{$padding-content * 2});
+		max-height: 16vw;
+		object-fit: cover;
+	}
+
+	// Elementos de ancho completo.
+	.sticky,
+	.entry-header,
+	.posts-navigation,
+	.widgets-sidebar--main-sidebar {
+		grid-column: 1 / -1;
+	}
+
+	// Leer más.
+	.readmore .icon-arrow {
+		margin-left: -0.15rem;
+		vertical-align: -0.15em;
+		font-size: 0.8em;
+	}
+
+	// Paginación.
+	.nav-links {
+		@include flex-row($gap: 0);
+		justify-content: space-between;
+	}
+}
+
+// Cabecera de entradas/artículos
+// ----------------------------------------------
+.entry-header {
+	.entry-title:where(:not(.entry-title--page)) {
+		padding-top: 0;
+		margin-bottom: 0;
+	}
+
+	.entry-meta {
+		margin-bottom: 1em;
+
+		svg {
+			vertical-align: -0.13em;
+		}
+	}
+
+	.entry-posted-on--updated {
+		font-size: 0.85em;
+		opacity: 0.8;
+	}
+}

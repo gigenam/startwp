@@ -1,0 +1,100 @@
+/**
+ * Inicio de sesión / Registro
+ *
+ * @since 1.0.0
+ */
+
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+body.login {
+	padding-top: 8vh;
+	font-family: var(--startwp--font-family--main);
+
+	// Logo.
+	// @see /inc/custom/class-login.php para más modificaciones.
+	h1 a {
+		width: auto;
+		height: auto;
+		margin-bottom: 0.5rem;
+		font-size: var(--startwp--font-family--title);
+		font-size: $fs-heading-2;
+		font-weight: bold;
+	}
+
+	form {
+		border-radius: $border-radius;
+	}
+
+	// Recordar.
+	p.forgetmenot {
+		padding-top: rem(5);
+	}
+
+	// Mostrar contraseña.
+	.button.wp-hide-pw {
+		top: 1px;
+	}
+
+	// Botón principal.
+	.button-primary {
+		background-color: var(--startwp--color--primary);
+		border: none;
+		border-radius: $border-radius;
+
+		&:hover {
+			background-color: var(--startwp--color--primary);
+			opacity: $link-hover;
+		}
+	}
+
+	// Enlaces útiles.
+	p#nav,
+	p#backtoblog {
+		text-align: center;
+	}
+
+	.privacy-policy-page-link {
+		margin-top: 0;
+	}
+
+	p#nav,
+	p#backtoblog,
+	.privacy-policy-page-link {
+		a {
+			color: var(--startwp--color--text);
+			font-weight: bold;
+			text-decoration: none;
+
+			&:hover {
+				color: var(--startwp--color--primary);
+				text-decoration: underline;
+				opacity: $link-hover;
+			}
+		}
+	}
+
+	// Ocultar selector de multi idioma.
+	.language-switcher {
+		display: none;
+	}
+
+	// Mensajes
+	// ------------------------------------------
+	#login_error,
+	.message,
+	.success {
+		border-radius: $border-radius;
+		border-left-width: 5px;
+	}
+
+	// Recuperar contraseña
+	// ------------------------------------------
+	&-action-lostpassword {
+		.button-primary {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+/*!
+Theme Name: StartWP
+Theme URI: https: //github.com/gigenam/startwp
+Author: Marcos Gigena
+Author URI: https://github.com/gigenam/
+Description: Un tema simple para iniciar la creación de otros proyectos
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: startwp
+*/
+
+/**
+Este tema, como WordPress, está bajo la licencia GPL.
+Úsalo para hacer algo genial, divertirte y compartir lo que has aprendido.
+
+StartWP esta basado en Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores es distribuido bajo los términos de the GNU GPL v2 or later.
+*/
+
+/**
+ * @see LEEME.txt para ayuda.
+ * @see CHANGELOG.md para el historial de cambios.
+ *
+ * Si deseas agregar estilos personalizados, crea un tema hijo.
+ * Nada de lo que escriba aquí cambiará los estilos del sitio.
+ * Para obtener más ayuda sobre cómo crear un tema hijo, consulta LEEME.txt.
+ */

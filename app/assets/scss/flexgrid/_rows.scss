@@ -1,0 +1,40 @@
+/**
+ * Rows (contenedores)
+ */
+
+// Reset margins.
+[class*="flexrow"] > * {
+	margin: 0;
+}
+
+// Flexbox
+// ----------------------------------------------
+// Mixin re-utilizable para crear contenedores flexibles.
+//
+// @param $wrap      Define si los elementos saltan de linea o no.
+// @param $direction Define si los elementos se alinean horizontal o vertical.
+// @param $gap       Define si el contenedor tiene una separación inferior.
+@mixin flex-row($wrap: wrap, $direction: "", $gap: 1em) {
+	display: flex;
+	flex-wrap: $wrap;
+
+	@if ($gap != "") {
+		margin-bottom: $gap;
+	}
+
+	@if ($direction != "") {
+		flex-direction: $direction;
+	}
+}
+
+.flexrow {
+	@include flex-row();
+
+	&.is-column {
+		flex-direction: column;
+	}
+
+	&.is-nowrap {
+		flex-wrap: nowrap;
+	}
+}

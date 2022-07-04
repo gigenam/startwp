@@ -1,0 +1,50 @@
+/**
+ * Elementos visibles en diferentes puntos de quiebre
+ *
+ * @since 1.0.0
+ */
+
+@mixin col-hidden($direction: "") {
+	// Oculto en.
+	@if ($direction == "") {
+		.hidden {
+			@each $key in map-keys($breakpoints) {
+				@include only($key) {
+					&-#{$key} {
+						display: none;
+					}
+				}
+			}
+		}
+	} @else {
+		// Oculto desde.
+		@if ($direction == "from") {
+			.hidden-from {
+				@each $key in map-keys($breakpoints) {
+					@include from($key) {
+						&-#{$key} {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		// Oculto hasta.
+		@if ($direction == "to") {
+			.hidden-to {
+				@each $key in map-keys($breakpoints) {
+					@include to($key) {
+						&-#{$key} {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include col-hidden();
+@include col-hidden("from");
+@include col-hidden("to");

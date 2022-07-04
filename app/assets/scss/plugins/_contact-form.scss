@@ -1,0 +1,85 @@
+/**
+ * Contact Form 7
+ *
+ * @link  https://wordpress.org/plugins/contact-form-7/
+ * @since 1.0.0
+ */
+
+.wpcf7 {
+	form {
+		// Si se quieren agregar los mensajes arriba del formulario,
+		// descomentar la siguiente linea.
+		// @include flex-row($direction: column);
+
+		// Todos los campos ocupan el ancho total. Para un diseño más compacto,
+		// asignarle un ancho máximo al padre (form).
+		input:where(:not([type="submit"], [type="checkbox"], [type="radio"])),
+		select,
+		textarea {
+			width: 100%;
+		}
+
+		// Listas de checkbox y radios.
+		// Quitar margen a los primeros.
+		.wpcf7-list-item {
+			&.first {
+				margin-left: 0;
+			}
+
+			// Cuando se activa la opción "use label elements",
+			// alinear check/radio y etiqueta de forma vertical.
+			> label {
+				@include flex-row($direction: column);
+				align-items: center;
+			}
+		}
+
+		// Spinner.
+		.wpcf7-spinner {
+			top: 0.3rem;
+		}
+
+		// Mensajes de alerta
+		// --------------------------------------
+		.wpcf7-response-output {
+			order: -1;
+			padding: 1em;
+			margin: 0 0 1em;
+			color: var(--startwp--color--white);
+			border: none;
+			border-radius: $border-radius;
+		}
+
+		// Formulario enviado.
+		&.sent .wpcf7-response-output {
+			background-color: var(--startwp--color--success);
+		}
+
+		// Formulario fallido.
+		&.failed,
+		&.aborted {
+			.wpcf7-response-output {
+				background-color: var(--startwp--color--error);
+			}
+		}
+
+		// Formulario incompleto/inválido.
+		&.invalid,
+		&.unaccepted,
+		&.payment-required {
+			.wpcf7-response-output {
+				background-color: var(--startwp--color--warning);
+			}
+		}
+
+		// Campo requerido.
+		.wpcf7-not-valid-tip {
+			padding: 0.1rem 0.25rem;
+			margin-top: -2px;
+			color: var(--startwp--color--white);
+			background-color: var(--startwp--color--error);
+			font-size: 0.86em;
+			border-radius: 0 0 $border-radius $border-radius;
+		}
+	}
+}

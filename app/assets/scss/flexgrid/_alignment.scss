@@ -1,0 +1,84 @@
+/**
+ * Alineación de ítems
+ */
+
+// Main axis.
+// @param $main Determina el tipo de alineación.
+@mixin align-main($main) {
+	justify-content: $main;
+}
+
+// Cross axis.
+// @param $cross Determina el tipo de alineación.
+@mixin align-cross($cross) {
+	align-items: $cross;
+}
+
+// Self axis.
+// @param $self Determina el tipo de alineación.
+@mixin align-self($self) {
+	align-self: $self;
+}
+
+// Flexbox
+// ----------------------------------------------
+.flexrow {
+	// Main axis.
+	&.main-start {
+		@include align-main(flex-start);
+	}
+
+	&.main-end {
+		@include align-main(flex-end);
+	}
+
+	&.main-center {
+		@include align-main(center);
+	}
+
+	&.main-around {
+		@include align-main(space-around);
+	}
+
+	&.main-between {
+		@include align-main(space-between);
+	}
+
+	&.main-evenly {
+		@include align-main(space-evenly);
+	}
+
+	// Cross axis.
+	&.cross-start {
+		@include align-cross(flex-start);
+	}
+
+	&.cross-end {
+		@include align-cross(flex-end);
+	}
+
+	&.cross-center {
+		@include align-cross(center);
+	}
+
+	&.cross-stretch {
+		@include align-cross(stretch);
+	}
+
+	// Self axis.
+	> .self-start {
+		@include align-self(flex-start);
+	}
+
+	> .self-end {
+		@include align-self(flex-end);
+	}
+
+	> .self-center {
+		@include align-self(center);
+	}
+
+	> .self-stretch {
+		@include align-self(stretch);
+	}
+}

@@ -1,0 +1,38 @@
+/**
+ * MetaSlider
+ *
+ * @link  https://wordpress.org/plugins/ml-slider/
+ * @since 1.0.0
+ */
+
+.metaslider {
+	// Evitar que las flechas se vean fuera del contenedor.
+	overflow: hidden;
+
+	// Opción 1: FlexSlider
+	// ------------------------------------------
+	// Estilos de flechas.
+	// Lo importante es dejar las clases definidas para hacer cualquier cambio
+	// a estas fácilmente, ya sea usando sprites u otras imágenes con diferentes
+	// estilos, colores, etc.
+	ul.flex-direction-nav {
+		li[class*="flex-nav"] a {
+			width: rem(32);
+			height: rem(32);
+			background: var(--startwp--color--background) img("sprites.svg#arrow") no-repeat center 75% / 80%;
+			border-radius: 50%;
+		}
+
+		li.flex-nav-prev a {
+			transform: rotate(90deg);
+		}
+
+		li.flex-nav-next a {
+			transform: rotate(-90deg);
+		}
+	}
+
+	// Para hacer cambios de estilos en hover (por ejemplo, cambiar opacidad),
+	// hay que empezar desde el padre. Ejemplo:
+	// &:hover ul.flex-direction-nav li[class*="flex-nav"] a {}
+}

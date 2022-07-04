@@ -1,0 +1,106 @@
+//
+// Mixins para bloques de código re-utilizables/repetibles
+//
+// * font-family().
+// * clearfix().
+// * adminbar-height().
+// * reset-menu().
+//
+// @dependencies ./_variables.scss
+// @since        1.0.0
+//
+
+//
+// Tipografías locales
+// TODO: Hoy en día con usar los formatos woff o woff2 alcanza.
+//
+// @param $fontName Nombre de la fuente igual al archivo de esta.
+// @param $folder   Nombre de la carpeta en caso de organizar las fuentes de esa forma.
+// ----------------------------------------------
+@mixin font-family($fontName, $folder: "") {
+	@font-face {
+		font-display: swap;
+		font-family: $fontName;
+
+		@if ($folder == "") {
+			src: url("../fonts/" + $fontName + ".eot"),
+				url("../fonts/" + $fontName + ".eot?#iefix") format("embedded-opentype"),
+				url("../fonts/" + $fontName + ".otf") format("opentype"),
+				url("../fonts/" + $fontName + ".woff") format("woff"),
+				url("../fonts/" + $fontName + ".ttf") format("truetype");
+		} @else {
+			src: url("../fonts/" + $folder + "/" + $fontName + ".eot"),
+				url("../fonts/" + $folder + "/" + $fontName + ".eot?#iefix") format("embedded-opentype"),
+				url("../fonts/" + $folder + "/" + $fontName + ".otf") format("opentype"),
+				url("../fonts/" + $folder + "/" + $fontName + ".woff") format("woff"),
+				url("../fonts/" + $folder + "/" + $fontName + ".ttf") format("truetype");
+		}
+	}
+	// Como usar:
+	// ----------------------------------------------
+	// body {
+	//    @include font-family(Nombre de fuente, Carpeta (opcional))
+	// }
+	// selector {
+	//    font-family: Nombre de fuente;
+	// }
+}
+
+//
+// Clearfix
+// Clear floats.
+// ----------------------------------------------
+@mixin clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		table-layout: fixed;
+		clear: both;
+	}
+}
+
+@mixin clearfix-before() {
+	&::before {
+		content: "";
+		display: table;
+		table-layout: fixed;
+		clear: both;
+	}
+}
+// Como usar:
+// ----------------------------------------------
+// float element {
+//    @include clearfix();
+//    -- o --
+//    @include clearfix-before();
+// }
+
+//
+// WP Admin Bar
+// Agregar un espacio adicional para evitar sobre-posición con la barra de WP.
+//
+// @param $type Propiedad a ser asignada. Es recomendado usar top, pero puede ser margin, etc.
+// ----------------------------------------------
+@mixin adminbar-height($type) {
+	#{$type}: var(--wp-admin--admin-bar--height);
+	// Como usar:
+	// ----------------------------------------------
+	// element {
+	//    @include adminbar-height(top o margin-top);
+	// }
+}
+
+//
+// Menus y listas
+// Reiniciar estilos por defecto de ul, ol.
+// ----------------------------------------------
+@mixin reset-menu() {
+	padding-right: 0;
+	padding-left: 0;
+	list-style: none;
+	// Como usar:
+	// ----------------------------------------------
+	// ul o ol {
+	//    @include reset-menu();
+	// }
+}

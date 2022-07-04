@@ -1,0 +1,19 @@
+/**
+ * Cabecera principal
+ *
+ * @since 1.0.0
+ */
+
+.site-header {
+	@include to(large) {
+		margin-bottom: 0;
+	}
+
+	* {
+		color: currentColor;
+
+		&:focus {
+			outline-color: currentColor;
+		}
+	}
+}

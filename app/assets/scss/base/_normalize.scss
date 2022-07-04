@@ -1,0 +1,475 @@
+/**
+ * Normalizar estilos para todos los navegadores
+ *
+ * @since 1.0.0
+ */
+
+// Box sizing.
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	word-break: break-word;
+}
+
+// Text selection.
+::selection {
+	color: var(--startwp--color--background);
+	background-color: var(--startwp--color--foreground);
+}
+
+// Accesibilidad.
+// Agregar borde punteado sobre elementos interactivos.
+:focus:where(:not(video)) {
+	outline: 2px dotted var(--startwp--color--primary);
+	box-shadow: none;
+}
+
+// Prevenir scroll horizontal.
+html,
+body {
+	overflow-x: hidden;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: rem(16);
+	-webkit-text-size-adjust: 100%;
+
+	&:focus-within {
+		scroll-behavior: smooth;
+	}
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	line-height: 1.5;
+	color: var(--startwp--color--foreground);
+	background-color: var(--startwp--color--background);
+	font-family: var(--startwp--font-family--main);
+	font-size: 1rem;
+	font-weight: normal;
+	text-rendering: optimizeSpeed;
+
+	&.admin-bar {
+		min-height: calc(100vh - 46px);
+
+		@include from(784px) {
+			min-height: calc(100vh - 32px);
+		}
+	}
+}
+
+// Quitar márgenes por defecto.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+pre {
+	margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding-bottom: 1px; // Fix outline with line-height.
+	margin-bottom: 1.6rem;
+
+	&:where(:not(:first-child)) {
+		padding-top: 1.6rem;
+	}
+}
+
+// Quitar margin al último elemento dentro de un contenedor.
+// * > *:last-child {
+// 	margin-bottom: 0;
+// }
+
+// Quitar estilos a listas cuando se usan clases de menu o lista.
+ul,
+ol {
+	&.menu,
+	&.list,
+	&.menu ul,
+	&.menu ol,
+	&.list ul,
+	&.list ol {
+		@include reset-menu();
+
+		li {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Separadores.
+hr {
+	height: 0;
+	margin-top: 1.5em;
+	clear: both;
+	box-sizing: content-box;
+	overflow: visible;
+	border: 0;
+	border-bottom: 1px solid var(--startwp--color--shadow);
+}
+
+ul,
+ol,
+* ul,
+* ol {
+	padding-left: 1.2em;
+}
+
+ul,
+ol {
+	ul,
+	ol {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
+
+	li:where(:not(:last-child)) {
+		margin-bottom: 0.5em;
+	}
+}
+
+// Estilos por defecto para elementos sin clases.
+a {
+	color: var(--startwp--color--primary);
+	font-weight: bold;
+	text-decoration: none;
+
+	&:not([class]) {
+		text-decoration-skip-ink: auto;
+	}
+
+	&:hover {
+		text-decoration: underline;
+		text-underline-offset: 0.3rem;
+	}
+
+	&:hover,
+	&:focus,
+	&:visited {
+		opacity: $link-hover;
+	}
+
+	// Teléfonos para Android & iOS.
+	// Agregar tel:[phone number] al atributo href (iOS lo hace por defecto).
+	// Ej: <a href="tel:0123456">Contacto 123456</a>
+
+	// Emails.
+	// Agregar mailto:[email address] al atributo href.
+	// Ej: <a href="mailto:ejemplo@misitio.com">Contacto</a>
+	&[href^="tel"],
+	&[href^="mailto"] {
+		position: relative;
+		color: currentColor !important; // Override: Asegurar que ningún navegador pueda anular esto.
+		text-decoration: none !important; // Override: Asegurar que ningún navegador pueda anular esto.
+	}
+}
+
+blockquote {
+	padding: 0.8em 0.8em 0.8em clamp(0.7em, 2vw, 1.4em);
+	margin: 0 0 1em 0;
+	border: 1px solid var(--startwp--color--shadow);
+	border-left: 6px solid var(--startwp--color--foreground);
+	border-radius: $border-radius;
+
+	cite {
+		display: block;
+		padding-left: 0.5em;
+		margin-top: 0.5em;
+		font-size: 0.95em;
+	}
+}
+
+// Formatos.
+pre {
+	max-width: 100%;
+	padding: 0.5em;
+	overflow: auto;
+	background-color: #fafafa;
+	font-size: rem(14);
+	white-space: pre;
+}
+
+pre,
+code,
+mark,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	border: 1px solid #d4d4d4;
+	border-radius: 3px;
+}
+
+mark,
+code,
+kbd,
+samp {
+	display: inline-block;
+	padding: 0 0.35em 0.1em;
+	line-height: 1.4;
+	color: var(--startwp--color--foreground);
+	background-color: #ebebeb;
+	font-size: rem(14);
+
+	&,
+	* {
+		white-space: pre-wrap;
+	}
+}
+
+sub,
+sup {
+	position: relative;
+	vertical-align: baseline;
+	line-height: 0;
+	font-size: 80%;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+// Imágenes.
+img,
+picture,
+figure {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+	border-style: none;
+}
+
+figcaption {
+	display: block;
+	padding: $padding-content-half $padding-content;
+	margin-bottom: 1em;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+// Imágenes en linea dentro de párrafos.
+p > img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+// Embebidos.
+embed,
+iframe,
+object,
+video,
+audio {
+	width: 100%;
+	max-width: 100%;
+	border: none;
+}
+
+// Formularios.
+form {
+	max-width: 100%;
+}
+
+input,
+button,
+optgroup,
+select,
+select:focus,
+textarea {
+	font: inherit;
+}
+
+.btn,
+.button,
+button,
+input:where(:not([type="checkbox"]):not([type="radio"])),
+select,
+textarea {
+	min-height: $input-height;
+	padding: 0.35em 0.45em;
+	border: 1px solid var(--startwp--color--shadow);
+	border-radius: $border-radius;
+}
+
+input:where(:not([type="checkbox"]):not([type="radio"])),
+select,
+textarea {
+	width: 100%;
+	max-width: 100%;
+
+	@include from(medium) {
+		width: $input-width;
+	}
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width: 1em;
+	height: 1em;
+	margin: 0;
+}
+
+// Corrección menor en la altura de los checkbox y radios para blink y webkit.
+.is-chrome,
+.is-safari {
+	input[type="checkbox"],
+	input[type="radio"] {
+		vertical-align: -2px;
+	}
+}
+
+// Corregir altura en archivos.
+input[type="file"] {
+	height: auto;
+}
+
+// Problema conocido:
+// - En iOS las opciones no respetan el padding horizontal.
+select[multiple] {
+	min-height: $input-height;
+	overflow: hidden;
+	padding: 0;
+
+	&:focus {
+		height: auto;
+	}
+
+	option {
+		padding: rem(5) rem(6);
+	}
+}
+
+select optgroup,
+option {
+	background-color: var(--startwp--color--background);
+}
+
+label {
+	user-select: none;
+}
+
+// Placeholders.
+::placeholder {
+	color: currentColor;
+	opacity: 0.4;
+}
+
+::-moz-placeholder {
+	color: currentColor;
+	opacity: 0.6;
+}
+
+::-webkit-input-placeholder {
+	color: currentColor;
+	opacity: 0.6;
+}
+
+// Tablas.
+table {
+	display: table;
+	table-layout: auto;
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 1em;
+	border-collapse: collapse;
+	overflow: auto;
+
+	@include to(medium) {
+		display: block;
+
+		th,
+		td {
+			width: 100%;
+		}
+	}
+
+	thead,
+	tfoot {
+		text-align: center;
+	}
+
+	thead {
+		background-color: var(--startwp--color--shadow);
+	}
+}
+
+table.layout-fixed {
+	width: 100%;
+	table-layout: fixed;
+
+	@include from(medium) {
+		th,
+		td {
+			white-space: pre-wrap;
+		}
+	}
+}
+
+th,
+td {
+	padding: 0.5em;
+	white-space: pre;
+	border: 1px solid var(--startwp--color--shadow);
+}
+
+th {
+	font-weight: bold;
+}
+
+template,
+[hidden],
+.hidden {
+	display: none !important;
+	padding: 0;
+	margin: 0;
+}
+
+// No mostrar el contorno en el destino del enlace de salto.
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+// Elementos con fondo.
+.has-background {
+	padding: var(--startwp--gap--content) !important; // Override wp-styles.
+}
+
+// Quitar todo tipo de animaciones para evitar problemas de accesibilidad.
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

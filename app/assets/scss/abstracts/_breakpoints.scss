@@ -1,0 +1,77 @@
+//
+// Puntos de quiebre adaptables
+//
+// * from().
+// * to().
+// * only().
+//
+// @since 1.0.0
+//
+
+$breakpoints: (
+	// desde Móviles HD.
+	small: 429px,
+	// desde Tablets en horizontal.
+	medium: 599px,
+	// desde HD / Notebooks.
+	large: 959px,
+	// desde FullHD / Retina.
+	// xlarge: 1799px
+);
+
+// Desde -> ( desde $bp hacia arriba ) !Recomendado
+// ----------------------------------------------
+@mixin from($bp) {
+	@if map-has-key($breakpoints, $bp) {
+		@media screen and (min-width: map-get($breakpoints, $bp)) {
+			@content;
+		}
+	} @else {
+		@media screen and (min-width: $bp) {
+			@content;
+		}
+	}
+}
+
+// Hasta -> ( desde 0 hasta $bp )
+// ----------------------------------------------
+@mixin to($bp) {
+	@if map-has-key($breakpoints, $bp) {
+		@media screen and (max-width: map-get($breakpoints, $bp)) {
+			@content;
+		}
+	} @else {
+		@media screen and (max-width: $bp) {
+			@content;
+		}
+	}
+}
+
+// Sólo en X tamaño ( $bp )
+// * Se pueden usar las opciones small, medium y large.
+// * * Para algo menor a small, usar @include to(small){}.
+// * * Para algo mayor a large, usar @include from(xlarge){}.
+// ----------------------------------------------
+@mixin only($bp) {
+	@if ($bp == small) {
+		@media screen and (min-width: map-get($breakpoints, small)) and (max-width: map-get($breakpoints, medium)) {
+			@content;
+		}
+	} @else if ($bp == medium) {
+		@media screen and (min-width: map-get($breakpoints, medium)) and (max-width: map-get($breakpoints, large)) {
+			@content;
+		}
+	} @else if ($bp == large) {
+		@media screen and (min-width: map-get($breakpoints, $bp)) and (max-width: map-get($breakpoints, xlarge)) {
+			@content;
+		}
+	}
+}
+
+// Como usar:
+// ----------------------------------------------
+// @include from(size) {
+//     css styles
+// }
+// size: $breakpoints o tamaños fijos* (px, rem, etc.)
+// * Los tamaños fijos no funcionan en only().

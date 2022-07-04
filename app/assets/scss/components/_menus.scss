@@ -1,0 +1,222 @@
+/**
+ * Menús de navegación
+ *
+ * @since 1.0.0
+ */
+
+// Botón móvil.
+.btn-menu {
+	flex-direction: column;
+	justify-content: space-around;
+	width: rem(46);
+	height: rem(42);
+	position: absolute;
+	top: $padding-content;
+	right: $padding-content;
+	z-index: 100;
+	padding: 0.44em;
+	background-color: transparent;
+	border: 1px solid currentColor;
+
+	&-bar {
+		width: 80%;
+		height: 2px;
+		background-color: currentColor;
+		transform-origin: right center;
+		transition: transform 0.3s ease, opacity 0.1s ease;
+		border-radius: $border-radius;
+	}
+
+	&--is-active {
+		.btn-menu-bar {
+			&--top {
+				transform: translateY(-50%) rotate(-38deg) scaleX(1.32);
+			}
+
+			&--middle {
+				transform: scaleX(0);
+			}
+
+			&--bottom {
+				transform: translateY(50%) rotate(38deg) scaleX(1.32);
+			}
+		}
+	}
+}
+
+// Corregir posición cuando la barra de admin de WP está visible.
+.admin-bar .btn-menu {
+	@include adminbar-height(top);
+}
+
+// Navegación principal.
+//-----------------------------------------------
+.nav-primary {
+	@include to(large) {
+		width: 100%;
+		// Comentar esto para usar otros estilos de menú móvil (#L147).
+		height: 0;
+		overflow: hidden;
+		transition: height 0.3s ease;
+
+		&--is-visible {
+			height: var(--startwp--nav-primary--height);
+		}
+		// Comentar esto para usar otros estilos de menú móvil (#L147).
+	}
+
+	// Menu.
+	.menu {
+		@include to(large) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	// Items.
+	.menu-item {
+		position: relative;
+		white-space: nowrap;
+
+		a {
+			display: block;
+			padding: 0.5em 0.7em;
+			font-weight: normal;
+		}
+
+		svg.icon-arrow {
+			vertical-align: -0.1rem;
+			font-size: 0.75em;
+		}
+	}
+
+	// Sub-menus.
+	.sub-menu {
+		@include to(large) {
+			@include flex-row($gap: 0);
+			justify-content: center;
+			box-shadow: 0 0 2px var(--startwp--color--shadow) inset;
+		}
+
+		@include from(large) {
+			visibility: hidden;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			margin-top: 0;
+			background-color: var(--startwp--color--foreground);
+			box-shadow: 0 1px 6px 2px rgba(black, 0.2);
+			border-radius: $border-radius;
+
+			.sub-menu {
+				top: 0;
+				right: 100%;
+			}
+		}
+	}
+}
+
+//
+// Mostrar sub-menus
+// ----------------------------------------------
+// Hover.
+.nav-primary .menu[data-submenu="hover"] {
+	.menu-item--show-sub-menu > .sub-menu,
+	.menu-item:hover > .sub-menu {
+		visibility: visible;
+	}
+}
+
+// Click.
+.nav-primary .menu[data-submenu="click"] {
+	.menu-item--show-sub-menu > .sub-menu--is-visible {
+		visibility: visible;
+	}
+
+	// Ayuda al hacer focus en un elemento con el teclado.
+	.menu-item--sub-menu-tip {
+		display: inline-block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		padding: 0rem 0.5rem 0.1rem;
+		font-size: 0.9em;
+		border: 1px solid currentColor;
+		opacity: 0.8;
+	}
+}
+
+//
+// Diferentes estilos para el menú principal en móviles
+// Hacer modificaciones en /assets/js/components/MainNav.js
+// ----------------------------------------------
+/*
+ * Menu flotante.
+.nav-primary {
+	.menu {
+		@include to(large) {
+			flex-wrap: nowrap;
+			flex-direction: column;
+			justify-content: center;
+			visibility: hidden;
+			height: 100%;
+			max-height: 100vh;
+			overflow-y: auto;
+			position: fixed;
+			top: 0;
+			left: 0;
+			padding: 2em;
+			z-index: 99; // -1 del botón.
+			background-color: var(--startwp--color--foreground);
+			opacity: 0;
+			transform: scale3d(1.15, 1.15, 1);
+			transition: all 0.3s ease;
+		}
+	}
+
+	@include to(large) {
+		&--is-visible {
+			.menu {
+				visibility: visible;
+				opacity: 0.98;
+				transform: scale3d(1, 1, 1);
+				transition: all 0.3s ease;
+			}
+		}
+	}
+} */
+
+/*
+ * Menu lateral.
+.nav-primary {
+	.menu {
+		@include to(large) {
+			flex-wrap: nowrap;
+			flex-direction: column;
+			width: rem(380);
+			max-width: 96%;
+			height: 100%;
+			max-height: 100vh;
+			overflow-y: auto;
+			position: fixed;
+			top: 0;
+			right: 0;
+			padding: rem(46) 1.5em 1.5em;
+			z-index: 99; // -1 del botón.
+			background-color: var(--startwp--color--foreground);
+			transform: translate3d(100%, 0, 0);
+			transition: transform 0.3s ease;
+		}
+	}
+
+	@include to(large) {
+		&--is-visible {
+			.menu {
+				opacity: 0.99;
+				box-shadow: -14px 0 24px rgba(black, 0.2);
+				transform: translate3d(0, 0, 0);
+				transition: transform 0.3s ease;
+			}
+		}
+	}
+} */

@@ -1,0 +1,83 @@
+/**
+ * Columns (ítems)
+ */
+@use "sass:math";
+
+// Flexbox
+// ----------------------------------------------
+// Columna de tamaño fijo.
+// @param $size Define el tamaño máximo de la columna.
+@mixin col($size: "") {
+	flex-grow: 1;
+	flex-shrink: 1;
+	width: 100%;
+	min-width: 0;
+
+	@if ($size != "") {
+		max-width: math.div(100%, $flexrow-columns) * $size;
+	}
+}
+
+// Columna flexible.
+@mixin col-flex() {
+	flex: 1 1 0;
+	max-width: 100%;
+}
+
+// Columna completa.
+@mixin col-full() {
+	flex: 1 0 100%;
+}
+
+// Columna.
+@mixin flex-cols() {
+	&.cols-flex > *,
+	> .col-flex {
+		@include col-flex();
+	}
+
+	@each $key, $val in $breakpoints {
+		@include from($key) {
+			&.cols-#{$key}-flex > *,
+			> .col-#{$key}-flex {
+				@include col-flex();
+			}
+		}
+	}
+
+	@for $i from 1 through $flexrow-columns {
+		&.cols-#{$i} > *:where(:not([class*="col-"])) {
+			max-width: math.div(100%, $i);
+		}
+
+		> .col-#{$i} {
+			max-width: math.div(100%, $flexrow-columns) * $i;
+		}
+
+		@each $key, $val in $breakpoints {
+			@include from($key) {
+				&.cols-#{$key}-#{$i} > *:where(:not([class*="col-"])) {
+					max-width: math.div(100%, $i);
+				}
+
+				> .col-#{$key}-#{$i} {
+					max-width: math.div(100%, $flexrow-columns) * $i;
+				}
+			}
+		}
+	}
+}
+
+.flexrow {
+	&[class*="cols-"] > *,
+	> [class*="col-"] {
+		@include col();
+	}
+
+	// Hijos con tamaño fijo dentro de cols-flex.
+	&.cols-flex > [class*="col-"] {
+		flex-basis: auto;
+	}
+
+	@include flex-cols();
+}

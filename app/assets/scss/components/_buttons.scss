@@ -1,0 +1,61 @@
+/**
+ * Botones
+ *
+ * @since 1.0.0
+ */
+
+.btn,
+button,
+.wp-block-button__link,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	padding-right: 1em;
+	padding-left: 1em;
+	color: var(--startwp--color--background);
+	background-color: var(--startwp--color--foreground);
+	font-weight: normal;
+	border-radius: $border-radius;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: none;
+		opacity: $link-hover;
+	}
+}
+
+.btn-primary {
+	color: var(--startwp--color--white);
+	background-color: var(--startwp--color--primary);
+}
+
+.btn-secondary {
+	color: var(--startwp--color--black);
+	background-color: var(--startwp--color--secondary);
+}
+
+.btn-accent {
+	color: var(--startwp--color--white);
+	background-color: var(--startwp--color--accent);
+}
+
+.btn-success,
+input[type="submit"] {
+	color: var(--startwp--color--white);
+	background-color: var(--startwp--color--success);
+}
+
+.btn-warning,
+input[type="reset"] {
+	color: var(--startwp--color--white);
+	background-color: var(--startwp--color--warning);
+}
+
+.btn-error {
+	color: var(--startwp--color--white);
+	background-color: var(--startwp--color--error);
+}

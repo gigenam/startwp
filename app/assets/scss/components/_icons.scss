@@ -1,0 +1,70 @@
+/**
+ * Íconos SVG
+ *
+ * @since 1.0.0
+ */
+// @see /assets/js/utilities/InlineIcons.js
+
+// Prevenir agregar estilos a los padres con la clase class has-icon.
+// Prevenir agregar estilos al widget de búsqueda con icono.
+// Prevenir agregar estilos al widget de íconos sociales.
+[class*="icon-"]:where(:not([class*="has-icon"], [class*="icon-button"], [class*="wp-block-social-links"])) {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.22em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+	transform-origin: center;
+}
+
+// Separaciones
+// ----------------------------------------------
+[class*="has-icon"] svg {
+	margin-right: 0.35em;
+}
+
+[class*="has-icon-after"] svg {
+	margin-right: 0;
+	margin-left: 0.35em;
+}
+
+// Outline
+// ----------------------------------------------
+[class*="icon-"].is-outline,
+[class*="has-icon"].is-outline svg {
+	fill: transparent;
+	stroke-width: 2px;
+}
+
+// Estados para abrir/cerrar
+// ----------------------------------------------
+// Cross from + to x.
+[class*="has-icon"].icon-cross.is-open > svg,
+.icon-cross:not([class*="has-icon"]).is-open {
+	transform: rotate(45deg);
+}
+
+// Rotaciones
+// ----------------------------------------------
+// Top.
+[class*="has-icon"].is-top:not(.is-hover) > svg,
+[class*="icon-"].is-top:not([class*="has-icon"]),
+[class*="has-icon"].is-top.is-hover:hover > svg {
+	transform: translateX(1px) rotate(180deg);
+}
+
+// Right.
+[class*="has-icon"].is-right:not(.is-hover) > svg,
+[class*="icon-"].is-right:not([class*="has-icon"]),
+[class*="has-icon"].is-right.is-hover:hover > svg {
+	transform: rotate(-90deg);
+}
+
+// Left.
+[class*="has-icon"].is-left:not(.is-hover) > svg,
+[class*="icon-"].is-left:not([class*="has-icon"]),
+[class*="has-icon"].is-left.is-hover:hover > svg {
+	transform: rotate(90deg);
+}
