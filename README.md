@@ -97,6 +97,9 @@ llamadas con **startwp**.
 Que las búsquedas seas sensibles a mayúsculas ya que necesitaras cambiar varios
 tipo (`startwp`, `Startwp`, `StartWP`).
 
+[ ! ] Todos los archivos `README.md` del tema tienen mis datos y la descripción
+genérica. También puedes buscar y remplazar esos textos.
+
 Una vez todo listo, abre una terminal en la carpeta del proyecto y arranca el
 comando `npm run start` para instalar todas las dependencias de desarrollo.
 

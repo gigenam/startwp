@@ -13,6 +13,18 @@ Licencia URI    : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 Un tema simple para iniciar la creación de otros proyectos
 
 
+== Índice ==
+
+- Instalación
+- Compatibilidad
+- Preguntas Frecuentes
+- - Tema hijo
+- - Tipografías personalizadas
+- Plugins
+- Créditos
+- Licencia
+
+
 == Instalación ==
 
 Método 1)
@@ -32,10 +44,10 @@ twentytwentytwo, etc.
 == Compatibilidad ==
 
 Versiones mínimas de Navegadores:
-- Google Chrome   : 80 (y Opera, Vivaldi o cualquier otro basado en chromium)
-- Mozilla Firefox : 75
+- Google Chrome   : 90 (y Opera, Vivaldi o cualquier otro basado en chromium)
+- Mozilla Firefox : 90
 - Microsoft Edge  : 16 (no chromium EDGE, en ese caso es lo mismo a Chrome)
-- Apple Safari    : 12 (para macOS y iOS 12)
+- Apple Safari    : 13 (para macOS y iOS 13)
 
 1. Versiones antiguas de Opera y Opera Mini no son soportadas.
 2. Es recomendable utilizar la última version de todos los navegadores y en el
@@ -110,6 +122,67 @@ romper cosas o perder los cambios luego de una actualización.
 		---
 
 
+= ¿Cómo agregar tipografías personalizadas? =
+
+En caso de queres utilizar el servicio de fuentes de Google, <https://fonts.google.com>,
+se puede hacer de dos maneras, mediante <link> o @import.
+
+[ ! ] Los ejemplo son en un tema hijo (lo más recomendable). En caso de querer
+modificar los archivos originales, ve a "/inc/core/class-enqueue.php" para agregar
+el código php.
+
+Método 1) - <link>:
+Abre el archivo "functions.php" y crea una nueva función para agregar tus estilos
+personalizados (si es que no tienes una creada).
+
+	function startwp_mis_estilos() {
+		// El segundo valor es la url desde fonts.google.com cuando seleccionas
+		// una o mas tipografías. En este ejemplo usando "Ubuntu Regular y Bold".
+		wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap', null, null );
+
+		// Acá estas llamando al archivo style.css para agregar tus estilos
+		// personalizados. En ese archivo es que tienes que configurar los textos.
+		wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), null, wp_get_theme()->get('Version') );
+	}
+	add_action( 'wp_enqueue_scripts', 'startwp_mis_estilos' );
+
+Luego ve al archivo "style.css" y configura tus estilos. Por ejemplo:
+
+	body {
+		font-family: Ubuntu, sans-serif;
+		/* Siempre es recomendable agregar la familia genérica por si hay un
+		   problema en la carga. En este caso es sans-serif. */
+	}
+	a {
+		font-weight: 700;
+		/* Así se usan los diferentes peso o grosores. También se puede usar con
+		   light, regular, bold, etc. */
+	}
+
+Método 2) - @import:
+Abre el archivo "functions.php" y crea una nueva función para agregar tus estilos
+personalizados (si es que no tienes una creada).
+
+	function startwp_mis_estilos() {
+		// Acá estas llamando al archivo style.css para agregar tus estilos
+		// personalizados. Es importante tener este archivo, sin importar si no
+		// vas a modificar nada.
+		wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), null, wp_get_theme()->get('Version') );
+
+		// Esta es la forma para agregar estilos "en linea" sin necesidad de
+		// modificar los estilos css.
+		// - El primer valor hacer referencia al archivo de arriba (por eso es importante).
+		// - En el segundo puedes pasar todos los estilos css que quieras. En
+		//   este caso utilizamos el parámetro @import y declaramos los estilos
+		//   personalizados.
+		wp_add_inline_style(
+			'startwp-child',
+			'@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"); body{ font-family: Ubuntu, sans-serif } a { font-weight: 700 }'
+		);
+	}
+	add_action( 'wp_enqueue_scripts', 'startwp_mis_estilos' );
+
+
 = ¿Este tema soporta algún plugin (extensión)? =
 
 StartWP está creado bajo los *estándares de código* de WordPress. Cualquier plugin
@@ -124,7 +197,7 @@ tu libertad y conocimientos para hacer las *modificaciones* que desees.
 
 == Créditos ==
 
-* Basado en Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.,
+Basado en Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.,
 GPLv2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
 
 
