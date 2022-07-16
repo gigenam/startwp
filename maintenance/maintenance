@@ -6,10 +6,13 @@
  * (public_html/) para forzar a WordPress a ponerse en modo de mantenimiento.
  *
  * WordPress hace este proceso de forma automática cuando está actualizando.
- * Esto es para hacer pruebas y predecir como se va a ver el sitio cuando esto ocurra.
+ * Esto es para hacer pruebas y predecir como se va a ver el sitio cuando esto
+ * ocurra.
  *
- * Si iniciaste sesión como administrador, podes seguir viendo todo con normalidad
- * aunque algunos cambios pueden general problemas temporales, como subir archivos.
+ * Si tienes una sesión iniciada (sin importar el rango), puedes seguir viendo
+ * todo con normalidad aunque algunos cambios pueden general problemas temporales,
+ * como subir archivos. Para modificar el sitio en modo mantenimiento y restringir
+ * el acceso, es mejor revisar el archivo 'maintenance/function.php'.
  */
 
 if ( ! function_exists( 'is_user_logged_in' ) ) {

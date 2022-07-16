@@ -259,6 +259,12 @@ $separations: (
 // ----------------------------------------------
 .has-foreground-background-color {
 	background-color: var(--startwp--color--foreground);
+
+	::selection {
+		// Invertir colores de selección.
+		color: var(--startwp--color--foreground);
+		background-color: var(--startwp--color--background);
+	}
 }
 
 .has-background-background-color {

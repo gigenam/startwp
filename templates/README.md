@@ -23,10 +23,9 @@ Carpeta para agregar plantillas reutilizables.
   Para más ayuda o más íconos (por ejemplo para Android e iOS), visita
   [https://realfavicongenerator.net/](https://realfavicongenerator.net/)
 
-  - El archivo `original.svg` es el que se utiliza para crear y exportar los íconos.
   - `apple-touch-icon.png` es para dispositivos Apple y tiene un tanaño de 180x180.
-  - `favicon.png` es el más genérico y soportado por la mayoría de navegadores
-    y tiene un tamaño de 32x32.
+  - `favicon.png` es el más genérico y soportado por la mayoría de navegadores y
+    tiene un tamaño de 32x32.
   - `favicon.svg` es la versión más [moderna](https://caniuse.com/?search=svg%20favicons)
     y además de la ventaja propia en cuanto a calidad, también se puede utilizar
     en temas claros y oscuros (abrir el archivo en un editor de texto para ver).

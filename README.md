@@ -15,8 +15,8 @@ más básico en cuanto a plantillas php y estilos suficiente como para instalar 
 que todo funcione bien.
 
 Está desarrollado para ser usado de forma 'tradicional'. No tiene ningún soporte
-para ser usado con FSE (Full Site Editing) e incluso desactiva algunas cosas por
-defecto, como los svg para duotone y las variables CSS de WordPress.
+para ser usado con FSE (Full Site Editing) e incluso desactiva [algunas cosas](app/functions.php#L47)
+por defecto, como los svg para duotone y las variables CSS de WordPress.
 
 Este tema cuenta con varios archivos para poder desarrollar mediante varias
 automatizaciones realizadas con [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start).
@@ -35,8 +35,8 @@ auto refresco de navegador, etc.
 
 ## Extensiones recomendadas
 
-Para [Visual Studio Code](https://code.visualstudio.com/) (la mayoría
-están para otros editores populares):
+Para [Visual Studio Code](https://code.visualstudio.com/) (la mayoría están para
+otros editores populares):
 
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - [Configurar prettierrc](.prettierrc).
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) - [Configurar editorconfig](.editorconfig).
@@ -56,11 +56,13 @@ Para [WordPress](https://wordpress.org/):
 # Configuración inicial
 
 Si ya tienes una instalación de WordPress lista, abre el archivo `wp-config.php`
-en la raíz del sitio y activa el modo **DEBUG** (más info en
-[functions.php](./app/functions.php#L10)). Además puedes agregar otras opciones
-para obtener más información en caso de problemas:
+en la raíz del sitio y activa el modo **DEBUG** (más info en [functions.php](./app/functions.php#L10)).
+Además puedes agregar otras opciones para obtener más información en caso de
+problemas:
 
 ```php
+// wp-config.php
+
 define( 'WP_DEBUG', true );
 // Opcionales.
 define( 'WP_DEBUG_LOG', true );
@@ -78,6 +80,8 @@ Abre el archivo [composer.json](composer.json) (en caso de querer usar
 valores y las rutas apuntando a donde descargaste el proyecto en tu PC.
 
 ```jsonc
+// composer.json
+
 // Ejemplo de las rutas en diferentes sistemas operativos.
 
 // Windows y macOS:
@@ -95,7 +99,7 @@ Por último abre la carpeta del tema en tu editor y utiliza la funcionalidad de
 llamadas con **startwp**.
 
 Que las búsquedas seas sensibles a mayúsculas ya que necesitaras cambiar varios
-tipo (`startwp`, `Startwp`, `StartWP`).
+tipos (`startwp`, `Startwp`, `StartWP`).
 
 [ ! ] Todos los archivos `README.md` del tema tienen mis datos y la descripción
 genérica. También puedes buscar y remplazar esos textos.
@@ -112,10 +116,12 @@ Para auto formatear todos los archivos de forma automática y utilizando los
 [mismos plugins en VSCode](#extensiones-recomendadas), puedes agregar los
 siguientes parametros a tu configuración.
 
-Abre la paleta de comandos (`control + shift + p`) y busca `configuration.json`.
+Abre la paleta de comandos (`control + shift + p`) y busca `settings.json`.
 Añade el siguiente código:
 
 ```jsonc
+// settings.json (VS Code)
+
 {
   // ...
   // Otras configuraciones tuyas (revisa que no se repitan las opciones).
@@ -139,9 +145,9 @@ Añade el siguiente código:
 
 # Empezar a trabajar
 
-Una vez todo listo e instalado, arranca el comando `npm run dev` para iniciar
-el servidor local con [Browser Sync](https://www.browsersync.io/) y vigilar
-todos los archivos SCSS, JS y PHP.
+Una vez todo listo e instalado, arranca el comando `npm run dev` para iniciar el
+servidor local con [Browser Sync](https://www.browsersync.io/) y vigilar todos
+los archivos SCSS, JS y PHP.
 
 Para hacer cambios en los archivos sin necesidad de arrancar
 [Browser Sync](https://www.browsersync.io/), utiliza el comando `npm run watch`.
@@ -153,8 +159,7 @@ el cual comprimirá todos los archivos para ser subidos al sitio final.
 
 # Documentación adicional
 
-Este tema está creado bajo los
-[estándares de código de WordPress](https://developer.wordpress.org/coding-standards/).
+Este tema está creado bajo los [estándares de código de WordPress](https://developer.wordpress.org/coding-standards/).
 Esto significa que todos los archivos del proyecto están bien documentados y
 formateados de forma consistente (con la ayuda de las extensiones y configuraciones
 anteriores). En todas partes del tema encontraras archivos `README.md` con algo
@@ -171,12 +176,12 @@ Además el tema cuenta con dos traducciones por defecto, es_ES y es_AR.
 
 Para más información puedes ver la tarea en [gulpfile.babel.js](./gulpfile.babel.js#L202)
 y la carpeta `app/languages/` y buscar todas las funciones de textos traducibles
-(`__()`, `_e()`, etc).
+(`__()`, `_e()`, etc). Para más información, revisar la [documentación oficial](https://developer.wordpress.org/themes/functionality/internationalization/)
+(En ingles).
 
 ## Plugins
 
-Cualquier plugin que siga los mismos
-[estándares de código de WordPress](https://developer.wordpress.org/coding-standards/)
+Cualquier plugin que siga los mismos [estándares de código de WordPress](https://developer.wordpress.org/coding-standards/)
 no debería generar problemas de compatibilidad. Por cuestión de reutilización
 frecuente, los únicos plugins soportados parcialmente son:
 

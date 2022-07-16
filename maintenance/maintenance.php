@@ -3,7 +3,7 @@
  * Modo mantenimiento
  *
  * Subir este archivo dentro de la carpeta /wp-content/ en el servidor para que
- * WordPress la utilice cuando actualiza el sitio en vez de la típica pantalla
+ * WordPress lo utilice cuando actualiza el sitio en vez de la típica pantalla
  * en blanco con el cartel "No disponible por mantenimiento programado...".
  *
  * NO USAR funciones de WordPress. Sólo PHP plano y HTML.
@@ -29,7 +29,7 @@ $startwp_site_url = ( STARTWP_DEV_MODE )
 	? $_SERVER['SERVER_NAME'] . '/startwp/' // En desarrollo.
 	: $_SERVER['SERVER_NAME'] . '/';        // En producción.
 
-// Por cuestión de organización, es recomendable crear una carpeta para imágenes,
+// Por cuestión de organización, es recomendable crear una carpeta para imágenes
 // y demás archivos que quieras usar para esta plantilla de mantenimiento.
 $startwp_maintenance = $startwp_site_url . 'wp-content/maintenance';
 ?>
@@ -41,17 +41,12 @@ $startwp_maintenance = $startwp_site_url . 'wp-content/maintenance';
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<!-- <link rel="shortcut icon" href="//<?php echo $startwp_maintenance . '/favicon.ico'; ?>" type="image/icon"> -->
+	<!-- <link rel="icon" type="image/png" sizes="32x32" href="//<?php echo $startwp_maintenance . '/favicon.png'; ?>"> -->
 	<style>
-		*, *::before, *::after {
-			box-sizing: inherit;
-			word-break: break-word;
-		}
-		html {
-			box-sizing: border-box;
-			font-size: 16px;
-			-webkit-text-size-adjust: 100%;
-		}
+		*,
+		*::before,
+		*::after { box-sizing: inherit; word-break: break-word }
+		html { box-sizing: border-box; font-size: 16px; -webkit-text-size-adjust: 100% }
 		body {
 			display: flex;
 			flex-wrap: wrap;
@@ -64,30 +59,28 @@ $startwp_maintenance = $startwp_site_url . 'wp-content/maintenance';
 			background-color: #ffffff;
 			font-family: sans-serif;
 		}
-		a { color: #305cd4; font-weight: bold; }
-		a:not(:hover) { text-decoration: none; }
-		.main-container { padding: 5rem 1rem; }
+		a { color: #305cd4; font-weight: bold }
+		a:not(:hover) { text-decoration: none }
+		.main-container { padding: 5rem 1rem }
 		.main-title {
 			margin-top: 0;
 			margin-bottom: 0;
 			line-height: 1.15;
 			font-size: 1.8em;
 		}
-		.main-container, .main-footer { text-align: center; }
+		.main-container,
+		.main-footer { text-align: center; }
 		.main-footer {
 			margin-top: auto;
 			padding-top: 1em;
 			padding-bottom: 1em;
 			font-size: .9em;
 		}
-		.main-footer span {
-			display: block;
-			padding-bottom: .25em;
-		}
+		.main-footer span { display: block; padding-bottom: .25em }
 		@media screen and (min-width: 640px) {
-			.main-container { padding: 7% 1rem; font-size: 1.2em; }
-			.main-title { font-size: 3.2rem; }
-			.main-footer span { font-size: 1.2rem; }
+			.main-container { padding: 7% 1rem; font-size: 1.2em }
+			.main-title { font-size: 3.2rem }
+			.main-footer span { font-size: 1.2rem }
 		}
 	</style>
 
@@ -135,7 +128,7 @@ print_r( 'SITE_URL    : ') . var_dump( $startwp_site_url );
 	<footer class="main-footer">
 		<p>
 			<span>
-				<a href="https://github.com/gigenam/startwp" target="_blank">StartWP</a> &copy; <?php echo date( 'Y' ); ?>
+				<a href="https://github.com/gigenam/startwp" target="_blank">StartWP</a> &copy; <?php echo gmdate( 'Y' ); ?>
 			</span>
 			<a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html" target="_blank">
 				GNU General Public License

@@ -15,9 +15,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( get_template_directory_uri() . '/img/apple-touch-icon.png' ); ?>">
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( get_template_directory_uri() . '/img/favicon.png' ); ?>">
-	<link rel="icon" type="image/svg+xml" href="<?php echo esc_url( get_template_directory_uri() . '/img/favicon.svg' ); ?>">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( get_template_directory_uri() . '/img/apple-touch-icon.png' ); ?>?ver=<?php echo esc_html( $GLOBALS['startwp_theme_version'] ); ?>">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( get_template_directory_uri() . '/img/favicon.png' ); ?>?ver=<?php echo esc_html( $GLOBALS['startwp_theme_version'] ); ?>">
+	<link rel="icon" type="image/svg+xml" href="<?php echo esc_url( get_template_directory_uri() . '/img/favicon.svg' ); ?>?ver=<?php echo esc_html( $GLOBALS['startwp_theme_version'] ); ?>">
 	<?php wp_head(); ?>
 </head>
 
