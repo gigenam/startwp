@@ -93,20 +93,25 @@ romper cosas o perder los cambios luego de una actualización.
 		 *
 		 * @package    StartWP Child
 		 * @subpackage startwp
-		 * @version    1.0.0
+		 * @since      1.0.0
 		 */
 
 		function startwp_child_enqueue_styles() {
-			wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), null, wp_get_theme()->get('Version') );
+			wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), array( 'startwp-main' ), wp_get_theme()->get('Version') );
 		}
 		add_action( 'wp_enqueue_scripts', 'startwp_child_enqueue_styles' );
 
-
-		[i] También puedes agregar scripts personalizados con:
+		También puedes agregar scripts personalizados con:
 		function startwp_child_enqueue_scripts() {
-			wp_enqueue_script( 'startwp-child', get_stylesheet_directory_uri() . '/script.js', null, wp_get_theme()->get('Version'), true );
+			wp_enqueue_script( 'startwp-child', get_stylesheet_directory_uri() . '/script.js', array( 'startwp-main' ), wp_get_theme()->get('Version'), true );
 		}
 		add_action( 'wp_enqueue_scripts', 'startwp_child_enqueue_scripts' );
+
+		[!] Importante prestar atención al valor "array( 'startwp-main' )". Debe
+		ser igual al archivo de estilos y scripts principales del padre. Si tus
+		estilos no están sobreescribiendo los del tema principal, revisa en
+		"/inc/core/class-enqueue.php#L33" que estés utilizando el nombre correcto
+		para que estos archivos (hijos) se carguen después que los del padre.
 
 	1.4. Puedes sobreescribir cualquier archivo PHP del tema original también.
 	Solo tienes que crear la misma estructura de archivos y carpetas y agregar
@@ -137,12 +142,12 @@ personalizados (si es que no tienes una creada).
 
 	function startwp_mis_estilos() {
 		// El segundo valor es la url desde fonts.google.com cuando seleccionas
-		// una o mas tipografías. En este ejemplo usando "Ubuntu Regular y Bold".
+		// una o más tipografías. En este ejemplo usando "Ubuntu Regular y Bold".
 		wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap', null, null );
 
 		// Acá estas llamando al archivo style.css para agregar tus estilos
 		// personalizados. En ese archivo es que tienes que configurar los textos.
-		wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), null, wp_get_theme()->get('Version') );
+		wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), array( 'startwp-main' ), wp_get_theme()->get('Version') );
 	}
 	add_action( 'wp_enqueue_scripts', 'startwp_mis_estilos' );
 
@@ -155,11 +160,22 @@ Luego ve al archivo "style.css" y configura tus estilos. Por ejemplo:
 	}
 	a {
 		font-weight: 700;
-		/* Así se usan los diferentes peso o grosores. También se puede usar con
+		/* Así se usan los diferentes pesos o grosores. También se puede usar con
 		   light, regular, bold, etc. */
 	}
 
 Método 2) - @import:
+a - CSS)
+Abre el archivo "style.css" y agrega los siguientes estilos:
+	@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+	body{
+		font-family: Ubuntu, sans-serif;
+	}
+	a {
+		font-weight: 700;
+	}
+
+b - PHP)
 Abre el archivo "functions.php" y crea una nueva función para agregar tus estilos
 personalizados (si es que no tienes una creada).
 
@@ -167,7 +183,7 @@ personalizados (si es que no tienes una creada).
 		// Acá estas llamando al archivo style.css para agregar tus estilos
 		// personalizados. Es importante tener este archivo, sin importar si no
 		// vas a modificar nada.
-		wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), null, wp_get_theme()->get('Version') );
+		wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), array( 'startwp-main' ), wp_get_theme()->get('Version') );
 
 		// Esta es la forma para agregar estilos "en linea" sin necesidad de
 		// modificar los estilos css.

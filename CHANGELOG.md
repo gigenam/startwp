@@ -12,6 +12,11 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Version 1.1.1 - 2022-07-18 :
+
+- [!] Corrección menor en la documentación para crear un tema hijo y llamar los
+  estilos y scripts personalizados correctamente.
+
 ## Version 1.1.0 - 2022-07-16 :
 
 - [+] Agregado archivo [function.php](maintenance/function.php) para poner el
