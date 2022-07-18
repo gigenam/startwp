@@ -28,7 +28,9 @@ export default class MainNav {
 
 		// Navegación por el menú con el teclado.
 		this.menuItems.forEach( ( el ) => {
+			// Agregar flecha indicadora de sub-menus.
 			el.firstElementChild.classList.add( 'has-icon-after', 'icon-arrow' );
+
 			el.firstElementChild.addEventListener( 'focus', () => this.showSubMenus( el ) );
 			el.lastElementChild.lastElementChild.addEventListener( 'focusout', () => this.hideSubMenus( el ) );
 
@@ -42,18 +44,20 @@ export default class MainNav {
 		 * Agregar el atributo data-submenu="click" al ul/ol padre.
 		 * Por defecto el menú principal viene con data-submenu="hover".
 		 *
-		 * @see header.php#L68
+		 * @see header.php#L71
 		 */
 		this.clickItems.forEach( ( el ) => {
-			// Crear y mostrar una ayuda para la navegación con teclado
-			// cuando hay sub-menus disponibles.
+			// Crear y mostrar una ayuda para la navegación con teclado cuando
+			// hay sub-menus disponibles.
 			const label = document.createElement( 'span' );
 			label.classList.add( 'menu-item--sub-menu-tip' );
 			label.innerHTML = startwp_i10n.viewSubmenus;
 			el.firstElementChild.addEventListener( 'keyup', ( e ) => e.target.appendChild( label ) );
 			el.firstElementChild.addEventListener( 'focusout', ( e ) => e.target.removeChild( label ) );
 
+			// Agregar flecha indicadora de sub-menus.
 			el.firstElementChild.classList.add( 'has-icon-after', 'icon-arrow' );
+
 			el.firstElementChild.addEventListener( 'click', ( e ) => {
 				e.preventDefault();
 				e.stopPropagation();
@@ -80,7 +84,7 @@ export default class MainNav {
 	 */
 	toggleMenu() {
 		// Comentar en caso de usar estilos flotante o lateral.
-		// @see /assets/scss/components/_menus.scss#L147
+		// @see /assets/scss/components/_menus.scss#L149
 		document.documentElement.style.setProperty( '--startwp--nav-primary--height', `${ this.menuContainer.getBoundingClientRect().height }px` );
 
 		this.menuButton.classList.toggle( 'btn-menu--is-active' );

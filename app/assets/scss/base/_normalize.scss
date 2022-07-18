@@ -81,7 +81,7 @@ h3,
 h4,
 h5,
 h6 {
-	padding-bottom: 1px; // Fix outline with line-height.
+	padding-bottom: 1px; // Fix outline.
 	margin-bottom: 1.6rem;
 
 	&:where(:not(:first-child)) {
@@ -98,9 +98,9 @@ h6 {
 ul,
 ol {
 	&.menu,
-	&.list,
 	&.menu ul,
 	&.menu ol,
+	&.list,
 	&.list ul,
 	&.list ol {
 		@include reset-menu();
@@ -164,17 +164,17 @@ a {
 	}
 
 	// Teléfonos para Android & iOS.
-	// Agregar tel:[phone number] al atributo href (iOS lo hace por defecto).
-	// Ej: <a href="tel:0123456">Contacto 123456</a>
+	// Agregar tel:[número] al atributo href (iOS lo hace por defecto).
+	// Ej: <a href="tel:0123456">Contacto 1 23 456</a>
 
 	// Emails.
-	// Agregar mailto:[email address] al atributo href.
+	// Agregar mailto:[email] al atributo href.
 	// Ej: <a href="mailto:ejemplo@misitio.com">Contacto</a>
 	&[href^="tel"],
 	&[href^="mailto"] {
 		position: relative;
-		color: currentColor !important; // Override: Asegurar que ningún navegador pueda anular esto.
-		text-decoration: none !important; // Override: Asegurar que ningún navegador pueda anular esto.
+		color: currentColor !important; // Override: Asegurarse que ningún navegador pueda anular esto.
+		text-decoration: none !important; // Override: Asegurarse que ningún navegador pueda anular esto.
 	}
 }
 
@@ -210,7 +210,7 @@ kbd,
 samp {
 	font-family: monospace, monospace;
 	border: 1px solid #d4d4d4;
-	border-radius: 3px;
+	border-radius: $border-radius;
 }
 
 mark,
@@ -348,7 +348,7 @@ input[type="file"] {
 }
 
 // Problema conocido:
-// - En iOS las opciones no respetan el padding horizontal.
+// - En iOS las opciones múltiples no respetan el padding horizontal.
 select[multiple] {
 	min-height: $input-height;
 	overflow: hidden;
@@ -443,7 +443,7 @@ th {
 template,
 [hidden],
 .hidden {
-	display: none !important;
+	display: none !important; // Override: Evitar que otras clases puedan mostrar estos elementos.
 	padding: 0;
 	margin: 0;
 }
@@ -455,7 +455,7 @@ template,
 
 // Elementos con fondo.
 .has-background {
-	padding: var(--startwp--gap--content) !important; // Override wp-styles.
+	padding: var(--startwp--gap--content) !important; // Override: wp-styles.
 }
 
 // Quitar todo tipo de animaciones para evitar problemas de accesibilidad.

@@ -18,6 +18,10 @@ Está desarrollado para ser usado de forma 'tradicional'. No tiene ningún sopor
 para ser usado con FSE (Full Site Editing) e incluso desactiva [algunas cosas](app/functions.php#L47)
 por defecto, como los svg para duotone y las variables CSS de WordPress.
 
+\* Está incluido el nuevo archivo [theme.json](./app/theme.json), pero principalmente
+para no repetir código o estilos entre el sitio y el editor y para prevenir o
+desactivar estilos no deseados.
+
 Este tema cuenta con varios archivos para poder desarrollar mediante varias
 automatizaciones realizadas con [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start).
 Algunos ejemplos son compilar los estilos de SCSS a CSS, Javascript a JS ES5,

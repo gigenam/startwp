@@ -36,7 +36,7 @@
 			/**
 			 * Enlace a políticas de privacidad
 			 *
-			 * @see /inc/setup/class-general.php#L89
+			 * @see /inc/setup/class-general.php#L90
 			 */
 			Startwp_General_Setup::privacy_policy();
 			?>

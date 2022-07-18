@@ -4,6 +4,7 @@
  *
  * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/
  * @package startwp
+ * @since   1.0.0
  */
 
 /**

@@ -1,7 +1,7 @@
 <?php
 /**
  * Fragmento de código para poner el sitio en mantenimiento y que nadie salvo
- * los usuarios autorizados puedan seguir trabajando en actualizar el sitio.
+ * los usuarios autorizados puedan seguir visualizando el sitio.
  *
  * Si quieres hacer modificaciones en tu sitio sin que otros usuarios
  * (registrados o anónimos) puedan ver, no es muy recomendable hacerlo con los

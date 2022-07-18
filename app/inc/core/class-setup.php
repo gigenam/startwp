@@ -1,6 +1,6 @@
 <?php
 /**
- * Funcionalidades principales llamadas en la acción after setup theme
+ * Funcionalidades principales llamadas en la acción 'after setup theme'
  *
  * * setup()
  *
@@ -63,7 +63,7 @@ if ( ! class_exists( 'Startwp_Setup' ) ) {
 			$startwp_content_width = $content_width;
 			if ( ! isset( $startwp_content_width ) ) {
 				// igual al tamaño definido en theme.json#L6.
-				$startwp_content_width = 1200;
+				$startwp_content_width = 1100;
 			}
 
 			/**

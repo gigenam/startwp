@@ -23,11 +23,13 @@ $fs-heading-6: rem(13);
 $input-width: rem(450);
 $input-height: rem(35);
 
+//
 // Fuentes
 // ----------------------------------------------
 $ff-main: sans-serif;
 $ff-title: sans-serif;
 
+//
 // Separaciones
 // ----------------------------------------------
 // Contenido.
@@ -39,6 +41,7 @@ $margin-content: 1rem;
 $margin-content-half: math.div($margin-content, 2);
 $margin-content-doble: $margin-content * 2;
 
+//
 // Colores
 // ----------------------------------------------
 $color-text: #333333;
@@ -53,6 +56,7 @@ $color-error: #be4242;
 
 $link-hover: 0.85;
 
+//
 // Bordes
 // ----------------------------------------------
 $border-radius: 4px;

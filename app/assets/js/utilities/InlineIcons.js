@@ -4,7 +4,7 @@
  * Agregarle las clases 'has-icon icon-[nombre ícono]' a un elemento en el HTML.
  * Para agregar el ícono después, usar 'has-icon-after icon-[nombre ícono]'.
  * En caso de no poder controlar el HTML, usar el método customIcon().
- * Ver a partir de lineas 21 y 84.
+ * Ver a partir de lineas 20 y 82.
  *
  * @since 1.0.0
  */
@@ -37,8 +37,6 @@ export default class InlineIcons {
 	addIcons() {
 		this.iconSelectors.forEach( ( element ) => {
 			// Separar clases.
-			// TODO: Puede romperse si se agregan clases antes con separadores [-].
-			// Revisar e intentar reparar/mejorar.
 			const elementClasses = element.classList.value;
 			const trimClasses    = elementClasses.substring( elementClasses.search( /\s[icon]/ ) + 1 );
 			let iconClass        = trimClasses.substring( 5, trimClasses.search( /[a-z]\s/g ) + 1 );

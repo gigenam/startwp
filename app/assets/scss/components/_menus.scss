@@ -49,12 +49,13 @@
 	@include adminbar-height(top);
 }
 
+//
 // Navegación principal.
 //-----------------------------------------------
 .nav-primary {
 	@include to(large) {
 		width: 100%;
-		// Comentar esto para usar otros estilos de menú móvil (#L147).
+		// Comentar esto para usar otros estilos de menú móvil (linea 150) ->.
 		height: 0;
 		overflow: hidden;
 		transition: height 0.3s ease;
@@ -62,7 +63,7 @@
 		&--is-visible {
 			height: var(--startwp--nav-primary--height);
 		}
-		// Comentar esto para usar otros estilos de menú móvil (#L147).
+		// <- Comentar esto para usar otros estilos de menú móvil (linea 150).
 	}
 
 	// Menu.
@@ -138,7 +139,7 @@
 		display: inline-block;
 		position: absolute;
 		top: 100%;
-		left: 0;
+		right: 0;
 		padding: 0rem 0.5rem 0.1rem;
 		font-size: 0.9em;
 		border: 1px solid currentColor;

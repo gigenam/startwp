@@ -8,18 +8,21 @@
 	justify-content: $main;
 }
 
+//
 // Cross axis.
 // @param $cross Determina el tipo de alineación.
 @mixin align-cross($cross) {
 	align-items: $cross;
 }
 
+//
 // Self axis.
 // @param $self Determina el tipo de alineación.
 @mixin align-self($self) {
 	align-self: $self;
 }
 
+//
 // Flexbox
 // ----------------------------------------------
 .flexrow {

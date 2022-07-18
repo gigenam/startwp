@@ -19,6 +19,7 @@ $breakpoints: (
 	// xlarge: 1799px
 );
 
+//
 // Desde -> ( desde $bp hacia arriba ) !Recomendado
 // ----------------------------------------------
 @mixin from($bp) {
@@ -33,6 +34,7 @@ $breakpoints: (
 	}
 }
 
+//
 // Hasta -> ( desde 0 hasta $bp )
 // ----------------------------------------------
 @mixin to($bp) {
@@ -47,6 +49,7 @@ $breakpoints: (
 	}
 }
 
+//
 // Sólo en X tamaño ( $bp )
 // * Se pueden usar las opciones small, medium y large.
 // * * Para algo menor a small, usar @include to(small){}.

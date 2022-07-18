@@ -9,7 +9,7 @@
 
 /**
  * Desde WordPress 3.0 es recomendable tener este archivo de forma obligatoria.
- * En caso de usar widgets, des-comentar en 'functions.php#L35' para habilitar
+ * En caso de usar widgets, descomentar en 'functions.php#L35' para habilitar
  * las posiciones.
  */
 

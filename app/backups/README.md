@@ -12,4 +12,4 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 En esta carpeta se agregan todos los archivos que no se están utilizando pero
 quedan como respaldo por si se necesitan a futuro. Por ejemplo si se quiere hacer
-uso de más funcionalidades de blog como archivos, paginas de usuarios, etc.
+uso de más funcionalidades de blog como archivos, páginas de usuarios, etc.

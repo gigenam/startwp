@@ -27,7 +27,7 @@ if ( ! class_exists( 'Startwp_Menus' ) ) {
 					// Registrar más posiciones acá.
 				)
 			);
-			add_action( 'after_setup_theme', array( 'Startwp_Menus', 'register' ), 1 );
+			add_action( 'init', array( 'Startwp_Menus', 'register' ), 1 );
 		}
 
 		/**

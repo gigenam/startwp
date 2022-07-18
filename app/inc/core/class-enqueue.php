@@ -42,7 +42,7 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 				'startwp_i10n',
 				array(
 					'themeURI'     => esc_url( get_template_directory_uri() ), // Usado en: InlineIcons.js.
-					'viewSubmenus' => esc_html__( ' Press enter to view the sub-menu.', 'startwp' ), // Usado en: MainNav.js.
+					'viewSubmenus' => __( ' Press enter to view the sub-menu.', 'startwp' ), // Usado en: MainNav.js.
 				)
 			);
 		}

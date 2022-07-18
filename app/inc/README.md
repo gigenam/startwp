@@ -18,11 +18,11 @@ importan en [functions.php](../functions.php)
 - Funcionalidades básicas. Agregar estilos y scripts, soporte de menus y
   widgets, etc.
 
+`custom/`:
+
+- Funcionalidades y/o modificaciones personalizadas.
+
 `setup/`:
 
 - Funcionalidades de uso general o para artículos y entradas mediante acciones
   y filtros.
-
-`custom/`:
-
-- Funcionalidades y/o modificaciones personalizadas.

@@ -19,6 +19,7 @@
 	transform-origin: center;
 }
 
+//
 // Separaciones
 // ----------------------------------------------
 [class*="has-icon"] svg {
@@ -30,6 +31,7 @@
 	margin-left: 0.35em;
 }
 
+//
 // Outline
 // ----------------------------------------------
 [class*="icon-"].is-outline,
@@ -38,6 +40,7 @@
 	stroke-width: 2px;
 }
 
+//
 // Estados para abrir/cerrar
 // ----------------------------------------------
 // Cross from + to x.
@@ -46,6 +49,7 @@
 	transform: rotate(45deg);
 }
 
+//
 // Rotaciones
 // ----------------------------------------------
 // Top.

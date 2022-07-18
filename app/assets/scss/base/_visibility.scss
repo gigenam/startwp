@@ -7,24 +7,20 @@
 @mixin col-hidden($direction: "") {
 	// Oculto en.
 	@if ($direction == "") {
-		.hidden {
-			@each $key in map-keys($breakpoints) {
-				@include only($key) {
-					&-#{$key} {
-						display: none;
-					}
+		@each $key in map-keys($breakpoints) {
+			@include only($key) {
+				.hidden-#{$key} {
+					display: none;
 				}
 			}
 		}
 	} @else {
 		// Oculto desde.
 		@if ($direction == "from") {
-			.hidden-from {
-				@each $key in map-keys($breakpoints) {
-					@include from($key) {
-						&-#{$key} {
-							display: none;
-						}
+			@each $key in map-keys($breakpoints) {
+				@include from($key) {
+					.hidden-from-#{$key} {
+						display: none;
 					}
 				}
 			}
@@ -32,12 +28,10 @@
 
 		// Oculto hasta.
 		@if ($direction == "to") {
-			.hidden-to {
-				@each $key in map-keys($breakpoints) {
-					@include to($key) {
-						&-#{$key} {
-							display: none;
-						}
+			@each $key in map-keys($breakpoints) {
+				@include to($key) {
+					.hidden-to-#{$key} {
+						display: none;
 					}
 				}
 			}
