@@ -10,7 +10,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 # Partes re-utilizables
 
-Esta carpeta se agregan todas las secciones que puedan ser re-utilizables para
+En esta carpeta se agregan todas las secciones que puedan ser re-utilizables para
 evitar escribir código repetido.
 
 Por ejemplo el contenido para entradas, ya sea en el blog, archivos, búsqueda, etc.

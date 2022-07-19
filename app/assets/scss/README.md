@@ -57,4 +57,4 @@ bloques de WordPress.
 sesión, recuperar contraseña y registro de usuarios.
 
 [main.scss](./main.scss) es el archivo a compilar todos los estilos responsables
-de el funcionamiento del sitio para el público general.
+del funcionamiento del sitio para el público general.

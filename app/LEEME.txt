@@ -1,11 +1,11 @@
 === StartWP ===
 
-Contribuidores  : Marcos Gigena
-Requiere WP     : 6.0 o mayor
-Probado hasta   : 6.0
-Requiere PHP    : 7.0 o mayor
-Licencia        : GNU General Public License v2 or later
-Licencia URI    : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Contribuidores : Marcos Gigena
+Requiere WP    : 6.0 o mayor
+Probado hasta  : 6.0
+Requiere PHP   : 7.0 o mayor
+Licencia       : GNU General Public License v2 or later
+Licencia URI   : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 
 == Descripción ==
@@ -79,7 +79,7 @@ romper cosas o perder los cambios luego de una actualización.
 		*/
 
 		Lo importante acá es "Theme Name" para localizarlo en la administración,
-		el "Template", que se refiere al tema padre y "Text Domain" es para
+		el "Template", que se refiere al tema padre y "Text Domain" que es para
 		localización y evitar problemas con el padre.
 
 		También, puedes agregar más info como "License" y/o "Author", etc.
