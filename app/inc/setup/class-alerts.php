@@ -67,7 +67,7 @@ if ( ! class_exists( 'Startwp_Alerts' ) ) {
 			$args = wp_parse_args( $args, $defaults );
 
 			$show_alert     = ! empty( $args['type'] ) ? 'alert--visible ' : null;
-			$alert_icon     = ! empty( $args['icon'] ) ? '<svg class="icon-' . esc_html( $args['icon'] ) . '" aria-hidden="true"><use xlink:href="' . esc_url( get_template_directory_uri() . '/img/sprites.svg#' . esc_html( $args['icon'] ) ) . '" /></svg>' : null;
+			$alert_icon     = ! empty( $args['icon'] ) ? '<svg class="icon-' . esc_html( $args['icon'] ) . '" aria-hidden="true"><use xlink:href="#' . esc_html( $args['icon'] ) . '" /></svg>' : null;
 			$alert_classes  = ! empty( $args['classes'] ) ? $args['classes'] : null;
 			$alert_button   = ! empty( $args['button'] ) ? $args['button'] : __( 'Close', 'startwp' );
 			$alert_privacy  = $args['privacy'] ? get_the_privacy_policy_link( '<p class="col-medium-6">' . esc_html_x( 'Read more about our ', 'Sobre políticas de privacidad', 'startwp' ), '</p>' ) : null;

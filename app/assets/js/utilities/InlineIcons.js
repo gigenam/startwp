@@ -11,7 +11,6 @@
 
 export default class InlineIcons {
 	constructor() {
-		this.themeURI      = startwp_i10n.themeURI;
 		this.iconSelectors = document.querySelectorAll( '[class*="icon-"]:where(:not(svg):not([class*="icon-button"]):not([class*="wp-block-social-links"]))' );
 
 		if ( this.iconSelectors ) {
@@ -19,7 +18,6 @@ export default class InlineIcons {
 
 			// Ejemplo para agregar en un elemento existente (Login/out widget)
 			// con posibilidad de cambiar de estado.
-
 			// this.customIcon(
 			// 	'.logged-in.wp-block-loginout',
 			// 	'loginout',
@@ -48,7 +46,7 @@ export default class InlineIcons {
 			const iconSVG = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );
 			iconSVG.setAttribute( 'aria-hidden', 'true' );
 			iconSVG.classList.add( `icon-${ iconClass }` );
-			iconSVG.innerHTML = `<use xlink:href="${ this.themeURI }/img/sprites.svg#${ iconClass }"/>`;
+			iconSVG.innerHTML = `<use xlink:href="#${ iconClass }"/>`;
 
 			// Si es un menú de navegación o un botón de bloque,
 			// agregar el SVG dentro del enlace.
@@ -98,9 +96,9 @@ export default class InlineIcons {
 
 			if ( validate ) {
 				const icon = ( element.classList.contains( validateClass ) ) ? changeClasses[ 0 ] : changeClasses[ 1 ];
-				iconSVG.innerHTML = `<use xlink:href="${ this.themeURI }/img/sprites.svg#${ icon }"/>`;
+				iconSVG.innerHTML = `<use xlink:href="#${ icon }"/>`;
 			} else {
-				iconSVG.innerHTML = `<use xlink:href="${ this.themeURI }/img/sprites.svg#${ iconClass }"/>`;
+				iconSVG.innerHTML = `<use xlink:href="#${ iconClass }"/>`;
 			}
 
 			if ( afterPos ) {

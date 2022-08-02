@@ -117,8 +117,8 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 */
 		public static function post_title() {
 			$article_type      = apply_filters( 'startwp_article_type', $type = 'single' );
-			$article_sticky    = ( is_sticky() ) ? '<svg class="icon-sticky" aria-hidden="true"><use xlink:href="' . esc_url( get_template_directory_uri() . '/img/sprites.svg#sticky' ) . '" /></svg>' : '';
-			$article_protected = ( post_password_required() ) ? '<svg class="icon-lock" aria-hidden="true"><use xlink:href="' . esc_url( get_template_directory_uri() . '/img/sprites.svg#lock' ) . '" /></svg>' : '';
+			$article_sticky    = ( is_sticky() ) ? '<svg class="icon-sticky" aria-hidden="true"><use xlink:href="#sticky" /></svg>' : '';
+			$article_protected = ( post_password_required() ) ? '<svg class="icon-lock" aria-hidden="true"><use xlink:href="#lock" /></svg>' : '';
 
 			if ( is_singular() ) {
 				the_title( '<h1 class="entry-title entry-title--' . esc_html( $article_type ) . '">', '</h1>' );
@@ -326,9 +326,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 			$error_message = esc_html__( 'Sorry, your password is wrong. Please try again.', 'startwp' );
 			$error_message = '
 			<p class="message-error password-form-message text-center">
-				<svg class="icon-warning" aria-hidden="true">
-					<use xlink:href="' . esc_url( get_template_directory_uri() . '/img/sprites.svg#warning' ) . '" />
-				</svg>'
+				<svg class="icon-warning" aria-hidden="true"><use xlink:href="#warning" /></svg>'
 				. $error_message .
 			'</p>';
 			return $form . $error_message;

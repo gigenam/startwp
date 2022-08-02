@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const info = require( './package.json' );
+import info from './package.json' assert {'type':'json'};
 
 console.info( '\x1b[2m%s\x1b[0m', `
 /**

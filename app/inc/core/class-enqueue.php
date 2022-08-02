@@ -24,6 +24,7 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 			add_action( 'enqueue_block_editor_assets', array( $this, 'editor' ) );
 			add_action( 'login_enqueue_scripts', array( $this, 'login' ) );
 			// add_action( 'wp_enqueue_scripts', array( $this, 'comments' ) );
+			add_action( 'wp_footer', array( $this, 'icons' ), 1 );
 		}
 
 		/**
@@ -68,6 +69,81 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
 			}
+		}
+
+		/**
+		 * Agregar íconos en linea antes de finalizar el contenido.
+		 *
+		 * Para poder usarlos con <svg><use xlink:href="#nombre-icono" /><svg>
+		 * sin requerir de una URL absoluta y poder cargarlos correctamente sin
+		 * problemas en caso de usar servicio de tipo CDN para cargar y cachear
+		 * los recursos de forma externa.
+		 */
+		public static function icons() {
+			/**
+			 * WordPress prefiere usar WP_Filesystem en vez de la función PHP
+			 * integrada file_get_contents().
+			 */
+			global $wp_filesystem;
+			require_once ABSPATH . '/wp-admin/includes/file.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+			WP_Filesystem();
+
+			/**
+			 * Agregar nuevos filtros para escapar las propiedades de SVG de
+			 * forma segura.
+			 */
+			add_filter(
+				'safe_style_css',
+				function( $styles ) {
+					$styles[] = 'display';
+					$styles[] = 'fill';
+					$styles[] = 'fill-opacity';
+					$styles[] = 'stroke';
+					$styles[] = 'stroke-width';
+					return $styles;
+				}
+			);
+
+			/**
+			 * Agrega el contenido de sprites.svg en el píe de página del sitio
+			 * de forma segura para evitar código malicioso. Si tienes problemas
+			 * con algunos ícono, puedes escapar más propiedades como 'clipPath'
+			 * o 'circle', etc.
+			 */
+			echo '<div class="svg-sprites hidden">' . wp_kses(
+				$wp_filesystem->get_contents( get_stylesheet_directory_uri() . '/img/sprites.svg' ),
+				array(
+					'svg'   => array(
+						'xmlns'   => array(),
+						'version' => array(),
+						'id'      => array(),
+						'width'   => array(),
+						'height'  => array(),
+						'viewbox' => array(),
+					),
+					'style' => array(),
+					'g'     => array(
+						'id'        => array(),
+						'style'     => array(),
+						'transform' => array(),
+						'clip-path' => array(),
+						'stroke'    => array(),
+					),
+					'path'  => array(
+						'd'         => array(),
+						'style'     => array(),
+						'transform' => array(),
+						'fill'      => array(),
+						'stroke'    => array(),
+					),
+					'rect'  => array(
+						'x'      => array(),
+						'y'      => array(),
+						'width'  => array(),
+						'height' => array(),
+					),
+				)
+			) . '</div>';
 		}
 
 	}//end class

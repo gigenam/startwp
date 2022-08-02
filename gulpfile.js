@@ -13,32 +13,31 @@
  * * watchFiles()
  */
 
-import info         from './package.json';
-import yargs        from 'yargs';
+import info         from './package.json' assert {'type':'json'};
 import gulp         from 'gulp';
 import clean        from 'gulp-clean';
-import dartSass     from 'sass';
 import gulpSass     from 'gulp-sass';
 import postcss      from 'gulp-postcss';
 import sourcemaps   from 'gulp-sourcemaps';
 import imagemin     from 'gulp-imagemin';
-import svgsprite    from 'gulp-svg-sprite';
+import svgSprite    from 'gulp-svg-sprite';
 import wppot        from 'gulp-wp-pot';
 import mergeMQ      from 'gulp-merge-media-queries';
 import rename       from 'gulp-rename';
+import urlAdjuster  from 'gulp-css-url-adjuster';
+import replace      from 'gulp-string-replace';
+import BrowserSync  from 'browser-sync';
+import dartSass     from 'sass';
 import autoprefixer from 'autoprefixer';
 import cssnano      from 'cssnano';
 import webpack      from 'webpack-stream';
-import BrowserSync  from 'browser-sync';
-import urlAdjuster  from 'gulp-css-url-adjuster';
-import replace      from 'gulp-string-replace';
 const sass = gulpSass( dartSass );
 
 /**
  * Variables globales
  */
 // Prod.
-const PRODUCTION = yargs.argv.prod;
+const PRODUCTION = process.env.NODE_ENV;
 
 // Variables con información del tema desde package.json.
 const devURL           = info.site;
@@ -98,7 +97,7 @@ export const cleanCss = () => {
 
 // Compilar archivos SCSS.
 export const styles = ( done ) => {
-	if ( ! PRODUCTION ) {
+	if ( PRODUCTION !== 'production' ) {
 		gulp.src( paths.styles.src )
 			.pipe( sourcemaps.init() )
 			.pipe( sass( { outputStyle: 'expanded' } ).on( 'error', sass.logError ) )
@@ -128,7 +127,7 @@ export const styles = ( done ) => {
 export const scripts = ( done ) => {
 	gulp.src( paths.scripts.src )
 		.pipe( webpack( {
-			mode: ( ! PRODUCTION ) ? 'development' : 'production',
+			mode: ( PRODUCTION !== 'production' ) ? 'development' : 'production',
 			entry: { main: paths.scripts.src },
 			module: {
 				rules: [ {
@@ -141,8 +140,8 @@ export const scripts = ( done ) => {
 					},
 				} ],
 			},
-			devtool: ( ! PRODUCTION ) ? 'inline-source-map' : false,
-			output: { filename: ( ! PRODUCTION ) ? '[name].js' : '[name].min.js' },
+			devtool: ( PRODUCTION !== 'production' ) ? 'inline-source-map' : false,
+			output: { filename: ( PRODUCTION !== 'production' ) ? '[name].js' : '[name].min.js' },
 		} ).on( 'error', function handleError() {
 			this.emit( 'end' ); // Recover from errors.
 		} ) )
@@ -153,8 +152,9 @@ export const scripts = ( done ) => {
 // Crear sprites de íconos.
 export const sprites = ( done ) => {
 	gulp.src( paths.sprites.src )
-		.pipe( svgsprite( {
+		.pipe( svgSprite( {
 			mode: {
+				inline: true,
 				stack: {
 					dest: './',
 					sprite: './sprites.svg',
@@ -167,7 +167,7 @@ export const sprites = ( done ) => {
 
 // Copiar imágenes a la carpeta final. Comprimir en producción.
 export const images = ( done ) => {
-	if ( ! PRODUCTION ) {
+	if ( PRODUCTION !== 'production' ) {
 		gulp.src( paths.images.src )
 			.pipe( gulp.dest( paths.images.dest ) );
 	} else {
