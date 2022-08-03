@@ -12,6 +12,21 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Version 1.2.0 - 2022-08-03 :
+
+- [+] Agregado de nuevo sistema de SVGs para cargarlos en el final del contenido
+  y no necesitar rutas absolutas al llamarlos con `<svg><use xlink:href="..."></svg>`.
+  Más información en [class-enqueue.php](app/inc/core/class-enqueue.php#L74).
+- [!] Limpieza de algunos paquetes `npm` ya innecesarios y agregado del paquete
+  principal de `webpack` para evitar problemas.
+- [!] Correcciones y actualizaciones de nuevos paquetes `npm`. Al momento de este
+  commit puede surgir un error entre `@wordpress/eslint-plugin ^12.x` y `eslint ^8.x`.
+  En ese caso instalar las dependencias con la opción extra `--legacy-peer-deps`.
+  Ej: `npm run start --legacy-peer-deps`.
+- [!] Cambio en el nombre de `gulpfile.babel.js` por `gulpfile.js`. Ya no es
+  necesario usar `babel` para la configuración de gulp aunque de momento algunas
+  funcionalidades están marcadas como experimentales (asserts).
+
 ## Version 1.1.1 - 2022-07-18 :
 
 - [!] Correcciones generales de documentación y mejoras en comentarios.

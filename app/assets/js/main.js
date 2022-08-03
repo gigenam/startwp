@@ -2,10 +2,10 @@
  * Scripts principales
  */
 
-import MainNav        from './components/MainNav';
-import DetectBrowsers from './utilities/DetectBrowsers';
-import LinksAsButtons from './utilities/LinksAsButtons';
-import InlineIcons    from './utilities/InlineIcons';
+import MainNav        from './components/MainNav.js';
+import DetectBrowsers from './utilities/DetectBrowsers.js';
+import LinksAsButtons from './utilities/LinksAsButtons.js';
+import InlineIcons    from './utilities/InlineIcons.js';
 
 // Componentes.
 new MainNav();

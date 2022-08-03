@@ -8,6 +8,18 @@ License     : GNU General Public License v2 or later
 License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ```
 
+# Actualización 03 de Agosto
+
+En el último commit se actualizaron varias dependencias para evitar una gran
+cantidad de problemas con paquetes desactualizados. Estos cambios también traen
+varias modificaciones y posibles problemas.
+
+En caso de estar trabajando en un proyecto, es recomendable clonar o descargar
+en una carpeta aparte para probar que todo funcione bien dependiendo de su
+entorno de desarrollo.
+
+Para más información, ver [CHANGELOG.md](CHANGELOG.md).
+
 # Documentación
 
 StartWP es un tema pensado como plantilla para crear otros temas. Viene con lo
