@@ -5,10 +5,8 @@
  *
  * Si quieres hacer modificaciones en tu sitio sin que otros usuarios
  * (registrados o anónimos) puedan ver, no es muy recomendable hacerlo con los
- * archivos de mantenimiento.
- *
- * Una mejor forma es modificar y agregar el siguiente fragmento de código en el
- * archivo 'app/functions.php'.
+ * archivos de mantenimiento. Una mejor forma es modificar y agregar el siguiente
+ * fragmento de código en el archivo 'app/functions.php'.
  *
  * Dentro de 'wp_die()' puedes agregar casi todo el contenido HTML que quieras e
  * incluso usar funciones de WordPress, ya que el sitio sigue funcionando.

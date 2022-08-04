@@ -10,15 +10,18 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 # Actualización 03 de Agosto
 
-En el último commit se actualizaron varias dependencias para evitar una gran
-cantidad de problemas con paquetes desactualizados. Estos cambios también traen
-varias modificaciones y posibles problemas.
+En el commit [c418c38](https://github.com/gigenam/startwp/commit/c418c38e5257ffff7d4e01e7bebd22fb832a2364)
+se actualizaron varias dependencias para evitar una gran cantidad de problemas
+con paquetes desactualizados. Estos cambios también traen varias modificaciones
+y posibles problemas a la hora de instalar los nuevos paquetes.
 
 En caso de estar trabajando en un proyecto, es recomendable clonar o descargar
-en una carpeta aparte para probar que todo funcione bien dependiendo de su
+en una carpeta aparte para probar que todo funcione bien dependiendo de tu
 entorno de desarrollo.
 
-Para más información, ver [CHANGELOG.md](CHANGELOG.md).
+Para más información, ver [CHANGELOG.md](CHANGELOG.md#L23).
+
+<br>
 
 # Documentación
 
@@ -89,7 +92,7 @@ Abre el archivo [package.json](package.json) y modifica todos los valores por
 defecto con tus datos\*. Estos van a ser usados en algunas tareas. Por ejemplo el
 valor `site` es la url de desarrollo que va a tomar [Browser Sync](https://www.browsersync.io/).
 
-[*] El valor `name` debe ser todo en minúsculas y en lo posible una sola palabra.
+\* El valor `name` debe ser todo en minúsculas y en lo posible una sola palabra.
 
 Abre el archivo [composer.json](composer.json) (en caso de querer usar
 [WPCS](https://github.com/WordPress/WordPress-Coding-Standards)) y configura los
@@ -175,7 +178,8 @@ el cual comprimirá todos los archivos para ser subidos al sitio final.
 
 # Documentación adicional
 
-Este tema está creado bajo los [estándares de código de WordPress](https://developer.wordpress.org/coding-standards/).
+Este tema está basado en [underscores](https://github.com/automattic/_s) y creado
+bajo los [estándares de código de WordPress](https://developer.wordpress.org/coding-standards/).
 Esto significa que todos los archivos del proyecto están bien documentados y
 formateados de forma consistente (con la ayuda de las extensiones y configuraciones
 anteriores). En todas partes del tema encontraras archivos `README.md` con algo
@@ -190,7 +194,7 @@ en ingles porque es más fácil dejar ese por defecto y luego agregar los necesa
 en tu idioma que al revés (a menos que no te importe el soporte multi idioma).
 Además el tema cuenta con dos traducciones por defecto, es_ES y es_AR.
 
-Para más información puedes ver la tarea en [gulpfile.babel.js](./gulpfile.babel.js#L202)
+Para más información puedes ver la tarea en [gulpfile.js](./gulpfile.js#L193)
 y la carpeta `app/languages/` y buscar todas las funciones de textos traducibles
 (`__()`, `_e()`, etc). Para más información, revisar la [documentación oficial](https://developer.wordpress.org/themes/functionality/internationalization/)
 (En ingles).
@@ -242,7 +246,7 @@ a)
 b)
 
 - `npm install -g npm-check-updates` : Instala el paquete global (sudo en linux/mac).
-- `ncu` : Verifica si tiene paquetes desactualizados.
+- `ncu` : Verifica si tienes paquetes desactualizados.
 - `ncu -u` : Actualiza a las últimas versiones en [package.json](package.json).
 - `npm install` : Instala los paquetes a las últimas versiones.
 
@@ -251,8 +255,8 @@ b)
 a)
 
 - `composer outdated` : Verifica si tiene paquetes desactualizados.
-- `composer update` : Actualiza a los paquetes de forma segura sin subir de versión
-  mayor.
+- `composer update` : Actualiza a los paquetes de forma segura sin subir de
+  versión mayor.
 
 <br>
 

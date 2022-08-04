@@ -1,6 +1,6 @@
 <?php
 /**
- * Plantilla principal para el contenido de paginas en page.php
+ * Plantilla principal para el contenido de páginas en page.php
  *
  * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/
  * @package startwp
@@ -34,7 +34,6 @@
 			)
 		);
 		?>
-
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

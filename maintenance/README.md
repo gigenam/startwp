@@ -17,21 +17,21 @@ Ya sea de forma manual o cuando WordPress está actualizando.
 del tema y forzar el modo mantenimiento pero con mayor control sobre quien puede
 ver o acceder al sitio. Esta forma es la recomendada para bloquear el acceso
 a usuarios (registrados o anónimos) cuando quieres hacer cambios importantes en
-tu sitio ya que a diferencia del método anterior, en este caso WordPress y todas
-sus funcionalidades siguen funcionando sin problemas.
+tu sitio ya que a diferencia del método **maintenance**, en este caso WordPress
+y todas sus funcionalidades siguen funcionando sin problemas.
 
 [index.html](./index.html) es utilizado principalmente cuando WordPress todavía
 no fue instalado. A modo de próximamente.
 
-[index.php](./index.php) es recomendado para usar si se crean sub-carpetas
-(por ejemplo una llamada **maintenance** o similar) para agregar más cosas como
-imágenes o scripts para usar en [maintenance.php](./maintenance.php). Este archivo
-está vacío para evitar accesos indeseados.
+[index.php](./index.php) es recomendado para usar si se crean sub-carpetas para
+agregar más cosas como imágenes o scripts para usar en [maintenance.php](./maintenance.php).
+Este archivo está vacío para evitar accesos indeseados.
 
 [maintenance](./maintenance), como se comenta arriba, es para forzar el modo de
-mantenimiento de WordPress. Para eso hay que nombrarlo a `.maintenance` (con un punto delante)
-y subirlo a la raíz del servidor (public_html/).
+mantenimiento de WordPress. Para eso hay que nombrarlo a `.maintenance` (con un
+punto delante) y subirlo a la raíz del servidor (public_html/).
 
 [maintenance.php](./maintenance.php) debe ser subido dentro de la carpeta
-`/wp-content/` y será usado cuando WordPress actualice el sitio o cuando se
-utilice el archivo [maintenance](./maintenance) para forzar esta funcionalidad.
+`/wp-content/` del servidor (public_html/wp-content) y será usado cuando WordPress
+actualice el sitio o cuando se utilice el archivo [maintenance](./maintenance)
+para forzar esta funcionalidad.

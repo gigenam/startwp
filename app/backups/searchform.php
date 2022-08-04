@@ -8,7 +8,7 @@
 
 /**
  * De momento este archivo no es utilizado pero sirve para personalizar el widget
- * de busqueda deWordPress. Este queda de respaldo para sitios más complejos o
+ * de busqueda de WordPress. Este queda de respaldo para sitios más complejos o
  * más personalizaciones.
  */
 ?>

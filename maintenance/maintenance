@@ -10,8 +10,8 @@
  * ocurra.
  *
  * Si tienes una sesión iniciada (sin importar el rango), puedes seguir viendo
- * todo con normalidad aunque algunos cambios pueden general problemas temporales,
- * como subir archivos. Para modificar el sitio en modo mantenimiento y restringir
+ * todo con normalidad aunque algunos cambios, como subir archivos, pueden general
+ * problemas temporales. Para modificar el sitio en modo mantenimiento y restringir
  * el acceso, es mejor revisar el archivo 'maintenance/function.php'.
  */
 

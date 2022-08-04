@@ -10,10 +10,9 @@
 get_header();
 ?>
 
-	<main id="main" class="site-main">
+	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
-
 			<header class="entry-header wrapper">
 				<h1 class="entry-title">
 					<?php
@@ -47,7 +46,6 @@ get_header();
 
 		endif;
 		?>
-
 	</main><!-- #main -->
 
 <?php

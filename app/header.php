@@ -36,7 +36,7 @@
 			/**
 			 * Logo personalizado
 			 *
-			 * @see /inc/setup/class-general.php#L60
+			 * @see /inc/setup/class-general.php#L61
 			 */
 			Startwp_General_Setup::custom_logo();
 

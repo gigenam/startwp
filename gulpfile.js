@@ -21,7 +21,7 @@ import postcss      from 'gulp-postcss';
 import sourcemaps   from 'gulp-sourcemaps';
 import imagemin     from 'gulp-imagemin';
 import svgSprite    from 'gulp-svg-sprite';
-import wppot        from 'gulp-wp-pot';
+import wpPot        from 'gulp-wp-pot';
 import mergeMQ      from 'gulp-merge-media-queries';
 import rename       from 'gulp-rename';
 import urlAdjuster  from 'gulp-css-url-adjuster';
@@ -193,7 +193,7 @@ export const images = ( done ) => {
 // Crear archivo de traducción.
 export const translate = ( done ) => {
 	gulp.src( [ './app/**/*.php' ] )
-		.pipe( wppot( { domain: themeDomain } ) )
+		.pipe( wpPot( { domain: themeDomain } ) )
 		.pipe( gulp.dest( `./app/languages/${ themeDomain }.pot` ) );
 	done();
 };

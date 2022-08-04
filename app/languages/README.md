@@ -11,10 +11,10 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 # Traducciones
 
 Este tema viene preparado para ser traducido en múltiples idiomas. Solo hace
-falta crear los diferentes archivos `.pot`, `.po` y `.mo` y agregarlos en esta
-carpeta.
+falta crear los diferentes archivos `.po` y `.mo` y agregarlos en esta carpeta.
 
-Más información en la [documentación oficial](https://developer.wordpress.org/apis/handbook/internationalization/localization/) (en ingles).
+Más información en la [documentación oficial](https://developer.wordpress.org/apis/handbook/internationalization/localization/)
+(en ingles).
 
 Si quieres traducir el tema de forma fácil y con la ayuda de WordPress, puedes
 instalar en tu sitio el plugin [Loco Translate](https://wordpress.org/plugins/loco-translate/)

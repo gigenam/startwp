@@ -10,8 +10,7 @@
 get_header();
 ?>
 
-	<main id="main" class="site-main">
-
+	<main id="primary" class="site-main">
 		<?php
 		while ( have_posts() ) {
 			the_post();
@@ -25,7 +24,7 @@ get_header();
 				)
 			);
 
-			// Agregar la plantilla de comentarios si estos están abierto o
+			// Agregar la plantilla de comentarios si estos están abiertos o
 			// existe alguno. Para usar comentarios con todas las funcionalidades
 			// por defecto, descomentar '/inc/core/class-enqueue.php#L26' y
 			// modifica el archivo comments.php a gusto.
@@ -36,7 +35,6 @@ get_header();
 
 		get_sidebar();
 		?>
-
 	</main><!-- #main -->
 
 <?php

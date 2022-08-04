@@ -24,7 +24,8 @@ define( 'STARTWP_DEV_MODE', false );
 // Modificar los valores dependiendo de tus sitios.
 $startwp_site_url = ( STARTWP_DEV_MODE )
 	/**
-	 * @param string $_SERVER['SERVER_NAME'] El nombre del dominio (localhost o tu-dominio.com).
+	 * @param string $_SERVER['SERVER_NAME'] El nombre del dominio (localhost o
+	 * tu-dominio.com).
 	 */
 	? $_SERVER['SERVER_NAME'] . '/startwp/' // En desarrollo.
 	: $_SERVER['SERVER_NAME'] . '/';        // En producción.

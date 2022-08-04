@@ -73,8 +73,8 @@ if ( ! class_exists( 'Startwp_Menus' ) ) {
 }
 
 /**
- * Registrar posiciones after setup theme
+ * Registrar posiciones
  *
- * @see header.php#L58 para ver como se está usando en la navegación principal.
+ * @see header.php#L61 para ver como se está usando en la navegación principal.
  */
 Startwp_Menus::register();

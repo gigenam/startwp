@@ -14,13 +14,18 @@
 		"Element": "readonly"
 	},
 	"rules": {
-		"indent": ["error"],
+		"indent": [
+			"error"
+		],
 		"no-multi-spaces": 0,
 		"no-tabs": 0,
 		"no-unused-vars": 0,
 		"no-undef": 0,
 		"space-unary-ops": 0,
-		"wrap-iife": ["error", "inside"]
+		"wrap-iife": [
+			"error",
+			"inside"
+		]
 	},
 	"parserOptions": {
 		"ecmaVersion": 2017,

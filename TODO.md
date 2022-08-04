@@ -56,10 +56,9 @@ Pantalla en blanco sin errores:
 - revisar en [header.php](./app/header.php) que esté la función de cabecera
   correctamente - `wp_head()`.
 - revisar en [footer.php](./app/footer.php) que esté la función de cierre
-  correctamente al final
-  del body - `wp_footer()`.
+  correctamente al final del body - `wp_footer()`.
 - revisar en [index.php](./app/index.php), [page.php](./app/page.php),
-  [single.php](./app/single.php), etc. Que estén la funciones de cabecera y pie de
-  página correctamente.
+  [single.php](./app/single.php), etc. Que estén la funciones de cabecera y pie
+  de página correctamente.
   - `get_header()`.
   - `get_footer()`.

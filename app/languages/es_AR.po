@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: undefined\n"
-"POT-Creation-Date: 2022-07-16 08:52-0300\n"
+"POT-Creation-Date: 2022-08-04 10:38-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,11 +22,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: backups/404.php:22
+#: backups/404.php:23
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ups! Esa pagina no se pudo encontrar."
 
-#: backups/404.php:26
+#: backups/404.php:27
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
@@ -34,58 +34,46 @@ msgstr ""
 "Parece que no se encontr&oacute; nada en este lugar. Intent&aacute; usar uno "
 "de los enlaces a continuación o hacer una b&uacute;squeda."
 
-#: backups/404.php:35
+#: backups/404.php:36
 msgid "Most Used Categories"
 msgstr "Categor&iacute;as m&aacute;s usadas"
 
-#: backups/404.php:53
+#: backups/404.php:54
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Intentá ver en los archivos mensuales. %1$s"
 
-#: backups/searchform.php:17 backups/searchform.php:19
-#: backups/searchform.php:22
+#: backups/searchform.php:18 backups/searchform.php:20
+#: backups/searchform.php:23
 msgid "Search"
 msgstr "Buscar"
 
-#: backups/searchform.php:19
+#: backups/searchform.php:20
 msgid "What are you looking for?"
 msgstr "¿Qué estás buscando?"
 
-#: comments.php:33
+#: comments.php:34
 #, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr "Una opinion en &ldquo;%1$s&rdquo;"
 
-#: comments.php:39
+#: comments.php:40
 #, php-format
-msgctxt "título de la entrada"
+msgctxt "Título de la entrada"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s opinion en &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s opiniones en &ldquo;%2$s&rdquo;"
 
-#: comments.php:64
+#: comments.php:65
 msgid "Comments are closed."
 msgstr "Los comentarios están cerrados."
-
-#: functions.php:132 functions.php:149
-msgid "Site under maintenance"
-msgstr "Sitio en mantenimiento"
-
-#: functions.php:134
-msgid "We are making some improvements,"
-msgstr "Estamos haciendo algunas mejoras,"
-
-#: functions.php:135
-msgid "please come back later."
-msgstr "por favor vuelve m&aacute;s tarde."
 
 #: header.php:29
 msgid "Skip to content"
 msgstr "Saltar al contenido"
 
-#: inc/core/class-enqueue.php:45
+#: inc/core/class-enqueue.php:47
 msgid " Press enter to view the sub-menu."
 msgstr " Presion&aacute; enter para ver los sub-menus."
 
@@ -110,11 +98,11 @@ msgstr ""
 msgid "Site Address"
 msgstr "Direcci&oacute;n del Sitio"
 
-#: inc/setup/class-alerts.php:32
+#: inc/setup/class-alerts.php:34
 msgid "Ups. This is not working fine."
 msgstr "Ups. Esto no est&aacute; funcionando bien."
 
-#: inc/setup/class-alerts.php:32
+#: inc/setup/class-alerts.php:34
 msgid ""
 "Your web browser is not compatible or has Javascript disable witch is "
 "important for multiple functionalities. Activate, update or change to a web "
@@ -125,11 +113,11 @@ msgstr ""
 "funcionalidades. Activa, actualiza o cambia a un navegador web compatible "
 "con estas funciones."
 
-#: inc/setup/class-alerts.php:35
+#: inc/setup/class-alerts.php:37
 msgid "We have a problem here."
 msgstr "Ac&aacute; tenemos un problema."
 
-#: inc/setup/class-alerts.php:35
+#: inc/setup/class-alerts.php:37
 msgid ""
 "Your web browser doesn&rsquo;t support some properties and technologies that "
 "this site use."
@@ -137,7 +125,7 @@ msgstr ""
 "Tu navegador web no es compatible con algunas propiedades y tecnolog&iacute;"
 "as modernas que este sitio utiliza."
 
-#: inc/setup/class-alerts.php:35
+#: inc/setup/class-alerts.php:37
 msgid ""
 "Update to the latest version or try another modern options like Mozilla "
 "Firefox, Google Chrome or the new Microsoft Edge."
@@ -145,16 +133,16 @@ msgstr ""
 "Actualiza a una versi&oacute;n m&aacute;s nueva o prueba otras opciones como "
 "Mozilla Firefox, Google Chrome o el nuevo Microsoft Edge."
 
-#: inc/setup/class-alerts.php:72
+#: inc/setup/class-alerts.php:74
 msgid "Close"
 msgstr "Cerrar"
 
-#: inc/setup/class-alerts.php:73
+#: inc/setup/class-alerts.php:75
 msgctxt "Sobre políticas de privacidad"
 msgid "Read more about our "
 msgstr "Lee m&aacute;s sobre nuestra "
 
-#: inc/setup/class-alerts.php:74
+#: inc/setup/class-alerts.php:76
 msgid "Don&rsquo;t show again"
 msgstr "No mostrar de nuevo"
 
@@ -163,51 +151,72 @@ msgstr "No mostrar de nuevo"
 msgid "%s - Private"
 msgstr "%s - Privado"
 
-#: inc/setup/class-posts.php:177
+#: inc/setup/class-posts.php:178
 msgid "Updated on"
 msgstr "Actualizado en"
 
-#: inc/setup/class-posts.php:209
+#: inc/setup/class-posts.php:210
 #, php-format
 msgctxt "Autor de la entrada"
 msgid "by %s"
 msgstr "por %s"
 
-#: inc/setup/class-posts.php:230
+#: inc/setup/class-posts.php:240
+#, php-format
+msgid "1 %1$s"
+msgstr ""
+
+#: inc/setup/class-posts.php:241
+msgid "comment on"
+msgstr "comentario en"
+
+#: inc/setup/class-posts.php:247
+#, php-format
+msgctxt "Cantidad comentarios y título de la entrada"
+msgid "%1$s %2$s"
+msgid_plural "%1$s %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/setup/class-posts.php:249
+msgid "comments on"
+msgstr "comentarios en"
+
+#: inc/setup/class-posts.php:263
 msgid ", "
 msgstr ""
 
-#: inc/setup/class-posts.php:236
+#: inc/setup/class-posts.php:269
 msgid "Categories"
 msgstr "Categor&iacute;as"
 
-#: inc/setup/class-posts.php:265
+#: inc/setup/class-posts.php:298
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: inc/setup/class-posts.php:306
+#: inc/setup/class-posts.php:339
 msgid "This content is private. To view it enter your password below:"
 msgstr "Este contenido es privado. Para verlo ingresa la contraseña debajo:"
 
-#: inc/setup/class-posts.php:307
+#: inc/setup/class-posts.php:340
 msgctxt "Private post form label"
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: inc/setup/class-posts.php:310
+#: inc/setup/class-posts.php:343
 msgctxt "Private post form submit"
 msgid "Enter"
 msgstr "Ingresar"
 
-#: inc/setup/class-posts.php:326
+#: inc/setup/class-posts.php:359
 msgid "Sorry, your password is wrong. Please try again."
 msgstr "La contraseña es incorrecta. Por favor intenta de nuevo."
 
-#: inc/setup/class-posts.php:361
+#: inc/setup/class-posts.php:392
 msgid "Continue reading"
 msgstr "Continuar leyendo"
 
-#: inc/setup/class-posts.php:362
+#: inc/setup/class-posts.php:393
 msgid "about "
 msgstr "sobre "
 
@@ -252,23 +261,32 @@ msgstr ""
 "Parece que no podemos encontrar lo que est&aacute;s buscando. tal vez una "
 "nueva b&uacute;squeda puede ayudar."
 
-#: template-parts/content-page.php:32 template-parts/content.php:82
+#: template-parts/content-page.php:32 template-parts/content.php:84
 msgid "Pages:"
 msgstr "P&aacute;ginas:"
 
-#: template-parts/content.php:50
+#: template-parts/content.php:52
 msgid "Read more"
 msgstr "Leer m&aacute;s"
 
-#: template-parts/content.php:50
+#: template-parts/content.php:52
 msgctxt "Sobre la entrada"
 msgid "about "
 msgstr "sobre "
 
-#: template-parts/content.php:72
+#: template-parts/content.php:74
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Continuar leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#~ msgid "Site under maintenance"
+#~ msgstr "Sitio en mantenimiento"
+
+#~ msgid "We are making some improvements,"
+#~ msgstr "Estamos haciendo algunas mejoras,"
+
+#~ msgid "please come back later."
+#~ msgstr "por favor vuelve m&aacute;s tarde."
 
 #~ msgid "Coming soon"
 #~ msgstr "Próximamente"

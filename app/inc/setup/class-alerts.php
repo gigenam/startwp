@@ -26,6 +26,9 @@ if ( ! class_exists( 'Startwp_Alerts' ) ) {
 					/**
 					 * Para traducir los mensajes, estos deben ser creados antes
 					 * de instanciar la clase en esta acción.
+					 *
+					 * TODO: Probar otras formas de iniciar las instancias.
+					 * Para poder agregar los mensajes de una forma más cómoda.
 					 */
 					if ( 'no-js' === $args['type'] ) {
 						// Mensaje de JavaScript desactivado.

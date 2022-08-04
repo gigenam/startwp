@@ -6,6 +6,7 @@
  * * editor()
  * * login()
  * * comments()
+ * * icons()
  *
  * @package startwp
  * @since   1.0.0
@@ -42,7 +43,7 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 				'startwp-main',
 				'startwp_i10n',
 				array(
-					'themeURI'     => esc_url( get_template_directory_uri() ), // Usado en: InlineIcons.js.
+					'themeURI'     => esc_url( get_template_directory_uri() ), // URL absoluta hasta el tema en caso de necesitarla para JavaScript.
 					'viewSubmenus' => __( ' Press enter to view the sub-menu.', 'startwp' ), // Usado en: MainNav.js.
 				)
 			);
@@ -74,10 +75,12 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 		/**
 		 * Agregar íconos en linea antes de finalizar el contenido.
 		 *
-		 * Para poder usarlos con <svg><use xlink:href="#nombre-icono" /><svg>
+		 * Para poder usarlos con <svg><use xlink:href="#nombre-icono" /></svg>
 		 * sin requerir de una URL absoluta y poder cargarlos correctamente sin
-		 * problemas en caso de usar servicio de tipo CDN para cargar y cachear
-		 * los recursos de forma externa.
+		 * problemas (CORS) en caso de usar servicios de tipo CDN para cargar y
+		 * cachear los recursos de forma externa.
+		 *
+		 * @since 1.2.0
 		 */
 		public static function icons() {
 			/**
@@ -105,7 +108,7 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 			);
 
 			/**
-			 * Agrega el contenido de sprites.svg en el píe de página del sitio
+			 * Agrega el contenido de sprites.svg en el pie de página del sitio
 			 * de forma segura para evitar código malicioso. Si tienes problemas
 			 * con algunos ícono, puedes escapar más propiedades como 'clipPath'
 			 * o 'circle', etc.

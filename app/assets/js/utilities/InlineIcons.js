@@ -4,7 +4,7 @@
  * Agregarle las clases 'has-icon icon-[nombre ícono]' a un elemento en el HTML.
  * Para agregar el ícono después, usar 'has-icon-after icon-[nombre ícono]'.
  * En caso de no poder controlar el HTML, usar el método customIcon().
- * Ver a partir de lineas 20 y 82.
+ * Ver a partir de lineas 16 y 80.
  *
  * @since 1.0.0
  */

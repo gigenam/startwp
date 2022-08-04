@@ -11,7 +11,7 @@ import InlineIcons    from './utilities/InlineIcons.js';
 new MainNav();
 
 // Utilidades.
-( function( window ) {
+( ( window ) => {
 	// Hacer DetectBrowsers de acceso global guardándolo en window.
 	if ( typeof( window.DetectBrowsers ) === 'undefined' ) {
 		window.DetectBrowsers = DetectBrowsers;

@@ -25,14 +25,14 @@ if ( ! class_exists( 'Startwp_Login' ) ) {
 		}
 
 		/**
-		 * Remplazar la url del logo
+		 * Remplazar la url de wordpress.org del logo por la de tu sitio
 		 */
 		public function logo_url() {
 			return esc_url( home_url() );
 		}
 
 		/**
-		 * Remplazar el texto del logo
+		 * Remplazar el texto del logo por el nombre de tu sitio
 		 */
 		public function logo_text() {
 			return esc_html( get_bloginfo( 'name' ) );

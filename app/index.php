@@ -13,8 +13,7 @@
 get_header();
 ?>
 
-<main id="main" class="<?php echo esc_html( 'site-main' ); ?>">
-
+<main id="primary" class="<?php echo esc_html( 'site-main' ); ?>">
 	<?php
 	if ( have_posts() ) :
 
@@ -51,9 +50,7 @@ get_header();
 		get_template_part( 'template-parts/content', 'none' );
 
 	endif;// Fin have_posts().
-
 	?>
-
 </main><!-- #main -->
 
 <?php

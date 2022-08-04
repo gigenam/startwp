@@ -7,8 +7,9 @@
  * * post_thumbnail()
  * * post_title()
  * * posted_on()
- * * posted_update()
  * * posted_by()
+ * * comments_count()
+ * * posted_update()
  * * post_categories()
  * * post_tags()
  * * check_post_password()
@@ -40,8 +41,9 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 			add_action( 'startwp_single_header', array( $this, 'post_thumbnail' ), 10 );
 			add_action( 'startwp_single_header', array( $this, 'post_title' ), 20 );
 			add_action( 'startwp_single_publish', array( $this, 'posted_on' ), 10 );
-			add_action( 'startwp_single_publish', array( $this, 'posted_update' ), 30 );
 			add_action( 'startwp_single_publish', array( $this, 'posted_by' ), 20 );
+			add_action( 'startwp_single_publish', array( $this, 'comments_count' ), 30 );
+			add_action( 'startwp_single_publish', array( $this, 'posted_update' ), 40 );
 			add_action( 'startwp_single_footer', array( $this, 'post_categories' ), 10 );
 			add_action( 'startwp_single_footer', array( $this, 'post_tags' ), 20 );
 
@@ -183,7 +185,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 
 					// Última actualización.
 					printf(
-						'<br><span class="entry-posted-on entry-posted-on--updated">%s</span>',
+						'<br><span class="col-12 entry-posted-on entry-posted-on--updated">%s</span>',
 						wp_kses(
 							$time_string_update,
 							array(
@@ -205,7 +207,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		public static function posted_by() {
 			printf(
 				'<span class="entry-posted-by">' . esc_html(
-				/* translators: %s: nombre de autor. */
+					/* translators: %s: Nombre de autor. */
 					apply_filters( 'startwp_posted_by_text', esc_html_x( 'by %s', 'Autor de la entrada', 'startwp' ) )
 				) . '</span>',
 				wp_kses(
@@ -221,17 +223,51 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		}
 
 		/**
+		 * Agregar contador de comentarios
+		 *
+		 * @since 1.2.1
+		 */
+		public static function comments_count() {
+			// Mostrar contador sólo si los comentarios están abiertos o hay
+			// alguno publicado. Y sólo si la entrada no está protegida con contraseña.
+			if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+				$startwp_comment_count = get_comments_number();
+				$startwp_comments_icon = ( '0' === $startwp_comment_count ) ? '#cmt' : '#cmts';
+				$startwp_no_comments   = ( '0' === $startwp_comment_count ) ? ' is-outline' : '';
+
+				printf( '<span class="entry-comments margin-left-auto"><a href="' . esc_url( get_permalink() . '#comments' ) . '">' );
+				if ( '1' === $startwp_comment_count ) {
+					// Un comentario.
+					printf(
+						/* translators: 1: Título de la entrada. */
+						esc_html__( '1 %1$s', 'startwp' ),
+						'<span class="screen-reader-text">' . esc_html__( 'comment on', 'startwp' ) . ' &ldquo;' . wp_kses_post( get_the_title() ) . '&rdquo;</span><svg class="icon-comment"><use xlink:href="#cmt" /></svg>'
+					);
+				} else {
+					// 0 o muchos comentarios.
+					printf(
+					/* translators: 1: Número de comentarios, 2: Título. */
+						esc_html( _nx( '%1$s %2$s', '%1$s %2$s', $startwp_comment_count, 'Cantidad comentarios y título de la entrada', 'startwp' ) ),
+						number_format_i18n( $startwp_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+						'<span class="screen-reader-text">' . esc_html__( 'comments on', 'startwp' ) . ' &ldquo;' . wp_kses_post( get_the_title() ) . '&rdquo;</span><svg class="icon-comment' . esc_html( $startwp_no_comments ) . '" aria-hidden="true"><use xlink:href="' . esc_attr( $startwp_comments_icon ) . '" /></svg>'
+					);
+				}
+				printf( '</a></span>' );
+			}
+		}
+
+		/**
 		 * Agregar enlace a la/s categoría/s.
 		 */
 		public static function post_categories() {
 			// Solo mostrar en entradas.
 			if ( 'post' === get_post_type() ) {
-				/* translators: separador de categorías */
+				/* translators: Separador de categorías */
 				$categories_list = get_the_category_list( esc_html__( ', ', 'startwp' ) );
 
 				if ( $categories_list && is_single() ) {
 					printf(
-					/* translators: 1: lista de categorías. */
+						/* translators: 1: Lista de categorías. */
 						'<p class="entry-categories"><span class="entry-categories-title">' . esc_html(
 							apply_filters( 'startwp_categories_list_text', __( 'Categories', 'startwp' ) )
 						) . '</span><br>' . esc_html( '%1$s' ) . '</p>',
@@ -255,12 +291,12 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		public static function post_tags() {
 			// Solo mostrar en entradas.
 			if ( 'post' === get_post_type() ) {
-				/* translators: separador de etiquetas */
+				/* translators: Separador de etiquetas */
 				$tags_list = get_the_tag_list( '', esc_html( ' ' ) );
 
 				if ( $tags_list && is_single() ) {
 					printf(
-					/* translators: 1: lista de etiquetas */
+						/* translators: 1: Lista de etiquetas */
 						'<p class="entry-tags"><span class="entry-tags-title">' . esc_html(
 							apply_filters( 'startwp_tags_list_text', __( 'Tags', 'startwp' ) )
 						) . '</span><br>' . esc_html( '%1$s' ) . '</p>',
@@ -340,7 +376,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 */
 		public static function protected_post_text( $protect ) {
 			// Para agregar contenido personalizado es recomendable hacerlo traducible:
-			// Ej: esc_html_x( 'Hola %s', 'título original', 'startwp' ).
+			// Ej: esc_html_x( 'Hola %s', 'Título original', 'startwp' ).
 			return esc_html( '%s' );
 		}
 

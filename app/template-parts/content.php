@@ -14,7 +14,6 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header<?php echo esc_html( $startwp_wrapper ); ?>">
-
 		<?php
 		/**
 		 * Hook: startwp_single_header
@@ -26,14 +25,15 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 
 		if ( has_action( 'startwp_single_publish' ) && 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="flexrow entry-meta">
 				<?php
 				/**
 				 * Hook: startwp_single_publish
 				 *
-				 * @hooked Startwp_Posts_Extras->posted_on     - 10
-				 * @hooked Startwp_Posts_Extras->posted_by     - 20
-				 * @hooked Startwp_Posts_Extras->posted_update - 30
+				 * @hooked Startwp_Posts_Extras->posted_on      - 10
+				 * @hooked Startwp_Posts_Extras->posted_by      - 20
+				 * @hooked Startwp_Posts_Extras->comments_count - 30
+				 * @hooked Startwp_Posts_Extras->posted_update  - 40
 				 */
 				do_action( 'startwp_single_publish' );
 				?>
@@ -41,11 +41,9 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 			<?php
 		endif;
 		?>
-
 	</header><!-- .entry-header -->
 
 	<div class="entry-content<?php echo esc_html( $startwp_wrapper ); ?>">
-
 		<?php
 		$startwp_read_more_link = apply_filters( 'startwp_excerpt_more', '<a class="has-icon-after icon-arrow is-right readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_html__( 'Read more', 'startwp' ) . ' <span class="screen-reader-text">' . esc_html_x( 'about ', 'Sobre la entrada', 'startwp' ) . get_the_title() . '</span></a>' );
 		if ( ! is_singular() && ! has_excerpt() ) {
@@ -84,7 +82,6 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 			)
 		);
 		?>
-
 	</div><!-- .entry-content -->
 
 	<?php if ( has_action( 'startwp_single_footer' ) && ! post_password_required() ) : ?>

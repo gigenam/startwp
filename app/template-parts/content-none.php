@@ -1,6 +1,6 @@
 <?php
 /**
- * Plantilla para cuando no se encontró contenido (pagina o entrada)
+ * Plantilla para cuando no se encontró contenido (página o entrada)
  *
  * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/
  * @package startwp
@@ -41,7 +41,6 @@
 
 		endif;
 		?>
-
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

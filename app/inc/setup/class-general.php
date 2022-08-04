@@ -61,7 +61,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		/**
 		 * Logo personalizado
 		 *
-		 * @see header.php#L32
+		 * @see header.php#L36
 		 */
 		public static function custom_logo() {
 			$custom_logo = get_custom_logo();
@@ -141,12 +141,12 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		/**
 		 * Open Graph metas
 		 *
-		 * Algunas funcionalidades para poder compartir paginas en redes sociales.
+		 * Algunas funcionalidades para poder compartir páginas en redes sociales.
 		 * Para opciones o control más avanzado, comenta esto en el __construct()
 		 * y utiliza algunos de los plugins más populares.
 		 *
 		 * En el caso de Twitter se puede usar una imagen diferente. Para esto
-		 * hay que cambiar el valor de la linea 160 por 'summary' y agregar una
+		 * hay que cambiar el valor de la linea 161 por 'summary' y agregar una
 		 * imagen llamada 'og-summary.jpg' en la carpeta 'img' principal.
 		 *
 		 * @see templates/README.md

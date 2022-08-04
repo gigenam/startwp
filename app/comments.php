@@ -15,13 +15,12 @@
 
 if ( post_password_required() ) {
 	// Si la publicación actual está protegida por una contraseña y el visitante
-	// aún no ha ingresado la contraseña, no cargar los comentarios.
+	// aún no ha ingresado la misma, no cargar los comentarios.
 	return;
 }
 ?>
 
 <div id="comments" class="comments-area">
-
 	<?php
 	if ( have_comments() ) :
 		?>
@@ -36,8 +35,8 @@ if ( post_password_required() ) {
 				);
 			} else {
 				printf(
-					/* translators: 1: Número de comentarios, 2: título. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $startwp_comment_count, 'título de la entrada', 'startwp' ) ),
+					/* translators: 1: Número de comentarios, 2: Título. */
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $startwp_comment_count, 'Título de la entrada', 'startwp' ) ),
 					number_format_i18n( $startwp_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
@@ -70,5 +69,4 @@ if ( post_password_required() ) {
 
 	comment_form();
 	?>
-
 </div><!-- #comments -->

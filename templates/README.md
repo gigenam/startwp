@@ -15,13 +15,12 @@ Carpeta para agregar plantillas reutilizables.
 `favicons/`:
 
 - En esta carpeta se encuentran algunos archivos para la creación de la imagen
-  que aparece en las pestañas de los navegadores (favicon).
-  @see [header.php](../app/header.php#L18).
+  que aparece en las pestañas de los navegadores (favicon). Ver [header.php](../app/header.php#L18).
 
   Las imágenes finales deben ir en la carpeta `app/img/`.
 
   Para más ayuda o más íconos (por ejemplo para Android e iOS), visita
-  [https://realfavicongenerator.net/](https://realfavicongenerator.net/)
+  [https://realfavicongenerator.net/](https://realfavicongenerator.net/).
 
   - `apple-touch-icon.png` es para dispositivos Apple y tiene un tanaño de 180x180.
   - `favicon.png` es el más genérico y soportado por la mayoría de navegadores y
@@ -32,20 +31,22 @@ Carpeta para agregar plantillas reutilizables.
 
 `screenshot/`:
 
-- En esta carpeta se encuentra algunos archivos para la creación de la imagen de
+- En esta carpeta se encuentran algunos archivos para la creación de la imagen de
   muestra del tema que se visualiza al seleccionar temas en la administración.
-  @see [screenshot.png](../app/screenshot.png)
+  Ver [screenshot.png](../app/screenshot.png).
 - El archivo de formato .xcf es para ser utilizado con [GIMP](https://gimp.org/).
 
 `sharing/`:
 
 - En esta carpeta se encuentran algunos archivos para la creación de la imagen de
   muestra al compartir enlaces en redes sociales como Facebook y Twitter.
-  @see [class-general.php](../app/inc/setup/class-general.php#L139)
-  @see [og-summary-large.jpg](../app/img/og-summary-large.jpg)
+  Ver [class-general.php](../app/inc/setup/class-general.php#L139) y
+  [og-summary-large.jpg](../app/img/og-summary-large.jpg).
 
 - El archivo de formato .xcf es para ser utilizado con [GIMP](https://gimp.org/)
   y tiene dos modos por defecto. **summary** y **summary-large**.
-  - Tamaños mínimos recomendados (px):
-    - Summary Large (1.9:1) = 1200 x 630
-    - Summary (1:1) = 600 x 600
+
+  Tamaños mínimos recomendados (px):
+
+  - Summary Large (1.9:1) = 1200 x 630
+  - Summary (1:1) = 600 x 600
