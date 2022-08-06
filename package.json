@@ -19,8 +19,8 @@
 	"main": "index.js",
 	"scripts": {
 		"help": "node index.js",
-		"start": "npm install && composer update && gulp updateThemeInfo && gulp build && node index.js",
-		"start:no-composer": "npm install && gulp updateThemeInfo && gulp build && node index.js",
+		"start": "npm install && composer update && gulp updateThemeInfo && gulp build && gulp translate && node index.js",
+		"start:no-composer": "npm install && gulp updateThemeInfo && gulp build && gulp translate && node index.js",
 		"dev": "gulp dev",
 		"watch": "gulp watch",
 		"build": "NODE_ENV=production gulp build && gulp scripts"

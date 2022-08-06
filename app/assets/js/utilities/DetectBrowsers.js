@@ -51,17 +51,17 @@ export default class DetectBrowsers {
 		this.isOperaOld = this.userAgentString.indexOf( 'OP' ) > -1;
 
 		// Descartar IE ya que también coincide con Firefox rv:.
-		if ( ( this.isFirefox ) && ( this.isIE ) ) {
+		if ( this.isFirefox && this.isIE ) {
 			this.isIE = false;
 		}
 
 		// Descartar Safari ya que también coincide con Chrome.
-		if ( ( this.isChrome ) && ( this.isSafari ) ) {
+		if ( this.isChrome && this.isSafari ) {
 			this.isSafari = false;
 		}
 
 		// Descartar Chrome ya que también coincide con Opera.
-		if ( ( this.isChrome ) && ( this.isOperaOld ) ) {
+		if ( this.isChrome && this.isOperaOld ) {
 			this.isChrome = false;
 		}
 	}

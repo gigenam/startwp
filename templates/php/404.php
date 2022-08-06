@@ -57,7 +57,6 @@ get_header();
 
 					the_widget( 'WP_Widget_Tag_Cloud' );
 					?>
-
 			</div><!-- .page-content -->
 
 		</section><!-- .error-404 -->

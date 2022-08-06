@@ -101,8 +101,8 @@ export const styles = ( done ) => {
 		gulp.src( paths.styles.src )
 			.pipe( sourcemaps.init() )
 			.pipe( sass( { outputStyle: 'expanded' } ).on( 'error', sass.logError ) )
+			// .pipe( mergeMQ() )
 			.pipe( sourcemaps.write( '.' ) )
-			.pipe( mergeMQ() )
 			.pipe( gulp.dest( paths.styles.dest ) )
 			.pipe( server.stream() );
 	} else {
@@ -114,7 +114,7 @@ export const styles = ( done ) => {
 				// Quitar versión a los sprites para evitar problemas.
 				return e.match( /sprites.svg#[a-zA-Z-_]*/g );
 			} ) )
-			.pipe( mergeMQ() )
+			// .pipe( mergeMQ() )
 			.pipe( gulp.dest( paths.styles.dest ) )
 			.pipe( postcss( [ cssnano() ] ) )
 			.pipe( rename( { suffix: '.min' } ) )
@@ -134,16 +134,14 @@ export const scripts = ( done ) => {
 					test: /\.js$/,
 					use: {
 						loader: 'babel-loader',
-						options: {
-							presets: [ '@babel/preset-env' ],
-						},
+						options: { presets: [ '@babel/preset-env' ] },
 					},
 				} ],
 			},
 			devtool: ( PRODUCTION !== 'production' ) ? 'inline-source-map' : false,
 			output: { filename: ( PRODUCTION !== 'production' ) ? '[name].js' : '[name].min.js' },
 		} ).on( 'error', function handleError() {
-			this.emit( 'end' ); // Recover from errors.
+			this.emit( 'end' ); // Seguir compilando a pesar de errores.
 		} ) )
 		.pipe( gulp.dest( paths.scripts.dest ) );
 	done();

@@ -84,7 +84,7 @@ export default class MainNav {
 	 */
 	toggleMenu() {
 		// Comentar en caso de usar estilos flotante o lateral.
-		// @see /assets/scss/components/_menus.scss#L149
+		// @see /assets/scss/components/_menus.scss#L150
 		document.documentElement.style.setProperty( '--startwp--nav-primary--height', `${ this.menuContainer.getBoundingClientRect().height }px` );
 
 		this.menuButton.classList.toggle( 'btn-menu--is-active' );

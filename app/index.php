@@ -13,7 +13,7 @@
 get_header();
 ?>
 
-<main id="primary" class="<?php echo esc_html( 'site-main' ); ?>">
+<main id="primary" class="site-main">
 	<?php
 	if ( have_posts() ) :
 

@@ -97,32 +97,42 @@
 //
 // Alineación de bloques
 // ----------------------------------------------
+.alignright,
+.alignleft {
+	margin-bottom: rem(5);
+}
+
 .alignleft {
 	float: left;
 	margin-right: rem(10);
-	margin-bottom: rem(10);
+
+	@include from($main-width) {
+		margin-left: 8vw;
+	}
 }
 
 .alignright {
 	float: right;
-	margin-bottom: rem(10);
 	margin-left: rem(10);
+
+	@include from($main-width) {
+		margin-right: 8vw;
+	}
 }
 
 .alignleft,
 .alignright {
-	max-width: 50%;
+	max-width: 50%; // Quitar en caso de no querer limite de ancho.
 }
 
 .aligncenter {
 	display: block;
 	margin-right: auto;
-	margin-bottom: rem(10);
 	margin-left: auto;
 }
 
 .alignwide {
-	width: calc(var(--startwp--content-width--main, #{$main-width}) + #{$padding-content * 4});
+	width: calc(var(--startwp--content-width--main, #{$main-width}) + #{$padding-content * 6});
 	margin-right: auto;
 	margin-left: auto;
 }

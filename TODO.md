@@ -16,6 +16,15 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 ## Revisiones pendientes:
 
+Quitada la tarea para combinar todos los **media queries** en [gulpfile.js](./gulpfile.js#L98)
+porque causa problemas con los `sourcemaps` y puede generar problemas de
+especificidad en producción si no se prueban los estilos antes. Ademas el paquete
+no recibe actualizaciones desde hace demasiados años (mismo para otros similares).
+
+De momento el paquete se sigue instalando con [npm install](./package.json#L40)
+para hacer más pruebas o como opción de compilación manual, descomentando las
+lineas [104](./gulpfile.js#L104) y/o [117](./gulpfile.js#L117) en [gulpfile.js](./gulpfile.js#L98).
+
 ## Correcciones:
 
 ## Traducciones:

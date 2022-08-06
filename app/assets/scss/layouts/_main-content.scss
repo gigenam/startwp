@@ -27,6 +27,7 @@
 	}
 
 	// Angosto.
+	@at-root .site-main--inner &, // Wrapper más angosto en páginas individuales para una lectura más cómoda.
 	&.is-narrow {
 		--startwp--content-width--main: #{$narrow-width};
 
@@ -43,6 +44,10 @@
 // ----------------------------------------------
 .entry-content {
 	@include clearfix();
+
+	> [class*="wp-block"]:where(:not(.alignleft, .alignright)) {
+		margin-bottom: 1em;
+	}
 }
 
 .page-links {
@@ -54,7 +59,7 @@
 	.site-header {
 		margin-bottom: 0;
 	}
-	.site-main {
+	.site-main--inner {
 		padding-top: 0;
 	}
 }
@@ -88,11 +93,15 @@
 	}
 
 	.entry-thumbnail img {
-		margin: -#{$padding-content} -#{$padding-content} #{$padding-content} -#{$padding-content};
+		margin: -#{$padding-content} -#{$padding-content} 0.25em -#{$padding-content};
 		width: calc(100% + #{$padding-content * 2});
 		max-width: calc(100% + #{$padding-content * 2});
-		max-height: 16vw;
+		max-height: 30vw;
 		object-fit: cover;
+
+		@include from(medium) {
+			max-height: 15vw;
+		}
 	}
 
 	// Elementos de ancho completo.
@@ -101,6 +110,22 @@
 	.posts-navigation,
 	.widgets-sidebar--main-sidebar {
 		grid-column: 1 / -1;
+	}
+
+	.entry-header {
+		svg {
+			vertical-align: -3px;
+			font-size: 0.9em;
+		}
+
+		.entry-title svg {
+			margin-right: 0.25rem;
+			margin-left: -0.25rem;
+		}
+	}
+
+	.entry-content > :last-child {
+		margin-bottom: 0.2rem;
 	}
 
 	// Leer más.

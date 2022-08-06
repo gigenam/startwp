@@ -5,6 +5,11 @@
  */
 
 .single {
+	.entry-meta,
+	.entry-content:where(:not(:last-child)) {
+		margin-bottom: 1.5em;
+	}
+
 	.post-navigation,
 	.comments-area {
 		@extend .wrapper;

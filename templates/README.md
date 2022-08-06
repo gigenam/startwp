@@ -29,6 +29,12 @@ Carpeta para agregar plantillas reutilizables.
     y además de la ventaja propia en cuanto a calidad, también se puede utilizar
     en temas claros y oscuros (abrir el archivo en un editor de texto para ver).
 
+`php/`:
+
+- En esta carpeta se agregan todos los archivos que no se están utilizando pero
+  quedan como respaldo por si se necesitan a futuro. Por ejemplo si se quiere hacer
+  uso de más funcionalidades de blog como archivos, páginas de usuarios, etc.
+
 `screenshot/`:
 
 - En esta carpeta se encuentran algunos archivos para la creación de la imagen de

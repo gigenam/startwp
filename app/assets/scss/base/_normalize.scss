@@ -142,6 +142,14 @@ ol {
 	}
 }
 
+// Drop cap respetando estilos generales.
+// Revisar dependiendo de cada familia tipográfica.
+.has-drop-cap:not(:focus)::first-letter {
+	margin: 0.06em 0 0 -0.085em;
+	font-size: 7.2em; // 4 lineas aprox.
+	font-weight: inherit;
+}
+
 // Estilos por defecto para elementos sin clases.
 a {
 	color: var(--startwp--color--primary);
@@ -178,7 +186,8 @@ a {
 	}
 }
 
-blockquote {
+blockquote,
+.wp-block-quote {
 	padding: 0.8em 0.8em 0.8em clamp(0.7em, 2vw, 1.4em);
 	margin: 0 0 1em 0;
 	border: 1px solid var(--startwp--color--shadow);
@@ -190,7 +199,15 @@ blockquote {
 		padding-left: 0.5em;
 		margin-top: 0.5em;
 		font-size: 0.95em;
+		font-style: italic;
 	}
+}
+
+.wp-block-pullquote blockquote {
+	padding: 0 0.8em;
+	margin: 0;
+	border: none;
+	border-radius: 0;
 }
 
 // Formatos.
@@ -228,6 +245,12 @@ samp {
 	* {
 		white-space: pre-wrap;
 	}
+}
+
+.wp-block-code code {
+	padding: 0;
+	background-color: transparent;
+	border: none;
 }
 
 sub,
@@ -270,6 +293,13 @@ figcaption {
 	margin-bottom: 1em;
 	font-size: 0.9em;
 	text-align: center;
+}
+
+.wp-block-image figcaption {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: currentColor;
+	opacity: 0.8;
 }
 
 // Imágenes en linea dentro de párrafos.
@@ -320,9 +350,10 @@ select,
 textarea {
 	width: 100%;
 	max-width: 100%;
+	margin-right: 0.25rem;
 
 	@include from(medium) {
-		width: $input-width;
+		max-width: $input-width;
 	}
 }
 
@@ -399,7 +430,9 @@ table {
 	overflow: auto;
 
 	@include to(medium) {
-		display: block;
+		&:not(.has-fixed-layout) {
+			display: block;
+		}
 
 		th,
 		td {

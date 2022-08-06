@@ -19,7 +19,7 @@ En caso de estar trabajando en un proyecto, es recomendable clonar o descargar
 en una carpeta aparte para probar que todo funcione bien dependiendo de tu
 entorno de desarrollo.
 
-Para más información, ver [CHANGELOG.md](CHANGELOG.md#L23).
+Para más información, ver [CHANGELOG.md](CHANGELOG.md) Version 1.2.0.
 
 <br>
 
@@ -126,7 +126,7 @@ genérica. También puedes buscar y remplazar esos textos.
 Una vez todo listo, abre una terminal en la carpeta del proyecto y arranca el
 comando `npm run start` para instalar todas las dependencias de desarrollo.
 
-[*] Si no quieres usar [Composer](https://getcomposer.org), usa el comando
+\* Si no quieres usar [Composer](https://getcomposer.org), usa el comando
 `npm run start:no-composer` para evitar errores de instalación.
 
 ## Configuración adicional de plugins

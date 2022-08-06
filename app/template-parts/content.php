@@ -46,11 +46,20 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 	<div class="entry-content<?php echo esc_html( $startwp_wrapper ); ?>">
 		<?php
 		$startwp_read_more_link = apply_filters( 'startwp_excerpt_more', '<a class="has-icon-after icon-arrow is-right readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_html__( 'Read more', 'startwp' ) . ' <span class="screen-reader-text">' . esc_html_x( 'about ', 'Sobre la entrada', 'startwp' ) . get_the_title() . '</span></a>' );
-		if ( ! is_singular() && ! has_excerpt() ) {
+		$show_excerpt           = get_the_excerpt();
+
+		// Extracto personalizado para artículos privados en vista de blog.
+		if ( post_password_required() ) {
+			$show_excerpt = ( ! empty( $post->post_excerpt ) )
+				? $post->post_excerpt
+				: __( 'This content is private. Enter to get access.', 'startwp' );
+		}
+
+		if ( ! is_singular() ) {
 			printf(
 				'%1$s',
 				wp_kses(
-					'<p>' . get_the_excerpt() . $startwp_read_more_link . '</p>',
+					'<p>' . $show_excerpt . $startwp_read_more_link . '</p>',
 					array(
 						'p'    => array(),
 						'a'    => array(
@@ -63,29 +72,20 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 				)
 			);
 		} else {
-			the_content(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Nombre de la entrada para lectores de pantalla */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'startwp' ),
-						array( 'span' => array( 'class' => array() ) )
-					),
-					wp_kses_post( get_the_title() )
+			the_content();
+
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'startwp' ),
+					'after'  => '</div>',
 				)
 			);
 		}
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'startwp' ),
-				'after'  => '</div>',
-			)
-		);
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( has_action( 'startwp_single_footer' ) && ! post_password_required() ) : ?>
-		<footer class="entry-footer wrapper">
+	<?php if ( is_singular() && has_action( 'startwp_single_footer' ) && ! post_password_required() ) : ?>
+		<footer class="entry-footer<?php echo esc_html( $startwp_wrapper ); ?>">
 			<?php
 			/**
 			 * Hook: startwp_single_footer

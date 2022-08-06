@@ -74,7 +74,7 @@ $border-radius: 4px;
 	--startwp--color--success: #{$color-success};
 	--startwp--color--warning: #{$color-warning};
 	--startwp--color--error: #{$color-error};
-	--startwp--color--shadow: rgba(#{hexToRGB($color-text)}, 0.2);
+	--startwp--color--shadow: rgba(#{hexToRGB($color-text)}, 0.16);
 	--startwp--color--white: #ffffff;
 	--startwp--color--black: #222222;
 	--startwp--font-family--main: #{$ff-main};

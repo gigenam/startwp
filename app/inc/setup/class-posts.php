@@ -60,6 +60,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 			add_filter( 'the_password_form', array( $this, 'password_form' ) );
 			add_filter( 'the_password_form', array( $this, 'post_password_message' ) );
 			add_filter( 'protected_title_format', array( $this, 'protected_post_text' ) );
+			add_filter( 'private_title_format', array( $this, 'private_post_text' ) );
 		}
 
 		/**
@@ -106,7 +107,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 					'<a class="entry-thumbnail entry-thumbnail--blog alignfull" href="' . esc_url( get_the_permalink() ) . '" aria-hidden="true" tabindex="-1">%s</a>',
 					get_the_post_thumbnail(
 						get_the_ID(),
-						'post-thumbnail',
+						'blog-thumbnail',
 						array( 'alt' => the_title_attribute( array( 'echo' => false ) ) )
 					)
 				);
@@ -378,6 +379,23 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 			// Para agregar contenido personalizado es recomendable hacerlo traducible:
 			// Ej: esc_html_x( 'Hola %s', 'Título original', 'startwp' ).
 			return esc_html( '%s' );
+		}
+
+		/**
+		 * Quitar texto privado en artículos y agregar ícono
+		 *
+		 * @param  string $private Agrega la palabra "privado" al los títulos.
+		 * @return string Solo el título original sin "privado". Con ícono en blog.
+		 */
+		public static function private_post_text( $private ) {
+			// Para agregar contenido personalizado es recomendable hacerlo traducible:
+			// Ej: esc_html_x( 'Hola %s', 'Título original', 'startwp' ).
+			if ( ! is_singular() ) {
+				$private = '<svg class="icon-private"><use xlink:href="#private"></svg>%s';
+			} else {
+				$private = '%s';
+			}
+			return $private;
 		}
 
 		/**
