@@ -48,8 +48,9 @@ if ( ! class_exists( 'Startwp_Customizer' ) ) {
 			$wp_customize->add_setting(
 				'startwp_address',
 				array(
-					'default'   => '',
-					'transport' => 'refresh',
+					'default'           => '',
+					'transport'         => 'refresh',
+					'sanitize_callback' => 'sanitize_text_field',
 				)
 			);
 			$wp_customize->add_control(

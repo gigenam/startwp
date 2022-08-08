@@ -79,17 +79,13 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 		 * sin requerir de una URL absoluta y poder cargarlos correctamente sin
 		 * problemas (CORS) en caso de usar servicios de tipo CDN para cargar y
 		 * cachear los recursos de forma externa.
-		 *
-		 * @since 1.2.0
 		 */
 		public static function icons() {
 			/**
-			 * WordPress prefiere usar WP_Filesystem en vez de la función PHP
-			 * integrada file_get_contents().
+			 * El plugin Theme Check recomienda usar WP_Filesystem sólo para
+			 * actualizaciones. Para este caso es más recomendable usar wp_remote_get().
 			 */
-			global $wp_filesystem;
-			require_once ABSPATH . '/wp-admin/includes/file.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-			WP_Filesystem();
+			$response = wp_remote_get( get_template_directory_uri() . '/img/sprites.svg' );
 
 			/**
 			 * Agregar nuevos filtros para escapar las propiedades de SVG de
@@ -107,46 +103,48 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 				}
 			);
 
-			/**
-			 * Agrega el contenido de sprites.svg en el pie de página del sitio
-			 * de forma segura para evitar código malicioso. Si tienes problemas
-			 * con algunos ícono, puedes escapar más propiedades como 'clipPath'
-			 * o 'circle', etc.
-			 */
-			echo '<div class="svg-sprites hidden">' . wp_kses(
-				$wp_filesystem->get_contents( get_stylesheet_directory_uri() . '/img/sprites.svg' ),
-				array(
-					'svg'   => array(
-						'xmlns'   => array(),
-						'version' => array(),
-						'id'      => array(),
-						'width'   => array(),
-						'height'  => array(),
-						'viewbox' => array(),
-					),
-					'style' => array(),
-					'g'     => array(
-						'id'        => array(),
-						'style'     => array(),
-						'transform' => array(),
-						'clip-path' => array(),
-						'stroke'    => array(),
-					),
-					'path'  => array(
-						'd'         => array(),
-						'style'     => array(),
-						'transform' => array(),
-						'fill'      => array(),
-						'stroke'    => array(),
-					),
-					'rect'  => array(
-						'x'      => array(),
-						'y'      => array(),
-						'width'  => array(),
-						'height' => array(),
-					),
-				)
-			) . '</div>';
+			if ( is_array( $response ) && ! is_wp_error( $response ) ) {
+				/**
+				 * Agrega el contenido de sprites.svg en el pie de página del
+				 * sitio de forma segura para evitar código malicioso. Si tienes
+				 * problemas con algunos ícono, puedes escapar más propiedades
+				 * como 'clipPath' o 'circle', etc.
+				 */
+				echo '<div class="svg-sprites hidden">' . wp_kses(
+					$response['body'],
+					array(
+						'svg'   => array(
+							'xmlns'   => array(),
+							'version' => array(),
+							'id'      => array(),
+							'width'   => array(),
+							'height'  => array(),
+							'viewbox' => array(),
+						),
+						'style' => array(),
+						'g'     => array(
+							'id'        => array(),
+							'style'     => array(),
+							'transform' => array(),
+							'clip-path' => array(),
+							'stroke'    => array(),
+						),
+						'path'  => array(
+							'd'         => array(),
+							'style'     => array(),
+							'transform' => array(),
+							'fill'      => array(),
+							'stroke'    => array(),
+						),
+						'rect'  => array(
+							'x'      => array(),
+							'y'      => array(),
+							'width'  => array(),
+							'height' => array(),
+						),
+					)
+				) . '</div>';
+			}
 		}
 
 	}//end class

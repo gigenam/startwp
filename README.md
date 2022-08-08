@@ -89,7 +89,7 @@ define( 'WP_DEBUG_DISPLAY', true );
 ```
 
 Abre el archivo [package.json](package.json) y modifica todos los valores por
-defecto con tus datos\*. Estos van a ser usados en algunas tareas. Por ejemplo el
+defecto con tus datos\*. Estos van a ser usados en algunas tareas, por ejemplo el
 valor `site` es la url de desarrollo que va a tomar [Browser Sync](https://www.browsersync.io/).
 
 \* El valor `name` debe ser todo en minúsculas y en lo posible una sola palabra.
@@ -103,7 +103,7 @@ valores y las rutas apuntando a donde descargaste el proyecto en tu PC.
 
 // Ejemplo de las rutas en diferentes sistemas operativos.
 
-// Windows y macOS:
+// Windows(*) y macOS:
 "phpcs --config-set installed_paths /Users/TU_USUARIO/ruta/a/wpcs",
 
 // Linux:
@@ -111,6 +111,8 @@ valores y las rutas apuntando a donde descargaste el proyecto en tu PC.
 
 // También puedes hacer la instalación con composer y https://packagist.org/,
 // pero yo prefiero tener una carpeta global para ser usada en todos mis proyectos.
+
+// (*) Usando git bash (y creo que PowerShell), sino con CMD las barras deben ser invertidas.
 ```
 
 Por último abre la carpeta del tema en tu editor y utiliza la funcionalidad de
@@ -121,7 +123,8 @@ Que las búsquedas seas sensibles a mayúsculas ya que necesitaras cambiar vario
 tipos (`startwp`, `Startwp`, `StartWP`).
 
 [ ! ] Todos los archivos `README.md` del tema tienen mis datos y la descripción
-genérica. También puedes buscar y remplazar esos textos.
+genérica, también puedes buscar y remplazar esos textos. Se agradece cualquier
+referencia a este repositorio.
 
 Una vez todo listo, abre una terminal en la carpeta del proyecto y arranca el
 comando `npm run start` para instalar todas las dependencias de desarrollo.
@@ -222,10 +225,10 @@ genérica.
 
 ## Plantillas adicionales
 
-En la carpeta `templates` encontraras tres carpetas con archivos de ayuda para
-crear la imagen que se mostrará en la sección de temas de la administración
-([screenshot.png](./app/screenshot.png)), las imágenes genéricas que se
-mostraran al compartir tu sitio por redes sociales y los favicons.
+En la carpeta `templates` encontraras carpetas con archivos de ayuda para crear
+la imagen que se mostrará en la sección de temas de la administración
+([screenshot.png](./app/screenshot.png)), las imágenes genéricas que se mostraran
+al compartir tu sitio por redes sociales, los favicons y otras plantillas php.
 
 ## Actualizar dependencias
 

@@ -23,27 +23,6 @@ if ( ! class_exists( 'Startwp_Alerts' ) ) {
 			add_action(
 				'wp_footer',
 				function() use ( $args ) {
-					/**
-					 * Para traducir los mensajes, estos deben ser creados antes
-					 * de instanciar la clase en esta acción.
-					 *
-					 * TODO: Probar otras formas de iniciar las instancias.
-					 * Para poder agregar los mensajes de una forma más cómoda.
-					 */
-					if ( 'no-js' === $args['type'] ) {
-						// Mensaje de JavaScript desactivado.
-						$args['message'] = '<span class="heading-3">' . __( 'Ups. This is not working fine.', 'startwp' ) . '</span><br>' . __( 'Your web browser is not compatible or has Javascript disable witch is important for multiple functionalities. Activate, update or change to a web browser compatible with this functions.', 'startwp' );
-					} elseif ( 'old-browser' === $args['type'] ) {
-						// Mensaje de navegadores viejos.
-						$args['message'] = '<span class="heading-3">' . __( 'We have a problem here.', 'startwp' ) . '</span><br>' . __( 'Your web browser doesn&rsquo;t support some properties and technologies that this site use.', 'startwp' ) . '<br> ' . __( 'Update to the latest version or try another modern options like Mozilla Firefox, Google Chrome or the new Microsoft Edge.', 'startwp' );
-					}
-					// else {
-						// Mensajes personalizados.
-						// Si vas a crear múltiples mensajes tendrás que agregar
-						// más validaciones al 'else' como arriba.
-						// Ejemplo de cookies descomentar esto y a partir de linea 162
-						// $args['message'] = '<span class="heading-3">' . __( 'We use cookies here.', 'startwp' ) . '</span><br> ' . __( 'If you don\'t mind we will save some data in your browser for better experience.', 'startwp' ),
-					// }
 					return self::create_alert( $args );
 				},
 				$priority,
@@ -64,7 +43,7 @@ if ( ! class_exists( 'Startwp_Alerts' ) ) {
 				'button'   => '',    // Texto para cerrar (no funciona en no-js alertas).
 				'privacy'  => false, // Mostrar mensaje de privacidad (no funciona en no-js alertas. Política de privacidad debe estar publicado).
 				'remember' => false, // Agregar check para no mostrar de nuevo (no funciona en no-js alertas).
-				'save'     => false, // Luego de sacar alerta, salvar estado en localStorage para no mostrar más (sin necesidad de confirmar el check anterior).
+				'save'     => false, // Luego de cerrar alerta, salvar estado en localStorage para no mostrar más (sin necesidad de confirmar el check anterior).
 			);
 
 			$args = wp_parse_args( $args, $defaults );
@@ -141,37 +120,48 @@ if ( ! class_exists( 'Startwp_Alerts' ) ) {
 
 }
 
-// JavaScript desactivado.
-$alert_no_javascript = new Startwp_Alerts(
-	array(
-		'type'    => 'no-js',
-		'icon'    => 'error',
-		'classes' => 'alert__no-js message-error',
-	)
-);
+/**
+ * Esperar a que el tema sea configurado para cargar las alertas y poder
+ * traducir los mensajes correctamente.
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		// JavaScript desactivado.
+		$alert_no_javascript = new Startwp_Alerts(
+			array(
+				'type'    => 'no-js',
+				'icon'    => 'error',
+				'classes' => 'alert__no-js message-error',
+				'message' => '<span class="heading-3">' . __( 'Ups. This is not working fine.', 'startwp' ) . '</span><br>' . __( 'Your web browser is not compatible or has Javascript disable witch is important for multiple functionalities. Activate, update or change to a web browser compatible with this functions.', 'startwp' ),
+			)
+		);
 
-// Navegadores viejos sin soporte.
-$alert_old_browsers = new Startwp_Alerts(
-	array(
-		'type'     => 'old-browser',
-		'icon'     => 'warning',
-		'classes'  => 'alert__old-browsers message-error',
-		'privacy'  => true,
-		'remember' => true,
-	),
-	30
-);
+		// Navegadores viejos sin soporte.
+		$alert_old_browsers = new Startwp_Alerts(
+			array(
+				'type'     => 'old-browser',
+				'icon'     => 'warning',
+				'classes'  => 'alert__old-browsers message-error',
+				'message'  => '<span class="heading-3">' . __( 'We have a problem here.', 'startwp' ) . '</span><br>' . __( 'Your web browser doesn&rsquo;t support some properties and technologies that this site use.', 'startwp' ) . '<br> ' . __( 'Update to the latest version or try another modern options like Mozilla Firefox, Google Chrome or the new Microsoft Edge.', 'startwp' ),
+				'privacy'  => false,
+				'remember' => true,
+			),
+			30
+		);
 
-// Ejemplo adicional: Alerta de Cookies
-// ----------------------------------------------
-// $alert_cookies = new Startwp_Alerts(
-// array(
-// 'type'    => 'cookies',
-// 'icon'    => 'cookie',
-// 'classes' => 'alert__cookies message-info',
-// 'button'  => __( 'I Understand', 'startwp' ),
-// 'privacy' => true,
-// 'save'    => true,
-// ),
-// 50
-// );
+		// Ejemplo adicional: Alerta de Cookies.
+		// $alert_cookies = new Startwp_Alerts(
+		// array(
+		// 'type'    => 'cookies',
+		// 'icon'    => 'cookie',
+		// 'classes' => 'alert__cookies message-info',
+		// 'message' => '<span class="heading-3">' . __( 'We use cookies here.', 'startwp' ) . '</span><br> ' . __( 'If you don\'t mind we will save some data in your browser for better experience.', 'startwp' ),
+		// 'button'  => __( 'I Understand', 'startwp' ),
+		// 'privacy' => true,
+		// 'save'    => true,
+		// ),
+		// 50
+		// );
+	}
+);

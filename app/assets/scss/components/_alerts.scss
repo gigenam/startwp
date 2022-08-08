@@ -87,7 +87,7 @@
 
 	&__content {
 		width: 100%;
-		max-width: 72rem;
+		max-width: var(--startwp--content-width--main, 1100px);
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -135,7 +135,6 @@
 	margin-left: 0.75em;
 	background-color: transparent;
 	font-size: 1.02em;
-	border: 2px solid var(--startwp--color--error);
 
 	&:hover,
 	&:focus {

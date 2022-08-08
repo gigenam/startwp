@@ -134,6 +134,9 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 * Agregar información sobre fecha de publicación
 		 */
 		public static function posted_on() {
+			if ( post_password_required() ) {
+				return;
+			}
 			$time_string = '<time class="has-icon icon-calendar" datetime="%1$s">%2$s</time>';
 			$time_string = sprintf(
 				$time_string,
@@ -175,7 +178,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 * Agregar información sobre fecha de actualización
 		 */
 		public static function posted_update() {
-			if ( is_singular() ) {
+			if ( is_singular() && ! post_password_required() ) {
 				if ( get_the_modified_date() !== get_the_date() ) {
 					$time_string_update = '<time class="has-icon icon-clock" datetime="%1$s">' . __( 'Updated on', 'startwp' ) . ' %2$s</time>';
 					$time_string_update = sprintf(
@@ -206,6 +209,9 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 * Agregar información sobre el autor
 		 */
 		public static function posted_by() {
+			if ( post_password_required() ) {
+				return;
+			}
 			printf(
 				'<span class="entry-posted-by">' . esc_html(
 					/* translators: %s: Nombre de autor. */
@@ -225,8 +231,6 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 
 		/**
 		 * Agregar contador de comentarios
-		 *
-		 * @since 1.2.1
 		 */
 		public static function comments_count() {
 			// Mostrar contador sólo si los comentarios están abiertos o hay
@@ -242,7 +246,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 					printf(
 						/* translators: 1: Título de la entrada. */
 						esc_html__( '1 %1$s', 'startwp' ),
-						'<span class="screen-reader-text">' . esc_html__( 'comment on', 'startwp' ) . ' &ldquo;' . wp_kses_post( get_the_title() ) . '&rdquo;</span><svg class="icon-comment"><use xlink:href="#cmt" /></svg>'
+						'<span class="screen-reader-text">' . esc_html__( 'comment on', 'startwp' ) . ' &ldquo;' . wp_kses_post( get_the_title() ) . '&rdquo;</span><svg class="icon-comment" aria-hidden="true"><use xlink:href="#cmt" /></svg>'
 					);
 				} else {
 					// 0 o muchos comentarios.
@@ -391,7 +395,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 			// Para agregar contenido personalizado es recomendable hacerlo traducible:
 			// Ej: esc_html_x( 'Hola %s', 'Título original', 'startwp' ).
 			if ( ! is_singular() ) {
-				$private = '<svg class="icon-private"><use xlink:href="#private"></svg>%s';
+				$private = '<svg class="icon-private" aria-hidden="true"><use xlink:href="#private"></svg>%s';
 			} else {
 				$private = '%s';
 			}

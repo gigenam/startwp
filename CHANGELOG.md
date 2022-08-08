@@ -12,6 +12,16 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Version 1.3.1 - 2022-08-08 :
+
+- [+] Agregado de `sanitize_callback` en [class-customizer.php](app/inc/custom/class-customizer.php#L53).
+- [!] Arreglo en alertas para instanciarlas más fácil y que los mensajes se puedan
+  traducir correctamente en [class-alerts.php](app/inc/setup/class-alerts.php#L123).
+- [!] Cambio en la forma de usar SVGs en [class-enqueue.php](app/inc/core/class-enqueue.php#L86).
+- [!] Ocultar información extra como autor y fechas en páginas privadas.
+- [!] Correcciones menores en mejora de accesibilidad.
+- [!] Correcciones menores de documentación.
+
 ## Version 1.3.0 - 2022-08-06 :
 
 - [+] Agregado nuevo ícono para contenido privado.
