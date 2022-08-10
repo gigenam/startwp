@@ -29,7 +29,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		}
 
 		/**
-		 * Agregar nombre de pagina o entrada al <body> como clase
+		 * Agregar nombre de página o entrada al <body> como clase
 		 *
 		 * @param array $classes Todas las clases por defecto del <body>.
 		 */
@@ -90,7 +90,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		/**
 		 * Modificar el enlace de WP de políticas de privacidad
 		 *
-		 * @see footer.php#L36
+		 * @see footer.php#L37
 		 */
 		public static function privacy_policy() {
 			$privacy_link = get_the_privacy_policy_link( '<p class="privacy-policy">', '</p>' );

@@ -79,7 +79,7 @@ if ( ! class_exists( 'Startwp_Setup' ) ) {
 			/*
 			* Tamaño de imágenes
 			*/
-			// Imágenes destacadas. @see /inc/setup/class-posts.php#L105.
+			// Imágenes destacadas. @see /inc/setup/class-posts.php#L108.
 			add_image_size( 'blog-thumbnail', 580, 230, true );
 			// Open Graph. @see /inc/setup/class-general.php#L160.
 			add_image_size( 'social-summary', 300, 300, true );

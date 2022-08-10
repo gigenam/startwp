@@ -45,17 +45,29 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 
 	<div class="entry-content<?php echo esc_html( $startwp_wrapper ); ?>">
 		<?php
-		$startwp_read_more_link = apply_filters( 'startwp_excerpt_more', '<a class="has-icon-after icon-arrow is-right readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_html__( 'Read more', 'startwp' ) . ' <span class="screen-reader-text">' . esc_html_x( 'about ', 'Sobre la entrada', 'startwp' ) . get_the_title() . '</span></a>' );
 		$show_excerpt           = get_the_excerpt();
+		$startwp_read_more_link = apply_filters(
+			'startwp_excerpt_more',
+			'<a class="has-icon-after icon-arrow is-right readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_html__( 'Read more', 'startwp' ) . ' <span class="screen-reader-text">' . esc_html_x( 'about ', 'Sobre la entrada', 'startwp' ) . get_the_title() . '</span></a>'
+		);
 
 		// Extracto personalizado para artículos privados en vista de blog.
 		if ( post_password_required() ) {
-			$show_excerpt = ( ! empty( $post->post_excerpt ) )
-				? $post->post_excerpt
-				: __( 'This content is private. Enter to get access.', 'startwp' );
+			$startwp_read_more_link = '';
+			$show_excerpt           = ( ! empty( $post->post_excerpt ) )
+				? $post->post_excerpt . ' <a class="has-icon-after icon-arrow is-right readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_html__( 'Access', 'startwp' ) . ' </a>'
+				: __( 'This content is private.', 'startwp' ) . ' <a class="readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_html__( 'Enter', 'startwp' ) . '</a> ' . esc_html__( 'to get access.', 'startwp' );
 		}
 
-		if ( ! is_singular() ) {
+		if ( is_search() ) {
+			/**
+			 * Hook: startwp_search_content
+			 *
+			 * @hooked Startwp_Posts_Extras->search_excerpt_highlight - 10
+			 */
+			do_action( 'startwp_search_content' );
+
+		} elseif ( ! is_singular() ) {
 			printf(
 				'%1$s',
 				wp_kses(

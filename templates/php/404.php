@@ -61,7 +61,7 @@ get_header();
 
 		</section><!-- .error-404 -->
 
-	</main><!-- #main -->
+	</main><!-- #primary -->
 
 <?php
 get_footer();

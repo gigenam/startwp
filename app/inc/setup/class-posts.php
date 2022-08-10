@@ -137,6 +137,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 			if ( post_password_required() ) {
 				return;
 			}
+
 			$time_string = '<time class="has-icon icon-calendar" datetime="%1$s">%2$s</time>';
 			$time_string = sprintf(
 				$time_string,
@@ -251,7 +252,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 				} else {
 					// 0 o muchos comentarios.
 					printf(
-					/* translators: 1: Número de comentarios, 2: Título. */
+						/* translators: 1: Número de comentarios, 2: Título de la entrada. */
 						esc_html( _nx( '%1$s %2$s', '%1$s %2$s', $startwp_comment_count, 'Cantidad comentarios y título de la entrada', 'startwp' ) ),
 						number_format_i18n( $startwp_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						'<span class="screen-reader-text">' . esc_html__( 'comments on', 'startwp' ) . ' &ldquo;' . wp_kses_post( get_the_title() ) . '&rdquo;</span><svg class="icon-comment' . esc_html( $startwp_no_comments ) . '" aria-hidden="true"><use xlink:href="' . esc_attr( $startwp_comments_icon ) . '" /></svg>'
@@ -267,8 +268,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		public static function post_categories() {
 			// Solo mostrar en entradas.
 			if ( 'post' === get_post_type() ) {
-				/* translators: Separador de categorías */
-				$categories_list = get_the_category_list( esc_html__( ', ', 'startwp' ) );
+				$categories_list = get_the_category_list( esc_html( ', ' ) );
 
 				if ( $categories_list && is_single() ) {
 					printf(
@@ -296,7 +296,6 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		public static function post_tags() {
 			// Solo mostrar en entradas.
 			if ( 'post' === get_post_type() ) {
-				/* translators: Separador de etiquetas */
 				$tags_list = get_the_tag_list( '', esc_html( ' ' ) );
 
 				if ( $tags_list && is_single() ) {
@@ -343,10 +342,10 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 * @return string
 		 */
 		public static function password_form( $form ) {
-			$form  = '<form class="password-form text-center" action="' . esc_url( home_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">';
+			$form  = '<form class="password-form" action="' . esc_url( home_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">';
 			$form .= '<p class="password-form__description">' . esc_html__( 'This content is private. To view it enter your password below:', 'startwp' ) . '</p>';
 			$form .= '<p class="screen-reader-text password-form__label"><label for="password">' . esc_html_x( 'Password:', 'Private post form label', 'startwp' ) . '</label></p>';
-			$form .= '<div class="flexrow main-center">';
+			$form .= '<div class="flexrow">';
 			$form .= '<input class="password-form__input" name="post_password" id="password" type="password" required />';
 			$form .= '<button class="btn btn-primary password-form__submit" type="submit">' . esc_html_x( 'Enter', 'Private post form submit', 'startwp' ) . '</button>';
 			$form .= '</div>';
@@ -366,11 +365,11 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 			}
 			$error_message = esc_html__( 'Sorry, your password is wrong. Please try again.', 'startwp' );
 			$error_message = '
-			<p class="message-error password-form-message text-center">
+			<p class="message-error password-form-message">
 				<svg class="icon-warning" aria-hidden="true"><use xlink:href="#warning" /></svg>'
 				. $error_message .
 			'</p>';
-			return $form . $error_message;
+			return $form . $error_message; // El mensage debajo del formulario.
 		}
 
 		/**
@@ -411,27 +410,24 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 			if ( '' !== get_search_query() ) {
 				$excerpt = preg_replace( '/(' . $keys . ')/iu', '<strong class="search-highlight">\0</strong>', $excerpt );
 			}
-			$readmore = '
-			<br>
-			<a class="has-icon-after icon-arrow is-right readmore float-right" href="' . esc_url( get_permalink() ) . '" rel="bookmark">'
-				. apply_filters( 'startwp_search_readmore_text', esc_html__( 'Continue reading', 'startwp' ) ) .
-				' <span class="screen-reader-text">' . esc_html__( 'about ', 'startwp' ) . get_the_title() . '</span>
-			</a>';
+			$read_more_link = apply_filters(
+				'startwp_search_readmore_text',
+				' <a class="has-icon-after icon-arrow is-right readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_html__( 'Continue reading', 'startwp' ) . ' <span class="screen-reader-text">' . esc_html_x( 'about ', 'Sobre la entrada', 'startwp' ) . get_the_title() . '</span></a>'
+			);
 
 			printf(
-				'<p>%1$s</p>',
+				'%1$s',
 				wp_kses(
-					$excerpt . $readmore,
+					'<p>' . $excerpt . $read_more_link . '</p>',
 					array(
 						'p'      => array(),
-						'br'     => array(),
 						'a'      => array(
 							'class' => array(),
 							'href'  => array(),
 							'rel'   => array(),
 						),
-						'strong' => array( 'class' => array() ),
 						'span'   => array( 'class' => array() ),
+						'strong' => array( 'class' => array() ),
 					)
 				)
 			);

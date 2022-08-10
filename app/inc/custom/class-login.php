@@ -12,7 +12,7 @@
 
 if ( ! class_exists( 'Startwp_Login' ) ) {
 	/**
-	 * Modificar la pagina de inicio / registro
+	 * Modificar la página de inicio / registro
 	 */
 	class Startwp_Login {
 		/**

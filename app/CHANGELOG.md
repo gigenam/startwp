@@ -12,4 +12,4 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
-## Version X.X.X - 2022-XX-XX : Versión inicial.
+## Ver X.X.X - 2022-XX-XX : Versión inicial.

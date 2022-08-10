@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: undefined\n"
-"POT-Creation-Date: 2022-08-06 10:44-0300\n"
+"POT-Creation-Date: 2022-08-10 12:01-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -63,15 +63,28 @@ msgstr "Sidebar Principal"
 msgid "Add widgets here to show in the main sidebar."
 msgstr "Agrega widgets aqu&iacute; para mostrarlos en el sidebar principal."
 
-#: inc/custom/class-customizer.php:60
+#: inc/custom/class-customizer.php:61
 msgid "Site Address"
 msgstr "Direcci&oacute;n del Sitio"
 
-#: inc/setup/class-alerts.php:35
+#: inc/setup/class-alerts.php:54
+msgid "Close"
+msgstr "Cerrar"
+
+#: inc/setup/class-alerts.php:55
+msgctxt "Sobre políticas de privacidad"
+msgid "Read more about our "
+msgstr "Lee m&aacute;s sobre nuestra "
+
+#: inc/setup/class-alerts.php:56
+msgid "Don&rsquo;t show again"
+msgstr "No mostrar de nuevo"
+
+#: inc/setup/class-alerts.php:136
 msgid "Ups. This is not working fine."
 msgstr "Ups. Esto no est&aacute; funcionando bien."
 
-#: inc/setup/class-alerts.php:35
+#: inc/setup/class-alerts.php:136
 msgid ""
 "Your web browser is not compatible or has Javascript disable witch is "
 "important for multiple functionalities. Activate, update or change to a web "
@@ -82,11 +95,11 @@ msgstr ""
 "funcionalidades. Activa, actualiza o cambia a un navegador web compatible "
 "con estas funciones."
 
-#: inc/setup/class-alerts.php:38
+#: inc/setup/class-alerts.php:146
 msgid "We have a problem here."
 msgstr "Aqu&iacute; tenemos un problema."
 
-#: inc/setup/class-alerts.php:38
+#: inc/setup/class-alerts.php:146
 msgid ""
 "Your web browser doesn&rsquo;t support some properties and technologies that "
 "this site use."
@@ -94,7 +107,7 @@ msgstr ""
 "Tu navegador web no es compatible con algunas propiedades y tecnolog&iacute;"
 "as modernas que este sitio utiliza."
 
-#: inc/setup/class-alerts.php:38
+#: inc/setup/class-alerts.php:146
 msgid ""
 "Update to the latest version or try another modern options like Mozilla "
 "Firefox, Google Chrome or the new Microsoft Edge."
@@ -102,44 +115,31 @@ msgstr ""
 "Actualiza a una versi&oacute;n m&aacute;s nueva o prueba otras opciones como "
 "Mozilla Firefox, Google Chrome o el nuevo Microsoft Edge."
 
-#: inc/setup/class-alerts.php:75
-msgid "Close"
-msgstr "Cerrar"
-
-#: inc/setup/class-alerts.php:76
-msgctxt "Sobre políticas de privacidad"
-msgid "Read more about our "
-msgstr "Lee m&aacute;s sobre nuestra "
-
-#: inc/setup/class-alerts.php:77
-msgid "Don&rsquo;t show again"
-msgstr "No mostrar de nuevo"
-
 #: inc/setup/class-general.php:107
 #, php-format
 msgid "%s - Private"
 msgstr "%s - Privado"
 
-#: inc/setup/class-posts.php:180
+#: inc/setup/class-posts.php:184
 msgid "Updated on"
 msgstr "Actualizado en"
 
-#: inc/setup/class-posts.php:212
+#: inc/setup/class-posts.php:219
 #, php-format
 msgctxt "Autor de la entrada"
 msgid "by %s"
 msgstr "por %s"
 
-#: inc/setup/class-posts.php:244
+#: inc/setup/class-posts.php:249
 #, php-format
 msgid "1 %1$s"
 msgstr ""
 
-#: inc/setup/class-posts.php:245
+#: inc/setup/class-posts.php:250
 msgid "comment on"
 msgstr "comentario en"
 
-#: inc/setup/class-posts.php:251
+#: inc/setup/class-posts.php:256
 #, php-format
 msgctxt "Cantidad comentarios y título de la entrada"
 msgid "%1$s %2$s"
@@ -147,45 +147,42 @@ msgid_plural "%1$s %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/setup/class-posts.php:253
+#: inc/setup/class-posts.php:258
 msgid "comments on"
 msgstr "comentarios en"
 
-#: inc/setup/class-posts.php:267
-msgid ", "
-msgstr ""
-
-#: inc/setup/class-posts.php:273
+#: inc/setup/class-posts.php:278
 msgid "Categories"
 msgstr "Categor&iacute;as"
 
-#: inc/setup/class-posts.php:302
+#: inc/setup/class-posts.php:307
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: inc/setup/class-posts.php:343
+#: inc/setup/class-posts.php:348
 msgid "This content is private. To view it enter your password below:"
 msgstr "Este contenido es privado. Para verlo ingresa la contraseña debajo:"
 
-#: inc/setup/class-posts.php:344
+#: inc/setup/class-posts.php:349
 msgctxt "Private post form label"
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: inc/setup/class-posts.php:347
+#: inc/setup/class-posts.php:352
 msgctxt "Private post form submit"
 msgid "Enter"
 msgstr "Ingresar"
 
-#: inc/setup/class-posts.php:363
+#: inc/setup/class-posts.php:368
 msgid "Sorry, your password is wrong. Please try again."
 msgstr "La contraseña es incorrecta. Por favor intenta de nuevo."
 
-#: inc/setup/class-posts.php:413
+#: inc/setup/class-posts.php:417
 msgid "Continue reading"
 msgstr "Continuar leyendo"
 
-#: inc/setup/class-posts.php:414
+#: inc/setup/class-posts.php:417 template-parts/content.php:51
+msgctxt "Sobre la entrada"
 msgid "about "
 msgstr "sobre "
 
@@ -230,22 +227,32 @@ msgstr ""
 "Parece que no podemos encontrar lo que est&aacute;s buscando. tal vez una "
 "nueva b&uacute;squeda puede ayudar."
 
-#: template-parts/content-page.php:32 template-parts/content.php:79
+#: template-parts/content-page.php:32 template-parts/content.php:91
 msgid "Pages:"
 msgstr "P&aacute;ginas:"
 
-#: template-parts/content.php:48
+#: template-parts/content.php:51
 msgid "Read more"
 msgstr "Leer m&aacute;s"
 
-#: template-parts/content.php:48
-msgctxt "Sobre la entrada"
-msgid "about "
-msgstr "sobre "
+#: template-parts/content.php:58
+msgid "Access"
+msgstr "Ingresar"
 
-#: template-parts/content.php:55
-msgid "This content is private. Enter to get access."
-msgstr "Este contenido es privado. Ingresa para tener acceso."
+#: template-parts/content.php:59
+msgid "This content is private."
+msgstr "Este contenido es privado."
+
+#: template-parts/content.php:59
+msgid "Enter"
+msgstr "Ingresa"
+
+#: template-parts/content.php:59
+msgid "to get access."
+msgstr "para tener acceso."
+
+#~ msgid "about "
+#~ msgstr "sobre "
 
 #~ msgid "Oops! That page can&rsquo;t be found."
 #~ msgstr "Ups! Esa pagina no se pudo encontrar."

@@ -41,7 +41,7 @@ get_header();
 		}// Fin del loop.
 
 		the_posts_navigation();    // anterior - siguiente.
-		// the_posts_pagination(); // < 1 2 ... >.
+		// the_posts_pagination(); // Alternativa: < 1 2 ... >.
 
 		get_sidebar();
 
@@ -51,7 +51,7 @@ get_header();
 
 	endif;// Fin have_posts().
 	?>
-</main><!-- #main -->
+</main><!-- #primary -->
 
 <?php
 get_footer();

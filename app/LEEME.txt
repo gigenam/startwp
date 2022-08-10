@@ -82,7 +82,7 @@ romper cosas o perder los cambios luego de una actualización.
 		el "Template", que se refiere al tema padre y "Text Domain" que es para
 		localización y evitar problemas con el padre.
 
-		También, puedes agregar más info como "License" y/o "Author", etc.
+		También, puedes agregar más info como "License", "Author", etc.
 		(ver "style.css" en el tema padre para ver otras cosas que agregar).
 		Description y Version quedan para modificar a tu gusto.
 
@@ -129,7 +129,7 @@ romper cosas o perder los cambios luego de una actualización.
 
 = ¿Cómo agregar tipografías personalizadas? =
 
-En caso de queres utilizar el servicio de fuentes de Google, <https://fonts.google.com>,
+En caso de querer utilizar el servicio de fuentes de Google, <https://fonts.google.com>,
 se puede hacer de dos maneras, mediante <link> o @import.
 
 [ ! ] Los ejemplo son en un tema hijo (lo más recomendable). En caso de querer
@@ -140,7 +140,7 @@ Método 1) - <link>:
 Abre el archivo "functions.php" y crea una nueva función para agregar tus estilos
 personalizados (si es que no tienes una creada).
 
-	function startwp_mis_estilos() {
+	function startwp_child_mis_estilos() {
 		// El segundo valor es la url desde fonts.google.com cuando seleccionas
 		// una o más tipografías. En este ejemplo usando "Ubuntu Regular y Bold".
 		wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap', null, null );
@@ -149,7 +149,7 @@ personalizados (si es que no tienes una creada).
 		// personalizados. En ese archivo es que tienes que configurar los textos.
 		wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), array( 'startwp-main' ), wp_get_theme()->get('Version') );
 	}
-	add_action( 'wp_enqueue_scripts', 'startwp_mis_estilos' );
+	add_action( 'wp_enqueue_scripts', 'startwp_child_mis_estilos' );
 
 Luego ve al archivo "style.css" y configura tus estilos. Por ejemplo:
 
@@ -193,7 +193,7 @@ personalizados (si es que no tienes una creada).
 		//   personalizados.
 		wp_add_inline_style(
 			'startwp-child',
-			'@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"); body{ font-family: Ubuntu, sans-serif } a { font-weight: 700 }'
+			'@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"); body{ font-family: Ubuntu, sans-serif } a{ font-weight: 700 }'
 		);
 	}
 	add_action( 'wp_enqueue_scripts', 'startwp_mis_estilos' );
@@ -213,8 +213,11 @@ tu libertad y conocimientos para hacer las *modificaciones* que desees.
 
 == Créditos ==
 
-Basado en Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.,
+Basado en Underscores https://underscores.me/, (C) Automattic, Inc.,
 GPLv2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+
+Algunos íconos vienen de, o están inspirados/basados en https://fontawesome.com/,
+(C) Fonticons, Inc., Font Awesome Free License (https://fontawesome.com/license/free)
 
 
 == Licencia ==

@@ -26,7 +26,7 @@ get_header();
 			}
 		} // Fin del loop.
 		?>
-	</main><!-- #main -->
+	</main><!-- #primary -->
 
 <?php
 get_footer();

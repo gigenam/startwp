@@ -32,7 +32,7 @@
 }
 
 //
-// Outline
+// Contorno
 // ----------------------------------------------
 [class*="icon-"].is-outline,
 [class*="has-icon"].is-outline svg {
@@ -43,7 +43,7 @@
 //
 // Estados para abrir/cerrar
 // ----------------------------------------------
-// Cross from + to x.
+// Cross de + a x.
 [class*="has-icon"].icon-cross.is-open > svg,
 .icon-cross:not([class*="has-icon"]).is-open {
 	transform: rotate(45deg);
@@ -52,23 +52,42 @@
 //
 // Rotaciones
 // ----------------------------------------------
-// Top.
+// Arriba.
 [class*="has-icon"].is-top:not(.is-hover) > svg,
 [class*="icon-"].is-top:not([class*="has-icon"]),
 [class*="has-icon"].is-top.is-hover:hover > svg {
 	transform: translateX(1px) rotate(180deg);
 }
 
-// Right.
+// Derecha.
 [class*="has-icon"].is-right:not(.is-hover) > svg,
 [class*="icon-"].is-right:not([class*="has-icon"]),
 [class*="has-icon"].is-right.is-hover:hover > svg {
 	transform: rotate(-90deg);
 }
 
-// Left.
+// Izquierda.
 [class*="has-icon"].is-left:not(.is-hover) > svg,
 [class*="icon-"].is-left:not([class*="has-icon"]),
 [class*="has-icon"].is-left.is-hover:hover > svg {
 	transform: rotate(90deg);
+}
+
+//
+// Animaciones
+// ----------------------------------------------
+svg[class*="icon-"][class*="is-animate"],
+[class*="has-icon"][class*="is-animate"] svg {
+	transform-origin: center;
+	animation: animate 1s linear infinite;
+	@keyframes animate {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+svg[class*="icon-"].is-animate-reverse,
+[class*="has-icon"].is-animate-reverse svg {
+	animation-direction: reverse;
 }

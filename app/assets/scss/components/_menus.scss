@@ -46,7 +46,7 @@
 
 // Corregir posición cuando la barra de admin de WP está visible.
 .admin-bar .btn-menu {
-	@include adminbar-height(top);
+	top: calc(#{$padding-content} + var(--wp-admin--admin-bar--height));
 }
 
 //

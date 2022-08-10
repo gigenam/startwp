@@ -19,7 +19,7 @@ En caso de estar trabajando en un proyecto, es recomendable clonar o descargar
 en una carpeta aparte para probar que todo funcione bien dependiendo de tu
 entorno de desarrollo.
 
-Para más información, ver [CHANGELOG.md](CHANGELOG.md) Version 1.2.0.
+Para más información, ver [CHANGELOG.md - Version 1.2.0](CHANGELOG.md).
 
 <br>
 

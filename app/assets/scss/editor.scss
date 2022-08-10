@@ -4,12 +4,39 @@
  * @since 1.0.0
  */
 
+@import "abstracts/breakpoints";
 @import "abstracts/mixins";
 @import "abstracts/functions";
 @import "abstracts/variables";
 
-.editor-styles-wrapper {
+body .editor-styles-wrapper {
+	line-height: 1.5;
 	font-family: var(--startwp--font-family--main);
+
+	// Bloques principales sin alineación.
+	.edit-post-visual-editor__post-title-wrapper > :where(:not(.alignleft, .alignright, .alignwide, .alignfull)),
+	.block-editor-block-list__layout.is-root-container > :where(:not(.alignleft, .alignright, .alignwide, .alignfull)) {
+		max-width: var(--startwp--content-width--main, #{$narrow-width});
+		padding-right: 0.5em;
+		padding-left: 0.5em;
+	}
+
+	// Bloques con fondo.
+	.wp-block.has-background {
+		max-width: calc(var(--startwp--content-width--main, #{$narrow-width}) - 2em);
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+	// Elementos anchos.
+	.block-editor-block-list__layout.is-root-container > .alignwide {
+		max-width: var(--startwp--content-width--main, #{$narrow-width + 100});
+	}
+
+	// Evitar escape del contenido.
+	.components-resizable-box__container {
+		width: 100% !important; // Override: estilos en linea.
+	}
 
 	h1,
 	.wp-block-post-title {
@@ -25,18 +52,66 @@
 		font-size: $fs-heading-4;
 	}
 
-	.wp-block:where(:not([data-align])) {
-		max-width: var(--startwp--content-width--main, #{$main-width});
-		padding-right: 1rem;
-		padding-left: 1rem;
-		margin-right: auto;
-		margin-left: auto;
+	.has-drop-cap:not(:focus)::first-letter {
+		margin: 0.06em 0 0 -0.085em;
+		font-size: 7.2em; // 4 lineas aprox.
+		font-weight: inherit;
+	}
+
+	// Listas.
+	.wp-block-list {
+		padding-left: 1.5em !important;
+	}
+
+	// Citas (estilos iguales del frente).
+	.wp-block-quote {
+		padding: 0.8em 0.8em 0.8em clamp(0.8em, 2vw, 1.5em);
+		border-left: 5px solid var(--startwp--color--foreground);
+
+		&.is-style-plain {
+			border: none;
+		}
+
+		cite {
+			font-style: italic;
+		}
+	}
+
+	pre,
+	code {
+		padding: 0.2em 0.45em 0.45em;
+		font-size: 0.9em;
+		font-family: monospace, monospace;
+		border: 1px solid #d4d4d4;
+		border-radius: $border-radius;
+	}
+
+	code {
+		padding: 0 0.35em 0.1em;
+		line-height: 1.4;
+		background-color: #ebebeb;
+		font-size: rem(14);
+
+		&,
+		* {
+			white-space: pre-wrap;
+		}
+	}
+
+	// Evitar estilos dobles porque el bloque de código inserta un elemento code
+	// dentro de un elemento pre.
+	.wp-block-code code {
+		padding: 0;
+		background-color: transparent;
+		border: none;
 	}
 
 	iframe {
 		width: 100%;
 	}
 
+	// Corrección en el elemento salto de página para evitar probelmas si hay
+	// elementos flotantes (alineados a la derecha o izquierda).
 	.wp-block.wp-block-nextpage::before {
 		content: "";
 		display: table;

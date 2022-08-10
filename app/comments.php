@@ -9,8 +9,8 @@
 
 /**
  * Desde WordPress 3.0 es recomendable tener este archivo de forma obligatoria.
- * En caso de usar comentarios, también activa las opciones extras en
- * '/inc/core/class-enqueue.php#L25'.
+ * En caso de usar comentarios, también activa las opciones extras des-comentando
+ * la linea en '/inc/core/class-enqueue.php#L27'.
  */
 
 if ( post_password_required() ) {

@@ -29,6 +29,9 @@ Carpeta para agregar plantillas reutilizables.
     y además de la ventaja propia en cuanto a calidad, también se puede utilizar
     en temas claros y oscuros (abrir el archivo en un editor de texto para ver).
 
+\* En caso de querer controlar el favicon desde el personalizador, quitar las
+lineas 18, 19 y 20 del [header.php](../app/header.php).
+
 `php/`:
 
 - En esta carpeta se agregan todos los archivos que no se están utilizando pero
