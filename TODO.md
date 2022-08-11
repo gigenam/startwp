@@ -16,14 +16,14 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 ## Revisiones pendientes:
 
-Quitada la tarea para combinar todos los **media queries** en [gulpfile.js](./gulpfile.js#L98)
+Quitada la tarea para combinar todos los **media queries** en [gulpfile.js](./gulpfile.js#L99)
 porque causa problemas con los `sourcemaps` y puede generar problemas de
 especificidad en producción si no se prueban los estilos antes. Ademas el paquete
 no recibe actualizaciones desde hace demasiados años (mismo para otros similares).
 
 De momento el paquete se sigue instalando con [npm install](./package.json#L40)
 para hacer más pruebas o como opción de compilación manual, descomentando las
-lineas [104](./gulpfile.js#L104) y/o [117](./gulpfile.js#L117) en [gulpfile.js](./gulpfile.js#L98).
+lineas [105](./gulpfile.js#L105) y/o [118](./gulpfile.js#L118) en [gulpfile.js](./gulpfile.js#L99).
 
 ## Correcciones:
 
@@ -40,6 +40,29 @@ meses. **Debes iniciar sesión**, sino serás redirigido a la pantalla de login.
   localhost:8080, etc.
 - `[site]` = En desarrollo es probable que estés en una subcarpeta, por ejemplo
   localhost:8080/mi-sitio. Si no es así, quita esto de la url.
+
+<br>
+
+### Colores:
+
+Para utilizar los mismos colores en todo el tema con prioridad en la facilidad de
+modificarlos en desarrollo, estos están definidos y utilizados como **custom properties**
+en [variables.scss](app/assets/scss/abstracts/_variables.scss#L64).
+
+Al utilizar estas variables CSS en [theme.json](app/theme.json#L14) funcionan en
+el editor de WordPress y muestra los colores correctamente, pero con el efecto
+negativo que aparece la variable como texto y no el código de color.
+
+Una solución sería no quitar las variables generadas por WordPress en [functions.php](app/functions.php#L54)
+y utilizar estas en el tema, pero en mi caso prefiero tener mis propios nombres
+para evitar sobre-escrituras, tanto por WordPress como plugins externos.
+
+La otra sería tener que repetir los colores dos veces de forma manual. En
+[theme.json](app/theme.json#L14) y en [variables.scss](app/assets/scss/abstracts/_variables.scss#L44).
+
+Esto sería un poco incomodo, pero fácil de corregir al finalizar el desarrollo
+del tema en caso que se quiera dejar algo más intuitivo para personas que sólo
+vayan a utilizar el editor de contenido para hacer modificaciones.
 
 <br>
 

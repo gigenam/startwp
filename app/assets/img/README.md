@@ -18,9 +18,10 @@ sin comprimir.
 
 `sprites/`:
 
-- Esta carpeta está pensada para agregar todos los íconos para el sitio en
-  formato **svg**.
-- Luego mediante el comando `gulp sprites` se compilan todos en el archivo
-  [sprites.svg](./sprites.svg) en la carpeta superior para ser utilizados en
-  linea (como por ejemplo [ACÁ](../../inc/setup/class-posts.php#L123)) o
-  mediante clases y agregados dinamicamente con [JavaScript](../js/utilities/InlineIcons.js)).
+Esta carpeta está pensada para agregar todos los íconos para el sitio en formato
+**svg**.
+
+Luego mediante el comando `gulp sprites` se compilan todos en el archivo
+[sprites.svg](./sprites.svg) en la carpeta superior para ser utilizados en linea
+(como por ejemplo [ACÁ](../../inc/setup/class-posts.php#L123)) o mediante clases
+y agregados dinamicamente con [JavaScript](../js/utilities/InlineIcons.js)).

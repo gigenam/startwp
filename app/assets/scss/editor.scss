@@ -33,11 +33,6 @@ body .editor-styles-wrapper {
 		max-width: var(--startwp--content-width--main, #{$narrow-width + 100});
 	}
 
-	// Evitar escape del contenido.
-	.components-resizable-box__container {
-		width: 100% !important; // Override: estilos en linea.
-	}
-
 	h1,
 	.wp-block-post-title {
 		font-size: $fs-heading-1;
@@ -118,5 +113,17 @@ body .editor-styles-wrapper {
 		table-layout: fixed;
 		clear: both;
 		position: static;
+	}
+
+	// Botones.
+	.wp-block-button__link {
+		padding: 0.417em 1em;
+		color: var(--startwp--color--background);
+		background-color: var(--startwp--color--foreground);
+		border-radius: $border-radius;
+
+		&:hover {
+			opacity: $link-hover;
+		}
 	}
 }

@@ -196,7 +196,6 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 							array(
 								'time' => array(
 									'class'    => array(),
-									'class'    => array(),
 									'datetime' => array(),
 								),
 							)
@@ -296,7 +295,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		public static function post_tags() {
 			// Solo mostrar en entradas.
 			if ( 'post' === get_post_type() ) {
-				$tags_list = get_the_tag_list( '', esc_html( ' ' ) );
+				$tags_list = get_the_tag_list( '', esc_html( ', ' ) );
 
 				if ( $tags_list && is_single() ) {
 					printf(

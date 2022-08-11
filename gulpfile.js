@@ -26,7 +26,7 @@ import mergeMQ      from 'gulp-merge-media-queries';
 import rename       from 'gulp-rename';
 import urlAdjuster  from 'gulp-css-url-adjuster';
 import replace      from 'gulp-string-replace';
-import BrowserSync  from 'browser-sync';
+import browserSync  from 'browser-sync';
 import dartSass     from 'sass';
 import autoprefixer from 'autoprefixer';
 import cssnano      from 'cssnano';
@@ -50,7 +50,7 @@ const authorURL        = info.homepage;
 
 // Browser Sync.
 const liveSync = devURL;
-const server   = BrowserSync.create();
+const server   = browserSync.create();
 
 // Rutas.
 const paths = {
@@ -77,6 +77,7 @@ const paths = {
  *
  * @param { Function } done Finalizar la tarea.
  */
+
 // Iniciar Browser Sync.
 export const sync = ( done ) => {
 	server.init( {

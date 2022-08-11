@@ -7,6 +7,7 @@
 .btn,
 button,
 .wp-block-button__link,
+.wp-block-file .wp-block-file__button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
@@ -14,8 +15,8 @@ button,
 	justify-content: center;
 	align-items: center;
 	width: auto;
-	padding-right: 1em;
-	padding-left: 1em;
+	padding: 0.417em 1em;
+	margin: 0;
 	color: var(--startwp--color--background);
 	background-color: var(--startwp--color--foreground);
 	font-weight: normal;
@@ -28,7 +29,13 @@ button,
 	}
 }
 
-.btn-primary {
+.wp-block-file .wp-block-file__button {
+	font-size: 0.86em;
+	margin-left: 0.5em;
+}
+
+.btn-primary,
+.wp-block-file .wp-block-file__button {
 	color: var(--startwp--color--white);
 	background-color: var(--startwp--color--primary);
 }

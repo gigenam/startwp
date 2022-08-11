@@ -99,7 +99,7 @@
 // ----------------------------------------------
 .alignright,
 .alignleft {
-	margin-bottom: rem(5);
+	margin-bottom: rem(3);
 }
 
 .alignleft {
@@ -107,7 +107,7 @@
 	margin-right: rem(10);
 
 	@include from($main-width) {
-		margin-left: 8vw;
+		margin-left: calc(((100vw - var(--startwp--content-width--main)) / 2) - 2.1rem);
 	}
 }
 
@@ -116,13 +116,18 @@
 	margin-left: rem(10);
 
 	@include from($main-width) {
-		margin-right: 8vw;
+		margin-right: calc(((100vw - var(--startwp--content-width--main)) / 2) - 2.1rem);
 	}
 }
 
 .alignleft,
 .alignright {
-	max-width: 50%; // Quitar en caso de no querer limite de ancho.
+	// Quitar en caso de no querer limite de ancho.
+	max-width: 50%;
+
+	@include from($main-width) {
+		max-width: calc((var(--startwp--content-width--main) / 2) + 2.1rem);
+	}
 }
 
 .aligncenter {
@@ -132,13 +137,13 @@
 }
 
 .alignwide {
-	width: calc(var(--startwp--content-width--main, #{$main-width}) + #{$padding-content * 6});
+	max-width: calc(var(--startwp--content-width--main, #{$main-width}) + #{$padding-content * 6});
 	margin-right: auto;
 	margin-left: auto;
 }
 
 .alignfull,
-.alignfull > * {
+.alignfull:where(:not([class*="wp-block"])) > * {
 	width: 100%;
 }
 
@@ -231,35 +236,43 @@ $separations: (
 //
 // Color de textos
 // ----------------------------------------------
-.has-foreground-color {
+.has-foreground-color,
+.has-foreground-color:hover {
 	color: var(--startwp--color--foreground);
 }
 
-.has-background-color {
+.has-background-color,
+.has-background-color:hover {
 	color: var(--startwp--color--background);
 }
 
-.has-primary-color {
+.has-primary-color,
+.has-primary-color:hover {
 	color: var(--startwp--color--primary);
 }
 
-.has-secondary-color {
+.has-secondary-color,
+.has-secondary-color:hover {
 	color: var(--startwp--color--secondary);
 }
 
-.has-accent-color {
+.has-accent-color,
+.has-accent-color:hover {
 	color: var(--startwp--color--accent);
 }
 
-.has-success-color {
+.has-success-color,
+.has-success-color:hover {
 	color: var(--startwp--color--success);
 }
 
-.has-warning-color {
+.has-warning-color,
+.has-warning-color:hover {
 	color: var(--startwp--color--warning);
 }
 
-.has-error-color {
+.has-error-color,
+.has-error-color:hover {
 	color: var(--startwp--color--error);
 }
 

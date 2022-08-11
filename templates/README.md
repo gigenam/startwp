@@ -14,48 +14,49 @@ Carpeta para agregar plantillas reutilizables.
 
 `favicons/`:
 
-- En esta carpeta se encuentran algunos archivos para la creación de la imagen
-  que aparece en las pestañas de los navegadores (favicon). Ver [header.php](../app/header.php#L18).
+En esta carpeta se encuentran algunos archivos para la creación de la imagen
+que aparece en las pestañas de los navegadores (favicon). Ver [header.php](../app/header.php#L18).
 
-  Las imágenes finales deben ir en la carpeta `app/img/`.
+Las imágenes finales deben ir en la carpeta `app/img/`.
 
-  Para más ayuda o más íconos (por ejemplo para Android e iOS), visita
-  [https://realfavicongenerator.net/](https://realfavicongenerator.net/).
+Para más ayuda o más íconos (por ejemplo para Android e iOS), visita
+[https://realfavicongenerator.net/](https://realfavicongenerator.net/).
 
-  - `apple-touch-icon.png` es para dispositivos Apple y tiene un tanaño de 180x180.
-  - `favicon.png` es el más genérico y soportado por la mayoría de navegadores y
-    tiene un tamaño de 32x32.
-  - `favicon.svg` es la versión más [moderna](https://caniuse.com/?search=svg%20favicons)
-    y además de la ventaja propia en cuanto a calidad, también se puede utilizar
-    en temas claros y oscuros (abrir el archivo en un editor de texto para ver).
+- `apple-touch-icon.png` es para dispositivos Apple y tiene un tanaño de 180x180.
+- `favicon.png` es el más genérico y soportado por la mayoría de navegadores y
+  tiene un tamaño de 32x32.
+- `favicon.svg` es la versión más [moderna](https://caniuse.com/?search=svg%20favicons)
+  y además de la ventaja propia en cuanto a calidad, también se puede utilizar
+  en temas claros y oscuros (abrir el archivo en un editor de texto para ver).
 
 \* En caso de querer controlar el favicon desde el personalizador, quitar las
 lineas 18, 19 y 20 del [header.php](../app/header.php).
 
 `php/`:
 
-- En esta carpeta se agregan todos los archivos que no se están utilizando pero
-  quedan como respaldo por si se necesitan a futuro. Por ejemplo si se quiere hacer
-  uso de más funcionalidades de blog como archivos, páginas de usuarios, etc.
+En esta carpeta se agregan todos los archivos que no se están utilizando pero
+quedan como respaldo por si se necesitan a futuro. Por ejemplo si se quiere hacer
+uso de más funcionalidades de blog como archivos, páginas de usuarios, etc.
 
 `screenshot/`:
 
-- En esta carpeta se encuentran algunos archivos para la creación de la imagen de
-  muestra del tema que se visualiza al seleccionar temas en la administración.
-  Ver [screenshot.png](../app/screenshot.png).
-- El archivo de formato .xcf es para ser utilizado con [GIMP](https://gimp.org/).
+En esta carpeta se encuentran algunos archivos para la creación de la imagen de
+muestra del tema que se visualiza al seleccionar temas en la administración.
+Ver [screenshot.png](../app/screenshot.png).
+
+El archivo de formato .xcf es para ser utilizado con [GIMP](https://gimp.org/).
 
 `sharing/`:
 
-- En esta carpeta se encuentran algunos archivos para la creación de la imagen de
-  muestra al compartir enlaces en redes sociales como Facebook y Twitter.
-  Ver [class-general.php](../app/inc/setup/class-general.php#L139) y
-  [og-summary-large.jpg](../app/img/og-summary-large.jpg).
+En esta carpeta se encuentran algunos archivos para la creación de la imagen de
+muestra al compartir enlaces en redes sociales como Facebook y Twitter.
+Ver [class-general.php](../app/inc/setup/class-general.php#L139) y
+[og-summary-large.jpg](../app/img/og-summary-large.jpg).
 
-- El archivo de formato .xcf es para ser utilizado con [GIMP](https://gimp.org/)
-  y tiene dos modos por defecto. **summary** y **summary-large**.
+El archivo de formato .xcf es para ser utilizado con [GIMP](https://gimp.org/)
+y tiene dos modos por defecto. **summary** y **summary-large**.
 
-  Tamaños mínimos recomendados (px):
+Tamaños mínimos recomendados (px):
 
-  - Summary Large (1.9:1) = 1200 x 630
-  - Summary (1:1) = 600 x 600
+- Summary Large (1.9:1) = 1200 x 630
+- Summary (1:1) = 600 x 600

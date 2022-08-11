@@ -27,7 +27,16 @@
 		margin-right: auto;
 		margin-left: auto;
 
-		> * {
+		@include to(#{$main-width}) {
+			padding-right: $padding-content;
+			padding-left: $padding-content;
+		}
+
+		@include from(#{$main-width}) {
+			--startwp--content-width--main: #{$narrow-width};
+		}
+
+		> *:not(:last-child) {
 			margin-bottom: 1em;
 		}
 	}

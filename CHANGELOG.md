@@ -12,6 +12,16 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.3.3 - 2022-08-11 :
+
+- [-] Eliminados los colores predeterminados en el editor para no tener que
+  agregar estilos personalizados para cada nombre. Ver [theme.json](app/theme.json#L10).
+- [!] Correcciones de ancho máximo de la sección de por defecto widgets igual al
+  contenido principal.
+- [!] Correcciones de estilos para algunos bloques, en el editor y cargar clases
+  utilitarias al final del CSS.
+- [!] Correcciones generales de documentación.
+
 ## Ver 1.3.2 - 2022-08-10 :
 
 - [+] Nuevo ícono `dots` y nuevas animaciones para íconos con las clases
@@ -32,7 +42,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 ## Ver 1.3.0 - 2022-08-06 :
 
-- [+] Agregado nuevo ícono para contenido privado.
+- [+] Agregado nuevo ícono `private` para contenido privado.
 - [+] Agregada tarea `gulp translate` al iniciar el proyecto así ya queda el
   archivo `.pot` creado para traducciones futuras.
 - [-] Quitada la tarea para combinar todos los **media queries** en [gulpfile.js](./gulpfile.js#L98)
@@ -48,7 +58,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ## Ver 1.2.1 - 2022-08-04 :
 
 - [+] Agregado contador de comentarios a las entradas cuando estos están abiertos
-  en las lineas [45](app/inc/setup/class-posts.php#L45) y [232](app/inc/setup/class-posts.php#L233)
+  en las lineas [45](app/inc/setup/class-posts.php#L45) y [233](app/inc/setup/class-posts.php#L233)
   del archivo [class-posts.php](app/inc/setup/class-posts.php).
 - [!] Cambio de nombre para íconos de comentarios porque no funcionaban. Ahora
   se utilizan con `icon-cmt` y `icon-cmts`.

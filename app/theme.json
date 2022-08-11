@@ -8,6 +8,9 @@
 			"wideSize": "1300px"
 		},
 		"color": {
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
 			"palette": [
 				{
 					"name": "Primario",

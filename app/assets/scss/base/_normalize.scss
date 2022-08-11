@@ -486,8 +486,8 @@ template,
 	outline: 0;
 }
 
-// Elementos con fondo.
-.has-background {
+// Elementos con fondo. Excluir botones.
+.has-background:where(:not([class*="button"])) {
 	padding: var(--startwp--gap--content) !important; // Override: wp-styles.
 }
 

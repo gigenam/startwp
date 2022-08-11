@@ -16,8 +16,13 @@ falta crear los diferentes archivos `.po` y `.mo` y agregarlos en esta carpeta.
 Más información en la [documentación oficial](https://developer.wordpress.org/apis/handbook/internationalization/localization/)
 (en ingles).
 
+Si quieres traducir el tema de forma fácil mediante la ayuda de una interfaz
+gráfica, puedes usar [Poedit](https://poedit.net/download) abriendo los archivos
+`po` incluidos acá.
+
 Si quieres traducir el tema de forma fácil y con la ayuda de WordPress, puedes
 instalar en tu sitio el plugin [Loco Translate](https://wordpress.org/plugins/loco-translate/)
-y luego exportar los archivos de traducción e incluirlos en esta carpeta\*.
+y luego exportar los archivos de traducción e incluirlos en esta carpeta\* o en
+las otras opciones que el plugin te propone.
 
 \* O en un tema hijo para no perder los cambios en caso de actualizaciones.
