@@ -129,15 +129,9 @@
 //
 // Botón para cerrar alertas
 // ----------------------------------------------
-.btn__alert-close {
+button.btn__alert-close {
 	height: auto;
-	padding: 0.25em 0.5em;
-	margin-left: 0.75em;
-	background-color: transparent;
-	font-size: 1.02em;
-
-	&:hover,
-	&:focus {
-		box-shadow: 0 0 10px 1px rgba($color-text, 0.25) inset;
-	}
+	padding: 0.25em 1em;
+	margin-left: 1em;
+	font-size: 1em;
 }

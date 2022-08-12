@@ -55,19 +55,19 @@ const server   = browserSync.create();
 // Rutas.
 const paths = {
 	styles: {
-		src: './app/assets/scss/*.scss',
+		src : './app/assets/scss/*.scss',
 		dest: './app/css',
 	},
 	scripts: {
-		src: './app/assets/js/main.js',
+		src : './app/assets/js/main.js',
 		dest: './app/js',
 	},
 	sprites: {
-		src: './app/assets/img/sprites/*.svg',
+		src : './app/assets/img/sprites/*.svg',
 		dest: './app/assets/img',
 	},
 	images: {
-		src: './app/assets/img/*.{jpg,jpeg,png,gif,webp,svg}',
+		src : './app/assets/img/*.{jpg,jpeg,png,gif,webp,svg}',
 		dest: './app/img',
 	},
 };
@@ -81,8 +81,8 @@ const paths = {
 // Iniciar Browser Sync.
 export const sync = ( done ) => {
 	server.init( {
-		proxy: liveSync,
-		open: false,                     // Prevenir abrir navegador al arrancar.
+		proxy : liveSync,
+		open  : false,                     // Prevenir abrir navegador al arrancar.
 		notify: false,                   // Quitar notificaciones.
 		// injectChanges: true,          // Forzar inyección de CSS.
 		// browser: {string or string[]} // Navegador por defecto (cuando 'open' está en true).
@@ -128,19 +128,19 @@ export const styles = ( done ) => {
 export const scripts = ( done ) => {
 	gulp.src( paths.scripts.src )
 		.pipe( webpack( {
-			mode: ( PRODUCTION !== 'production' ) ? 'development' : 'production',
-			entry: { main: paths.scripts.src },
-			module: {
+			mode   : ( PRODUCTION !== 'production' ) ? 'development' : 'production',
+			entry  : { main: paths.scripts.src },
+			output : { filename: ( PRODUCTION !== 'production' ) ? '[name].js' : '[name].min.js' },
+			devtool: ( PRODUCTION !== 'production' ) ? 'inline-source-map' : false,
+			module : {
 				rules: [ {
 					test: /\.js$/,
-					use: {
-						loader: 'babel-loader',
+					use : {
+						loader : 'babel-loader',
 						options: { presets: [ '@babel/preset-env' ] },
 					},
 				} ],
 			},
-			devtool: ( PRODUCTION !== 'production' ) ? 'inline-source-map' : false,
-			output: { filename: ( PRODUCTION !== 'production' ) ? '[name].js' : '[name].min.js' },
 		} ).on( 'error', function handleError() {
 			this.emit( 'end' ); // Seguir compilando a pesar de errores.
 		} ) )
@@ -154,8 +154,8 @@ export const sprites = ( done ) => {
 		.pipe( svgSprite( {
 			mode: {
 				inline: true,
-				stack: {
-					dest: './',
+				stack : {
+					dest  : './',
 					sprite: './sprites.svg',
 				},
 			},
@@ -176,13 +176,13 @@ export const images = ( done ) => {
 
 		gulp.src( paths.images.src )
 			.pipe( imagemin( {
-				interlaced: true,
+				interlaced : true,
 				progressive: true,
-				optimizationLevel: 5,
 				svgoPlugins: [
+					{ cleanupIDs   : true },
 					{ removeViewBox: true },
-					{ cleanupIDs: true },
 				],
+				optimizationLevel: 5,
 			} ) )
 			.pipe( gulp.dest( paths.images.dest ) );
 	}

@@ -113,9 +113,8 @@ export default class DetectBrowsers {
 	 */
 	rememberAlert() {
 		this.rememberClose.forEach( ( check ) => {
-			const checkParent      = check.parentElement.parentElement.parentElement.parentElement;
-			const checkParentClass = checkParent.classList;
-			const storageItem      = 'startwp_' + checkParentClass[ checkParentClass.length - 1 ];
+			const checkParent = check.parentElement.parentElement.parentElement.parentElement;
+			const storageItem = 'startwp_' + checkParent.classList[ checkParent.classList.length - 1 ];
 
 			check.addEventListener( 'click', () => {
 				if ( check.checked ) {
@@ -136,7 +135,6 @@ export default class DetectBrowsers {
 		// 	this.alertsAutoSave.forEach( ( alert ) => {
 		// 		const storageItem = 'startwp_' + alert.classList[ 2 ];
 		// 		setTimeout( () => localStorage.setItem( storageItem, true ), 500 );
-
 		// 		if ( localStorage.getItem( storageItem ) ) {
 		// 			alert.classList.remove( 'alert--visible' );
 		// 		}

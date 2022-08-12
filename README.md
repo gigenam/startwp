@@ -8,6 +8,30 @@ License     : GNU General Public License v2 or later
 License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ```
 
+![GitHub manifest version](https://img.shields.io/github/manifest-json/v/gigenam/startwp?label=Versi%C3%B3n%20Repo&logo=github)
+![Required Node Version](https://img.shields.io/badge/Recomendado->=14.20%20LTS-blue?logo=node.js)
+![Required PHP Version](https://img.shields.io/badge/Recomendado->=7.0-blue?logo=php)
+![Required WP Version](https://img.shields.io/badge/Mínimo-6.0-blue?logo=wordpress)
+![Tested WP Version](https://img.shields.io/badge/Probado-6.0.1-lightgrey?logo=wordpress)
+
+<br>
+
+# Índice:
+
+- [Documentación](#documentación)
+- [Dependencias](#dependencias)
+- [Configuración inicial](#configuración-inicial)
+- [Empezar a trabajar](#empezar-a-trabajar)
+- [Extras](#documentación-adicional)
+  - [Localización](#localización)
+  - [Plugins](#plugins)
+  - [Mantenimiento](#mantenimiento)
+  - [Plantillas adicionales](#plantillas-adicionales)
+  - [Dependencias](#dependencias)
+- [Listo para producción](#listo-para-producción)
+
+<br>
+
 # Actualización 03 de Agosto
 
 En el commit [c418c38](https://github.com/gigenam/startwp/commit/c418c38e5257ffff7d4e01e7bebd22fb832a2364)
@@ -61,7 +85,7 @@ otros editores populares):
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) - [Configurar editorconfig](.editorconfig).
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - [Configurar eslintrc](.eslintrc) y [eslintignore](.eslintignore).
 - [PHP Sniffer & Beautifier](https://marketplace.visualstudio.com/items?itemName=ValeryanM.vscode-phpsab) - [Configurar composer.json](composer.json).
-- [SCSS Formatter](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
+- [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) y [SCSS Formatter](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
 - [WordPress Snippets](https://marketplace.visualstudio.com/items?itemName=wordpresstoolbox.wordpress-toolbox) (actions, filters, functions, etc.).
 
 Para [WordPress](https://wordpress.org/):
@@ -132,11 +156,17 @@ comando `npm run start` para instalar todas las dependencias de desarrollo.
 \* Si no quieres usar [Composer](https://getcomposer.org), usa el comando
 `npm run start:no-composer` para evitar errores de instalación.
 
+\*\* Los archivos [CHANGELOG.md](CHANGELOG.md) y [manifest.json](manifest.json)
+son sólo para mostrar [cierta información](index.js) y llevar registro de la
+versión y los cambios del repositorio. Para registrar tus propios cambios,
+utiliza el archivo [CHANGELOG.md](app/CHANGELOG.md) dentro de `app/`.
+
+<br>
+
 ## Configuración adicional de plugins
 
-Para auto formatear todos los archivos de forma automática y utilizando los
-[mismos plugins en VSCode](#extensiones-recomendadas), puedes agregar los
-siguientes parametros a tu configuración.
+Para auto formatear todos los archivos utilizando los [mismos plugins en VSCode](#extensiones-recomendadas),
+puedes agregar los siguientes parametros a tu configuración.
 
 Abre la paleta de comandos (`control + shift + p`) y busca `settings.json`.
 Añade el siguiente código:
@@ -175,7 +205,8 @@ Para hacer cambios en los archivos sin necesidad de arrancar
 [Browser Sync](https://www.browsersync.io/), utiliza el comando `npm run watch`.
 
 Una vez todo listo para pasar a producción, utiliza el comando `npm run build`
-el cual comprimirá todos los archivos para ser subidos al sitio final.
+el cual comprimirá todos los archivos para ser subidos al sitio final. Más info
+al final de este documento.
 
 <br>
 
@@ -262,5 +293,22 @@ a)
   versión mayor.
 
 <br>
+
+# Listo para producción
+
+Una vez que tengas tu tema listo, tienes algunas automatizaciones y archivos para
+facilitar la forma de preparar todo para producción y futuras actualizaciones.
+
+Al utilizar el comando `npm run build`, además de comprimir todos los archivos de
+estilos, scripts e imágenes, se modifica la versión en [style.css](app/style.css#L8)
+desde [package.json](package.json#L5). Esto es importante porque una vez que
+desactives el modo `WP_DEBUG` para tu sitio final, todos los archivos de estilos
+y scripts var a tener la versión del tema.
+
+Al hacer actualizaciones, sólo tienes que cambiar la versión de tu proyecto en un
+solo lugar ([package.json](package.json#L5)), compilar y subir los archivos
+modificados que con la nueva versión no vas a tener problemas en que los cambios
+se actualicen correctamente (a menos que utilices plugins adicionales para
+aumentar la velocidad del sitio).
 
 _atte._ **MG**

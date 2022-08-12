@@ -8,9 +8,24 @@ License     : GNU General Public License v2 or later
 License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ```
 
-# Historial de cambios
+# Historial de cambios del repositorio
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
+
+## Ver 1.4.0 - 2022-08-12 :
+
+- [+] Agregado archivo [manifest.json](manifest.json) para probar mostrar y
+  controlar mejor la versión actual del repositorio.
+- [!] Cambios en [index.js](index.js). Ahora a información viene de [manifest.json](manifest.json).
+- [!] Cambios en [package.json](package.json) y [composer.json](composer.json)
+  ya que las versiones en esos archivos deben ser modificadas por el proyecto a
+  desarrollar y/o actualizar en producción.
+- [!] Optimización y limpieza de código en [InlineIcons.js](app/assets/js/utilities/InlineIcons.js).
+- [!] Pequeña optimización en [MainNav.js](app/assets/js/components/MainNav.js)
+  creando las ayudas de navegación con teclado fuera del loop de ítems. También
+  se eliminó una variable en [DetectBrowsers.js](app/assets/js/utilities/DetectBrowsers.js).
+- [!] Correcciones menores de estilos.
+- [!] Actualización de documentación.
 
 ## Ver 1.3.3 - 2022-08-11 :
 

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import info from './package.json' assert {'type':'json'};
+import info from './manifest.json' assert {'type':'json'};
 
 console.info(
 '\x1b[2m%s\x1b[0m', `

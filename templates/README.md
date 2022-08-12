@@ -17,10 +17,10 @@ Carpeta para agregar plantillas reutilizables.
 En esta carpeta se encuentran algunos archivos para la creación de la imagen
 que aparece en las pestañas de los navegadores (favicon). Ver [header.php](../app/header.php#L18).
 
-Las imágenes finales deben ir en la carpeta `app/img/`.
+\* En caso de querer controlar el favicon desde el personalizador, quitar las
+lineas 18, 19 y 20 del [header.php](../app/header.php).
 
-Para más ayuda o más íconos (por ejemplo para Android e iOS), visita
-[https://realfavicongenerator.net/](https://realfavicongenerator.net/).
+Las imágenes finales deben ir en la carpeta `app/img/`.
 
 - `apple-touch-icon.png` es para dispositivos Apple y tiene un tanaño de 180x180.
 - `favicon.png` es el más genérico y soportado por la mayoría de navegadores y
@@ -29,8 +29,8 @@ Para más ayuda o más íconos (por ejemplo para Android e iOS), visita
   y además de la ventaja propia en cuanto a calidad, también se puede utilizar
   en temas claros y oscuros (abrir el archivo en un editor de texto para ver).
 
-\* En caso de querer controlar el favicon desde el personalizador, quitar las
-lineas 18, 19 y 20 del [header.php](../app/header.php).
+Para más ayuda o más íconos (por ejemplo para Android e iOS), visita
+[https://realfavicongenerator.net/](https://realfavicongenerator.net/).
 
 `php/`:
 

@@ -22,7 +22,7 @@ especificidad en producción si no se prueban los estilos antes. Ademas el paque
 no recibe actualizaciones desde hace demasiados años (mismo para otros similares).
 
 De momento el paquete se sigue instalando con [npm install](./package.json#L40)
-para hacer más pruebas o como opción de compilación manual, descomentando las
+para hacer más pruebas o como opción de compilación manual descomentando las
 lineas [105](./gulpfile.js#L105) y/o [118](./gulpfile.js#L118) en [gulpfile.js](./gulpfile.js#L99).
 
 ## Correcciones:
@@ -55,7 +55,8 @@ negativo que aparece la variable como texto y no el código de color.
 
 Una solución sería no quitar las variables generadas por WordPress en [functions.php](app/functions.php#L54)
 y utilizar estas en el tema, pero en mi caso prefiero tener mis propios nombres
-para evitar sobre-escrituras, tanto por WordPress como plugins externos.
+para evitar sobre-escrituras, tanto por WordPress como plugins externos (ya sufrí
+estos problemas en el pasado con un plugin).
 
 La otra sería tener que repetir los colores dos veces de forma manual. En
 [theme.json](app/theme.json#L14) y en [variables.scss](app/assets/scss/abstracts/_variables.scss#L44).

@@ -15,6 +15,9 @@ export default class MainNav {
 		this.menuContainer = document.querySelector( '.nav-primary .menu' );
 		this.menuItems     = document.querySelectorAll( '.nav-primary .menu[data-submenu="hover"] .menu-item-has-children' );
 		this.clickItems    = document.querySelectorAll( '.nav-primary .menu[data-submenu="click"] .menu-item-has-children' );
+		if ( this.clickItems.length ) {
+			this.toolTip = this.createToolTip();
+		}
 		this.events();
 	}
 
@@ -47,13 +50,9 @@ export default class MainNav {
 		 * @see header.php#L71
 		 */
 		this.clickItems.forEach( ( el ) => {
-			// Crear y mostrar una ayuda para la navegación con teclado cuando
-			// hay sub-menus disponibles.
-			const label = document.createElement( 'span' );
-			label.classList.add( 'menu-item--sub-menu-tip' );
-			label.innerHTML = startwp_i10n.viewSubmenus;
-			el.firstElementChild.addEventListener( 'keyup', ( e ) => e.target.appendChild( label ) );
-			el.firstElementChild.addEventListener( 'focusout', ( e ) => e.target.removeChild( label ) );
+			// Mostrar / ocultar ayuda de navegación con teclado.
+			el.firstElementChild.addEventListener( 'keyup', ( e ) => e.target.appendChild( this.toolTip ) );
+			el.firstElementChild.addEventListener( 'focusout', ( e ) => e.target.removeChild( this.toolTip ) );
 
 			// Agregar flecha indicadora de sub-menus.
 			el.firstElementChild.classList.add( 'has-icon-after', 'icon-arrow' );
@@ -77,6 +76,17 @@ export default class MainNav {
 				}
 			} );
 		} );
+	}
+
+	/**
+	 * Crear y mostrar una ayuda para la navegación con teclado cuando hay
+	 * sub-menus disponibles (sólo en modo click).
+	 */
+	createToolTip() {
+		const label = document.createElement( 'span' );
+		label.classList.add( 'menu-item--sub-menu-tip' );
+		label.innerHTML = startwp_i10n.viewSubmenus;
+		return label;
 	}
 
 	/**
