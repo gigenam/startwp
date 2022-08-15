@@ -1,47 +1,28 @@
 /**
- * Entradas individuales
+ * Páginas y entradas individuales
  *
  * @since 1.0.0
  */
 
-.single {
-	.entry-meta,
-	.entry-content:where(:not(:last-child)) {
-		margin-bottom: 1.5em;
-	}
+// Meta info y contenido principal.
+.entry-meta,
+.entry-content:where(:not(:last-child)) {
+	margin-bottom: 1.5em;
+}
 
-	.post-navigation,
-	.comments-area {
-		@extend .wrapper;
-		padding-top: 1em;
-		padding-bottom: 1em;
-	}
+// Navegación de entradas y comentarios.
+.post-navigation,
+.comments-area {
+	@extend .wrapper;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
 
-	.post-navigation {
-		margin-top: 1em;
-		margin-bottom: 1em;
-	}
+.post-navigation {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
 
-	.widgets-sidebar--main-sidebar {
-		max-width: var(--startwp--content-width--main, #{$main-width});
-		margin-right: auto;
-		margin-left: auto;
-
-		@include to(#{$main-width}) {
-			padding-right: $padding-content;
-			padding-left: $padding-content;
-		}
-
-		@include from(#{$main-width}) {
-			--startwp--content-width--main: #{$narrow-width};
-		}
-
-		> *:not(:last-child) {
-			margin-bottom: 1em;
-		}
-	}
-
-	.comments-area {
-		margin-top: 1em;
-	}
+.comments-area {
+	margin-top: 1em;
 }

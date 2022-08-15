@@ -51,8 +51,9 @@ if ( ! class_exists( 'Startwp_Widgets' ) ) {
 				'side_wrap_classes' => '', // Clases personalizadas para agregar al contenedor.
 			);
 			$args     = wp_parse_args( $args, $defaults );
+			$visible  = ( is_singular() ) ? ' widgets-sidebar--inner' : null;
 
-			echo "<aside id='" . esc_html( $args['side_type'] ) . "' class='widgets-sidebar widgets-sidebar--" . esc_html( $args['side_type'] ) . ' ' . esc_html( $args['side_wrap_classes'] ) . "' role='complementary' aria-label='complementary sidebar'>";
+			echo "<aside id='" . esc_html( $args['side_type'] ) . "' class='widgets-sidebar widgets-sidebar--" . esc_html( $args['side_type'] . $visible ) . ' ' . esc_html( $args['side_wrap_classes'] ) . "' role='complementary' aria-label='complementary sidebar'>";
 			dynamic_sidebar( $args['side_type'] );
 			echo '</aside>';
 		}

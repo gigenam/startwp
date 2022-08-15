@@ -12,6 +12,13 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.1 - 2022-08-15 :
+
+- [!] Actualización de dependencias. Corregidos los problemas que podían surgir
+  en la actualización [1.2.0](#ver-120---2022-08-03).
+- [!] Correcciones menores para las secciones de widgets y comentarios sólo para
+  que respeten las dimensiones de contenido.
+
 ## Ver 1.4.0 - 2022-08-12 :
 
 - [+] Agregado archivo [manifest.json](manifest.json) para probar mostrar y

@@ -164,3 +164,29 @@
 		opacity: 0.8;
 	}
 }
+
+//
+// Sección de widgets
+// ----------------------------------------------
+.widgets-sidebar--main-sidebar {
+	max-width: var(--startwp--content-width--main, #{$main-width});
+
+	@include from(#{$main-width}) {
+		--startwp--content-width--main: #{$narrow-width};
+	}
+
+	> *:not(:last-child) {
+		margin-bottom: 1em;
+	}
+
+	// En páginas internas.
+	&.widgets-sidebar--inner {
+		margin-right: auto;
+		margin-left: auto;
+
+		@include to(#{$main-width}) {
+			padding-right: $padding-content;
+			padding-left: $padding-content;
+		}
+	}
+}

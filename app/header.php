@@ -1,6 +1,6 @@
 <?php
 /**
- * Cabecera principal del tema
+ * Cabecera principal del sitio
  *
  * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
  * @package startwp

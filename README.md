@@ -8,13 +8,11 @@ License     : GNU General Public License v2 or later
 License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ```
 
-![GitHub manifest version](https://img.shields.io/github/manifest-json/v/gigenam/startwp?label=Versi%C3%B3n%20Repo&logo=github)
+![GitHub manifest version](https://img.shields.io/github/manifest-json/v/gigenam/startwp?label=Repositorio&logo=github)
 ![Required Node Version](https://img.shields.io/badge/Recomendado->=14.20%20LTS-blue?logo=node.js)
 ![Required PHP Version](https://img.shields.io/badge/Recomendado->=7.0-blue?logo=php)
-![Required WP Version](https://img.shields.io/badge/Mínimo-6.0-blue?logo=wordpress)
-![Tested WP Version](https://img.shields.io/badge/Probado-6.0.1-lightgrey?logo=wordpress)
-
-<br>
+![Required WP Version](https://img.shields.io/badge/Mínimo-v6.0-blue?logo=wordpress)
+![Tested WP Version](https://img.shields.io/badge/Probado-v6.0.1-lightgrey?logo=wordpress)
 
 # Índice:
 
@@ -29,21 +27,6 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
   - [Plantillas adicionales](#plantillas-adicionales)
   - [Dependencias](#dependencias)
 - [Listo para producción](#listo-para-producción)
-
-<br>
-
-# Actualización 03 de Agosto
-
-En el commit [c418c38](https://github.com/gigenam/startwp/commit/c418c38e5257ffff7d4e01e7bebd22fb832a2364)
-se actualizaron varias dependencias para evitar una gran cantidad de problemas
-con paquetes desactualizados. Estos cambios también traen varias modificaciones
-y posibles problemas a la hora de instalar los nuevos paquetes.
-
-En caso de estar trabajando en un proyecto, es recomendable clonar o descargar
-en una carpeta aparte para probar que todo funcione bien dependiendo de tu
-entorno de desarrollo.
-
-Para más información, ver [CHANGELOG.md - Version 1.2.0](CHANGELOG.md).
 
 <br>
 

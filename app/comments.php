@@ -9,7 +9,7 @@
 
 /**
  * Desde WordPress 3.0 es recomendable tener este archivo de forma obligatoria.
- * En caso de usar comentarios, también activa las opciones extras des-comentando
+ * En caso de usar comentarios, también activa las opciones extras descomentando
  * la linea en '/inc/core/class-enqueue.php#L27'.
  */
 

@@ -61,4 +61,4 @@ remove_action( 'wp_head', 'feed_links', 2 );                            // Links
 remove_action( 'wp_head', 'rsd_link' );                                 // Link de Really Simple Discovery service endpoint, EditURI link.
 remove_action( 'wp_head', 'wlwmanifest_link' );                         // Link de Windows Live Writer manifest file.
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
-// Para agregar pingbacks, des-comentar la linea en /inc/setup/class-general.php#L28
+// Para agregar pingbacks, descomentar la linea en /inc/setup/class-general.php#L28
