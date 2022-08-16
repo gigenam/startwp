@@ -11,10 +11,12 @@
 
 if ( ! class_exists( 'Startwp_Menus' ) ) {
 	/**
-	 * Registrar y crear menús
+	 * Registrar y crear menús.
 	 *
 	 * Primero se registran las posiciones una vez (al final de este archivo).
 	 * Luego se crean los menús con el método render().
+	 *
+	 * @see header.php#L61
 	 */
 	class Startwp_Menus {
 		/**
@@ -74,7 +76,5 @@ if ( ! class_exists( 'Startwp_Menus' ) ) {
 
 /**
  * Registrar posiciones
- *
- * @see header.php#L61 para ver como se está usando en la navegación principal.
  */
 Startwp_Menus::register();

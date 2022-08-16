@@ -19,7 +19,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 	 */
 	class Startwp_General_Setup {
 		/**
-		 * Init
+		 * Iniciar clase
 		 */
 		public function __construct() {
 			add_filter( 'body_class', array( $this, 'slug_class' ) );
@@ -127,7 +127,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		}
 
 		/**
-		 * Pingbacks
+		 * Pingbacks.
 		 *
 		 * Encabezado de detección automática de URL de pingback para publicaciones,
 		 * páginas o archivos adjuntos individuales.
@@ -139,7 +139,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		}
 
 		/**
-		 * Open Graph metas
+		 * Open Graph metas.
 		 *
 		 * Algunas funcionalidades para poder compartir páginas en redes sociales.
 		 * Para opciones o control más avanzado, comenta esto en el __construct()

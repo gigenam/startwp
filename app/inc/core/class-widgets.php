@@ -11,7 +11,7 @@
 
 if ( ! class_exists( 'Startwp_Widgets' ) ) {
 	/**
-	 * Registrar y crear posiciones
+	 * Registrar y crear posiciones.
 	 *
 	 * Primero se registran las posiciones por única vez (al final de este archivo).
 	 * Luego se crean las posiciones con el método render().
@@ -64,7 +64,5 @@ if ( ! class_exists( 'Startwp_Widgets' ) ) {
 
 /**
  * Registrar posiciones en widgets init
- *
- * @see sidebar.php
  */
 Startwp_Widgets::register();

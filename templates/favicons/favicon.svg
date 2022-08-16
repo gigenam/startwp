@@ -8,7 +8,7 @@
   <style>
     /**
      * Si estas usando un tema oscuro en tu sistema, se invierten los colores.
-     * Puedes hacer lo mismo al revez con 'prefers-color-scheme: light'.
+     * Puedes hacer lo mismo al revés con 'prefers-color-scheme: light'.
      *
      * También puedes seleccionar o agregar un 'id' a cada elemento y agregarles
      * estilos de forma separada. Ej: rect { color: blue }

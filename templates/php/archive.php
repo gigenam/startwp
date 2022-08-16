@@ -8,8 +8,9 @@
  */
 
 /**
- * De momento este archivo no es utilizado ni fue modificado.
- * Este queda de respaldo para sitios más complejos o más personalizaciones.
+ * Este archivo no fue modificado desde que se clonó de Underscores.
+ * Este archivo sirve para personalizar las diferentes vistas de archivos como
+ * Mostrar entradas por fechas, categorías, etc.
  */
 get_header();
 ?>

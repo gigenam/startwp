@@ -33,16 +33,16 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 # Documentación
 
 StartWP es un tema pensado como plantilla para crear otros temas. Viene con lo
-más básico en cuanto a plantillas php y estilos suficiente como para instalar y
+más básico en cuanto a plantillas php y estilos suficientes como para instalar y
 que todo funcione bien.
 
 Está desarrollado para ser usado de forma 'tradicional'. No tiene ningún soporte
-para ser usado con FSE (Full Site Editing) e incluso desactiva [algunas cosas](app/functions.php#L47)
+para FSE (Full Site Editing) e incluso desactiva [algunas cosas](app/functions.php#L47)
 por defecto, como los svg para duotone y las variables CSS de WordPress.
 
-\* Está incluido el nuevo archivo [theme.json](./app/theme.json), pero principalmente
-para no repetir código o estilos entre el sitio y el editor y para prevenir o
-desactivar estilos no deseados.
+> Está incluido el nuevo archivo [theme.json](./app/theme.json), pero principalmente
+> para no repetir código o estilos entre el sitio y el editor y para prevenir o
+> desactivar [estilos no deseados](app/theme.json#L11).
 
 Este tema cuenta con varios archivos para poder desarrollar mediante varias
 automatizaciones realizadas con [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start).
@@ -129,9 +129,9 @@ llamadas con **startwp**.
 Que las búsquedas seas sensibles a mayúsculas ya que necesitaras cambiar varios
 tipos (`startwp`, `Startwp`, `StartWP`).
 
-[ ! ] Todos los archivos `README.md` del tema tienen mis datos y la descripción
-genérica, también puedes buscar y remplazar esos textos. Se agradece cualquier
-referencia a este repositorio.
+> Todos los archivos `README.md` del tema tienen mis datos y la descripción
+> genérica, también puedes buscar y remplazar esos textos. Se agradece cualquier
+> referencia a este repositorio.
 
 Una vez todo listo, abre una terminal en la carpeta del proyecto y arranca el
 comando `npm run start` para instalar todas las dependencias de desarrollo.

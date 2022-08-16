@@ -8,9 +8,9 @@
  */
 
 /**
- * De momento este archivo no es utilizado ni fue modificado porque al producirse
- * errores se utiliza el archivo /template-parts/content-none.php.
- * Este queda de respaldo para sitios más complejos o más personalizaciones.
+ * Este archivo no fue modificado desde que se clonó de Underscores.
+ * Este archivo sirve para personalizar la pantalla de error cuando se ingresa
+ * una dirección incorrecta o que no existe.
  */
 get_header();
 ?>

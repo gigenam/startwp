@@ -17,8 +17,8 @@ Carpeta para agregar plantillas reutilizables.
 En esta carpeta se encuentran algunos archivos para la creación de la imagen
 que aparece en las pestañas de los navegadores (favicon). Ver [header.php](../app/header.php#L18).
 
-\* En caso de querer controlar el favicon desde el personalizador, quitar las
-lineas 18, 19 y 20 del [header.php](../app/header.php).
+> En caso de querer controlar el favicon desde el personalizador, quitar las
+> lineas 18, 19 y 20 del [header.php](../app/header.php).
 
 Las imágenes finales deben ir en la carpeta `app/img/`.
 
@@ -37,6 +37,8 @@ Para más ayuda o más íconos (por ejemplo para Android e iOS), visita
 En esta carpeta se agregan todos los archivos que no se están utilizando pero
 quedan como respaldo por si se necesitan a futuro. Por ejemplo si se quiere hacer
 uso de más funcionalidades de blog como archivos, páginas de usuarios, etc.
+
+Los archivos deben ir en la raíz de `app/`.
 
 `screenshot/`:
 

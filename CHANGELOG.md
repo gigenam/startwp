@@ -12,6 +12,16 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.2 - 2022-08-16 :
+
+- [+] Agregado [demo.html](app/assets/scss/flexgrid/demo.html) para demostrar y
+  probar el uso de `FlexGrid`.
+- [+] Agregada plantilla de [front-page.php](/templates/php/front-page.php).
+- [!] Más correcciones en documentación. Eliminado de Google Fonts usando
+  @import y PHP en [LEEME.txt](app/LEEME.txt) (respaldo en [TODO.ms](TODO.md)).
+  Agregado de instrucciones para modificar el formulario de comentarios en
+  [LEEME.txt](app/LEEME.txt#L177)
+
 ## Ver 1.4.1 - 2022-08-15 :
 
 - [!] Actualización de dependencias. Corregidos los problemas que podían surgir
@@ -46,7 +56,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 ## Ver 1.3.2 - 2022-08-10 :
 
-- [+] Nuevo ícono `dots` y nuevas animaciones para íconos con las clases
+- [+] Agregado nuevo ícono `dots` y nuevas animaciones para íconos con las clases
   `is-animate` y `is-animate-reverse`.
 - [!] Actualización de licencias en [LEEME.txt](app/LEEME.txt#L214).
 - [!] Correcciones en contenidos privados, búsquedas y traducciones.

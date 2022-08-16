@@ -43,7 +43,7 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 				'startwp-main',
 				'startwp_i10n',
 				array(
-					'themeURI'     => esc_url( get_template_directory_uri() ), // URL absoluta hasta el tema en caso de necesitarla para JavaScript.
+					// 'themeURI'  => esc_url( get_template_directory_uri() ), // URL absoluta hasta el tema en caso de necesitarla para JavaScript (comentado por defecto porque no se está usando).
 					'viewSubmenus' => __( ' Press enter to view the sub-menu.', 'startwp' ), // Usado en: MainNav.js.
 				)
 			);
@@ -81,10 +81,6 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 		 * cachear los recursos de forma externa.
 		 */
 		public static function icons() {
-			/**
-			 * El plugin Theme Check recomienda usar WP_Filesystem sólo para
-			 * actualizaciones. Para este caso es más recomendable usar wp_remote_get().
-			 */
 			$response = wp_remote_get( get_template_directory_uri() . '/img/sprites.svg' );
 
 			/**

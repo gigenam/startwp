@@ -9,14 +9,14 @@
 
 /**
  * Desde WordPress 3.0 es recomendable tener este archivo de forma obligatoria.
- * En caso de usar widgets, descomentar en 'functions.php#L35' para habilitar
+ * En caso de usar widgets, descomenta en 'functions.php#L35' para habilitar
  * las posiciones.
  */
 
 /**
- * Sidebar principal (de muestra)
+ * Sidebar principal.
  *
- * Luego de habilitar el uso de widgets y crear una posición (o usar la principal),
+ * Luego de habilitar el uso de widgets y crear una posición (o usa la principal),
  * ve al archivo donde quieres agregar los widgets y añade el siguiente código php:
  * get_sidebar( 'sidebar-ID' );
  *

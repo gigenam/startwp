@@ -1,6 +1,6 @@
 <?php // phpcs:ignoreFile
 /**
- * Modo mantenimiento
+ * Modo mantenimiento.
  *
  * Subir este archivo dentro de la carpeta /wp-content/ en el servidor para que
  * WordPress lo utilice cuando actualiza el sitio en vez de la típica pantalla
@@ -46,8 +46,8 @@ $startwp_maintenance = $startwp_site_url . 'wp-content/maintenance';
 	<style>
 		*,
 		*::before,
-		*::after { box-sizing: inherit; word-break: break-word }
-		html { box-sizing: border-box; font-size: 16px; -webkit-text-size-adjust: 100% }
+		*::after { box-sizing: inherit; word-break: break-word; }
+		html { box-sizing: border-box; font-size: 16px; -webkit-text-size-adjust: 100%; }
 		body {
 			display: flex;
 			flex-wrap: wrap;
@@ -60,9 +60,9 @@ $startwp_maintenance = $startwp_site_url . 'wp-content/maintenance';
 			background-color: #ffffff;
 			font-family: sans-serif;
 		}
-		a { color: #305cd4; font-weight: bold }
-		a:not(:hover) { text-decoration: none }
-		.main-container { padding: 5rem 1rem }
+		a { color: #305cd4; font-weight: bold; }
+		a:not(:hover) { text-decoration: none; }
+		.main-container { padding: 5rem 1rem; }
 		.main-title {
 			margin-top: 0;
 			margin-bottom: 0;
@@ -75,13 +75,13 @@ $startwp_maintenance = $startwp_site_url . 'wp-content/maintenance';
 			margin-top: auto;
 			padding-top: 1em;
 			padding-bottom: 1em;
-			font-size: .9em;
+			font-size: 0.9em;
 		}
-		.main-footer span { display: block; padding-bottom: .25em }
+		.main-footer span { display: block; padding-bottom: 0.25em; }
 		@media screen and (min-width: 640px) {
-			.main-container { padding: 7% 1rem; font-size: 1.2em }
-			.main-title { font-size: 3.2rem }
-			.main-footer span { font-size: 1.2rem }
+			.main-container { padding: 7% 1rem; font-size: 1.2em; }
+			.main-title { font-size: 3.2rem; }
+			.main-footer span { font-size: 1.2rem; }
 		}
 	</style>
 

@@ -58,8 +58,8 @@ if ( post_password_required() ) {
 		<?php
 		the_comments_navigation();
 
-		// Mensaje para cuando los comentarios están cerrados.
 		if ( ! comments_open() ) :
+			// Mensaje para cuando los comentarios están cerrados.
 			?>
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'startwp' ); ?></p>
 			<?php
@@ -67,6 +67,11 @@ if ( post_password_required() ) {
 
 	endif; // Fin have_comments().
 
+	/**
+	 * Cargar el formulario de comentarios
+	 *
+	 * @see LEEME.txt#L203 para hacer modificaciones.
+	 */
 	comment_form();
 	?>
 </div><!-- #comments -->

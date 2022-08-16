@@ -32,8 +32,8 @@ get_header();
 				/**
 				 * Ejecutar el loop para que la búsqueda genere los resultados.
 				 * Si deseas modificar esto en un tema hijo (child theme), agrega
-				 * un archivo llamado content-search.php para que sea utilizado
-				 * en remplazo a este.
+				 * un archivo llamado content-search.php (respetando la ruto
+				 * completa) para que sea utilizado en remplazo a este.
 				 */
 				get_template_part( 'template-parts/content' );
 			}; // Fin del loop.

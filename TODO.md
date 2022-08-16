@@ -65,6 +65,30 @@ Esto sería un poco incomodo, pero fácil de corregir al finalizar el desarrollo
 del tema en caso que se quiera dejar algo más intuitivo para personas que sólo
 vayan a utilizar el editor de contenido para hacer modificaciones.
 
+### Gfonts con PHP
+
+Abre el archivo "functions.php" y crea una nueva función para agregar tus estilos
+personalizados (si es que no tienes una creada):
+
+    function startwp_mis_estilos() {
+    	// Acá estas llamando al archivo style.css para agregar tus estilos
+    	// personalizados. Es importante tener este archivo, sin importar si no
+    	// vas a modificar nada.
+    	wp_enqueue_style( 'startwp-child', get_stylesheet_uri(), array( 'startwp-main' ), wp_get_theme()->get('Version') );
+
+    	// Esta es la forma para agregar estilos "en linea" sin necesidad de
+    	// modificar los estilos css.
+    	// - El primer valor hacer referencia al archivo de arriba (por eso es importante).
+    	// - En el segundo puedes pasar todos los estilos css que quieras. En
+    	//   este caso utilizamos el parametro @import y declaramos los estilos
+    	//   personalizados.
+    	wp_add_inline_style(
+    		'startwp-child',
+    		'@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"); body{ font-family: Ubuntu, sans-serif } a{ font-weight: 700 }'
+    	);
+    }
+    add_action( 'wp_enqueue_scripts', 'startwp_mis_estilos' );
+
 <br>
 
 # Ideas:

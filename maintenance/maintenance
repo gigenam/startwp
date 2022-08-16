@@ -1,6 +1,6 @@
 <?php
 /**
- * Modo mantenimiento
+ * Modo mantenimiento.
  *
  * Renombrar a .maintenance (con un punto) y subir a la raíz del servidor
  * (public_html/) para forzar a WordPress a ponerse en modo de mantenimiento.

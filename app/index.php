@@ -1,6 +1,6 @@
 <?php
 /**
- * Plantilla principal
+ * Plantilla principal.
  *
  * En caso de no tener otros archivos como page.php, single.php, archive.php, etc.
  * Esta va a ser siempre la utilizada por defecto.

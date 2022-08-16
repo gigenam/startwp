@@ -39,7 +39,7 @@ if ( ! class_exists( 'Startwp_Login' ) ) {
 		}
 
 		/**
-		 * Mostrar título o imagen
+		 * Mostrar título o imagen.
 		 *
 		 * Si se agregó un logo en el personalizador, va a mostrar este.
 		 * Sino el título del sitio.

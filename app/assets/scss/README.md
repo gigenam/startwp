@@ -34,6 +34,8 @@ flexbox. Se puede usar por clases en los archivos HTML/PHP o mediante @mixins en
 otros archivos SCSS. En caso de no querer utilizarlo, comentar la linea 10 en
 [main.scss](./main.scss#L10).
 
+Ver [demo.html](flexgrid/demo.html) para obtener más ayuda.
+
 `layouts/`:
 
 Estilos estructurales y de interfaz. Por ejemplo cabeceras, contenidos principales,

@@ -7,9 +7,7 @@
  */
 
 /**
- * De momento este archivo no es utilizado pero sirve para personalizar el widget
- * de busqueda de WordPress. Este queda de respaldo para sitios más complejos o
- * más personalizaciones.
+ * Este archivo sirve para personalizar el formulario de búsqueda de WordPress.
  */
 ?>
 

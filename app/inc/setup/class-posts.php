@@ -28,7 +28,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 	 */
 	class Startwp_Posts_Extras {
 		/**
-		 * Init
+		 * Iniciar clase
 		 */
 		public function __construct() {
 			add_filter( 'startwp_article_type', array( $this, 'article_post_type' ) );

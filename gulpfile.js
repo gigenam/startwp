@@ -36,7 +36,6 @@ const sass = gulpSass( dartSass );
 /**
  * Variables globales
  */
-// Prod.
 const PRODUCTION = process.env.NODE_ENV;
 
 // Variables con información del tema desde package.json.
@@ -82,10 +81,10 @@ const paths = {
 export const sync = ( done ) => {
 	server.init( {
 		proxy : liveSync,
-		open  : false,                     // Prevenir abrir navegador al arrancar.
-		notify: false,                   // Quitar notificaciones.
-		// injectChanges: true,          // Forzar inyección de CSS.
-		// browser: {string or string[]} // Navegador por defecto (cuando 'open' está en true).
+		open  : false,          // Prevenir abrir navegador al arrancar.
+		notify: false,          // Quitar notificaciones.
+		// injectChanges: true, // Forzar inyección de CSS.
+		// browser      : {}    // Asignar navegador por defecto (cuando 'open' está en true) (Opciones: string o string[]).
 	} );
 	done();
 };
@@ -223,8 +222,7 @@ export const updateThemeInfo = ( done ) => {
 	done();
 };
 
-// Actualizar versión del tema al correr 'npm run build'.
-// Igual a package.json.
+// Actualizar versión del tema al correr 'npm run build'. Igual a package.json.
 export const updateThemeVersion = ( done ) => {
 	gulp.src( './app/style.css' )
 		.pipe( replace( /Version:\s([0-9.])*/, `Version: ${ themeVersion }` ) )
