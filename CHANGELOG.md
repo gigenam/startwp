@@ -12,6 +12,12 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.3 - 2022-08-22 :
+
+- [+] Agregado de [Github Action](.github/workflows/build.yml) para compilar y
+  probar el proyecto en Node 16.x y 18.x.
+- [!] Cambio en la versión mínima de Node a 16.16 LTS o superior.
+
 ## Ver 1.4.2 - 2022-08-16 :
 
 - [+] Agregado [demo.html](app/assets/scss/flexgrid/demo.html) para demostrar y

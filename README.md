@@ -9,9 +9,10 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ```
 
 ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/gigenam/startwp?label=Repositorio&logo=github)
-![Required Node Version](https://img.shields.io/badge/Recomendado->=14.20%20LTS-blue?logo=node.js)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/gigenam/startwp/npm-run-build/main?label=Build)
+![Required Node Version](https://img.shields.io/badge/Mínimo->=16.16%20LTS-blue?logo=node.js)
 ![Required PHP Version](https://img.shields.io/badge/Recomendado->=7.0-blue?logo=php)
-![Required WP Version](https://img.shields.io/badge/Mínimo-v6.0-blue?logo=wordpress)
+![Required WP Version](https://img.shields.io/badge/Recomendado->=6.0-blue?logo=wordpress)
 ![Tested WP Version](https://img.shields.io/badge/Probado-v6.0.1-lightgrey?logo=wordpress)
 
 # Índice:
