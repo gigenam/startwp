@@ -9,11 +9,11 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ```
 
 ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/gigenam/startwp?label=Repositorio&logo=github)
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/gigenam/startwp/npm-run-build/main?label=Build)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/gigenam/startwp/npm-run-build/main?label=NPM%20Build)
 ![Required Node Version](https://img.shields.io/badge/Mínimo->=16.16%20LTS-blue?logo=node.js)
 ![Required PHP Version](https://img.shields.io/badge/Recomendado->=7.0-blue?logo=php)
 ![Required WP Version](https://img.shields.io/badge/Recomendado->=6.0-blue?logo=wordpress)
-![Tested WP Version](https://img.shields.io/badge/Probado-v6.0.1-lightgrey?logo=wordpress)
+![Tested WP Version](https://img.shields.io/badge/Probado-6.0.1-lightgrey?logo=wordpress)
 
 # Índice:
 
@@ -33,7 +33,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 # Documentación
 
-StartWP es un tema pensado como plantilla para crear otros temas. Viene con lo
+**StartWP** es un tema pensado como plantilla para crear otros temas. Viene con lo
 más básico en cuanto a plantillas php y estilos suficientes como para instalar y
 que todo funcione bien.
 
@@ -97,10 +97,8 @@ define( 'WP_DEBUG_DISPLAY', true );
 ```
 
 Abre el archivo [package.json](package.json) y modifica todos los valores por
-defecto con tus datos\*. Estos van a ser usados en algunas tareas, por ejemplo el
+defecto con tus datos. Estos van a ser usados en algunas tareas, por ejemplo el
 valor `site` es la url de desarrollo que va a tomar [Browser Sync](https://www.browsersync.io/).
-
-\* El valor `name` debe ser todo en minúsculas y en lo posible una sola palabra.
 
 Abre el archivo [composer.json](composer.json) (en caso de querer usar
 [WPCS](https://github.com/WordPress/WordPress-Coding-Standards)) y configura los
@@ -141,9 +139,10 @@ comando `npm run start` para instalar todas las dependencias de desarrollo.
 `npm run start:no-composer` para evitar errores de instalación.
 
 \*\* Los archivos [CHANGELOG.md](CHANGELOG.md) y [manifest.json](manifest.json)
-son sólo para mostrar [cierta información](index.js) y llevar registro de la
-versión y los cambios del repositorio. Para registrar tus propios cambios,
-utiliza el archivo [CHANGELOG.md](app/CHANGELOG.md) dentro de `app/`.
+en la raíz del proyecto son sólo para mostrar [cierta información](index.js) y
+llevar registro de la versión y los cambios del repositorio. Para registrar tus
+propios cambios, utiliza el archivo [CHANGELOG.md](app/CHANGELOG.md) dentro de
+`app/`.
 
 <br>
 
@@ -203,7 +202,7 @@ formateados de forma consistente (con la ayuda de las extensiones y configuracio
 anteriores). En todas partes del tema encontraras archivos `README.md` con algo
 más de información.
 
-Además se incluyen algunos extras tanto en el tema como fuera de este.
+Además, se incluyen algunos extras tanto en el tema como fuera de este.
 
 ## Localización
 
@@ -215,7 +214,7 @@ Además el tema cuenta con dos traducciones por defecto, es_ES y es_AR.
 Para más información puedes ver la tarea en [gulpfile.js](./gulpfile.js#L193)
 y la carpeta `app/languages/` y buscar todas las funciones de textos traducibles
 (`__()`, `_e()`, etc). Para más información, revisar la [documentación oficial](https://developer.wordpress.org/themes/functionality/internationalization/)
-(En ingles).
+(En ingles) y el archivo [README.md](app/languages/README.md).
 
 ## Plugins
 
@@ -257,9 +256,9 @@ Para mantener los paquetes al día, puedes usar los siguientes comandos.
 
 a)
 
-- `npm outdated` : Verifica si tiene paquetes desactualizados.
+- `npm outdated` : Verifica si tienes paquetes desactualizados.
 - `npm update` : Actualiza a los paquetes de forma segura sin subir de versión
-  mayor.
+  mayor\*.
 
 b)
 
@@ -270,12 +269,12 @@ b)
 
 **composer**:
 
-a)
-
-- `composer outdated` : Verifica si tiene paquetes desactualizados.
+- `composer outdated` : Verifica si tienes paquetes desactualizados.
 - `composer update` : Actualiza a los paquetes de forma segura sin subir de
-  versión mayor.
+  versión mayor\*.
 
+\* Siempre que las vesiones contengan el simbolo `^`. Si lo quitas, puedes subir
+a la siguiente versión mayor.
 <br>
 
 # Listo para producción

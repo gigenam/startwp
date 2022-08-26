@@ -3,8 +3,6 @@
  */
 @use "sass:math";
 
-// Flexbox
-// ----------------------------------------------
 // Columna de tamaño fijo.
 // @param $size Define el tamaño máximo de la columna.
 @mixin col($size: "") {

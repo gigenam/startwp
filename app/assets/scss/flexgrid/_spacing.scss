@@ -3,8 +3,6 @@
  */
 @use "sass:math";
 
-// Flexbox
-// ----------------------------------------------
 @mixin flex-gap() {
 	@for $i from 1 through $flexrow-columns {
 		&.cols-#{$i} > *:where(:not([class*="col-"])) {

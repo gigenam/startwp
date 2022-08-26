@@ -70,7 +70,7 @@ if ( post_password_required() ) {
 	/**
 	 * Cargar el formulario de comentarios
 	 *
-	 * @see LEEME.txt#L203 para hacer modificaciones.
+	 * @see LEEME.txt#L177 para hacer modificaciones.
 	 */
 	comment_form();
 	?>

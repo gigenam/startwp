@@ -12,6 +12,14 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.4 - 2022-08-26 :
+
+- [-] Eliminación de la plantilla `app/template-parts/content-page.php` ya que
+  fue integrada directamente en [page.php](app/page.php).
+- [!] Limpieza y optimización en [MainNav.js](app/assets/js/components/MainNav.js).
+- [!] Actualización de dependencias.
+- [!] Correcciones menores de documentación.
+
 ## Ver 1.4.3 - 2022-08-22 :
 
 - [+] Agregado de [Github Action](.github/workflows/build.yml) para compilar y

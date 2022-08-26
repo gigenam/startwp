@@ -55,7 +55,7 @@
 .nav-primary {
 	@include to(large) {
 		width: 100%;
-		// Comentar esto para usar otros estilos de menú móvil (linea 150) ->.
+		// Comentar esto para usar otros estilos de menú móvil (ver linea 150) ->.
 		height: 0;
 		overflow: hidden;
 		transition: height 0.3s ease;
@@ -63,7 +63,7 @@
 		&--is-visible {
 			height: var(--startwp--nav-primary--height);
 		}
-		// <- Comentar esto para usar otros estilos de menú móvil (linea 150).
+		// <- Comentar esto para usar otros estilos de menú móvil (ver linea 150).
 	}
 
 	// Menu.
@@ -132,18 +132,6 @@
 .nav-primary .menu[data-submenu="click"] {
 	.menu-item--show-sub-menu > .sub-menu--is-visible {
 		visibility: visible;
-	}
-
-	// Ayuda al hacer focus en un elemento con el teclado.
-	.menu-item--sub-menu-tip {
-		display: inline-block;
-		position: absolute;
-		top: 100%;
-		right: 0;
-		padding: 0rem 0.5rem 0.1rem;
-		font-size: 0.9em;
-		border: 1px solid currentColor;
-		opacity: 0.8;
 	}
 }
 

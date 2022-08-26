@@ -76,6 +76,8 @@ body.login {
 	}
 
 	// Ocultar selector de multi idioma.
+	// Comentar o borrar esto en caso de querer utilizar esta nueva funcionalidad
+	// de seleccionar el idioma de la administración antes de iniciar sesión.
 	.language-switcher {
 		display: none;
 	}

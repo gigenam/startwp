@@ -67,7 +67,7 @@ export default class DetectBrowsers {
 	}
 
 	/**
-	 * Obtener y validar las versiones de Chrome, Firefox y Safari y devuelve
+	 * Obtener y validar las versiones de Chrome, Firefox y Safari y devolver
 	 * verdadero o falso para el parámetro this.isOutdated.
 	 *
 	 * Agregar la clase is-[navegador] al elemento HTML principal.

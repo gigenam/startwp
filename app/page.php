@@ -14,9 +14,37 @@ get_header();
 		<?php
 		while ( have_posts() ) {
 			the_post();
+			?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			get_template_part( 'template-parts/content', 'page' );
+				<header class="entry-header wrapper">
+					<?php
+					/**
+					 * Hook: startwp_page_header
+					 *
+					 * @hooked Startwp_Posts_Extras->post_thumbnail - 10
+					 * @hooked Startwp_Posts_Extras->post_title     - 20
+					 */
+					do_action( 'startwp_page_header' );
+					?>
+				</header><!-- .entry-header -->
 
+				<div class="entry-content wrapper">
+					<?php
+					the_content();
+
+					wp_link_pages(
+						array(
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'startwp' ),
+							'after'  => '</div>',
+						)
+					);
+					?>
+				</div><!-- .entry-content -->
+
+			</article><!-- #post-<?php the_ID(); ?> -->
+
+			<?php
 			// Agregar la plantilla de comentarios si estos están abiertos o
 			// existe alguno. Para usar comentarios con todas las funcionalidades
 			// por defecto, descomenta '/inc/core/class-enqueue.php#L26' y

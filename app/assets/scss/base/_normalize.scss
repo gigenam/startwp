@@ -42,7 +42,7 @@ html {
 }
 
 body {
-	min-height: 100vh;
+	min-height: 100vh; // Para agregar pie de página siempre al final.
 	margin: 0;
 	line-height: 1.5;
 	color: var(--startwp--color--foreground);
@@ -53,11 +53,7 @@ body {
 	text-rendering: optimizeSpeed;
 
 	&.admin-bar {
-		min-height: calc(100vh - 46px);
-
-		@include from(784px) {
-			min-height: calc(100vh - 32px);
-		}
+		min-height: calc(100vh - var(--wp-admin--admin-bar--height));
 	}
 }
 
@@ -89,12 +85,7 @@ h6 {
 	}
 }
 
-// Quitar margin al último elemento dentro de un contenedor.
-// * > *:last-child {
-// 	margin-bottom: 0;
-// }
-
-// Quitar estilos a listas cuando se usan clases de menu o lista.
+// Quitar estilos a listas cuando se usan clases de menu o list.
 ul,
 ol {
 	&.menu,
@@ -174,7 +165,7 @@ a {
 	// Teléfonos para Android & iOS.
 	// Agregar tel:[número] al atributo href (iOS lo hace por defecto).
 	// Ej: <a href="tel:0123456">Contacto 1 23 456</a>
-
+	//
 	// Emails.
 	// Agregar mailto:[email] al atributo href.
 	// Ej: <a href="mailto:ejemplo@misitio.com">Contacto</a>
@@ -308,7 +299,7 @@ p > img {
 	vertical-align: middle;
 }
 
-// Embebidos.
+// Incrustados.
 embed,
 iframe,
 object,
@@ -378,8 +369,8 @@ input[type="file"] {
 	height: auto;
 }
 
-// Problema conocido:
-// - En iOS las opciones múltiples no respetan el padding horizontal.
+// Problema conocido en iOS (probado hasta v14):
+// - Las opciones múltiples no respetan el padding horizontal.
 select[multiple] {
 	min-height: $input-height;
 	overflow: hidden;

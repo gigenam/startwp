@@ -11,7 +11,7 @@
 //
 
 // Tipografías locales
-// TODO: Hoy en día con usar los formatos woff o woff2 alcanza.
+// TIP: Hoy en día con usar los formatos woff o woff2 alcanza.
 //
 // @param $fontName Nombre de la fuente igual al archivo de esta.
 // @param $folder   Nombre de la carpeta en caso de organizar las fuentes de esa forma.
@@ -46,8 +46,7 @@
 }
 
 //
-// Clearfix
-// Clear floats.
+// Limpiar floats.
 // ----------------------------------------------
 @mixin clearfix() {
 	&::after {
@@ -77,6 +76,7 @@
 //
 // WP Admin Bar
 // Agregar un espacio adicional para evitar sobre-posición con la barra de WP.
+// Ideal para cuando se usan elementos en posición absoluta o fija.
 //
 // @param $type Propiedad a ser asignada. Es recomendado usar top, pero puede ser margin, etc.
 // ----------------------------------------------
@@ -90,7 +90,6 @@
 }
 
 //
-// Menus y listas
 // Reiniciar estilos por defecto de ul, ol.
 // ----------------------------------------------
 @mixin reset-menu() {

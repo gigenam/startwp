@@ -49,9 +49,9 @@ export default class InlineIcons {
 	 * Crear un SVG dentro de un elemento con las clases 'icon-[nombre icono]'
 	 */
 	addIcons() {
-		this.iconSelectors.forEach( ( element ) => {
+		this.iconSelectors.forEach( ( el ) => {
 			// Separar clases.
-			const trimClasses = element.classList.value.substring( element.classList.value.search( /\s[icon]/ ) + 1 );
+			const trimClasses = el.classList.value.substring( el.classList.value.search( /\s[icon]/ ) + 1 );
 			let iconClass     = trimClasses.substring( 5, trimClasses.search( /[a-z]\s/g ) + 1 );
 			if ( trimClasses.search( /[a-z]\s/g ) < 0 ) {
 				iconClass = trimClasses.substring( 5 );
@@ -59,27 +59,27 @@ export default class InlineIcons {
 
 			// Si es un menú de navegación o un botón de bloque, agregar el SVG
 			// dentro del enlace.
-			if ( element.classList.contains( 'menu-item' ) || element.classList.contains( 'wp-block-button' ) ) {
-				if ( element.classList.contains( 'has-icon-after' ) ) {
-					element.firstElementChild.insertAdjacentElement( 'beforeend', this.createSvgIcon( iconClass ) );
+			if ( el.classList.contains( 'menu-item' ) || el.classList.contains( 'wp-block-button' ) ) {
+				if ( el.classList.contains( 'has-icon-after' ) ) {
+					el.firstElementChild.insertAdjacentElement( 'beforeend', this.createSvgIcon( iconClass ) );
 					return;
 				}
-				element.firstElementChild.insertAdjacentElement( 'afterbegin', this.createSvgIcon( iconClass ) );
+				el.firstElementChild.insertAdjacentElement( 'afterbegin', this.createSvgIcon( iconClass ) );
 				return;
 			}
 
 			// Si es un archivo de bloque, agregar el SVG dentro del último enlace.
-			if ( element.classList.contains( 'wp-block-file' ) ) {
-				if ( element.classList.contains( 'has-icon-after' ) ) {
-					element.lastElementChild.insertAdjacentElement( 'beforeend', this.createSvgIcon( iconClass ) );
+			if ( el.classList.contains( 'wp-block-file' ) ) {
+				if ( el.classList.contains( 'has-icon-after' ) ) {
+					el.lastElementChild.insertAdjacentElement( 'beforeend', this.createSvgIcon( iconClass ) );
 					return;
 				}
-				element.lastElementChild.insertAdjacentElement( 'afterbegin', this.createSvgIcon( iconClass ) );
+				el.lastElementChild.insertAdjacentElement( 'afterbegin', this.createSvgIcon( iconClass ) );
 				return;
 			}
 
-			const insertPosition = ( element.classList.contains( 'has-icon-after' ) ) ? 'beforeend' : 'afterbegin';
-			element.insertAdjacentElement( insertPosition, this.createSvgIcon( iconClass ) );
+			const insertPosition = ( el.classList.contains( 'has-icon-after' ) ) ? 'beforeend' : 'afterbegin';
+			el.insertAdjacentElement( insertPosition, this.createSvgIcon( iconClass ) );
 		} );
 	}
 

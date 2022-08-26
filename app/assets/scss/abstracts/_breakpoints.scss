@@ -65,6 +65,7 @@ $breakpoints: (
 			@content;
 		}
 	} @else if ($bp == large) {
+		// Para usar only(large), descomentar el tamaño xlarge en la linea 19.
 		@media screen and (min-width: map-get($breakpoints, $bp)) and (max-width: map-get($breakpoints, xlarge)) {
 			@content;
 		}

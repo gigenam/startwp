@@ -49,7 +49,7 @@ if ( ! class_exists( 'Startwp_Menus' ) ) {
 			$nav_button = null;
 			if ( $args['has_button'] ) {
 				$nav_button = "
-				<a href='#show-menu' class='btn btn-menu btn-menu--{$args['nav_type']} hidden-from-large' data-prevent='true' aria-label='" . apply_filters( 'startwp_show_menu_button_text', esc_html__( 'Navigation Menu', 'startwp' ) ) . "' aria-expanded='false'>
+				<a href='#show-menu' id='btn-menu-{$args['nav_type']}' class='btn btn-menu btn-menu--{$args['nav_type']} hidden-from-large' data-prevent='true' aria-label='" . apply_filters( 'startwp_show_menu_button_text', esc_html__( 'Navigation Menu', 'startwp' ) ) . "' aria-expanded='false'>
 					<span class='btn-menu-bar btn-menu-bar--top' aria-hidden='true'></span>
 					<span class='btn-menu-bar btn-menu-bar--middle' aria-hidden='true'></span>
 					<span class='btn-menu-bar btn-menu-bar--bottom' aria-hidden='true'></span>

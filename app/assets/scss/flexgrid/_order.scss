@@ -23,9 +23,6 @@
 	}
 }
 
-//
-// Flexbox
-// ----------------------------------------------
 .flexrow {
 	> .is-order {
 		@include flexrow-order("first");

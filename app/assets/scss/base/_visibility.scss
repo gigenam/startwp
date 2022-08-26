@@ -4,7 +4,7 @@
  * @since 1.0.0
  */
 
-@mixin col-hidden($direction: "") {
+@mixin is-hidden($direction: "") {
 	// Oculto en.
 	@if ($direction == "") {
 		@each $key in map-keys($breakpoints) {
@@ -39,6 +39,6 @@
 	}
 }
 
-@include col-hidden();
-@include col-hidden("from");
-@include col-hidden("to");
+@include is-hidden();
+@include is-hidden("from");
+@include is-hidden("to");

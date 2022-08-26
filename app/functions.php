@@ -15,10 +15,10 @@
  * no comprimidos de estilos y scripts y le agregará un versionado aleatorio para
  * prevenir almacenamiento en la cache del navegador.
  */
-// Nombre del tema.
+// Nombre de la carpeta del tema.
 $startwp_name = wp_get_theme( 'startwp' );
 
-// En producción, la version del tema es agregada desde 'style.css#L7'.
+// En producción, la versión del tema es agregada desde 'style.css#L8'.
 $startwp_theme_version = ( 'development' === wp_get_environment_type() || WP_DEBUG )
 	? microtime()
 	: $startwp_name->get( 'Version' );

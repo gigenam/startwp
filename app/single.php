@@ -17,6 +17,7 @@ get_header();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
+			// Paginación entre entradas.
 			the_post_navigation(
 				array(
 					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'startwp' ) . '</span> <span class="nav-title">%title</span>',
