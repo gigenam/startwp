@@ -10,10 +10,10 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 ![GitHub manifest version](https://img.shields.io/github/manifest-json/v/gigenam/startwp?label=Repositorio&logo=github)
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/gigenam/startwp/npm-run-build/main?label=NPM%20Build)
-![Required Node Version](https://img.shields.io/badge/Mínimo->=16.16%20LTS-blue?logo=node.js)
+![Required Node Version](https://img.shields.io/badge/Mínimo->=16.x%20LTS-blue?logo=node.js)
 ![Required PHP Version](https://img.shields.io/badge/Recomendado->=7.0-blue?logo=php)
 ![Required WP Version](https://img.shields.io/badge/Recomendado->=6.0-blue?logo=wordpress)
-![Tested WP Version](https://img.shields.io/badge/Probado-6.0.1-lightgrey?logo=wordpress)
+![Tested WP Version](https://img.shields.io/badge/Probado-6.0-lightgrey?logo=wordpress)
 
 # Índice:
 
@@ -43,7 +43,7 @@ por defecto, como los svg para duotone y las variables CSS de WordPress.
 
 > Está incluido el nuevo archivo [theme.json](./app/theme.json), pero principalmente
 > para no repetir código o estilos entre el sitio y el editor y para prevenir o
-> desactivar [estilos no deseados](app/theme.json#L11).
+> desactivar [estilos no deseados](app/theme.json#L10).
 
 Este tema cuenta con varios archivos para poder desarrollar mediante varias
 automatizaciones realizadas con [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start).
@@ -211,7 +211,7 @@ en ingles porque es más fácil dejar ese por defecto y luego agregar los necesa
 en tu idioma que al revés (a menos que no te importe el soporte multi idioma).
 Además el tema cuenta con dos traducciones por defecto, es_ES y es_AR.
 
-Para más información puedes ver la tarea en [gulpfile.js](./gulpfile.js#L193)
+Para más información puedes ver la tarea en [gulpfile.js](./gulpfile.js#L191)
 y la carpeta `app/languages/` y buscar todas las funciones de textos traducibles
 (`__()`, `_e()`, etc). Para más información, revisar la [documentación oficial](https://developer.wordpress.org/themes/functionality/internationalization/)
 (En ingles) y el archivo [README.md](app/languages/README.md).

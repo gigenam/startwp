@@ -24,7 +24,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 - [+] Agregado de [Github Action](.github/workflows/build.yml) para compilar y
   probar el proyecto en Node 16.x y 18.x.
-- [!] Cambio en la versión mínima de Node a 16.16 LTS o superior.
+- [!] Cambio en la versión mínima de Node a 16.x LTS o superior.
 
 ## Ver 1.4.2 - 2022-08-16 :
 
@@ -47,7 +47,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 - [+] Agregado archivo [manifest.json](manifest.json) para probar mostrar y
   controlar mejor la versión actual del repositorio.
-- [!] Cambios en [index.js](index.js). Ahora a información viene de [manifest.json](manifest.json).
+- [!] Cambios en [index.js](index.js). Ahora la información viene de [manifest.json](manifest.json).
 - [!] Cambios en [package.json](package.json) y [composer.json](composer.json)
   ya que las versiones en esos archivos deben ser modificadas por el proyecto a
   desarrollar y/o actualizar en producción.
@@ -62,7 +62,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 - [-] Eliminados los colores predeterminados en el editor para no tener que
   agregar estilos personalizados para cada nombre. Ver [theme.json](app/theme.json#L10).
-- [!] Correcciones de ancho máximo de la sección de por defecto widgets igual al
+- [!] Correcciones de ancho máximo de la sección de widgets por defecto igual al
   contenido principal.
 - [!] Correcciones de estilos para algunos bloques, en el editor y cargar clases
   utilitarias al final del CSS.
@@ -72,7 +72,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 - [+] Agregado nuevo ícono `dots` y nuevas animaciones para íconos con las clases
   `is-animate` y `is-animate-reverse`.
-- [!] Actualización de licencias en [LEEME.txt](app/LEEME.txt#L214).
+- [!] Actualización de licencias en [LEEME.txt](app/LEEME.txt#L219).
 - [!] Correcciones en contenidos privados, búsquedas y traducciones.
 - [!] Correcciones menores de documentación y estilos.
 
@@ -81,7 +81,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 - [+] Agregado de `sanitize_callback` en [class-customizer.php](app/inc/custom/class-customizer.php#L53).
 - [!] Arreglo en alertas para instanciarlas más fácil y que los mensajes se puedan
   traducir correctamente en [class-alerts.php](app/inc/setup/class-alerts.php#L123).
-- [!] Cambio en la forma de usar SVGs en [class-enqueue.php](app/inc/core/class-enqueue.php#L84).
+- [!] Cambio en la forma de usar SVGs en [class-enqueue.php](app/inc/core/class-enqueue.php#L74).
 - [!] Ocultar información extra como autor y fechas en páginas privadas.
 - [!] Correcciones menores en mejora de accesibilidad.
 - [!] Correcciones menores de documentación.
@@ -104,7 +104,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ## Ver 1.2.1 - 2022-08-04 :
 
 - [+] Agregado contador de comentarios a las entradas cuando estos están abiertos
-  en las lineas [45](app/inc/setup/class-posts.php#L45) y [233](app/inc/setup/class-posts.php#L233)
+  en las lineas [45](app/inc/setup/class-posts.php#L45) y [232](app/inc/setup/class-posts.php#L232)
   del archivo [class-posts.php](app/inc/setup/class-posts.php).
 - [!] Cambio de nombre para íconos de comentarios porque no funcionaban. Ahora
   se utilizan con `icon-cmt` y `icon-cmts`.
