@@ -1,0 +1,81 @@
+/**
+ * Botones
+ */
+
+// Agregar al carrito.
+a.button,
+a.button.disabled,
+a.button.alt,
+button.button,
+button.button.disabled,
+button.button:disabled,
+button.button:disabled[disabled],
+button.button.alt,
+button.button.alt.disabled,
+p.stock {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.2rem 1em;
+	line-height: initial;
+	color: var(--startwp--color--background);
+	background-color: var(--startwp--color--foreground);
+
+	@include to(medium) {
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+	}
+
+	&:hover {
+		color: var(--startwp--color--background);
+		background-color: var(--startwp--color--foreground);
+		opacity: $link-hover;
+	}
+}
+
+// Seleccionar opciones.
+a.button.product_type_variable {
+	color: var(--startwp--color--foreground);
+	background-color: var(--startwp--color--background);
+	border: 1px solid var(--startwp--color--foreground);
+}
+
+// Producto externo.
+a.button.product_type_external {
+	color: var(--startwp--color--background);
+	background-color: var(--startwp--color--accent);
+}
+
+// Productos variables, Aplicar cupón y actualizar carrito.
+a.button.product_type_variable,
+.coupon button.button,
+.checkout_coupon button.button,
+button[name="update_cart"].button,
+button[name="update_cart"].button:disabled,
+button[name="update_cart"].button:disabled[disabled]:hover {
+	padding: 0.1em 1em;
+	color: var(--startwp--color--foreground);
+	background-color: var(--startwp--color--background);
+	border: 1px solid var(--startwp--color--foreground);
+
+	@include to(medium) {
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+	}
+}
+
+// Finalizar compra.
+a.button.checkout-button,
+a.button.checkout-button:hover,
+button.button#place_order {
+	padding: 0.7em 1.4em;
+	background-color: var(--startwp--color--success);
+}
+
+// En carrito.
+.wc-proceed-to-checkout {
+	a.button.checkout-button {
+		width: 100%;
+		margin-bottom: 0;
+	}
+}

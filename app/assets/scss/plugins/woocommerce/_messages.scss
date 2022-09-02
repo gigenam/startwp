@@ -1,0 +1,48 @@
+/**
+ * Mensajes y alertas
+ */
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	align-items: flex-start;
+	padding: 1rem 0.75rem 1rem 3rem;
+	background-color: var(--startwp--color--secondary);
+	border: 1px solid var(--startwp--color--shadow);
+	border-radius: $border-radius;
+
+	// Íconos.
+	&::before {
+		left: 1.1rem;
+	}
+
+	// TODO: revisar y borrar.
+
+	// Al actualizar costo de envío en carrito aparece el mensaje azul con la
+	// clase woocommerce-info y tiene un ícono cuadrado.
+
+	// Al actualizar cantidades en carrito aparece el mensaje verde con la clase
+	// woocommerce-message y tiene un ícono de check.
+
+	// role="alert" se muestra con verde en el mensaje de producto eliminado.
+	// este no tiene ninguna clase extra.
+
+	// class="cart-empty woocommerce-info" en "tu carrito está vacío" tiene un
+	// ícono cuadrado.
+
+	// En account el mensaje de "no hay nada pedidos todavía" en pedidos tiene
+	// las clases woocommerce-message y woocommerce-info (además de otras) y
+	// tiene un icono de check.
+
+	// En account el mensaje de "no hay descargas todavía" en pedidos tiene las
+	// clases woocommerce-Message y woocommerce-info (además de otras) y tiene
+	// un icono cuadrado (igual al carrito vacío).
+
+	// Al agregar un product en "single product" aparece un mensaje con las
+	// clase woocommerce-message y role="alert". Se muestra en verde y con un
+	// ícono de check y botón de ver carrito.
+
+	// Al agregar un product de nuevo que solo permite comprar una vez en
+	// "single product" aparece un mensaje con las clase woocommerce-error y
+	// role="alert". Se muestra en rojo y con un ícono de ! y botón de ver carrito.
+}

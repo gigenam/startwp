@@ -1,0 +1,232 @@
+/**
+ * Cuentas de usuario
+ */
+
+/**
+ * Inicio de sesión y registro
+ */
+
+.woocommerce-form-login,
+.woocommerce-form-register {
+	input {
+		max-width: 100%;
+	}
+
+	.button {
+		float: right;
+		margin: 0;
+	}
+}
+
+// Mostrar contraseña.
+.woocommerce-form,
+.woocommerce-form-row {
+	.show-password-input {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: $input-height;
+		height: $input-height;
+		top: 0;
+		right: 0;
+		border-radius: $border-radius;
+
+		&.display-password {
+			outline: 2px dotted var(--startwp--color--primary);
+		}
+
+		&::after {
+			margin: 0;
+		}
+	}
+
+	// Fuerza de contraseña.
+	.woocommerce-password-strength {
+		margin-top: -3px;
+		color: var(--startwp--color--white);
+		background-color: var(--startwp--color--warning);
+		font-weight: normal;
+		border-bottom-right-radius: $border-radius;
+		border-bottom-left-radius: $border-radius;
+
+		&.short {
+			color: var(--startwp--color--white);
+			background-color: var(--startwp--color--error);
+		}
+		&.good,
+		&.strong {
+			color: var(--startwp--color--white);
+			background-color: var(--startwp--color--success);
+		}
+	}
+}
+
+/**
+ * Recuperar contraseña
+ */
+form.lost_reset_password {
+	@include from(large) {
+		max-width: 50%;
+	}
+
+	.form-row {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 1em;
+	}
+}
+
+/**
+ * Página de usuario
+ */
+// Navegación.
+.woocommerce-MyAccount-navigation {
+	border-right: 1px solid var(--startwp--color--shadow);
+
+	ul {
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style: none;
+	}
+
+	li {
+		&:hover,
+		&.is-active {
+			background-color: var(--startwp--color--secondary);
+
+			a {
+				color: var(--startwp--color--foreground);
+			}
+		}
+
+		a {
+			display: block;
+			padding: 0.25em 0.5em;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+// Contenido.
+.woocommerce-MyAccount-content {
+	$forms-max-width: 47%;
+
+	// Corrección en mensaje de no hay pedidos.
+	.woocommerce-message {
+		a.button {
+			order: 1;
+			float: none;
+			margin-left: auto;
+		}
+	}
+
+	// Editar direcciones.
+	.woocommerce-Addresses {
+		.title {
+			> * {
+				float: none;
+				margin-bottom: 0;
+			}
+
+			h3 {
+				font-size: calc($fs-heading-4 * 1.1);
+			}
+
+			a {
+				display: initial;
+			}
+		}
+
+		address {
+			margin-top: 0.5rem;
+		}
+	}
+
+	// Formulario de dirección.
+	.woocommerce-address-fields,
+	.edit-account {
+		&__field-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			> p {
+				flex: 1 1 100%;
+
+				@include from(medium) {
+					flex-basis: 50%;
+				}
+			}
+		}
+
+		.form-row {
+			max-width: 100%;
+			float: none;
+			padding: 0;
+			margin-bottom: 1em;
+
+			@include from(medium) {
+				margin-top: auto;
+				max-width: $forms-max-width;
+			}
+		}
+
+		// Guardar cambios.
+		> p:last-of-type {
+			text-align: right;
+		}
+	}
+
+	// Detalles de la cuenta.
+	.edit-account {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		> p {
+			flex: 1 1 100%;
+
+			@include from(medium) {
+				&:not(.form-row-wide) {
+					flex-basis: 50%;
+				}
+
+				&.form-row-wide {
+					max-width: 100%;
+
+					input {
+						max-width: $forms-max-width;
+					}
+
+					> span {
+						display: block;
+					}
+				}
+			}
+		}
+
+		fieldset {
+			width: 100%;
+			padding-bottom: 0;
+			margin: 0 0 1em;
+			border-color: var(--startwp--color--shadow);
+
+			legend {
+				padding: 0 0.5rem;
+				opacity: 0.8;
+			}
+
+			.form-row,
+			.form-row input {
+				max-width: 100%;
+			}
+
+			.form-row > span {
+				max-width: $forms-max-width;
+			}
+		}
+	}
+}

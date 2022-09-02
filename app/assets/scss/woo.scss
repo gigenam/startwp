@@ -1,0 +1,19 @@
+/**
+ * Estilos WooCommerce
+ */
+
+@import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/breakpoints";
+@import "abstracts/variables";
+
+.woocommerce {
+	@import "plugins/woocommerce/generic";
+	@import "plugins/woocommerce/buttons";
+	@import "plugins/woocommerce/tables";
+	@import "plugins/woocommerce/messages";
+	@import "plugins/woocommerce/shop";
+	@import "plugins/woocommerce/product";
+	@import "plugins/woocommerce/checkout";
+	@import "plugins/woocommerce/account";
+}

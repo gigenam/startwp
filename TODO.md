@@ -12,7 +12,13 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 <br>
 
-## Funcionalidades pendientes:
+## Funcionalidades pendientes - WooCommerce:
+
+- Reseñas.
+- Widgets.
+- Bloques de gutenberg.
+- Correos.
+- Medios de pago externos.
 
 ## Revisiones pendientes:
 

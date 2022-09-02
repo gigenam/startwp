@@ -1,0 +1,81 @@
+/**
+ * Tablas de contenido
+ */
+
+table {
+	td,
+	th {
+		white-space: normal;
+	}
+}
+
+table.shop_table {
+	@include to(medium) {
+		tbody {
+			display: block;
+		}
+
+		tr {
+			display: inline-flex;
+			width: 100%;
+		}
+
+		&.cart {
+			tr {
+				flex-direction: column;
+			}
+		}
+	}
+
+	// Carrito.
+	td:where(:not(.product-name)) {
+		text-align: center;
+
+		> a,
+		img {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
+	// Input para ingresar cupón en checkout.
+	.coupon {
+		@include to(medium) {
+			margin-bottom: 0.5em;
+
+			#coupon_code {
+				width: 100%;
+				min-width: auto;
+				max-width: 49%;
+			}
+			button.button {
+				padding: 0;
+			}
+		}
+
+		#coupon_code {
+			min-width: rem(150);
+		}
+	}
+
+	// Revisar pedido final en checkout.
+	&.woocommerce-checkout-review-order-table {
+		border-collapse: collapse;
+
+		td,
+		th {
+			width: 50%;
+		}
+
+		tfoot th {
+			text-align: left;
+		}
+
+		@include to(medium) {
+			thead,
+			tfoot {
+				display: block;
+			}
+		}
+	}
+}

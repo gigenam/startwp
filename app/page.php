@@ -49,6 +49,8 @@ get_header();
 			// existe alguno. Para usar comentarios con todas las funcionalidades
 			// por defecto, descomenta '/inc/core/class-enqueue.php#L26' y
 			// modifica el archivo comments.php a gusto.
+			//
+			// * Revisar single.php#L20 en caso de tener WooCommerce activado.
 			if ( comments_open() || get_comments_number() ) {
 				comments_template();
 			}

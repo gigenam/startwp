@@ -1,0 +1,85 @@
+/**
+ * Estilos globales y genéricos para WooCommerce
+ */
+
+&-shop,
+&-cart,
+&-account,
+&-checkout {
+	// Ancho de las páginas.
+	.site-main .wrapper {
+		--startwp--content-width--main: #{$main-width};
+	}
+
+	// Elementos select personalizados.
+	.select2-container {
+		.select2-selection {
+			display: flex;
+			align-items: center;
+			padding: 0;
+			background-color: #f5f5f5;
+
+			&__arrow {
+				height: 100%;
+			}
+		}
+
+		.select2-dropdown {
+			border-color: var(--startwp--color--shadow);
+		}
+
+		.select2-search {
+			box-shadow: 0 1px 6px var(--startwp--color--shadow);
+
+			&__field {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+// Breadcrumbs / ruta del sitio.
+.woocommerce-breadcrumb {
+	padding: 1rem 0.1rem 0.5rem;
+}
+
+// Paginación.
+.woocommerce-pagination {
+	padding-bottom: 2rem;
+}
+
+// Inputs.
+input:where(:not([type="checkbox"]):not([type="radio"])),
+input#coupon_code {
+	padding: 1px 0.45em;
+}
+
+// Textarea.
+textarea {
+	min-height: rem(114);
+}
+
+// Etiqueta de oferta.
+div.product span.onsale,
+ul.products li.product span.onsale {
+	min-height: auto;
+	line-height: 1.6;
+	top: 0;
+	right: unset;
+	left: 0;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+	margin: 0;
+	font-weight: normal;
+	border-radius: $border-radius 0 0 0;
+}
+
+// En producto individual.
+.product > span.onsale {
+	font-size: 1.05em;
+}
+
+// Sufijo (precio con/sin impuesto, por ejemplo).
+.woocommerce-price-suffix {
+	color: var(--startwp--color--foreground);
+}

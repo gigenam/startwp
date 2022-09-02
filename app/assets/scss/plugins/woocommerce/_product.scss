@@ -1,0 +1,116 @@
+/**
+ * Productos individuales
+ */
+
+// Ancho de los productos individuales.
+.site-shop--inner {
+	--startwp--content-width--main: #{$narrow-width};
+
+	div.product {
+		// Galería de imágenes.
+		.woocommerce-product-gallery {
+			figure {
+				max-width: none; // fix: corregir el ancho máximo.
+			}
+		}
+
+		// Variaciones.
+		.variations {
+			tr:not(:first-child) th {
+				margin-top: 0.5em;
+			}
+
+			th {
+				padding-left: 0;
+				text-align: left;
+			}
+
+			select {
+				margin-right: 0 !important; // Override: estilos de woocommerce.
+			}
+
+			@include to(medium) {
+				tbody,
+				tr,
+				th,
+				td {
+					width: 100%;
+					display: block;
+					padding: 0;
+				}
+			}
+		}
+
+		// Grupo de productos.
+		.woocommerce-grouped-product-list-item__price {
+			del {
+				opacity: 0.6;
+			}
+
+			ins {
+				background: transparent;
+				font-weight: bold;
+			}
+		}
+
+		p.stock {
+			font-size: 1em;
+			border-radius: $border-radius;
+		}
+
+		// Disponible.
+		p.in-stock,
+		p.available-on-backorder {
+			color: var(--startwp--color--foreground);
+			background-color: var(--startwp--color--secondary);
+		}
+
+		// Sin stock.
+		p.out-of-stock {
+			color: var(--startwp--color--white);
+			background-color: var(--startwp--color--error);
+		}
+
+		// Precio variaciones.
+		.woocommerce-variation-price {
+			margin-bottom: 1em;
+		}
+
+		// Categorías, etiquetas, etc.
+		.product_meta {
+			display: flex;
+			flex-direction: column;
+
+			> * {
+				margin-bottom: 0.5em;
+			}
+		}
+
+		//
+		// Pestañas
+		// ------------------------------------------
+		.woocommerce-tabs {
+			ul.tabs {
+				padding-left: 0.4rem;
+
+				li {
+					padding: 0;
+				}
+
+				a {
+					font-size: 0.9em;
+					padding: 0.5em 1em;
+				}
+			}
+
+			h2 {
+				font-size: $fs-heading-3;
+			}
+
+			// Info adicional.
+			.woocommerce-product-attributes-item__value p {
+				padding: 0.5em 1em;
+			}
+		}
+	}
+}

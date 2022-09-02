@@ -43,6 +43,10 @@ require_once get_template_directory() . '/inc/setup/class-alerts.php';
 require_once get_template_directory() . '/inc/custom/class-login.php';
 require_once get_template_directory() . '/inc/custom/class-customizer.php';
 
+if ( class_exists( 'WooCommerce' ) ) {
+	require_once get_template_directory() . '/woocommerce/init.php';
+}
+
 
 /**
  * Quitar acciones.

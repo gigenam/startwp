@@ -1,0 +1,99 @@
+/**
+ * Productos
+ */
+
+// Contenedor.
+.site-shop {
+	.woocommerce-breadcrumb,
+	ul.products {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+ul.products {
+	li.product {
+		&:hover a:not(.button) {
+			opacity: 1; // Prevenir que etiquetas de oferta queden por detrás.
+		}
+
+		a {
+			img {
+				margin-bottom: 0;
+				border-radius: $border-radius;
+			}
+
+			&:focus {
+				outline: none;
+
+				> img {
+					outline: 2px dotted currentColor;
+				}
+			}
+		}
+
+		// Título.
+		.woocommerce-loop-product__title {
+			padding-bottom: 0;
+			font-size: 1.1em;
+			color: var(--startwp--color--foreground);
+		}
+
+		// Precio.
+		.price {
+			margin-bottom: 0;
+			color: var(--startwp--color--success);
+			font-size: 1em;
+
+			// Precio tachado.
+			del {
+				color: var(--startwp--color--foreground);
+				opacity: 0.4;
+			}
+		}
+
+		// Agregar al carrito.
+		.button {
+			width: 100%;
+			text-align: center;
+
+			&.added {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		&.outofstock .button {
+			color: var(--startwp--color--error);
+			background-color: var(--startwp--color--white);
+			border: 1px solid var(--startwp--color--error);
+		}
+
+		// Ver carrito.
+		.added_to_cart {
+			width: 100%;
+			padding: 0.25em;
+			text-align: center;
+			color: var(--startwp--color--foreground);
+			border: 1px solid currentColor;
+			border-top-width: 0;
+			border-bottom-left-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+	}
+}
+
+/**
+ * Paginación
+ */
+nav.woocommerce-pagination {
+	// Quitar bordes.
+	ul,
+	ul li {
+		border: none;
+	}
+
+	ul li {
+		min-width: 2.2rem;
+	}
+}
