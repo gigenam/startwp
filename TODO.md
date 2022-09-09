@@ -107,6 +107,7 @@ personalizados (si es que no tienes una creada):
 
 Errores de compilación:
 
+- Cumplir los requisitos mínimos de [NodeJS](README.md#L13).
 - Actualizar dependencias `npm update` y/o `composer update`.
 - Revisar archivos de configuración y verificar código y rutas.
 - Habilita/deshabilitar cosas no necesarias para el proyecto (admin styles,
