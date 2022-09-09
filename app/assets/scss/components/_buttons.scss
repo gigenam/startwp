@@ -31,7 +31,14 @@ button,
 
 .wp-block-file .wp-block-file__button {
 	font-size: 0.86em;
-	margin-left: 0.5em;
+}
+
+// Separación entre botones y algún contenido previo en la misma linea.
+// (input, enlace, etc).
+.wp-block-search__button,
+.password-form__submit,
+.wp-block-file .wp-block-file__button {
+	margin-left: 0.35rem;
 }
 
 .btn-primary,

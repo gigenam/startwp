@@ -12,6 +12,13 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.5 - 2022-09-09 :
+
+- [!] Corrección de márgenes para todos los elementos de formulario.
+- [!] Corrección de tamaño en checkbox y radios (em por rem) para evitar que
+  puedan crecer con el tamaño de un padre (Agregandolos dentro de un encabezado,
+  pos ejemplo).
+
 ## Ver 1.4.4 - 2022-08-26 :
 
 - [-] Eliminación de la plantilla `app/template-parts/content-page.php` ya que
