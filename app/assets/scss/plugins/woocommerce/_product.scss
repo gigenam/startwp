@@ -29,6 +29,10 @@
 				margin-right: 0 !important; // Override: estilos de woocommerce.
 			}
 
+			a.reset_variations {
+				color: var(--startwp--color--error);
+			}
+
 			@include to(medium) {
 				tbody,
 				tr,
@@ -110,6 +114,17 @@
 			// Info adicional.
 			.woocommerce-product-attributes-item__value p {
 				padding: 0.5em 1em;
+			}
+
+			table {
+				th,
+				td {
+					border: 1px solid var(--startwp--color--border);
+				}
+
+				th {
+					background-color: rgba(0, 0, 0, 0.04);
+				}
 			}
 		}
 	}

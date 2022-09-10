@@ -1,6 +1,7 @@
 /**
  * Productos
  */
+@use "sass:math";
 
 // Contenedor.
 .site-shop {
@@ -12,12 +13,23 @@
 }
 
 ul.products {
+	$gap: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+
 	li.product {
+		display: flex;
+		flex-direction: column;
+		float: none;
+		margin: 0 0 $gap 0;
+
 		&:hover a:not(.button) {
 			opacity: 1; // Prevenir que etiquetas de oferta queden por detrás.
 		}
 
-		a {
+		a.woocommerce-loop-product__link {
+			margin-bottom: 0.5rem;
+
 			img {
 				margin-bottom: 0;
 				border-radius: $border-radius;
@@ -55,6 +67,7 @@ ul.products {
 		// Agregar al carrito.
 		.button {
 			width: 100%;
+			margin-top: auto;
 			text-align: center;
 
 			&.added {
@@ -79,6 +92,52 @@ ul.products {
 			border-top-width: 0;
 			border-bottom-left-radius: $border-radius;
 			border-bottom-right-radius: $border-radius;
+		}
+	}
+
+	// Una columna por fila.
+	&.columns-1 > li.product {
+		width: 100%;
+		max-width: 100%;
+		margin-right: 0;
+	}
+
+	// 2 columnas por fila en móviles.
+	&:not(.columns-1) > li.product {
+		width: calc(50% - #{$gap * 0.5});
+		max-width: calc(50% - #{$gap * 0.5});
+
+		&:nth-child(odd) {
+			margin-right: $gap;
+		}
+	}
+
+	// Si se quieren agregar más columnas hay que aumentar el último valor luego
+	// de though (6). Y hacer modificaciones extras a medida.
+	@for $i from 2 through 6 {
+		&.columns-#{$i} > li.product {
+			@include from(medium) {
+				max-width: calc(#{math.div(100%, $i)} - #{$gap} + #{math.div($gap, $i)});
+				margin-right: $gap;
+
+				&:nth-child(#{$i}n) {
+					margin-right: 0;
+				}
+			}
+
+			// A partir de 5 columnas por fila se alinean 3 en tamaño medium.
+			@if ($i > 4) {
+				@include only(medium) {
+					max-width: calc(#{math.div(100%, 3)} - #{$gap} + #{math.div($gap, 3)});
+
+					&:nth-child(#{$i}n) {
+						margin-right: $gap;
+					}
+					&:nth-child(3n) {
+						margin-right: 0;
+					}
+				}
+			}
 		}
 	}
 }

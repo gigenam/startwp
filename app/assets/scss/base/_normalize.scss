@@ -110,7 +110,7 @@ hr {
 	box-sizing: content-box;
 	overflow: visible;
 	border: 0;
-	border-bottom: 1px solid var(--startwp--color--shadow);
+	border-bottom: 1px solid var(--startwp--color--border);
 }
 
 ul,
@@ -181,7 +181,7 @@ blockquote,
 .wp-block-quote {
 	padding: 0.8em 0.8em 0.8em clamp(0.7em, 2vw, 1.4em);
 	margin: 0 0 1em 0;
-	border: 1px solid var(--startwp--color--shadow);
+	border: 1px solid var(--startwp--color--border);
 	border-left: 6px solid var(--startwp--color--foreground);
 	border-radius: $border-radius;
 
@@ -334,7 +334,7 @@ select,
 textarea {
 	min-height: $input-height;
 	padding: 0.35em 0.45em;
-	border: 1px solid var(--startwp--color--shadow);
+	border: 1px solid var(--startwp--color--border);
 	border-radius: $border-radius;
 }
 
@@ -457,7 +457,7 @@ th,
 td {
 	padding: 0.5em;
 	white-space: pre;
-	border: 1px solid var(--startwp--color--shadow);
+	border: 1px solid var(--startwp--color--border);
 }
 
 th {

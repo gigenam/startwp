@@ -6,6 +6,7 @@ table {
 	td,
 	th {
 		white-space: normal;
+		border: none;
 	}
 }
 
@@ -28,6 +29,12 @@ table.shop_table {
 	}
 
 	// Carrito.
+	a.remove {
+		width: 1.5rem;
+		height: 1.5rem;
+		font-size: 1.5rem;
+	}
+
 	td:where(:not(.product-name)) {
 		text-align: center;
 

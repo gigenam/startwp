@@ -81,7 +81,7 @@ form.lost_reset_password {
  */
 // Navegación.
 .woocommerce-MyAccount-navigation {
-	border-right: 1px solid var(--startwp--color--shadow);
+	border-right: 1px solid var(--startwp--color--border);
 
 	ul {
 		padding-left: 0;
@@ -212,7 +212,7 @@ form.lost_reset_password {
 			width: 100%;
 			padding-bottom: 0;
 			margin: 0 0 1em;
-			border-color: var(--startwp--color--shadow);
+			border-color: var(--startwp--color--border);
 
 			legend {
 				padding: 0 0.5rem;

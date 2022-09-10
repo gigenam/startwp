@@ -41,6 +41,8 @@ a.button.product_type_variable {
 }
 
 // Producto externo.
+.product-type-external button.button,
+.product-type-external button.button:hover,
 a.button.product_type_external {
 	color: var(--startwp--color--background);
 	background-color: var(--startwp--color--accent);

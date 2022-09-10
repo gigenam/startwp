@@ -30,6 +30,24 @@ form.woocommerce-form-coupon {
 }
 
 form.checkout {
+	@include to(medium) {
+		.form-row {
+			width: 100%;
+		}
+
+		h3 {
+			margin-bottom: 0.5rem;
+			font-size: 1.5em;
+		}
+
+		.woocommerce-additional-fields,
+		.woocommerce-shipping-fields {
+			h3 {
+				margin-top: 0.75rem;
+			}
+		}
+	}
+
 	input,
 	textarea {
 		max-width: 100%;
