@@ -1,0 +1,59 @@
+/**
+ * Bloques de Gutenberg
+ */
+
+// Grilla de productos.
+.wc-block-grid__products {
+	.wc-block-grid__product {
+		&-title,
+		&-price,
+		&-add-to-cart {
+			font-size: 1rem;
+		}
+
+		img {
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		&-price {
+			ins {
+				color: var(--startwp--color--success);
+				background-color: transparent;
+				font-weight: bold;
+				margin-left: 0.25rem;
+			}
+
+			// Precio tachado.
+			del {
+				color: var(--startwp--color--foreground);
+				opacity: 0.4;
+			}
+		}
+
+		.woocommerce-price-suffix {
+			margin-left: 0.35rem;
+		}
+	}
+}
+
+// Listado de categorías.
+.wc-block-product-categories.is-dropdown {
+	.wc-block-product-categories__dropdown {
+		width: 100%;
+		max-width: $input-width;
+	}
+
+	select,
+	button {
+		height: $input-height;
+	}
+
+	select {
+		margin-right: 0;
+	}
+
+	button {
+		margin-left: 0.5rem;
+	}
+}

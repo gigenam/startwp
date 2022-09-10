@@ -17,3 +17,6 @@
 	@import "plugins/woocommerce/checkout";
 	@import "plugins/woocommerce/account";
 }
+
+// Fuera de la clase woocommerce para poder ser utilizados en cualquier parte.
+@import "plugins/woocommerce/blocks";

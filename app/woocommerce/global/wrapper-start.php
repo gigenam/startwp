@@ -33,12 +33,15 @@ endif;
  * Quitar resultados y opción de ordenado por defecto y agregarlos dentro de un
  * contenedor.
  */
-function startwp_add_container_to_results_ordering() {
-	echo '<div class="woocommerce-result-ordering">';
-	woocommerce_result_count();
-	woocommerce_catalog_ordering();
-	echo '</div>';
-}
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
-add_action( 'woocommerce_before_shop_loop', 'startwp_add_container_to_results_ordering', 20 );
+add_action(
+	'woocommerce_before_shop_loop',
+	function() {
+		echo '<div class="woocommerce-result-ordering">';
+		woocommerce_result_count();
+		woocommerce_catalog_ordering();
+		echo '</div>';
+	},
+	20
+);
