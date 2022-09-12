@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: undefined\n"
-"POT-Creation-Date: 2022-08-10 12:01-0300\n"
+"POT-Creation-Date: 2022-09-12 15:23-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -43,15 +43,11 @@ msgstr "Los comentarios están cerrados."
 msgid "Skip to content"
 msgstr "Saltar al contenido"
 
-#: inc/core/class-enqueue.php:47
-msgid " Press enter to view the sub-menu."
-msgstr " Presion&aacute; enter para ver los sub-menus."
-
-#: inc/core/class-menus.php:26
+#: inc/core/class-menus.php:28
 msgid "Primary Menu"
 msgstr "Men&uacute; Principal"
 
-#: inc/core/class-menus.php:50
+#: inc/core/class-menus.php:52
 msgid "Navigation Menu"
 msgstr "Men&uacute; de navegaci&oacute;n"
 
@@ -125,22 +121,22 @@ msgstr "%s - Privado"
 msgid "Updated on"
 msgstr "Actualizado en"
 
-#: inc/setup/class-posts.php:219
+#: inc/setup/class-posts.php:218
 #, php-format
 msgctxt "Autor de la entrada"
 msgid "by %s"
 msgstr "por %s"
 
-#: inc/setup/class-posts.php:249
+#: inc/setup/class-posts.php:248
 #, php-format
 msgid "1 %1$s"
 msgstr ""
 
-#: inc/setup/class-posts.php:250
+#: inc/setup/class-posts.php:249
 msgid "comment on"
 msgstr "comentario en"
 
-#: inc/setup/class-posts.php:256
+#: inc/setup/class-posts.php:255
 #, php-format
 msgctxt "Cantidad comentarios y título de la entrada"
 msgid "%1$s %2$s"
@@ -148,55 +144,59 @@ msgid_plural "%1$s %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/setup/class-posts.php:258
+#: inc/setup/class-posts.php:257
 msgid "comments on"
 msgstr "comentarios en"
 
-#: inc/setup/class-posts.php:278
+#: inc/setup/class-posts.php:276
 msgid "Categories"
 msgstr "Categor&iacute;as"
 
-#: inc/setup/class-posts.php:307
+#: inc/setup/class-posts.php:304
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: inc/setup/class-posts.php:348
+#: inc/setup/class-posts.php:345
 msgid "This content is private. To view it enter your password below:"
 msgstr "Este contenido es privado. Para verlo ingresa la contraseña debajo:"
 
-#: inc/setup/class-posts.php:349
+#: inc/setup/class-posts.php:346
 msgctxt "Private post form label"
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: inc/setup/class-posts.php:352
+#: inc/setup/class-posts.php:349
 msgctxt "Private post form submit"
 msgid "Enter"
 msgstr "Ingresar"
 
-#: inc/setup/class-posts.php:368
+#: inc/setup/class-posts.php:365
 msgid "Sorry, your password is wrong. Please try again."
 msgstr "La contraseña es incorrecta. Por favor intenta de nuevo."
 
-#: inc/setup/class-posts.php:417
+#: inc/setup/class-posts.php:414
 msgid "Continue reading"
 msgstr "Continuar leyendo"
 
-#: inc/setup/class-posts.php:417 template-parts/content.php:51
+#: inc/setup/class-posts.php:414 template-parts/content.php:51
 msgctxt "Sobre la entrada"
 msgid "about "
 msgstr "sobre "
+
+#: page.php:38 template-parts/content.php:91
+msgid "Pages:"
+msgstr "P&aacute;ginas:"
 
 #: search.php:21
 #, php-format
 msgid "Search results for: %s"
 msgstr "Resultados para: %s"
 
-#: single.php:22
+#: single.php:26
 msgid "Previous:"
 msgstr "Anterios:"
 
-#: single.php:23
+#: single.php:27
 msgid "Next:"
 msgstr "Siguiente:"
 
@@ -228,10 +228,6 @@ msgstr ""
 "Parece que no podemos encontrar lo que est&aacute;s buscando. tal vez una "
 "nueva b&uacute;squeda puede ayudar."
 
-#: template-parts/content-page.php:32 template-parts/content.php:91
-msgid "Pages:"
-msgstr "P&aacute;ginas:"
-
 #: template-parts/content.php:51
 msgid "Read more"
 msgstr "Leer m&aacute;s"
@@ -251,6 +247,16 @@ msgstr "Ingresá"
 #: template-parts/content.php:59
 msgid "to get access."
 msgstr "para tener acceso."
+
+#: woocommerce/class-init.php:81 woocommerce/class-init.php:88
+msgid "Free"
+msgstr "Gratis"
+
+#~ msgid "FREE!"
+#~ msgstr "GRATIS!"
+
+#~ msgid " Press enter to view the sub-menu."
+#~ msgstr " Presion&aacute; enter para ver los sub-menus."
 
 #~ msgid "about "
 #~ msgstr "sobre "

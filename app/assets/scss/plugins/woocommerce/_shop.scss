@@ -51,19 +51,6 @@ ul.products {
 			color: var(--startwp--color--foreground);
 		}
 
-		// Precio.
-		.price {
-			margin-bottom: 0;
-			color: var(--startwp--color--success);
-			font-size: 1em;
-
-			// Precio tachado.
-			del {
-				color: var(--startwp--color--foreground);
-				opacity: 0.4;
-			}
-		}
-
 		// Agregar al carrito.
 		.button {
 			width: 100%;

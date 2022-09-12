@@ -14,6 +14,11 @@
 			}
 		}
 
+		p.price,
+		.woocommerce-variation-price {
+			font-size: 1.25em;
+		}
+
 		// Variaciones.
 		.variations {
 			tr:not(:first-child) th {
@@ -59,6 +64,15 @@
 
 		p.stock {
 			font-size: 1em;
+			border-radius: $border-radius;
+		}
+
+		// Gratis.
+		.is-free {
+			padding: 0 1rem;
+			color: var(--startwp--color--white);
+			background-color: var(--startwp--color--success);
+			font-weight: normal;
 			border-radius: $border-radius;
 		}
 

@@ -66,7 +66,8 @@ table.shop_table {
 	}
 
 	// Revisar pedido final en checkout.
-	&.woocommerce-checkout-review-order-table {
+	&.woocommerce-checkout-review-order-table,
+	&.woocommerce-table--order-details {
 		border-collapse: collapse;
 
 		td,

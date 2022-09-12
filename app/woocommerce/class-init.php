@@ -27,7 +27,9 @@ if ( ! class_exists( 'Startwp_Woo_Init' ) ) {
 
 			// Filtros.
 			add_filter( 'body_class', array( $this, 'body_classes' ) );
+			add_filter( 'woocommerce_currency_symbol', array( $this, 'currency_symbol' ), 9999, 2 );
 			add_filter( 'woocommerce_get_image_size_gallery_thumbnail', array( $this, 'gallery_thumbnails' ) );
+			add_filter( 'woocommerce_get_price_html', array( $this, 'free_price_prefix' ), 99, 2 );
 
 			// Quitar los títulos "Descripción" e "Información adicional" de las
 			// pestañas de detalles en los productos.
@@ -55,6 +57,29 @@ if ( ! class_exists( 'Startwp_Woo_Init' ) ) {
 		}
 
 		/**
+		 * Cambiar el formato del simbolo según la configuración de moneda.
+		 *
+		 * @link https://es.wikipedia.org/wiki/ISO_4217
+		 * @param  string $currency_symbol El simbolo de la moneda.
+		 * @param  string $currency        El tipo de moneda.
+		 * @return string
+		 */
+		public function currency_symbol( $currency_symbol, $currency ) {
+			switch ( $currency ) {
+				case 'ARS':
+					$currency_symbol = 'AR$';
+					break;
+				case 'EUR':
+					$currency_symbol = 'EU€';
+					break;
+				case 'USD':
+					$currency_symbol = 'US$';
+					break;
+			}
+			return $currency_symbol;
+		}
+
+		/**
 		 * Cambiar el tamaño de las imágenes de las galerías de productos
 		 *
 		 * @param array $size Todas las propiedades de la galería de imágenes.
@@ -66,7 +91,32 @@ if ( ! class_exists( 'Startwp_Woo_Init' ) ) {
 				'crop'   => 0,
 			);
 		}
-	}
+
+		/**
+		 * Remplazar el valor por texto cuando los productos son gratuitos.
+		 *
+		 * @param  string $price   El precio del producto.
+		 * @param  object $product El producto.
+		 * @return string
+		 */
+		public function free_price_prefix( $price, $product ) {
+			if ( '0' === $product->get_regular_price() ) {
+				// Si el producto es gratis remplazar el 0.
+				$price = sprintf( '<ins class="is-free"><bdi>' . __( 'Free', 'startwp' ) . '</bdi></ins>' );
+			} elseif ( '0' === $product->get_price() ) {
+				// Si el producto es gratis en oferta, tachar el precio real y
+				// remplazar el 0.
+				$price = sprintf(
+					get_woocommerce_price_format(),
+					'<del>' . wc_price( $product->get_regular_price() ) . '</del> ',
+					'<ins><bdi>' . __( 'Free', 'startwp' ) . '</bdi></ins>'
+				);
+			}
+			return $price;
+		}
+
+	} //end class.
+
 }
 
 new Startwp_Woo_Init();

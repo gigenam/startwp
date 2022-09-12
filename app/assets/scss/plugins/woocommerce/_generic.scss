@@ -79,6 +79,27 @@ ul.products li.product span.onsale {
 	font-size: 1.05em;
 }
 
+// Precios
+ul.products li.product,
+div.product .entry-summary {
+	.price {
+		color: var(--startwp--color--success);
+		font-size: 1em;
+
+		// Moneda.
+		.woocommerce-Price-currencySymbol {
+			margin-right: -0.1rem;
+			font-size: 0.9em;
+		}
+
+		// Tachado
+		del {
+			color: var(--startwp--color--foreground);
+			opacity: 0.4;
+		}
+	}
+}
+
 // Sufijo (precio con/sin impuesto, por ejemplo).
 .woocommerce-price-suffix {
 	color: var(--startwp--color--foreground);
