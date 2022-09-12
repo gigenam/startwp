@@ -1,0 +1,47 @@
+/**
+ * Widgets
+ */
+
+// Filtros activos.
+.wp-block-woocommerce-active-filters {
+	.wc-block-active-filters__list {
+		// lista.
+		.wc-block-active-filters__list-item span {
+			font-size: 0.95em;
+			text-transform: none;
+
+			button {
+				top: 0;
+			}
+		}
+
+		// Fichas.
+		.wc-block-components-chip {
+			padding: 0 0.5rem 0 0.75rem;
+			border-radius: $border-radius;
+		}
+	}
+}
+
+// Filtrar por precio.
+.wp-block-woocommerce-price-filter {
+	.wc-block-price-slider {
+		// Fondo activo del slider.
+		.wc-block-components-price-slider__range-input-progress {
+			--range-color: var(--startwp--color--primary);
+		}
+
+		// Manijas del slider.
+		.wc-block-price-filter__range-input {
+			max-width: 100%;
+			min-height: auto;
+		}
+	}
+}
+
+// Filtrar por atributos.
+.wp-block-woocommerce-attribute-filter {
+	input {
+		margin-right: 0.25em;
+	}
+}
