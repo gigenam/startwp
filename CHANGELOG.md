@@ -12,6 +12,14 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.6 - 2022-10-05 :
+
+- [+] Agregado de clases de colores `has-white-*` y `has-black-*` en
+  [utilities.scss](app/assets/scss/base/_utilities.scss#L279) porque al seleccionar
+  colores blanco y negro puros desde el editor, Wordpress agrega las siguientes
+  clases en vez de el código hexadecimal.
+- [!] Actualización de dependencias.
+
 ## Ver 1.4.5 - 2022-09-09 :
 
 - [!] Corrección de márgenes para todos los elementos de formulario.
