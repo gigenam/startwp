@@ -12,6 +12,14 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.7 - 2022-10-12 :
+
+- [+] Agregada opción de pasar el valor `rem` sin medida en
+  [\_functions.scss](app/assets/scss/abstracts/_functions.scss#L13) para poder
+  ser utilizado en operaciones matemáticas sin problemas.
+- [!] Corrección menor en botones de login en `:focus`.
+- [!] Modificación menor de documentación de algunos parametros en scripts.
+
 ## Ver 1.4.6 - 2022-10-05 :
 
 - [+] Agregado de clases de colores `has-white-*` y `has-black-*` en

@@ -23,7 +23,7 @@ no recibe actualizaciones desde hace demasiados años (mismo para otros similare
 
 De momento el paquete se sigue instalando con [npm install](./package.json#L40)
 para hacer más pruebas o como opción de compilación manual descomentando las
-lineas [105](./gulpfile.js#L105) y/o [118](./gulpfile.js#L118) en [gulpfile.js](./gulpfile.js#L99).
+lineas [105](./gulpfile.js#L105) y [118](./gulpfile.js#L118) en [gulpfile.js](./gulpfile.js#L99).
 
 ## Correcciones:
 
