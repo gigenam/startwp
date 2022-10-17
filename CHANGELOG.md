@@ -12,6 +12,12 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.8 - 2022-10-17 :
+
+- [!] Arregos y actualización en la tarea de [compresión de imágenes](./gulpfile.js#L179),
+  que traía problemas al compilar los `sprites.svg` en modo producción.
+- [!] Actualización de dependencias.
+
 ## Ver 1.4.7 - 2022-10-12 :
 
 - [+] Agregada opción de pasar el valor `rem` sin medida en

@@ -89,7 +89,6 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 			add_filter(
 				'safe_style_css',
 				function( $styles ) {
-					$styles[] = 'display';
 					$styles[] = 'fill';
 					$styles[] = 'fill-opacity';
 					$styles[] = 'stroke';
