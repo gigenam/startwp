@@ -1,6 +1,6 @@
 ```
 Theme Name  : StartWP
-Theme URI   : https://github.com/gigenam/startwp
+Theme URI   : https://github.com/gigenam/startwp/tree/woocommerce
 Description : Un tema simple para iniciar la creación de otros proyectos
 Author      : Marcos Gigena
 Author URI  : https://github.com/gigenam
@@ -12,4 +12,4 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
-## Ver 1.0.0 - 2022-XX-XX : Versión inicial.
+## Ver 1.0.0 - 2022-11-03 : Versión inicial.

@@ -5,7 +5,6 @@
 /**
  * Inicio de sesión y registro
  */
-
 .woocommerce-form-login,
 .woocommerce-form-register {
 	input {
@@ -113,6 +112,14 @@ form.lost_reset_password {
 // Contenido.
 .woocommerce-MyAccount-content {
 	$forms-max-width: 47%;
+
+	// Detalles de pedidos.
+	.woocommerce-customer-details {
+		h2 {
+			font-size: 1.4em;
+			margin-bottom: 0.5em;
+		}
+	}
 
 	// Corrección en mensaje de no hay pedidos.
 	.woocommerce-message {

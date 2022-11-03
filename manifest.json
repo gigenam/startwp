@@ -1,9 +1,9 @@
 {
 	"name": "StartWP",
-	"version": "1.4.9",
+	"version": "1.0.0",
 	"description": "Registro de versión actual del repositorio",
 	"repository": {
-		"url": "https://github.com/gigenam/startwp",
+		"url": "https://github.com/gigenam/startwp/tree/woocommerce",
 		"author": "gigenam"
 	}
 }

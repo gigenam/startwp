@@ -8,12 +8,13 @@
 	"homepage": "https://github.com/gigenam/",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/gigenam/startwp",
+		"url": "https://github.com/gigenam/startwp/tree/woocommerce",
 		"author": "gigenam"
 	},
 	"license": "GNU General Public License v2 or later",
 	"keywords": [
 		"wordpress",
+		"woocommerce",
 		"theme"
 	],
 	"main": "index.js",

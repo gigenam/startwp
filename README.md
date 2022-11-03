@@ -18,16 +18,13 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 # Rama WooCommerce
 
 ![Required WooCommerce Version](https://img.shields.io/badge/Recomendado->=6.x-blue?logo=woo)
-![Tested WooCommerce Version](https://img.shields.io/badge/Probado-6.8.2-lightgrey?logo=woo)
+![Tested WooCommerce Version](https://img.shields.io/badge/Probado-7.1-lightgrey?logo=woo)
 
 Para probar y desarrollar sitios con [WooCommerce](https://wordpress.org/plugins/woocommerce/).
 
 Esta rama está pensada para agregar las funcionalidades y estilos más básicos
 para que al instalar [WooCommerce](https://wordpress.org/plugins/woocommerce/),
-todo se vea bien y de la forma más estándar posible.
-
-> Ver [TODO.md](TODO.md) para seguir el proceso de desarrollo y las cosas que
-> van faltando agregar e implementar.
+todo se vea bien, y sea fácil de extender y personalizar.
 
 La mayoría de estilos y agregados son independientes del tema principal para
 poder ser utilizados únicamente cuando se instala WooCommerce.

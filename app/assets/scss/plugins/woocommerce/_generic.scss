@@ -48,6 +48,11 @@
 	padding-bottom: 2rem;
 }
 
+// Mark.
+mark {
+	background-color: var(--startwp--color--border);
+}
+
 // Inputs.
 input:where(:not([type="checkbox"]):not([type="radio"])),
 input#coupon_code {
@@ -57,6 +62,25 @@ input#coupon_code {
 // Textarea.
 textarea {
 	min-height: rem(114);
+}
+
+// Quitar separaciones a las tablas.
+table.woocommerce-table,
+table.woocommerce-orders-table {
+	border-collapse: collapse;
+}
+
+// Detalles del cliente.
+.woocommerce-customer-details address {
+	// Quitar íconos por defecto.
+	p.woocommerce-customer-details--phone,
+	p.woocommerce-customer-details--email {
+		padding-left: 0;
+
+		&::before {
+			display: none;
+		}
+	}
 }
 
 // Etiqueta de oferta.

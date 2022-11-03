@@ -91,17 +91,4 @@ form.checkout {
 			}
 		}
 	}
-
-	// Detalles del cliente.
-	.woocommerce-customer-details address {
-		// Quitar íconos por defecto.
-		.woocommerce-customer-details--phone,
-		.woocommerce-customer-details--email {
-			padding-left: 0;
-
-			&::before {
-				display: none;
-			}
-		}
-	}
 }

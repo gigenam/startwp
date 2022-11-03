@@ -3,6 +3,7 @@
 Contribuidores : gigenam
 Requiere WP    : 6.0 o mayor
 Requiere PHP   : 7.0 o mayor
+Requiere Woo   : 6.x o mayor
 Licencia       : GNU General Public License v2 or later
 Licencia URI   : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -207,6 +208,8 @@ el formulario de comentarios visible (recomendable hacerlo sin iniciar sesión).
 
 StartWP está creado bajo los *estándares de código de WordPress*. Cualquier plugin
 que siga las mismas normas no debería generar problemas de compatibilidad.
+
+Esta versión cuenta con soporte básico para WooCommerce (https://wordpress.org/plugins/woocommerce/).
 
 Los estilos visuales quedaran a cargo de los desarrolladores de cada plugin o
 tu libertad y conocimientos para hacer las *modificaciones* que desees.
