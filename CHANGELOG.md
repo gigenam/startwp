@@ -12,6 +12,11 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.9 - 2022-11-03 :
+
+- [!] Correcciones menores de documentación y soporte para WP 6.1.
+- [!] Actualización de dependencias.
+
 ## Ver 1.4.8 - 2022-10-17 :
 
 - [!] Arregos y actualización en la tarea de [compresión de imágenes](./gulpfile.js#L179),
