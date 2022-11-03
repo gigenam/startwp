@@ -12,7 +12,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ![Required Node Version](https://img.shields.io/badge/Mínimo->=16.x%20-blue?logo=node.js)
 ![Required PHP Version](https://img.shields.io/badge/Recomendado->=7.0-blue?logo=php)
 ![Required WP Version](https://img.shields.io/badge/Recomendado->=6.0-blue?logo=wordpress)
-![Tested WP Version](https://img.shields.io/badge/Probado-6.0.2-lightgrey?logo=wordpress)
+![Tested WP Version](https://img.shields.io/badge/Probado-6.1-lightgrey?logo=wordpress)
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/gigenam/startwp/npm-run-build/main?label=NPM%20Build)
 
 # Rama WooCommerce
@@ -298,6 +298,7 @@ b)
 
 \* Siempre que las vesiones contengan el simbolo `^`. Si lo quitas, puedes subir
 a la siguiente versión mayor.
+
 <br>
 
 # Listo para producción

@@ -86,7 +86,7 @@ export default class MainNav {
 	/**
 	 * Mostrar sub-menus
 	 *
-	 * @param { Object } el El elemento seleccionado.
+	 * @param { HTMLElement } el El elemento seleccionado.
 	 */
 	showSubMenus( el ) {
 		el.classList.add( 'menu-item--show-sub-menu' );
@@ -96,7 +96,7 @@ export default class MainNav {
 	/**
 	 * Ocultar sub-menus
 	 *
-	 * @param { Object } el El elemento seleccionado.
+	 * @param { HTMLElement } el El elemento seleccionado.
 	 */
 	hideSubMenus( el ) {
 		el.classList.remove( 'menu-item--show-sub-menu' );

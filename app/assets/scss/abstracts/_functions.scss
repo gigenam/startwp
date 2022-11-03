@@ -13,9 +13,13 @@
 // Pixels a REMs
 //
 // @param $pxValue     Tamaño a convertir en pixeles (solo números).
+// @param $calc        Agregar o no rem. En caso de hacer operaciones matemáticas puras, poner en true.
 // @param $defaultSize Define el tamaño de 1rem (por defecto 16px).
 // ----------------------------------------------
-@function rem($pxValue, $defaultSize: 16) {
+@function rem($pxValue, $calc: false, $defaultSize: 16) {
+	@if ($calc) {
+		@return #{math.div($pxValue, $defaultSize)};
+	}
 	@return #{math.div($pxValue, $defaultSize)}rem;
 	// Como usar:
 	// ----------------------------------------------

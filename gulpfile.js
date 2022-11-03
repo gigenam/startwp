@@ -19,7 +19,11 @@ import clean        from 'gulp-clean';
 import gulpSass     from 'gulp-sass';
 import postcss      from 'gulp-postcss';
 import sourcemaps   from 'gulp-sourcemaps';
-import imagemin     from 'gulp-imagemin';
+import imagemin,
+	{ gifsicle,
+	  mozjpeg,
+	  optipng,
+	  svgo }        from 'gulp-imagemin';
 import svgSprite    from 'gulp-svg-sprite';
 import wpPot        from 'gulp-wp-pot';
 import mergeMQ      from 'gulp-merge-media-queries';
@@ -157,7 +161,7 @@ export const sprites = ( done ) => {
 					dest  : './',
 					sprite: './sprites.svg',
 				},
-			},
+			}
 		} ) )
 		.pipe( gulp.dest( paths.sprites.dest ) );
 	done();
@@ -174,15 +178,17 @@ export const images = ( done ) => {
 			.pipe( clean() );
 
 		gulp.src( paths.images.src )
-			.pipe( imagemin( {
-				interlaced : true,
-				progressive: true,
-				svgoPlugins: [
-					{ cleanupIDs   : true },
-					{ removeViewBox: true },
-				],
-				optimizationLevel: 5,
-			} ) )
+			.pipe( imagemin( [
+				gifsicle( { interlaced: true } ),
+				mozjpeg( { quality: 80, progressive: true } ),
+				optipng( { optimizationLevel: 5 } ),
+				svgo( {
+					plugins: [
+						{ name: 'cleanupIDs', active: false },
+						{ name: 'removeViewBox', active: true }
+					]
+				} )
+			] ) )
 			.pipe( gulp.dest( paths.images.dest ) );
 	}
 	done();

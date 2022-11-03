@@ -35,7 +35,7 @@ export default class InlineIcons {
 	 * Crear elemento SVG en linea.
 	 *
 	 * @param { string } iconClass El nombre del ícono.
-	 * @return { Object } Elemento svg.
+	 * @return { SVGElement } Elemento svg.
 	 */
 	createSvgIcon( iconClass ) {
 		const iconSVG = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );

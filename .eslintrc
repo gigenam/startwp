@@ -13,6 +13,9 @@
 		"NodeList": "readonly",
 		"Element": "readonly"
 	},
+	"plugins": [
+		"importAssertions"
+	],
 	"rules": {
 		"indent": [
 			"error"

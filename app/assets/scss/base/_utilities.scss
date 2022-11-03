@@ -276,6 +276,16 @@ $separations: (
 	color: var(--startwp--color--error);
 }
 
+.has-white-color,
+.has-white-color:hover {
+	color: #ffffff;
+}
+
+.has-black-color,
+.has-black-color:hover {
+	color: #000000;
+}
+
 //
 // Color de fondo
 // ----------------------------------------------
@@ -315,6 +325,14 @@ $separations: (
 
 .has-error-background-color {
 	background-color: var(--startwp--color--error);
+}
+
+.has-white-background-color {
+	background-color: #ffffff;
+}
+
+.has-black-background-color {
+	background-color: #000000;
 }
 
 //

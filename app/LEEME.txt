@@ -1,8 +1,7 @@
 === StartWP ===
 
-Contribuidores : Marcos Gigena
+Contribuidores : gigenam
 Requiere WP    : 6.0 o mayor
-Probado hasta  : 6.0
 Requiere PHP   : 7.0 o mayor
 Licencia       : GNU General Public License v2 or later
 Licencia URI   : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -10,7 +9,7 @@ Licencia URI   : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 == Descripción ==
 
-Un tema simple para iniciar la creación de otros proyectos
+Un tema simple para iniciar la creación de otros proyectos.
 
 
 == Índice ==
@@ -35,7 +34,7 @@ Instalar ahora.
 3. Clic en Activar para usarlo.
 
 Método 2)
-1. Conéctate a tu sitio por FTP y ve a wp-content > themes.
+1. Conéctate a tu sitio por FTP y ve a wp-content/themes/.
 2. Descomprime en tu PC el archivo .zip del tema para que te quede una carpeta
 llamada startwp.
 3. Sube esa carpeta dentro de themes, junto con los otros temas por defecto como

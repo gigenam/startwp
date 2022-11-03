@@ -43,9 +43,11 @@ body.login {
 		border: none;
 		border-radius: $border-radius;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: var(--startwp--color--primary);
 			opacity: $link-hover;
+			box-shadow: none;
 		}
 	}
 
