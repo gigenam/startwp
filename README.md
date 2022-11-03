@@ -8,7 +8,7 @@ License     : GNU General Public License v2 or later
 License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 ```
 
-![GitHub manifest version](https://img.shields.io/github/manifest-json/v/gigenam/startwp?label=Repositorio&logo=github)
+![GitHub manifest version](https://img.shields.io/github/manifest-json/v/gigenam/startwp/woocommerce?label=Repositorio)
 ![Required Node Version](https://img.shields.io/badge/Mínimo->=16.x%20-blue?logo=node.js)
 ![Required PHP Version](https://img.shields.io/badge/Recomendado->=7.0-blue?logo=php)
 ![Required WP Version](https://img.shields.io/badge/Recomendado->=6.0-blue?logo=wordpress)
