@@ -99,6 +99,12 @@ export const cleanCss = () => {
 		.pipe( clean() );
 };
 
+// Limpiar carpeta de imágenes para producción para evitar problemas de sobre-escritura.
+export const cleanImages = () => {
+	return gulp.src( paths.images.dest + '/', { read: false, allowEmpty: true } )
+		.pipe( clean() );
+};
+
 // Compilar archivos SCSS.
 export const styles = ( done ) => {
 	if ( PRODUCTION !== 'production' ) {
@@ -173,10 +179,6 @@ export const images = ( done ) => {
 		gulp.src( paths.images.src )
 			.pipe( gulp.dest( paths.images.dest ) );
 	} else {
-		// Primero borrar todo.
-		gulp.src( paths.images.dest + '/*', { allowEmpty: true } )
-			.pipe( clean() );
-
 		gulp.src( paths.images.src )
 			.pipe( imagemin( [
 				gifsicle( { interlaced: true } ),
@@ -254,10 +256,10 @@ export const watchFiles = ( done ) => {
 };
 
 // Arrancar servidor local, compilar y vigilar archivos de desarrollo.
-export const dev = gulp.series( cleanCss, gulp.parallel( styles, scripts, images ), sync, watchFiles );
+export const dev = gulp.series( cleanCss, cleanImages, gulp.parallel( styles, scripts, images ), sync, watchFiles );
 
 // Compilar y vigilar archivos de desarrollo.
-export const watch = gulp.series( cleanCss, gulp.parallel( styles, scripts, images ), watchFiles );
+export const watch = gulp.series( cleanCss, cleanImages, gulp.parallel( styles, scripts, images ), watchFiles );
 
 // Compilar y comprimir todo para producción.
-export const build = gulp.series( cleanCss, gulp.parallel( styles, scripts, images ), updateThemeVersion );
+export const build = gulp.series( cleanCss, cleanImages, gulp.parallel( styles, scripts, images ), updateThemeVersion );

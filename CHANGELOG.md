@@ -12,6 +12,13 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.10 - 2022-11-18 :
+
+- [+] Agregados 3 sprites más. `shipping.svg`, `star-half.svg` y `spotify.svg`.
+- [!] Separación de tarea para borrar la carpeta `img` en [gulpfile.js](gulpfile.js#L102).
+- [!] Correcciones menores.
+- [!] Actualización de dependencias.
+
 ## Ver 1.4.9 - 2022-11-03 :
 
 - [!] Correcciones menores de documentación y soporte para WP 6.1.

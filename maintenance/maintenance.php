@@ -115,7 +115,7 @@ print_r( 'SITE_URL    : ') . var_dump( $startwp_site_url );
 			<h1 class="heading main-title">Sitio en mantenimiento</h1>
 			<p>
 				Estamos haciendo algunas mejoras,<br>
-				por favor vuelve m&aacute;s tarde.
+				por favor vuelve más tarde.
 			</p>
 		<?php else : ?>
 			<h1 class="heading main-title">Site under maintenance</h1>
