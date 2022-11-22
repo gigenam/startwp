@@ -23,8 +23,10 @@ if ( ! class_exists( 'Startwp_Widgets' ) ) {
 		 * Registrar posiciones
 		 */
 		public static function register() {
-			// Para más posiciones, copiar y pegar la función 'register_sidebar()'
-			// y modificar los valores 'name' y 'id'. El resto son opcionales.
+			/**
+			 * Para más posiciones, copiar y pegar la función 'register_sidebar()'
+			 * y modificar los valores 'name' y 'id'. El resto son opcionales.
+			 */
 			register_sidebar(
 				array(
 					'name'          => esc_html__( 'Main Sidebar', 'startwp' ),

@@ -13,9 +13,8 @@
  * la linea en '/inc/core/class-enqueue.php#L27'.
  */
 
+// Evitar cargar los comentarios en publicaciones protegidas por contraseña.
 if ( post_password_required() ) {
-	// Si la publicación actual está protegida por una contraseña y el visitante
-	// aún no ha ingresado la misma, no cargar los comentarios.
 	return;
 }
 ?>
@@ -70,7 +69,7 @@ if ( post_password_required() ) {
 	/**
 	 * Cargar el formulario de comentarios
 	 *
-	 * @see LEEME.txt#L177 para hacer modificaciones.
+	 * @see LEEME.txt#L176 para hacer modificaciones.
 	 */
 	comment_form();
 	?>

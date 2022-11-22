@@ -91,11 +91,6 @@ if ( ! class_exists( 'Startwp_Setup' ) ) {
 			// Block styles.
 			add_theme_support( 'wp-block-styles' );
 
-			// Block templates.
-			// Posibilidad de crear plantillas directo desde el editor.
-			// Posiblemente obsoleto desde WP 5.9 y el nuevo FSE.
-			// add_theme_support( 'block-templates' );
-
 			// Imágenes a tamaño completo y anchas.
 			add_theme_support( 'align-wide' );
 			add_theme_support( 'gutenberg', array( 'wide-images', true ) );

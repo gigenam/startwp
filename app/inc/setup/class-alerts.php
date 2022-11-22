@@ -121,8 +121,8 @@ if ( ! class_exists( 'Startwp_Alerts' ) ) {
 }
 
 /**
- * Esperar a que el tema sea configurado para cargar las alertas y poder
- * traducir los mensajes correctamente.
+ * Esperar a que el tema sea configurado para cargar las alertas y poder traducir
+ * los mensajes correctamente.
  */
 add_action(
 	'after_setup_theme',

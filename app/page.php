@@ -45,10 +45,12 @@ get_header();
 			</article><!-- #post-<?php the_ID(); ?> -->
 
 			<?php
-			// Agregar la plantilla de comentarios si estos están abiertos o
-			// existe alguno. Para usar comentarios con todas las funcionalidades
-			// por defecto, descomenta '/inc/core/class-enqueue.php#L26' y
-			// modifica el archivo comments.php a gusto.
+			/**
+			 * Agregar la plantilla de comentarios si estos están abiertos o
+			 * existe alguno. Para usar comentarios con todas las funcionalidades
+			 * por defecto, descomenta '/inc/core/class-enqueue.php#L27' y
+			 * modifica el archivo comments.php a gusto.
+			 */
 			if ( comments_open() || get_comments_number() ) {
 				comments_template();
 			}

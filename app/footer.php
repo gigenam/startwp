@@ -11,7 +11,6 @@ $startwp_front_page_link = ( is_front_page() ) ? '#' : home_url( '/' );
 ?>
 
 	<footer id="site-footer" class="site-footer wrapper has-background-color has-foreground-background-color">
-
 		<div class="site-footer-container flexrow main-between margin-bottom-none padding-v">
 			<p class="site-info">
 				<a href="<?php echo esc_url( $startwp_front_page_link ); ?>" rel="home">
@@ -42,7 +41,6 @@ $startwp_front_page_link = ( is_front_page() ) ? '#' : home_url( '/' );
 			Startwp_General_Setup::privacy_policy();
 			?>
 		</div>
-
 	</footer><!-- #site-footer -->
 
 <?php wp_footer(); ?>

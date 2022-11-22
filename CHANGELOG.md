@@ -12,6 +12,11 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.4.11 - 2022-11-22 :
+
+- [-] Eliminado contenido comentado sobre block templates en [class-setup](app/inc/core/class-setup.php#L94).
+- [!] Mejoras y correcciones de documentación y comentarios.
+
 ## Ver 1.4.10 - 2022-11-18 :
 
 - [+] Agregados 3 sprites más. `shipping.svg`, `star-half.svg` y `spotify.svg`.

@@ -10,7 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'not-found' ); ?>>
-
 	<header class="entry-header wrapper">
 		<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'startwp' ); ?></h1>
 	</header><!-- .entry-header -->
@@ -42,5 +41,4 @@
 		endif;
 		?>
 	</div><!-- .entry-content -->
-
 </article><!-- #post-<?php the_ID(); ?> -->

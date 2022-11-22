@@ -233,8 +233,10 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 * Agregar contador de comentarios
 		 */
 		public static function comments_count() {
-			// Mostrar contador sólo si los comentarios están abiertos o hay
-			// alguno publicado. Y sólo si la entrada no está protegida con contraseña.
+			/**
+			 * Mostrar contador sólo si los comentarios están abiertos o hay
+			 * alguno publicado. Y sólo si la entrada no está protegida con contraseña.
+			 */
 			if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 				$startwp_comment_count = get_comments_number();
 				$startwp_comments_icon = ( '0' === $startwp_comment_count ) ? '#cmt' : '#cmts';
@@ -328,8 +330,10 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 			if ( isset( $_COOKIE[ 'wp-postpass_' . COOKIEHASH ] ) ) {
 				define( 'STARTWP_INVALID_POST_PASS', true );
 
-				// Revisar y quitar clave de cookies para que la alerta no
-				// ocurra o se imprima cada vez.
+				/**
+				 * Revisar y quitar clave de cookies para que la alerta no ocurra
+				 * o se imprima cada vez
+				 */
 				setcookie( 'wp-postpass_' . COOKIEHASH, null, -1, COOKIEPATH );
 			}
 		}
@@ -378,8 +382,10 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 * @return string Solo el título original sin "protegido".
 		 */
 		public static function protected_post_text( $protect ) {
-			// Para agregar contenido personalizado es recomendable hacerlo traducible:
-			// Ej: esc_html_x( 'Hola %s', 'Título original', 'startwp' ).
+			/**
+			 * Para agregar contenido personalizado es recomendable hacerlo traducible:
+			 * Ej: esc_html_x( 'Hola %s', 'Título original', 'startwp' ).
+			 */
 			return esc_html( '%s' );
 		}
 
@@ -390,8 +396,10 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 * @return string Solo el título original sin "privado". Con ícono en blog.
 		 */
 		public static function private_post_text( $private ) {
-			// Para agregar contenido personalizado es recomendable hacerlo traducible:
-			// Ej: esc_html_x( 'Hola %s', 'Título original', 'startwp' ).
+			/**
+			 * Para agregar contenido personalizado es recomendable hacerlo traducible:
+			 * Ej: esc_html_x( 'Hola %s', 'Título original', 'startwp' ).
+			 */
 			if ( ! is_singular() ) {
 				$private = '<svg class="icon-private" aria-hidden="true"><use xlink:href="#private"></svg>%s';
 			} else {

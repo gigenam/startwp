@@ -30,7 +30,6 @@
 	</a>
 
 	<header id="site-header" class="site-header flexrow main-between padding has-background-color has-foreground-background-color">
-
 		<div class="site-branding">
 			<?php
 			/**
@@ -72,5 +71,4 @@
 			)
 		);
 		?>
-
 	</header><!-- #site-header -->

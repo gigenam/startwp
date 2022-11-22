@@ -67,8 +67,8 @@ vayan a utilizar el editor de contenido para hacer modificaciones.
 
 ### Gfonts con PHP
 
-Abre el archivo "functions.php" y crea una nueva función para agregar tus estilos
-personalizados (si es que no tienes una creada):
+Abre el archivo "functions.php" en tu tema hijo y crea una nueva función para
+agregar tus estilos personalizados (si es que no tienes una creada):
 
     function startwp_mis_estilos() {
     	// Acá estas llamando al archivo style.css para agregar tus estilos
@@ -101,7 +101,7 @@ personalizados (si es que no tienes una creada):
 
 Errores de compilación:
 
-- Cumplir los requisitos mínimos de [NodeJS](README.md#L13).
+- Cumplir los requisitos mínimos de [NodeJS](README.md#L12).
 - Actualizar dependencias `npm update` y/o `composer update`.
 - Revisar archivos de configuración y verificar código y rutas.
 - Habilita/deshabilitar cosas no necesarias para el proyecto (admin styles,

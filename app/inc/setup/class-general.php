@@ -32,6 +32,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		 * Agregar nombre de página o entrada al <body> como clase
 		 *
 		 * @param array $classes Todas las clases por defecto del <body>.
+		 * @return string
 		 */
 		public static function slug_class( $classes ) {
 			global $post;
@@ -109,9 +110,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 				);
 			}
 
-			/**
-			 * Imprimir link
-			 */
+			// Imprimir link.
 			printf(
 				wp_kses(
 					$privacy_link,
