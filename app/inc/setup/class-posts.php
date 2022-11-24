@@ -66,7 +66,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		/**
 		 * Agregar enlace de leer más después del extracto.
 		 *
-		 * @param  string $link Devuelve el valor desde el filtro startwp_excerpt_more.
+		 * @param string $link Devuelve el valor desde el filtro startwp_excerpt_more.
 		 * @return string
 		 */
 		public static function read_more( $link ) {
@@ -76,7 +76,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		/**
 		 * Agregar filtros dependiendo el tipo de entrada
 		 *
-		 * @param  string $type El tipo de entrada desde el filtro startwp_article_type.
+		 * @param string $type El tipo de entrada desde el filtro startwp_article_type.
 		 * @return string
 		 */
 		public static function article_post_type( $type ) {
@@ -234,8 +234,8 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		 */
 		public static function comments_count() {
 			/**
-			 * Mostrar contador sólo si los comentarios están abiertos o hay
-			 * alguno publicado. Y sólo si la entrada no está protegida con contraseña.
+			 * Mostrar contador solo si los comentarios están abiertos o hay
+			 * alguno publicado. Y solo si la entrada no está protegida con contraseña.
 			 */
 			if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 				$startwp_comment_count = get_comments_number();
@@ -341,7 +341,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		/**
 		 * Formulario de contraseña personalizado
 		 *
-		 * @param  string $form El contenido del formulario por defecto.
+		 * @param string $form El contenido del formulario por defecto.
 		 * @return string
 		 */
 		public static function password_form( $form ) {
@@ -359,7 +359,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		/**
 		 * Agregar mensaje de contraseña incorrecta
 		 *
-		 * @param  string $form El contenido del formulario por defecto.
+		 * @param string $form El contenido del formulario por defecto.
 		 * @return string
 		 */
 		public static function post_password_message( $form ) {
@@ -378,7 +378,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		/**
 		 * Quitar texto protegido en artículos
 		 *
-		 * @param  string $protect Agrega la palabra "protegido" al los títulos.
+		 * @param string $protect Agrega la palabra "protegido" al los títulos.
 		 * @return string Solo el título original sin "protegido".
 		 */
 		public static function protected_post_text( $protect ) {
@@ -392,7 +392,7 @@ if ( ! class_exists( 'Startwp_Posts_Extras' ) ) {
 		/**
 		 * Quitar texto privado en artículos y agregar ícono
 		 *
-		 * @param  string $private Agrega la palabra "privado" al los títulos.
+		 * @param string $private Agrega la palabra "privado" al los títulos.
 		 * @return string Solo el título original sin "privado". Con ícono en blog.
 		 */
 		public static function private_post_text( $private ) {

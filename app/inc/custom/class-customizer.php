@@ -9,13 +9,15 @@
  * @since   1.0.0
  */
 
-// Es probable que a futuro el personalizador quede obsoleto a cambio del nuevo
-// sistema de FSE (Full Site Editing) mediante bloques, el cual no está soportado
-// por este tema de momento hasta que dicho sistema este más maduro/estable.
-
-// La intención de este archivo es dejar una pequeña funcionalidad de muestra
-// (agregar dirección en el pie de página) para poder extender y agregar más
-// opciones.
+/**
+ * Es probable que a futuro el personalizador quede obsoleto a cambio del nuevo
+ * sistema de FSE (Full Site Editing) mediante bloques, el cual no está soportado
+ * por este tema de momento hasta que dicho sistema este más maduro/estable.
+ *
+ * La intención de este archivo es dejar una pequeña funcionalidad de muestra
+ * (agregar dirección en el pie de página) para poder extender y agregar más
+ * opciones.
+ */
 
 if ( ! class_exists( 'Startwp_Customizer' ) ) {
 	/**

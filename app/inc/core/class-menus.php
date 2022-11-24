@@ -16,7 +16,7 @@ if ( ! class_exists( 'Startwp_Menus' ) ) {
 	 * Primero se registran las posiciones una vez (al final de este archivo).
 	 * Luego se crean los menús con el método render().
 	 *
-	 * @see header.php#L61
+	 * @see header.php#L60
 	 */
 	class Startwp_Menus {
 		/**

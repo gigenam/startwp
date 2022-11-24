@@ -12,6 +12,15 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.5.0 - 2022-11-24 :
+
+- [!] Mejoras en [Open Graph](app/inc/setup/class-general.php#L165) haciendo que
+  en caso de no tener imagen destacada pero sí alguna dentro del contenido, use
+  la primera publicada.
+- [!] Pequeña corrección en la separación de los elementos en [editor.scss](app/assets/scss/editor.scss)
+  y ajustes menores en la documentación de Flexgrid en [demo.html](app/assets/scss/flexgrid/demo.html).
+- [!] Correcciones menores de comentarios.
+
 ## Ver 1.4.11 - 2022-11-22 :
 
 - [-] Eliminado contenido comentado sobre block templates en [class-setup](app/inc/core/class-setup.php#L94).
@@ -86,7 +95,7 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 - [!] Actualización de dependencias. Corregidos los problemas que podían surgir
   en la actualización [1.2.0](#ver-120---2022-08-03).
-- [!] Correcciones menores para las secciones de widgets y comentarios sólo para
+- [!] Correcciones menores para las secciones de widgets y comentarios solo para
   que respeten las dimensiones de contenido.
 
 ## Ver 1.4.0 - 2022-08-12 :

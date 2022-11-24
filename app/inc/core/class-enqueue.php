@@ -39,13 +39,15 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 			 * Localizar textos en Javascript.
 			 * Descomentar y usar: startwpI10n.[key] ( Ej: startwpI10n.themeURI ).
 			 */
-			// wp_localize_script(
-			// 'startwp-main',
-			// 'startwpI10n',
-			// array(
-			// 'themeURI' => esc_url( get_template_directory_uri() ), // URL absoluta hasta el tema en caso de necesitarla para JavaScript.
-			// )
-			// );
+			/*
+			wp_localize_script(
+				'startwp-main',
+				'startwpI10n',
+				array(
+					'themeURI' => esc_url( get_template_directory_uri() ), // URL absoluta hasta el tema en caso de necesitarla para JavaScript.
+				)
+			);
+			*/
 		}
 
 		/**

@@ -5,7 +5,7 @@
  */
 // @see /assets/js/utilities/InlineIcons.js
 
-// Prevenir agregar estilos a los padres con la clase class has-icon.
+// Prevenir agregar estilos a los padres con la clase has-icon.
 // Prevenir agregar estilos al widget de búsqueda con icono.
 // Prevenir agregar estilos al widget de íconos sociales.
 [class*="icon-"]:where(:not([class*="has-icon"], [class*="icon-button"], [class*="wp-block-social-links"])) {

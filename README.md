@@ -33,9 +33,9 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 # Documentación
 
-**StartWP** es un tema pensado como plantilla para crear otros temas. Viene con lo
-más básico en cuanto a plantillas php y estilos suficientes como para instalar y
-que todo funcione bien.
+**StartWP** es un tema pensado como plantilla para crear otros temas. Viene con
+lo más básico en cuanto a plantillas php y estilos suficientes como para instalar
+y que todo funcione bien.
 
 Está desarrollado para ser usado de forma 'tradicional'. No tiene ningún soporte
 para FSE (Full Site Editing) e incluso desactiva [algunas cosas](app/functions.php#L47)
@@ -139,7 +139,7 @@ comando `npm run start` para instalar todas las dependencias de desarrollo.
 `npm run start:no-composer` para evitar errores de instalación.
 
 \*\* Los archivos [CHANGELOG.md](CHANGELOG.md) y [manifest.json](manifest.json)
-en la raíz del proyecto son sólo para mostrar [cierta información](index.js) y
+en la raíz del proyecto son solo para mostrar [cierta información](index.js) y
 llevar registro de la versión y los cambios del repositorio. Para registrar tus
 propios cambios, utiliza el archivo [CHANGELOG.md](app/CHANGELOG.md) dentro de
 `app/`.
@@ -289,8 +289,8 @@ desde [package.json](package.json#L5). Esto es importante porque una vez que
 desactives el modo `WP_DEBUG` para tu sitio final, todos los archivos de estilos
 y scripts var a tener la versión del tema.
 
-Al hacer actualizaciones, sólo tienes que cambiar la versión de tu proyecto en un
-solo lugar ([package.json](package.json#L5)), compilar y subir los archivos
+Al hacer actualizaciones, solo tienes que cambiar la versión de tu proyecto en
+un solo lugar ([package.json](package.json#L5)), compilar y subir los archivos
 modificados que con la nueva versión no vas a tener problemas en que los cambios
 se actualicen correctamente (a menos que utilices plugins adicionales para
 aumentar la velocidad del sitio).

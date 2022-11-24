@@ -18,16 +18,20 @@ export default class InlineIcons {
 		if ( this.iconSelectors ) {
 			this.addIcons();
 
-			// Ejemplo para agregar en un elemento existente (Login/out widget)
-			// con posibilidad de cambiar de estado.
-			// this.customIcon(
-			// 	'.wp-block-loginout',
-			// 	'loginout',
-			// 	false,
-			// 	true,
-			// 	'logged-out',
-			// 	[ 'login', 'logout' ],
-			// );
+			/**
+			 * Ejemplo para agregar en un elemento existente (Login/out widget)
+			 * con posibilidad de cambiar de estado.
+			 */
+			/*
+			this.customIcon(
+				'.wp-block-loginout',
+				'loginout',
+				false,
+				true,
+				'logged-out',
+				[ 'login', 'logout' ],
+			);
+			*/
 		}
 	}
 
@@ -57,8 +61,7 @@ export default class InlineIcons {
 				iconClass = trimClasses.substring( 5 );
 			}
 
-			// Si es un menú de navegación o un botón de bloque, agregar el SVG
-			// dentro del enlace.
+			// Si es un menú de navegación o un botón de bloque, agregar el SVG dentro del enlace.
 			if ( el.classList.contains( 'menu-item' ) || el.classList.contains( 'wp-block-button' ) ) {
 				if ( el.classList.contains( 'has-icon-after' ) ) {
 					el.firstElementChild.insertAdjacentElement( 'beforeend', this.createSvgIcon( iconClass ) );

@@ -62,7 +62,7 @@ La otra sería tener que repetir los colores dos veces de forma manual. En
 [theme.json](app/theme.json#L14) y en [variables.scss](app/assets/scss/abstracts/_variables.scss#L44).
 
 Esto sería un poco incomodo, pero fácil de corregir al finalizar el desarrollo
-del tema en caso que se quiera dejar algo más intuitivo para personas que sólo
+del tema en caso que se quiera dejar algo más intuitivo para personas que solo
 vayan a utilizar el editor de contenido para hacer modificaciones.
 
 ### Gfonts con PHP

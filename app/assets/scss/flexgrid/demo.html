@@ -8,10 +8,7 @@
 	<link rel="stylesheet" href="../../../css/main.css">
 	<title>Demo Flexgrid</title>
 	<style>
-		:root {
-			--startwp--content-width--main: 900px;
-		}
-
+		:root {--startwp--content-width--main: 900px}
 		.hidden.error {
 			padding: 15px;
 			color: white;
@@ -20,56 +17,35 @@
 			font-size: 17px;
 			text-align: center;
 		}
-
-		.hidden.error p:first-child {
-			font-size: 20px;
-		}
-
+		.hidden.error p:first-child {font-size: 20px}
 		.hidden.error code {
 			padding: 0 5px 1px;
 			color: black;
 			background-color: white;
 			font-size: .84em;
 		}
-
-		.demo-row {
-			background-color: #eee;
-		}
-
+		.site-header {border-bottom: 1px solid #ddd}
+		.site-header .site-branding {width: 100%}
+		.demo-row {background-color: #eee}
 		.demo-item {
 			background-color: #fdfdfd;
 			border: 1px solid #ececec;
 		}
-
-		.demo-item[class*="is-order"] {
-			background-color: #cacaca;
-		}
-
+		.demo-item[class*="is-order"] {background-color: #cacaca}
 		/* small */
 		@media screen and (min-width: 429px) {
-
 			[class*="small"] .demo-item,
-			[class*="small"].demo-item {
-				background-color: #b8d5fa;
-			}
+			[class*="small"].demo-item {background-color: #b8d5fa}
 		}
-
 		/* medium */
 		@media screen and (min-width: 599px) {
-
 			[class*="medium"] .demo-item,
-			[class*="medium"].demo-item {
-				background-color: #bdfde8;
-			}
+			[class*="medium"].demo-item {background-color: #bdfde8}
 		}
-
 		/* large */
 		@media screen and (min-width: 959px) {
-
 			[class*="large"] .demo-item,
-			[class*="large"].demo-item {
-				background-color: #ffdbc6;
-			}
+			[class*="large"].demo-item {background-color: #ffdbc6}
 		}
 	</style>
 </head>
@@ -84,8 +60,7 @@
 		</p>
 	</div>
 
-	<header id="site-header"
-		class="site-header flexrow main-between padding has-background-color has-foreground-background-color">
+	<header id="site-header" class="site-header flexrow main-between padding wrapper">
 		<div class="site-branding">
 			<h1 class="site-title margin-bottom-none">
 				Flexgrid
@@ -112,8 +87,9 @@
 
 		<p>Para empezar a trabajar hay que crear un contenedor y asignarle la
 			clase <code>flexrow</code>. No se recomienda agregarle estilos
-			visuales a este sino luego a los hijos. El contenedor puede ser un
-			<code>div</code>, <code>p</code>, o lo que sea.
+			visuales a este, es mejor a los hijos (ver sección <a href="#separaciones">separaciones</a>).
+			El contenedor puede ser un <code>div</code>, <code>p</code>, o
+			cualquier elemento HTML.
 		</p>
 
 		<blockquote>
@@ -246,12 +222,12 @@
 			<div class="demo-item">Ítem</div>
 		</div>
 		<pre>
-&lt;div class="flexrow cols-2"&gt; &lt;!-- sólo dos columnas por fila. --&gt;
+&lt;div class="flexrow cols-2"&gt; &lt;!-- solo dos columnas por fila. --&gt;
     &lt;div&gt;Ítem&lt;/div&gt;
     ...
 &lt;/div&gt;
 
-&lt;div class="flexrow cols-4"&gt; &lt;!-- sólo cuatro columnas por fila. --&gt;
+&lt;div class="flexrow cols-4"&gt; &lt;!-- solo cuatro columnas por fila. --&gt;
     &lt;div&gt;Ítem&lt;/div&gt;
     ...
 &lt;/div&gt;
@@ -306,14 +282,14 @@
 			las clases <code>col-[pantalla]-[tamaño]</code>.</p>
 
 		<ul>
-			<li><code>col</code> : se refiere a la columnas individual.</li>
+			<li><code>col</code> : se refiere a la columna individual.</li>
 			<li><code>[pantalla]</code> : se refiere a cuando van a tomar efecto
 				las dimensiones dependiendo del tamaño del navegador. Los valores
 				pueden ser <code>nada | small | medium | large</code> <sup>1</sup>.
 			</li>
 			<li><code>[tamaño]</code> : se refiere a cuanto ocupara la columna
-				en porcentaje de 12 columnas, donde 1 = 8% y 12 = 100%. Los
-				valores pueden ser <code>entre 1 y 12 | flex</code> <sup>2</sup>.
+				en porcentaje de 12 columnas, donde <code>1 = 8%</code> y <code>12 = 100%</code>.
+				Los valores pueden ser <code>entre 1 y 12 | flex</code> <sup>2</sup>.
 			</li>
 		</ul>
 
@@ -340,7 +316,7 @@
     &lt;div class="col-flex"&gt;Ítem&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-		<h3>cols-[pantalla]-*</h3>
+		<h3>col-[pantalla]-*</h3>
 
 		<p>Y con tamaños de pantalla definidos (achica y agranda la ventana del
 			navegador). Al asignar un tamaño, por ejemplo <code>medium</code>,
@@ -379,7 +355,7 @@
 &lt;/div&gt;</pre>
 
 		<p>Y para terminar una prueba combinando tamaños genéricos y específicos.
-			Importante tener cuidado cuando se van agregando múltiples opciones
+			Es importante tener cuidado cuando se van agregando múltiples opciones
 			o modificadores.</p>
 
 		<div class="flexrow cols-flex demo-row">
@@ -601,10 +577,10 @@
 		<pre>
 &lt;div class="flexrow"&gt;
     ...
-    &lt;div&gt;Ítem&lt;/div&gt; &lt;!-- stretch sólo es útil cuando los otros elementos tienen una alineación diferente. --&gt;
+    &lt;div&gt;Ítem&lt;/div&gt; &lt;!-- stretch solo es útil cuando los otros elementos tienen una alineación diferente. --&gt;
 &lt;/div&gt;</pre>
 
-		<h2>Separaciones</h2>
+		<h2 id="separaciones">Separaciones</h2>
 
 		<p>Para separar elementos de forma individual o el contenedor del contenido
 			es recomendable utilizar las clases utilitarias de <code>margin</code>
@@ -613,6 +589,12 @@
 
 		<p>Para separar a los hijo, hay que agregar la clase <code>has-gap</code>
 			al contenedor.</p>
+
+		<blockquote>
+			Esta es una de las razones por la cual no es recomendable agregar
+			estilos visuales a los contenedores, ya que al separar hijos se agregan
+			márgenes al costado y debajo por si hay múltiples filas.
+		</blockquote>
 
 		<div class="flexrow cols-3 has-gap demo-row">
 			<div class="demo-item">Ítem</div>
@@ -624,10 +606,6 @@
     &lt;div&gt;Ítem&lt;/div&gt;
     ...
 &lt;/div&gt;</pre>
-
-		<p>Esta es una de las razones por la cual no es recomendable agregar
-			estilos visuales a los contenedores, ya que al separar hijos se agregan
-			márgenes al costado y debajo por si hay múltiples filas.</p>
 
 		<p>Al usar <code>has-gap</code> se intenta agregar separaciones de forma
 			uniforme, pero al agregar diferentes clases y columnas se puede generar
@@ -769,7 +747,7 @@
 	<footer id="site-footer" class="site-footer wrapper has-background-color has-foreground-background-color">
 		<p class="flexrow main-center padding margin-bottom-none site-info">
 			<span>
-				<a href="https://github.com/gigenam/startwp" target="_blank">StartWP</a> &copy; 2022
+				<a href="https://github.com/gigenam/startwp" target="_blank">StartWP</a> &copy; Desde 2022
 			</span>
 			<a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html" target="_blank" class="margin-left">
 				GNU General Public License

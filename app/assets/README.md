@@ -13,6 +13,6 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 En esta carpeta se encuentran todos los archivos originales de estilos, scripts
 e imágenes.
 
-Esta carpeta está pensada para ser utilizada sólo en desarrollo, pero se encuentra
+Esta carpeta está pensada para ser utilizada solo en desarrollo, pero se encuentra
 dentro de `app` por si te interesa re-distribuir el tema con todos estos recursos
 originales. O si quieres subir todo al servidor como copia de seguridad.

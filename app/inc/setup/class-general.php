@@ -62,7 +62,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		/**
 		 * Logo personalizado
 		 *
-		 * @see header.php#L36
+		 * @see header.php#L35
 		 */
 		public static function custom_logo() {
 			$custom_logo = get_custom_logo();
@@ -91,7 +91,7 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		/**
 		 * Modificar el enlace de WP de políticas de privacidad
 		 *
-		 * @see footer.php#L37
+		 * @see footer.php#L36
 		 */
 		public static function privacy_policy() {
 			$privacy_link = get_the_privacy_policy_link( '<p class="privacy-policy">', '</p>' );
@@ -151,16 +151,25 @@ if ( ! class_exists( 'Startwp_General_Setup' ) ) {
 		 * @see templates/README.md
 		 */
 		public static function open_graph() {
+			global $post;
 			if ( ! is_404() ) {
-				$site_type        = 'website';
-				$site_uri         = ( is_front_page() ) ? get_home_url() : get_permalink( get_the_ID() );
-				$site_name        = ( is_front_page() ) ? get_bloginfo( 'name' ) : get_the_title( get_the_ID() );
-				$site_description = ( is_front_page() ) ? get_bloginfo( 'description' ) : get_the_excerpt( get_the_ID() );
-				$site_image       = ( is_front_page() ) ? get_template_directory_uri() . '/img/og-summary-large.jpg' : ( ( get_the_post_thumbnail() ) ? get_the_post_thumbnail_url( get_the_ID(), 'social-summary-large' ) : get_template_directory_uri() . '/img/og-summary-large.jpg' );
-				$twitter_card     = 'summary-large';
-				$twitter_type     = ( 'summary' === $twitter_card ) ? 'summary' : 'summary-large';
-				$twitter_image    = ( is_front_page() ) ? get_template_directory_uri() . '/img/og-' . $twitter_type . '.jpg' : ( ( get_the_post_thumbnail() ) ? get_the_post_thumbnail_url( get_the_ID(), 'social-' . $twitter_type ) : get_template_directory_uri() . '/img/og-' . $twitter_type . '.jpg' );
-				$twitter_user     = ''; // Puedes agregar tu usuario de twitter (sin @).
+				$site_type           = 'website';
+				$site_uri            = ( is_front_page() ) ? get_home_url() : get_permalink( get_the_ID() );
+				$site_name           = ( is_front_page() ) ? get_bloginfo( 'name' ) : get_the_title( get_the_ID() );
+				$site_description    = ( is_front_page() ) ? get_bloginfo( 'description' ) : get_the_excerpt( get_the_ID() );
+				$site_image          = get_template_directory_uri() . '/img/og-summary-large.jpg';
+				$twitter_card        = 'summary-large';
+				$twitter_type        = ( 'summary' === $twitter_card ) ? 'summary' : 'summary-large';
+				$twitter_image       = get_template_directory_uri() . '/img/og-' . $twitter_type . '.jpg';
+				$twitter_user        = ''; // Puedes agregar tu usuario de twitter (sin @).
+				$first_content_image = preg_match_all( '/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches );
+				if ( get_the_post_thumbnail() ) {
+					$site_image    = get_the_post_thumbnail_url( get_the_ID(), 'social-summary-large' );
+					$twitter_image = get_the_post_thumbnail_url( get_the_ID(), 'social-' . $twitter_type );
+				} elseif ( ! empty( $matches[1][0] ) ) {
+					$site_image    = $matches[1][0];
+					$twitter_image = $matches[1][0];
+				}
 				?>
 				<meta property="og:type" content="<?php echo esc_attr( $site_type ); ?>" />
 				<meta property="og:url" content="<?php echo esc_url( $site_uri ); ?>" />

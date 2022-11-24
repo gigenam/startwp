@@ -23,7 +23,7 @@ $startwp_front_page_link = ( is_front_page() ) ? '#' : home_url( '/' );
 			/**
 			 * Dirección del sitio
 			 *
-			 * @see /inc/custom/class-customizer.php#L41
+			 * @see /inc/custom/class-customizer.php#L43
 			 */
 			if ( get_theme_mod( 'startwp_address', false ) || is_customize_preview() ) :
 				?>
@@ -36,7 +36,7 @@ $startwp_front_page_link = ( is_front_page() ) ? '#' : home_url( '/' );
 			/**
 			 * Enlace a políticas de privacidad
 			 *
-			 * @see /inc/setup/class-general.php#L90
+			 * @see /inc/setup/class-general.php#L91
 			 */
 			Startwp_General_Setup::privacy_policy();
 			?>

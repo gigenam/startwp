@@ -6,7 +6,7 @@
  * WordPress lo utilice cuando actualiza el sitio en vez de la típica pantalla
  * en blanco con el cartel "No disponible por mantenimiento programado...".
  *
- * NO USAR funciones de WordPress. Sólo PHP plano y HTML.
+ * NO USAR funciones de WordPress. Solo PHP plano y HTML.
  *
  * @package startwp
  * @since   1.0.0
