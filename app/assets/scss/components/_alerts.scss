@@ -6,12 +6,14 @@
 
 // Mensajes
 // ----------------------------------------------
+.comments-area .no-comments,
 [class*="message-"] {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: $padding-content;
 	box-shadow: 0 3px 10px var(--startwp-main-border);
+	border-radius: 4px;
 
 	li {
 		margin-left: $padding-content * 1.25;
@@ -37,6 +39,10 @@
 		color: var(--startwp--color--white);
 		background-color: var(--startwp--color--error);
 	}
+}
+
+.comments-area .no-comments {
+	@extend .message-info;
 }
 
 //

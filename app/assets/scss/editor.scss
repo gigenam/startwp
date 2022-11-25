@@ -116,7 +116,9 @@ body .editor-styles-wrapper {
 	}
 
 	// Botones.
-	.wp-block-button__link {
+	// @since-wp 6.1 (wp-element-button).
+	.wp-block-button__link,
+	.wp-element-button {
 		padding: 0.417em 1em;
 		color: var(--startwp--color--background);
 		background-color: var(--startwp--color--foreground);

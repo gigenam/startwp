@@ -139,6 +139,10 @@
 	.nav-links {
 		@include flex-row($gap: 0);
 		justify-content: space-between;
+
+		.nav-next {
+			margin-left: auto;
+		}
 	}
 }
 

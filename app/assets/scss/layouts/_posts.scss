@@ -21,6 +21,40 @@
 .post-navigation {
 	margin-top: 1em;
 	margin-bottom: 1em;
+
+	.nav-links {
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			&:hover {
+				text-decoration: none;
+
+				.nav-title {
+					text-decoration: underline;
+				}
+			}
+
+			&:focus {
+				outline: none;
+
+				.nav-title {
+					outline: 2px dotted var(--startwp--color--primary);
+				}
+			}
+		}
+	}
+
+	.nav-subtitle {
+		display: block;
+		color: var(--startwp--color--foreground);
+		font-weight: normal;
+	}
+
+	.nav-next {
+		margin-left: auto;
+		text-align: end;
+	}
 }
 
 .comments-area {

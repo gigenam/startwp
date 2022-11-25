@@ -20,8 +20,8 @@ get_header();
 			// Paginación entre entradas.
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'startwp' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'startwp' ) . '</span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous post', 'startwp' ) . '</span><span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next post', 'startwp' ) . '</span><span class="nav-title">%title</span>',
 				)
 			);
 

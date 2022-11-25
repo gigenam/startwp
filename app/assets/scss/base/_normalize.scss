@@ -179,7 +179,7 @@ a {
 
 blockquote,
 .wp-block-quote {
-	padding: 0.8em 0.8em 0.8em clamp(0.7em, 2vw, 1.4em);
+	padding: 0.8em 0.8em 0.8em clamp(0.8em, 2vw, 1.2em);
 	margin: 0 0 1em 0;
 	border: 1px solid var(--startwp--color--shadow);
 	border-left: 6px solid var(--startwp--color--foreground);
@@ -187,11 +187,16 @@ blockquote,
 
 	cite {
 		display: block;
-		padding-left: 0.5em;
 		margin-top: 0.5em;
 		font-size: 0.95em;
 		font-style: italic;
 	}
+}
+
+.wp-block-quote.has-text-align-right {
+	padding: 0.8em clamp(0.8em, 2vw, 1.2em) 0.8em 0.8em;
+	border-left: 1px solid var(--startwp--color--shadow);
+	border-right: 6px solid var(--startwp--color--foreground);
 }
 
 .wp-block-pullquote blockquote {

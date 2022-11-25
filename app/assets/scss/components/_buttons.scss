@@ -29,8 +29,25 @@ button,
 	}
 }
 
+// Contenedor de botones.
+// @since-wp 6.1
+.wp-block-buttons {
+	display: flex;
+
+	&:not(.is-vertical) .wp-block-button:not(:last-child) {
+		margin-right: 1em;
+	}
+
+	&.is-vertical .wp-block-button:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+// Botones para descargar archivos.
+// @since-wp 6.1 (wp-element-button).
+.wp-block-file:not(.wp-element-button),
 .wp-block-file .wp-block-file__button {
-	font-size: 0.86em;
+	font-size: 0.88em;
 }
 
 // Separación entre botones y algún contenido previo en la misma linea.
