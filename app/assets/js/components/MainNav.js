@@ -31,7 +31,7 @@ export default class MainNav {
 		 * los sub-menus haciendo click en el padre de estos.
 		 * Por defecto el menú principal viene con data-submenu="hover".
 		 *
-		 * @see header.php#L71
+		 * @see header.php#L70
 		 */
 		this.menuItems.forEach( ( el ) => {
 			// Mostrar / ocultar sub-menus al hacer click.
@@ -54,8 +54,7 @@ export default class MainNav {
 			el.firstElementChild.addEventListener( 'focus', () => this.showSubMenus( el ) );
 			el.lastElementChild.lastElementChild.addEventListener( 'focusout', () => this.hideSubMenus( el ) );
 
-			// Ocultar sub-menus haciendo click en otra parte del documento o
-			// con la tecla ESC.
+			// Ocultar sub-menus haciendo click en otra parte del documento o con la tecla ESC.
 			document.body.addEventListener( 'click', () => this.hideSubMenus( el ) );
 			document.addEventListener( 'keydown', ( e ) => {
 				if ( 'Escape' === e.key ) {
@@ -69,8 +68,10 @@ export default class MainNav {
 	 * Mostrar navegación adaptable
 	 */
 	toggleMenu() {
-		// Comentar en caso de usar estilos flotante o lateral.
-		// @see /assets/scss/components/_menus.scss#L138
+		/**
+		 * Comentar en caso de usar estilos flotante o lateral.
+		 * @see /assets/scss/components/_menus.scss#L138
+		 */
 		document.documentElement.style.setProperty( '--startwp--nav-primary--height', `${ this.menuPrimary.getBoundingClientRect().height }px` );
 
 		this.menuButton.classList.toggle( 'btn-menu--is-active' );

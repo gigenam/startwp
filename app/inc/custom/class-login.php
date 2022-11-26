@@ -26,6 +26,8 @@ if ( ! class_exists( 'Startwp_Login' ) ) {
 
 		/**
 		 * Remplazar la url de wordpress.org del logo por la de tu sitio
+		 *
+		 * @return string Dirección del sitio.
 		 */
 		public function logo_url() {
 			return esc_url( home_url() );
@@ -33,6 +35,8 @@ if ( ! class_exists( 'Startwp_Login' ) ) {
 
 		/**
 		 * Remplazar el texto del logo por el nombre de tu sitio
+		 *
+		 * @return string Nombre del sitio.
 		 */
 		public function logo_text() {
 			return esc_html( get_bloginfo( 'name' ) );

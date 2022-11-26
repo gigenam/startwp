@@ -12,8 +12,8 @@
  *
  * Si esta definido define( 'WP_ENVIRONMENT_TYPE', 'development' ) o
  * define( 'WP_DEBUG', 'true' ) en wp-config.php, el tema va a cargar los archivos
- * no comprimidos de estilos y scripts y le agregará un versionado aleatorio para
- * prevenir almacenamiento en la cache del navegador.
+ * no comprimidos de estilos y scripts y les agregará un versionado aleatorio
+ * para prevenir almacenamiento en la cache del navegador.
  */
 // Nombre de la carpeta del tema.
 $startwp_name = wp_get_theme( 'startwp' );
@@ -23,7 +23,7 @@ $startwp_theme_version = ( 'development' === wp_get_environment_type() || WP_DEB
 	? microtime()
 	: $startwp_name->get( 'Version' );
 
-// En producción, carga los archivos minificados.
+// En producción, carga los archivos minificados. Ej: main.min.css.
 $startwp_theme_suffix = ( 'development' === wp_get_environment_type() || WP_DEBUG )
 	? null
 	: '.min';

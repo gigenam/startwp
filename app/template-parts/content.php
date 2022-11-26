@@ -12,7 +12,6 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 	<header class="entry-header<?php echo esc_html( $startwp_wrapper ); ?>">
 		<?php
 		/**
@@ -51,7 +50,7 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 			'<a class="has-icon-after icon-arrow is-right readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_html__( 'Read more', 'startwp' ) . ' <span class="screen-reader-text">' . esc_html_x( 'about ', 'Sobre la entrada', 'startwp' ) . get_the_title() . '</span></a>'
 		);
 
-		// Extracto personalizado para artículos privados en vista de blog.
+		// Extracto personalizado para artículos privados en vista de blog/archivos.
 		if ( post_password_required() ) {
 			$startwp_read_more_link = '';
 			$show_excerpt           = ( ! empty( $post->post_excerpt ) )
@@ -109,5 +108,4 @@ $startwp_wrapper = ! is_singular() && ! is_archive() ? '' : ' wrapper';
 			?>
 		</footer> <!-- .post__footer -->
 	<?php endif; ?>
-
 </article><!-- #post-<?php the_ID(); ?> -->

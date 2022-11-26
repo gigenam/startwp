@@ -12,10 +12,10 @@ $main-width: 1100px; // Actualizar theme.json
 $narrow-width: 900px;
 
 // Títulos.
-$fs-heading-1: rem(46);
-$fs-heading-2: rem(36);
-$fs-heading-3: rem(28);
-$fs-heading-4: rem(22);
+$fs-heading-1: clamp(rem(36), 6vw, rem(46));
+$fs-heading-2: clamp(rem(29), 4.6vw, rem(36));
+$fs-heading-3: clamp(rem(22), 3.6vw, rem(28));
+$fs-heading-4: clamp(rem(18), 2.6vw, rem(22));
 $fs-heading-5: 1em;
 $fs-heading-6: rem(13);
 

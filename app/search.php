@@ -11,7 +11,6 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
 		<?php if ( have_posts() ) : ?>
 			<header class="entry-header wrapper">
 				<h1 class="entry-title">

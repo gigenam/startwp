@@ -30,13 +30,12 @@
 	</a>
 
 	<header id="site-header" class="site-header flexrow main-between padding has-background-color has-foreground-background-color">
-
 		<div class="site-branding">
 			<?php
 			/**
 			 * Logo personalizado
 			 *
-			 * @see /inc/setup/class-general.php#L61
+			 * @see /inc/setup/class-general.php#L62
 			 */
 			Startwp_General_Setup::custom_logo();
 
@@ -72,5 +71,4 @@
 			)
 		);
 		?>
-
 	</header><!-- #site-header -->

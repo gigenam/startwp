@@ -50,7 +50,7 @@ $breakpoints: (
 }
 
 //
-// Sólo en X tamaño ( $bp )
+// Solo en X tamaño ( $bp )
 // * Se pueden usar las opciones small, medium y large.
 // * * Para algo menor a small, usar @include to(small){}.
 // * * Para algo mayor a large, usar @include from(xlarge){}.

@@ -12,4 +12,9 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+> Revisar los cambios en [main](https://github.com/gigenam/startwp/blob/main/CHANGELOG.md)
+> para ver todo lo que se va fusionando y actualizando en esta.
+>
+> Acá solo se lleva un registro básico de actualizaciones y agregados de WooCommerce.
+
 ## Ver 1.0.0 - 2022-11-03 : Versión inicial.

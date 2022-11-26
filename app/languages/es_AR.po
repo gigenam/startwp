@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: undefined\n"
-"POT-Creation-Date: 2022-09-12 15:23-0300\n"
+"POT-Creation-Date: 2022-11-26 08:58-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,16 +18,16 @@ msgstr ""
 "_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
 "esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.1\n"
+"X-Generator: Poedit 3.2.1\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: comments.php:33
+#: comments.php:32
 #, php-format
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr "Una opinion en &ldquo;%1$s&rdquo;"
 
-#: comments.php:39
+#: comments.php:38
 #, php-format
 msgctxt "Título de la entrada"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
@@ -35,7 +35,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "%1$s opinion en &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s opiniones en &ldquo;%2$s&rdquo;"
 
-#: comments.php:64
+#: comments.php:63
 msgid "Comments are closed."
 msgstr "Los comentarios están cerrados."
 
@@ -51,16 +51,16 @@ msgstr "Men&uacute; Principal"
 msgid "Navigation Menu"
 msgstr "Men&uacute; de navegaci&oacute;n"
 
-#: inc/core/class-widgets.php:30
+#: inc/core/class-widgets.php:32
 msgid "Main Sidebar"
 msgstr "Sidebar Principal"
 
-#: inc/core/class-widgets.php:32
+#: inc/core/class-widgets.php:34
 msgid "Add widgets here to show in the main sidebar."
 msgstr ""
 "Agreg&aacute; widgets ac&aacute; para mostrarlos en el sidebar principal."
 
-#: inc/custom/class-customizer.php:61
+#: inc/custom/class-customizer.php:63
 msgid "Site Address"
 msgstr "Direcci&oacute;n del Sitio"
 
@@ -109,10 +109,10 @@ msgid ""
 "Update to the latest version or try another modern options like Mozilla "
 "Firefox, Google Chrome or the new Microsoft Edge."
 msgstr ""
-"Actualiza a una versi&oacute;n m&aacute;s nueva o prueba otras opciones como "
-"Mozilla Firefox, Google Chrome o el nuevo Microsoft Edge."
+"Actualiz&aacute; a una versi&oacute;n m&aacute;s nueva o prob&aacute; otras "
+"opciones como Mozilla Firefox, Google Chrome o el nuevo Microsoft Edge."
 
-#: inc/setup/class-general.php:107
+#: inc/setup/class-general.php:108
 #, php-format
 msgid "%s - Private"
 msgstr "%s - Privado"
@@ -127,16 +127,16 @@ msgctxt "Autor de la entrada"
 msgid "by %s"
 msgstr "por %s"
 
-#: inc/setup/class-posts.php:248
+#: inc/setup/class-posts.php:250
 #, php-format
 msgid "1 %1$s"
 msgstr ""
 
-#: inc/setup/class-posts.php:249
+#: inc/setup/class-posts.php:251
 msgid "comment on"
 msgstr "comentario en"
 
-#: inc/setup/class-posts.php:255
+#: inc/setup/class-posts.php:257
 #, php-format
 msgctxt "Cantidad comentarios y título de la entrada"
 msgid "%1$s %2$s"
@@ -144,75 +144,76 @@ msgid_plural "%1$s %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/setup/class-posts.php:257
+#: inc/setup/class-posts.php:259
 msgid "comments on"
 msgstr "comentarios en"
 
-#: inc/setup/class-posts.php:276
+#: inc/setup/class-posts.php:278
 msgid "Categories"
 msgstr "Categor&iacute;as"
 
-#: inc/setup/class-posts.php:304
+#: inc/setup/class-posts.php:306
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: inc/setup/class-posts.php:345
+#: inc/setup/class-posts.php:349
 msgid "This content is private. To view it enter your password below:"
-msgstr "Este contenido es privado. Para verlo ingresa la contraseña debajo:"
+msgstr ""
+"Este contenido es privado. Para verlo ingres&aacute; la contraseña abajo:"
 
-#: inc/setup/class-posts.php:346
+#: inc/setup/class-posts.php:350
 msgctxt "Private post form label"
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: inc/setup/class-posts.php:349
+#: inc/setup/class-posts.php:353
 msgctxt "Private post form submit"
 msgid "Enter"
 msgstr "Ingresar"
 
-#: inc/setup/class-posts.php:365
+#: inc/setup/class-posts.php:369
 msgid "Sorry, your password is wrong. Please try again."
-msgstr "La contraseña es incorrecta. Por favor intenta de nuevo."
+msgstr "La contraseña es incorrecta. Por favor intent&aacute; de nuevo."
 
-#: inc/setup/class-posts.php:414
+#: inc/setup/class-posts.php:422
 msgid "Continue reading"
-msgstr "Continuar leyendo"
+msgstr "Segu&iacute; leyendo"
 
-#: inc/setup/class-posts.php:414 template-parts/content.php:51
+#: inc/setup/class-posts.php:422 template-parts/content.php:50
 msgctxt "Sobre la entrada"
 msgid "about "
 msgstr "sobre "
 
-#: page.php:38 template-parts/content.php:91
+#: page.php:38 template-parts/content.php:90
 msgid "Pages:"
 msgstr "P&aacute;ginas:"
 
-#: search.php:21
+#: search.php:20
 #, php-format
 msgid "Search results for: %s"
 msgstr "Resultados para: %s"
 
-#: single.php:26
-msgid "Previous:"
-msgstr "Anterios:"
+#: single.php:28
+msgid "Previous post"
+msgstr "Entrada anterior"
 
-#: single.php:27
-msgid "Next:"
-msgstr "Siguiente:"
+#: single.php:29
+msgid "Next post"
+msgstr "Entrada siguiente"
 
-#: template-parts/content-none.php:15
+#: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr "No se encontr&oacute; nada"
 
-#: template-parts/content-none.php:24
+#: template-parts/content-none.php:23
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"¿Listo/a para publicar tu primer entrada? <ahref=\"%1$s\">Comenz&aacute; "
+"¿Listo/a para publicar tu primer entrada? <a href=\"%1$s\">Comenz&aacute; "
 "ac&aacute;</a>."
 
-#: template-parts/content-none.php:32
+#: template-parts/content-none.php:31
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -220,7 +221,7 @@ msgstr ""
 "Nada concuerda con tus t&eacute;rminos de b&uacute;squeda. Por favor "
 "intent&aacute; de nuevo con otras palabras clave."
 
-#: template-parts/content-none.php:38
+#: template-parts/content-none.php:37
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -228,32 +229,29 @@ msgstr ""
 "Parece que no podemos encontrar lo que est&aacute;s buscando. tal vez una "
 "nueva b&uacute;squeda puede ayudar."
 
-#: template-parts/content.php:51
+#: template-parts/content.php:50
 msgid "Read more"
 msgstr "Leer m&aacute;s"
 
-#: template-parts/content.php:58
+#: template-parts/content.php:57
 msgid "Access"
 msgstr "Ingresar"
 
-#: template-parts/content.php:59
+#: template-parts/content.php:58
 msgid "This content is private."
 msgstr "Este contenido es privado."
 
-#: template-parts/content.php:59
+#: template-parts/content.php:58
 msgid "Enter"
 msgstr "Ingresá"
 
-#: template-parts/content.php:59
+#: template-parts/content.php:58
 msgid "to get access."
 msgstr "para tener acceso."
 
-#: woocommerce/class-init.php:81 woocommerce/class-init.php:88
+#: woocommerce/class-init.php:105 woocommerce/class-init.php:112
 msgid "Free"
 msgstr "Gratis"
-
-#~ msgid "FREE!"
-#~ msgstr "GRATIS!"
 
 #~ msgid " Press enter to view the sub-menu."
 #~ msgstr " Presion&aacute; enter para ver los sub-menus."
