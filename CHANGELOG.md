@@ -12,15 +12,23 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.7.0 - 2022-11-28 :
+
+- [+] Agregado de sprite `tiktok.svg` y corrección menor en `star-half.svg`.
+- [+] Agregados más estilos básicos para los comentarios (comentados por defecto
+  en [main.scss](app/assets/scss/main.scss#L19)).
+- [!] Cambios en plantilla SCSS. El archivo `_forms.scss` pasa a llamarse
+  `_comments.scss`.
+
 ## Ver 1.6.0 - 2022-11-25 :
 
 - [+] Agregados estilos para el formulario de comentarios (comentados por defecto)
   en [forms.scss](app/assets/scss/components/_forms.scss#L7).
-- [+] Agregados estilos para la navegación de entradas en [posts.scss](app/assets/scss/layouts/_posts.scss#L21).
+- [+] Agregados estilos para la navegación de entradas en [\_posts.scss](app/assets/scss/layouts/_posts.scss#L21).
 - [+] Agregado de tamaños variables para títulos inspirado en las nuevas opciones
-  de WP 6.1 en [variables.scss](app/assets/scss/abstracts/_variables.scss#L15).
+  de WP 6.1 en [\_variables.scss](app/assets/scss/abstracts/_variables.scss#L15).
 - [!] Corrección para bloques de botones para WP 6.1 en [editor.scss](app/assets/scss/editor.scss#L119)
-  y [buttons.scss](app/assets/scss/components/_buttons.scss#L33).
+  y [\_buttons.scss](app/assets/scss/components/_buttons.scss#L33).
 - [!] Corrección en el alto del `body` en la página de login/register para evitar
   scroll vertical.
 - [!] Correcciones en traducciones.

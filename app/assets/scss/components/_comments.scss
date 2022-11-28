@@ -1,0 +1,144 @@
+/**
+ * Comentarios
+ *
+ * @since 1.0.0
+ */
+// También activa las opciones extras descomentando la linea en
+// '/inc/core/class-enqueue.php#L27'.
+
+.comments-area {
+	margin-top: 2em;
+	@extend .wrapper;
+}
+
+//
+// Comentarios publicados
+// ----------------------------------------------
+.comment-list,
+.children {
+	@include reset-menu();
+}
+
+.comment-list {
+	// Comentarios individuales.
+	.comment {
+		position: relative;
+		margin-bottom: 0;
+
+		&:not(:first-child) {
+			padding-top: 1.3em;
+		}
+
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--startwp--color--shadow);
+		}
+
+		@include from(medium) {
+			padding: 1rem 0.8rem;
+		}
+
+		&.odd {
+			// Hacer modificaciones manuales en caso de usar fondo oscuro.
+			background-color: darken(#ffffff, 2%);
+		}
+	}
+
+	// Respuestas.
+	.children .comment {
+		padding-top: 1em;
+		padding-right: 0;
+		padding-bottom: 0;
+		border-top: 1px solid var(--startwp--color--shadow);
+		border-bottom: none;
+	}
+
+	// Avatar.
+	.avatar {
+		max-width: 2.6rem;
+		height: 2.6rem;
+		float: left;
+		margin-right: 1rem;
+	}
+
+	// Autor.
+	.comment-metadata {
+		font-size: 0.86em;
+		margin-bottom: 1em;
+	}
+}
+
+// Autor del contenido.
+.bypostauthor {
+	border: 2px solid var(--startwp--color--shadow);
+	border-radius: $border-radius;
+}
+
+//
+// Formulario de respuesta
+// ----------------------------------------------
+.comment-respond {
+	padding: 0.5em;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	border: 1px solid var(--startwp--color--shadow);
+	border-radius: $border-radius;
+
+	.comment-reply-title {
+		display: flex;
+		font-size: 1.4em;
+
+		small {
+			margin-left: auto;
+			font-size: 0.75em;
+		}
+
+		a {
+			color: var(--startwp--color--error);
+		}
+	}
+
+	.form-submit {
+		margin-bottom: 0;
+	}
+}
+
+//
+// Formulario de comentarios
+// ----------------------------------------------
+.comment-form {
+	// Conectado como.
+	.logged-in-as {
+		flex-wrap: wrap;
+
+		a {
+			margin-left: 0.3rem;
+		}
+
+		.required-field-message {
+			flex-basis: 100%;
+			font-size: 0.9em;
+		}
+	}
+
+	@include from(medium) {
+		p:not(.comment-notes, .comment-form-cookies-consent) {
+			display: flex;
+			align-items: flex-start;
+
+			label {
+				min-width: 11rem;
+			}
+		}
+	}
+
+	.comment-form-cookies-consent {
+		position: relative;
+		padding-left: 1.5rem;
+
+		input {
+			position: absolute;
+			left: 0;
+			top: 0.25rem;
+		}
+	}
+}

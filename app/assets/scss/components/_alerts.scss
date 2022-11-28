@@ -13,7 +13,7 @@
 	align-items: center;
 	padding: $padding-content;
 	box-shadow: 0 3px 10px var(--startwp-main-border);
-	border-radius: 4px;
+	border-radius: $border-radius;
 
 	li {
 		margin-left: $padding-content * 1.25;
