@@ -12,7 +12,7 @@
 export default class InlineIcons {
 	constructor() {
 		this.iconSelectors = document.querySelectorAll(
-			'[class*="icon-"]:where(:not(svg):not([class*="icon-button"]):not([class*="wp-block-social-links"]))',
+			'[class*="has-icon"][class*="icon-"]:where(:not(svg):not([class*="icon-button"]):not([class*="wp-block-social-links"]))',
 		);
 
 		if ( this.iconSelectors ) {

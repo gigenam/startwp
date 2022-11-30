@@ -12,6 +12,17 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.8.0 - 2022-11-30 :
+
+- [+] Agregado de sprite `telegram.svg` y algunos cambios de aspecto generales.
+- [+] Agregado archivo [demo.html](app/assets/img/sprites/demo.html) para mostrar
+  como usar y probar los sprites en este tema.
+- [!] Correccion menor de selector de clases en [inlineIcons.js](app/assets/js/utilities/InlineIcons.js#L15).
+- [!] Refactor y optimización de todos los sprites, ahorrando un **29%** en el
+  peso total de todos los SVG's y un **33%** en el archivo [sprites.svg](app/assets/img/sprites.svg).
+  Además de dejar todos los archivos en mejores condiciones para editarlos más
+  fácilmente.
+
 ## Ver 1.7.0 - 2022-11-28 :
 
 - [+] Agregado de sprite `tiktok.svg` y corrección menor en `star-half.svg`.

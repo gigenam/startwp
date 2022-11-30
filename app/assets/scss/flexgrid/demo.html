@@ -9,7 +9,11 @@
 	<title>Demo Flexgrid</title>
 	<style>
 		:root {--startwp--content-width--main: 900px}
-		.hidden.error {
+		.error {
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			left: 0;
 			padding: 15px;
 			color: white;
 			background-color: red;
@@ -17,8 +21,8 @@
 			font-size: 17px;
 			text-align: center;
 		}
-		.hidden.error p:first-child {font-size: 20px}
-		.hidden.error code {
+		.error p:first-child {font-size: 20px}
+		.error code {
 			padding: 0 5px 1px;
 			color: black;
 			background-color: white;
@@ -53,11 +57,8 @@
 <body class="flexrow cols-1 cross-start margin-bottom-none">
 	<div class="hidden error">
 		<p>Ups! Si estas viendo esto es porque los estilos no están cargando bien.</p>
-		<p>Revisa que exista la carpeta <code>app/css</code> y que dentro esté el
-			archivo <code>main.css</code></p>
-		<p>Si no es así, utiliza el comando <code>npm run dev</code> o
-			<code>npm run watch</code> o <code>npm run build</code>
-		</p>
+		<p>Revisa que exista la carpeta <code>app/css</code> y que dentro esté el archivo <code>main.css</code></p>
+		<p>Si no es así, utiliza el comando <code>npm run dev</code> o <code>npm run watch</code> o <code>npm run build</code></p>
 	</div>
 
 	<header id="site-header" class="site-header flexrow main-between padding wrapper">
