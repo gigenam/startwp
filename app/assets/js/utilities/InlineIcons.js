@@ -12,7 +12,7 @@
 export default class InlineIcons {
 	constructor() {
 		this.iconSelectors = document.querySelectorAll(
-			'[class*="has-icon"][class*="icon-"]:where(:not(svg):not([class*="icon-button"]):not([class*="wp-block-social-links"]))',
+			'[class*="has-icon"][class*="icon-"]:where(:not(svg):not([class*="icon-button"]):not([class*="wp-block-social-links"]))'
 		);
 
 		if ( this.iconSelectors ) {
@@ -39,7 +39,7 @@ export default class InlineIcons {
 	 * Crear elemento SVG en linea.
 	 *
 	 * @param { string } iconClass El nombre del ícono.
-	 * @return { SVGElement } Elemento svg.
+	 * @return { SVGElement }
 	 */
 	createSvgIcon( iconClass ) {
 		const iconSVG = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );
@@ -55,10 +55,11 @@ export default class InlineIcons {
 	addIcons() {
 		this.iconSelectors.forEach( ( el ) => {
 			// Separar clases.
-			const trimClasses = el.classList.value.substring( el.classList.value.search( /\s[icon]/ ) + 1 );
-			let iconClass     = trimClasses.substring( 5, trimClasses.search( /[a-z]\s/g ) + 1 );
+			const trimClasses = el.classList.value.substring( el.classList.value.match( /\sicon-/ ).index );
+			let iconClass     = trimClasses.substring( 6, trimClasses.search( /[a-z]\s/g ) + 1 );
+
 			if ( trimClasses.search( /[a-z]\s/g ) < 0 ) {
-				iconClass = trimClasses.substring( 5 );
+				iconClass = trimClasses.substring( 6 );
 			}
 
 			// Si es un menú de navegación o un botón de bloque, agregar el SVG dentro del enlace.

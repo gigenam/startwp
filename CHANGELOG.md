@@ -12,6 +12,11 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.8.1 - 2022-12-01 :
+
+- [!] Mejoras en el agregado de sprites en linea mediante clases.
+- [!] Correcciones menores en documentación de sprites.
+
 ## Ver 1.8.0 - 2022-11-30 :
 
 - [+] Agregado de sprite `telegram.svg` y algunos cambios de aspecto generales.

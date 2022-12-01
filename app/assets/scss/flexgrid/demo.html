@@ -31,10 +31,7 @@
 		.site-header {border-bottom: 1px solid #ddd}
 		.site-header .site-branding {width: 100%}
 		.demo-row {background-color: #eee}
-		.demo-item {
-			background-color: #fdfdfd;
-			border: 1px solid #ececec;
-		}
+		.demo-item {background-color: #fdfdfd; border: 1px solid #ececec}
 		.demo-item[class*="is-order"] {background-color: #cacaca}
 		/* small */
 		@media screen and (min-width: 429px) {
@@ -90,8 +87,7 @@
 			clase <code>flexrow</code>. No se recomienda agregarle estilos
 			visuales a este, es mejor a los hijos (ver sección <a href="#separaciones">separaciones</a>).
 			El contenedor puede ser un <code>div</code>, <code>p</code>, o
-			cualquier elemento HTML.
-		</p>
+			cualquier elemento HTML.</p>
 
 		<blockquote>
 			<p class="margin-bottom-none">Por propósitos de demostración en
@@ -117,8 +113,7 @@
 
 		<p>En el ejemplo se ve como por defecto y solo asignando la clase
 			<code>flexrow</code> los hijos directos se posicionan de forma
-			horizontal y el tamaño de estos es determinado por el contenido.
-		</p>
+			horizontal y el tamaño de estos es determinado por el contenido.</p>
 
 		<p>En caso de que los hijos sean demasiados o tengan suficiente contenido
 			para que no puedan entrar todos en linea, estos van a saltar de linea
@@ -127,10 +122,12 @@
 			contenedor.</p>
 
 		<div class="flexrow demo-row">
-			<div class="demo-item"><strong>Comportamiento por defecto</strong>:
+			<div class="demo-item">
+				<strong>Comportamiento por defecto</strong>:
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
 				sapiente quo ipsa culpa reiciendis, at eligendi, ipsum alias quam
-				aliquam autem corrupti consectetur tenetur vero sit praesentium.</div>
+				aliquam autem corrupti consectetur tenetur vero sit praesentium.
+			</div>
 			<div class="demo-item">Ítem</div>
 			<div class="demo-item">Ítem</div>
 		</div>
@@ -142,10 +139,12 @@
 			problemas. Usar con responsabilidad o en un caso especifico.</p>
 
 		<div class="flexrow is-nowrap demo-row">
-			<div class="demo-item"><strong>Comportamiento con is-nowrap</strong>:
+			<div class="demo-item">
+				<strong>Comportamiento con is-nowrap</strong>:
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo
 				sapiente quo ipsa culpa reiciendis, at eligendi, ipsum alias quam
-				aliquam autem corrupti consectetur tenetur vero sit praesentium.</div>
+				aliquam autem corrupti consectetur tenetur vero sit praesentium.
+			</div>
 			<div class="demo-item">Ítem</div>
 			<div class="demo-item">Ítem</div>
 		</div>
@@ -159,8 +158,7 @@
 
 		<p>Para terminar con las clases principales de flexbox. También se pueden
 			alinear los elementos de forma vertical. Para eso se usa la clase
-			<code>is-column</code>.
-		</p>
+			<code>is-column</code>.</p>
 
 		<div class="flexrow is-column demo-row">
 			<div class="demo-item">Ítem</div>
@@ -183,8 +181,7 @@
 
 		<p>Para controlar cuanto espacio van a ocupar los hijos directos de forma
 			genérica, hay que asignar al padre una de las clases
-			<code>cols-[pantalla]-[tamaño]</code>.
-		</p>
+			<code>cols-[pantalla]-[tamaño]</code>.</p>
 
 		<ul>
 			<li><code>cols</code> : se refiere a las columnas hijas.</li>
@@ -193,8 +190,7 @@
 				pueden ser <code>nada | small | medium | large</code> <sup>1</sup>.</li>
 			<li><code>[tamaño]</code> : se refiere a cuantas columnas por fila
 				van a entrar. Los valores pueden ser <code>entre 1 y 12 | flex</code>
-				<sup>2</sup>.
-			</li>
+				<sup>2</sup>.</li>
 		</ul>
 
 		<blockquote>
@@ -207,6 +203,7 @@
 		<h3>cols-[tamaño]</h3>
 
 		<p>Algunas pruebas con diferentes tamaños.</p>
+
 		<div class="flexrow cols-2 demo-row">
 			<div class="demo-item">Ítem</div>
 			<div class="demo-item">Ítem</div>
@@ -243,7 +240,7 @@
 		<p>Y con tamaños de pantalla definidos (achica y agranda la ventana del
 			navegador). Al asignar un tamaño, por ejemplo <code>medium</code>,
 			significa que por debajo de este los hijos siempre van a ocupar el
-			100% del ancho. </p>
+			100% del ancho.</p>
 
 		<div class="flexrow cols-small-flex demo-row">
 			<div class="demo-item">Ítem</div>
@@ -286,12 +283,10 @@
 			<li><code>col</code> : se refiere a la columna individual.</li>
 			<li><code>[pantalla]</code> : se refiere a cuando van a tomar efecto
 				las dimensiones dependiendo del tamaño del navegador. Los valores
-				pueden ser <code>nada | small | medium | large</code> <sup>1</sup>.
-			</li>
+				pueden ser <code>nada | small | medium | large</code> <sup>1</sup>.</li>
 			<li><code>[tamaño]</code> : se refiere a cuanto ocupara la columna
 				en porcentaje de 12 columnas, donde <code>1 = 8%</code> y <code>12 = 100%</code>.
-				Los valores pueden ser <code>entre 1 y 12 | flex</code> <sup>2</sup>.
-			</li>
+				Los valores pueden ser <code>entre 1 y 12 | flex</code> <sup>2</sup>.</li>
 		</ul>
 
 		<blockquote>
@@ -534,8 +529,7 @@
 
 		<p>Por último se puede controlar elementos de forma individual con
 			<code>self-[opción]</code> y tienen las mismas opciones que
-			<code>cross-*</code>. Las clases se agregan a los hijos.
-		</p>
+			<code>cross-*</code>. Las clases se agregan a los hijos.</p>
 
 		<div class="flexrow cols-8 demo-row" style="height: 65px">
 			<div class="demo-item">Ítem</div>
@@ -585,16 +579,17 @@
 
 		<p>Para separar elementos de forma individual o el contenedor del contenido
 			es recomendable utilizar las clases utilitarias de <code>margin</code>
-			y <code>padding</code> que vienen con este tema en <code>/assets/scss/base/_utilities.scss</code>.
-		</p>
+			y <code>padding</code> que vienen con este tema en
+			<code>/assets/scss/base/_utilities.scss</code>.</p>
 
 		<p>Para separar a los hijo, hay que agregar la clase <code>has-gap</code>
 			al contenedor.</p>
 
 		<blockquote>
-			Esta es una de las razones por la cual no es recomendable agregar
-			estilos visuales a los contenedores, ya que al separar hijos se agregan
-			márgenes al costado y debajo por si hay múltiples filas.
+			<p class="margin-bottom-none">Esta es una de las razones por la cual
+				no es recomendable agregar estilos visuales a los contenedores,
+				ya que al separar hijos se agregan márgenes al costado y debajo
+				por si hay múltiples filas.</p>
 		</blockquote>
 
 		<div class="flexrow cols-3 has-gap demo-row">
@@ -658,15 +653,14 @@
 		<h2>Orden</h2>
 
 		<blockquote>
-			<p class="margin-bottom-none">
-				Estas opciones están desactivadas por defecto. Para utilizarlas
-				revisa el archivo <code>/assets/scss/flexgrid/_flexgrid.scss</code>.</p>
+			<p class="margin-bottom-none">Estas opciones están desactivadas por
+				defecto. Para utilizarlas revisa el archivo
+				<code>/assets/scss/flexgrid/_flexgrid.scss</code>.</p>
 		</blockquote>
 
 		<p>Algunas clases para cambiar el orden de los hijos sin importar su
 			ubicación en el DOM. Las opciones pueden ser 3 y las clases son
-			<code>is-order-[pantalla]-[orden]</code>
-		</p>
+			<code>is-order-[pantalla]-[orden]</code>.</p>
 
 		<ul>
 			<li><code>[pantalla]</code> : se refiere a cuando van a tomar efecto
@@ -679,8 +673,7 @@
 		<h3>Primero (first)</h3>
 
 		<p>Para poner un hijo al principio del bloque, hay que agregarle la clase
-			<code>is-order-[pantalla]-first.</code>
-		</p>
+			<code>is-order-[pantalla]-first</code>.</p>
 
 		<div class="flexrow cols-5 demo-row">
 			<div class="demo-item">Ítem 1</div>
@@ -701,8 +694,7 @@
 		<h3>Último (last)</h3>
 
 		<p>Para poner un hijo al final del bloque, hay que agregarle la clase
-			<code>is-order-[pantalla]-last.</code>
-		</p>
+			<code>is-order-[pantalla]-last</code>.</p>
 
 		<div class="flexrow cols-5 demo-row">
 			<div class="demo-item">Ítem 1</div>
@@ -724,8 +716,7 @@
 
 		<p>Para poner un hijo en su posición original, hay que agregarle la clase
 			<code>is-order-[pantalla]-reset</code>. <br>Esta clase sirve únicamente
-			si ya se cambió el orden. Por ejemplo en un tamaño específico de pantalla.
-		</p>
+			si ya se cambió el orden. Por ejemplo en un tamaño específico de pantalla.</p>
 
 		<div class="flexrow cols-5 demo-row">
 			<div class="demo-item">Ítem 1</div>
