@@ -12,10 +12,19 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.9.0 - 2022-12-05 :
+
+- [+] Agregada clase para íconos con [fondo](app/assets/img/sprites/demo.html#L477).
+- [!] Corrección de tamaños para íconos con contorno `is-outline` para que no
+  sean más grandes que el resto.
+- [!] Cambios menores y actualización de diseño en algunos sprites, para una
+  mejor integración con [fondos](app/assets/img/sprites/demo.html#L358).
+- [!] Mejoras y agregados en la documentación de [sprites](app/assets/img/sprites/demo.html).
+
 ## Ver 1.8.1 - 2022-12-01 :
 
 - [!] Mejoras en el agregado de sprites en linea mediante clases.
-- [!] Correcciones menores en documentación de sprites.
+- [!] Correcciones menores en documentación de [sprites](app/assets/img/sprites/demo.html).
 
 ## Ver 1.8.0 - 2022-11-30 :
 

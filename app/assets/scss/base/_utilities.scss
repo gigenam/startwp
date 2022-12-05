@@ -236,51 +236,62 @@ $separations: (
 //
 // Color de textos
 // ----------------------------------------------
+[class*="has-icon"].has-foreground-color svg,
 .has-foreground-color,
 .has-foreground-color:hover {
 	color: var(--startwp--color--foreground);
 }
 
+[class*="has-icon"]:where([class*="has-background"]) svg,
+svg:where([class*="has-background"]),
 .has-background-color,
 .has-background-color:hover {
 	color: var(--startwp--color--background);
 }
 
+[class*="has-icon"].has-primary-color svg,
 .has-primary-color,
 .has-primary-color:hover {
 	color: var(--startwp--color--primary);
 }
 
+[class*="has-icon"].has-secondary-color svg,
 .has-secondary-color,
 .has-secondary-color:hover {
 	color: var(--startwp--color--secondary);
 }
 
+[class*="has-icon"].has-accent-color svg,
 .has-accent-color,
 .has-accent-color:hover {
 	color: var(--startwp--color--accent);
 }
 
+[class*="has-icon"].has-success-color svg,
 .has-success-color,
 .has-success-color:hover {
 	color: var(--startwp--color--success);
 }
 
+[class*="has-icon"].has-warning-color svg,
 .has-warning-color,
 .has-warning-color:hover {
 	color: var(--startwp--color--warning);
 }
 
+[class*="has-icon"].has-error-color svg,
 .has-error-color,
 .has-error-color:hover {
 	color: var(--startwp--color--error);
 }
 
+[class*="has-icon"].has-white-color svg,
 .has-white-color,
 .has-white-color:hover {
 	color: #ffffff;
 }
 
+[class*="has-icon"].has-black-color svg,
 .has-black-color,
 .has-black-color:hover {
 	color: #000000;
@@ -289,7 +300,9 @@ $separations: (
 //
 // Color de fondo
 // ----------------------------------------------
-.has-foreground-background-color {
+.has-foreground-background-color,
+svg:where(:not([class*="-background-color"])).has-background,
+[class*="has-icon"].has-background svg {
 	background-color: var(--startwp--color--foreground);
 
 	::selection {
@@ -299,39 +312,48 @@ $separations: (
 	}
 }
 
-.has-background-background-color {
+.has-background-background-color,
+[class*="has-icon"].has-background-background-color svg {
 	background-color: var(--startwp--color--background);
 }
 
-.has-primary-background-color {
+.has-primary-background-color,
+[class*="has-icon"].has-primary-background-color svg {
 	background-color: var(--startwp--color--primary);
 }
 
-.has-secondary-background-color {
+.has-secondary-background-color,
+[class*="has-icon"].has-secondary-background-color svg {
 	background-color: var(--startwp--color--secondary);
 }
 
-.has-accent-background-color {
+.has-accent-background-color,
+[class*="has-icon"].has-accent-background-color svg {
 	background-color: var(--startwp--color--accent);
 }
 
-.has-success-background-color {
+.has-success-background-color,
+[class*="has-icon"].has-success-background-color svg {
 	background-color: var(--startwp--color--success);
 }
 
-.has-warning-background-color {
+.has-warning-background-color,
+[class*="has-icon"].has-warning-background-color svg {
 	background-color: var(--startwp--color--warning);
 }
 
-.has-error-background-color {
+.has-error-background-color,
+[class*="has-icon"].has-error-background-color svg {
 	background-color: var(--startwp--color--error);
 }
 
-.has-white-background-color {
+.has-white-background-color,
+[class*="has-icon"].has-white-background-color svg {
 	background-color: #ffffff;
 }
 
-.has-black-background-color {
+.has-black-background-color,
+[class*="has-icon"].has-black-background-color svg {
 	background-color: #000000;
 }
 

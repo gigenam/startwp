@@ -55,6 +55,16 @@
 			align-items: center;
 		}
 		.block-column__child span {margin-bottom: 10px}
+		.test-menu {
+			display: inline-flex;
+			align-items: center;
+			padding: .25em .55em;
+			background-color: #eee;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		.test-menu svg {transition: transform .3s ease}
 	</style>
 </head>
 
@@ -78,7 +88,7 @@
 
 	<main class="site-main wrapper">
 
-		<p>Este tema viene incluido con un set de sprites SVG para ser utilizados
+		<p>En este tema viene incluido un set de sprites SVG para ser utilizados
 			como íconos en linea y con la ventaja de poder agregar modificaciones
 			mediante CSS (como por ejemplo cambiar colores, tamaño, etc.).</p>
 
@@ -103,7 +113,7 @@
 		<p>Para agregar íconos en linea se puede utilizar el método <code>&lt;use&gt;</code>.
 			Se agrega el código HTML como se demuestra abajo, se le agrega una clase*
 			al elemento <code>&lt;svg&gt;</code>, y se agrega el nombre del
-			archivo en el atributo <code>&lt;xlink:href&gt;</code> con <strong>#</strong>
+			archivo en el atributo <code>xlink:href</code> con <strong>#</strong>
 			como si fuera un <strong>ID</strong>.</p>
 
 		<blockquote>
@@ -224,12 +234,14 @@
 
 		<p>En este último caso, puedes utilizar CSS, pero ten en cuenta que no
 			podrás modificar el color, contorno y otros estilos de SVG. Tendrás
-			que crear tu propio ícono con todos los estilos finales en este.
-			Ejemplo:</p>
+			que crear tu propio ícono con todos los estilos finales en este.</p>
+
+		<p><strong>Ejemplo</strong>:</p>
 			
 		<p><span class="icon-css"></span></p>
 		<pre>
 En HTML existe el elemento con cualquier clase (en este ejemplo icon-css para probar que no surjan problemas con JS).
+
 &lt;span class="icon-css"&gt;&lt;/span&gt; &lt;-- Como no se está usando la clase has-icon, no debería generar nada extra. --&gt;
 
 Y en CSS los siguientes estilos:
@@ -243,7 +255,9 @@ Y en CSS los siguientes estilos:
 }</pre>
 
 		<p>La única ventaja de utilizar los SVG mediante CSS, es que se sigue
-			teniendo la gran calidad, ya que estos nunca se van a pixelar. Ejemplo:</p>
+			teniendo la gran calidad, ya que estos nunca se van a pixelar.</p>
+		
+		<p><strong>Ejemplo</strong>:</p>
 
 		<div class="block-column">
 			<p class="block-column__child">
@@ -273,81 +287,147 @@ Y en CSS los siguientes estilos:
 		<h2 id="iconos">Catálogo completo de íconos</h2>
 		<p>Total: 65</p>
 
-		<div class="flexrow cols-2 cols-large-4">
-			<div>
-				<p class="has-icon icon-archive"><code>archive</code></p>
-				<p class="has-icon icon-calendar"><code>calendar</code></p>
-				<p class="has-icon icon-check"><code>check</code></p>
-				<p class="has-icon icon-cog"><code>cog</code></p>
-				<p class="has-icon icon-csv"><code>csv</code></p>
-				<p class="has-icon icon-edit"><code>edit</code></p>
-				<p class="has-icon icon-google"><code>google</code></p>
-				<p class="has-icon icon-info"><code>info</code></p>
-				<p class="has-icon icon-linkedin"><code>linkedin</code></p>
-				<p class="has-icon icon-logout"><code>logout</code></p>
-				<p class="has-icon icon-phone"><code>phone</code></p>
-				<p class="has-icon icon-quote"><code>quote</code></p>
-				<p class="has-icon icon-shipping"><code>shipping</code></p>
-				<p class="has-icon icon-spinner"><code>spinner</code></p>
-				<p class="has-icon icon-sticky"><code>sticky</code></p>
-				<p class="has-icon icon-tiktok"><code>tiktok</code></p>
-				<p class="has-icon icon-youtube"><code>youtube</code></p>
-			</div>
-			<div>
-				<p class="has-icon icon-arrow"><code>arrow</code></p>
-				<p class="has-icon icon-cash"><code>cash</code></p>
-				<p class="has-icon icon-clock"><code>clock</code></p>
-				<p class="has-icon icon-cookie"><code>cookie</code></p>
-				<p class="has-icon icon-discord"><code>discord</code></p>
-				<p class="has-icon icon-error"><code>error</code></p>
-				<p class="has-icon icon-heart"><code>heart</code></p>
-				<p class="has-icon icon-instagram"><code>instagram</code></p>
-				<p class="has-icon icon-location"><code>location</code></p>
-				<p class="has-icon icon-mail"><code>mail</code></p>
-				<p class="has-icon icon-pinterest"><code>pinterest</code></p>
-				<p class="has-icon icon-reply"><code>reply</code></p>
-				<p class="has-icon icon-shopping-cart"><code>shopping-cart</code></p>
-				<p class="has-icon icon-spotify"><code>spotify</code></p>
-				<p class="has-icon icon-tags"><code>tags</code></p>
-				<p class="has-icon icon-twitter"><code>twitter</code></p>
-			</div>
-			<div>
-				<p class="has-icon icon-author"><code>author</code></p>
-				<p class="has-icon icon-cash-alt"><code>cash-alt</code></p>
-				<p class="has-icon icon-cmt"><code>cmt</code></p>
-				<p class="has-icon icon-credit"><code>credit</code></p>
-				<p class="has-icon icon-dots"><code>dots</code></p>
-				<p class="has-icon icon-facebook"><code>facebook</code></p>
-				<p class="has-icon icon-help"><code>help</code></p>
-				<p class="has-icon icon-language"><code>language</code></p>
-				<p class="has-icon icon-lock"><code>lock</code></p>
-				<p class="has-icon icon-mail-alt"><code>mail-alt</code></p>
-				<p class="has-icon icon-print"><code>print</code></p>
-				<p class="has-icon icon-search"><code>search</code></p>
-				<p class="has-icon icon-sign-in"><code>sign-in</code></p>
-				<p class="has-icon icon-star"><code>star</code></p>
-				<p class="has-icon icon-telegram"><code>telegram</code></p>
-				<p class="has-icon icon-warning"><code>warning</code></p>
-			</div>
-			<div>
-				<p class="has-icon icon-bank"><code>bank</code></p>
-				<p class="has-icon icon-cellphone"><code>cellphone</code></p>
-				<p class="has-icon icon-cmts"><code>cmts</code></p>
-				<p class="has-icon icon-cross"><code>cross</code></p>
-				<p class="has-icon icon-download"><code>download</code></p>
-				<p class="has-icon icon-github"><code>github</code></p>
-				<p class="has-icon icon-home"><code>home</code></p>
-				<p class="has-icon icon-link"><code>link</code></p>
-				<p class="has-icon icon-login"><code>login</code></p>
-				<p class="has-icon icon-pdf"><code>pdf</code></p>
-				<p class="has-icon icon-private"><code>private</code></p>
-				<p class="has-icon icon-share"><code>share</code></p>
-				<p class="has-icon icon-sign-out"><code>sign-out</code></p>
-				<p class="has-icon icon-star-half"><code>star-half</code></p>
-				<p class="has-icon icon-thumb"><code>thumb</code></p>
-				<p class="has-icon icon-whatsapp"><code>whatsapp</code></p>
-			</div>
+		<div class="flexrow cols-2 cols-large-4 has-gap">
+			<p class="has-icon icon-archive"><code>archive</code></p>
+			<p class="has-icon icon-arrow"><code>arrow</code></p>
+			<p class="has-icon icon-author"><code>author</code></p>
+			<p class="has-icon icon-bank"><code>bank</code></p>
+			<p class="has-icon icon-calendar"><code>calendar</code></p>
+			<p class="has-icon icon-cash"><code>cash</code></p>
+			<p class="has-icon icon-cash-alt"><code>cash-alt</code></p>
+			<p class="has-icon icon-cellphone"><code>cellphone</code></p>
+			<p class="has-icon icon-check"><code>check</code></p>
+			<p class="has-icon icon-clock"><code>clock</code></p>
+			<p class="has-icon icon-cmt"><code>cmt</code></p>
+			<p class="has-icon icon-cmts"><code>cmts</code></p>
+			<p class="has-icon icon-cog"><code>cog</code></p>
+			<p class="has-icon icon-cookie"><code>cookie</code></p>
+			<p class="has-icon icon-credit"><code>credit</code></p>
+			<p class="has-icon icon-cross"><code>cross</code></p>
+			<p class="has-icon icon-csv"><code>csv</code></p>
+			<p class="has-icon icon-discord"><code>discord</code></p>
+			<p class="has-icon icon-dots"><code>dots</code></p>
+			<p class="has-icon icon-download"><code>download</code></p>
+			<p class="has-icon icon-edit"><code>edit</code></p>
+			<p class="has-icon icon-error"><code>error</code></p>
+			<p class="has-icon icon-facebook"><code>facebook</code></p>
+			<p class="has-icon icon-github"><code>github</code></p>
+			<p class="has-icon icon-google"><code>google</code></p>
+			<p class="has-icon icon-heart"><code>heart</code></p>
+			<p class="has-icon icon-help"><code>help</code></p>
+			<p class="has-icon icon-home"><code>home</code></p>
+			<p class="has-icon icon-info"><code>info</code></p>
+			<p class="has-icon icon-instagram"><code>instagram</code></p>
+			<p class="has-icon icon-language"><code>language</code></p>
+			<p class="has-icon icon-link"><code>link</code></p>
+			<p class="has-icon icon-linkedin"><code>linkedin</code></p>
+			<p class="has-icon icon-location"><code>location</code></p>
+			<p class="has-icon icon-lock"><code>lock</code></p>
+			<p class="has-icon icon-login"><code>login</code></p>
+			<p class="has-icon icon-logout"><code>logout</code></p>
+			<p class="has-icon icon-mail"><code>mail</code></p>
+			<p class="has-icon icon-mail-alt"><code>mail-alt</code></p>
+			<p class="has-icon icon-pdf"><code>pdf</code></p>
+			<p class="has-icon icon-phone"><code>phone</code></p>
+			<p class="has-icon icon-pinterest"><code>pinterest</code></p>
+			<p class="has-icon icon-print"><code>print</code></p>
+			<p class="has-icon icon-private"><code>private</code></p>
+			<p class="has-icon icon-quote"><code>quote</code></p>
+			<p class="has-icon icon-reply"><code>reply</code></p>
+			<p class="has-icon icon-search"><code>search</code></p>
+			<p class="has-icon icon-share"><code>share</code></p>
+			<p class="has-icon icon-shipping"><code>shipping</code></p>
+			<p class="has-icon icon-shopping-cart"><code>shopping-cart</code></p>
+			<p class="has-icon icon-sign-in"><code>sign-in</code></p>
+			<p class="has-icon icon-sign-out"><code>sign-out</code></p>
+			<p class="has-icon icon-spinner"><code>spinner</code></p>
+			<p class="has-icon icon-spotify"><code>spotify</code></p>
+			<p class="has-icon icon-star"><code>star</code></p>
+			<p class="has-icon icon-star-half"><code>star-half</code></p>
+			<p class="has-icon icon-sticky"><code>sticky</code></p>
+			<p class="has-icon icon-tags"><code>tags</code></p>
+			<p class="has-icon icon-telegram"><code>telegram</code></p>
+			<p class="has-icon icon-thumb"><code>thumb</code></p>
+			<p class="has-icon icon-tiktok"><code>tiktok</code></p>
+			<p class="has-icon icon-twitter"><code>twitter</code></p>
+			<p class="has-icon icon-warning"><code>warning</code></p>
+			<p class="has-icon icon-whatsapp"><code>whatsapp</code></p>
+			<p class="has-icon icon-youtube"><code>youtube</code></p>
 		</div>
+
+		<h3>Con fondo</h3>
+
+		<p>Más información <a href="#modificadores">ACÁ</a>.</p>
+
+		<div class="flexrow cols-2 cols-large-4 has-gap">
+			<p class="has-icon icon-archive has-background"><code>archive</code></p>
+			<p class="has-icon icon-arrow has-background"><code>arrow</code></p>
+			<p class="has-icon icon-author has-background"><code>author</code></p>
+			<p class="has-icon icon-bank has-background"><code>bank</code></p>
+			<p class="has-icon icon-calendar has-background"><code>calendar</code></p>
+			<p class="has-icon icon-cash has-background"><code>cash</code></p>
+			<p class="has-icon icon-cash-alt has-background"><code>cash-alt</code></p>
+			<p class="has-icon icon-cellphone has-background"><code>cellphone</code></p>
+			<p class="has-icon icon-check has-background"><code>check</code></p>
+			<p class="has-icon icon-clock has-background"><code>clock</code></p>
+			<p class="has-icon icon-cmt has-background"><code>cmt</code></p>
+			<p class="has-icon icon-cmts has-background"><code>cmts</code></p>
+			<p class="has-icon icon-cog has-background"><code>cog</code></p>
+			<p class="has-icon icon-cookie has-background"><code>cookie</code></p>
+			<p class="has-icon icon-credit has-background"><code>credit</code></p>
+			<p class="has-icon icon-cross has-background"><code>cross</code></p>
+			<p class="has-icon icon-csv has-background"><code>csv</code></p>
+			<p class="has-icon icon-discord has-background"><code>discord</code></p>
+			<p class="has-icon icon-dots has-background"><code>dots</code></p>
+			<p class="has-icon icon-download has-background"><code>download</code></p>
+			<p class="has-icon icon-edit has-background"><code>edit</code></p>
+			<p class="has-icon icon-error has-background"><code>error</code></p>
+			<p class="has-icon icon-facebook has-background"><code>facebook</code></p>
+			<p class="has-icon icon-github has-background"><code>github</code></p>
+			<p class="has-icon icon-google has-background"><code>google</code></p>
+			<p class="has-icon icon-heart has-background"><code>heart</code></p>
+			<p class="has-icon icon-help has-background"><code>help</code></p>
+			<p class="has-icon icon-home has-background"><code>home</code></p>
+			<p class="has-icon icon-info has-background"><code>info</code></p>
+			<p class="has-icon icon-instagram has-background"><code>instagram</code></p>
+			<p class="has-icon icon-language has-background"><code>language</code></p>
+			<p class="has-icon icon-link has-background"><code>link</code></p>
+			<p class="has-icon icon-linkedin has-background"><code>linkedin</code></p>
+			<p class="has-icon icon-location has-background"><code>location</code></p>
+			<p class="has-icon icon-lock has-background"><code>lock</code></p>
+			<p class="has-icon icon-login has-background"><code>login</code></p>
+			<p class="has-icon icon-logout has-background"><code>logout</code></p>
+			<p class="has-icon icon-mail has-background"><code>mail</code></p>
+			<p class="has-icon icon-mail-alt has-background"><code>mail-alt</code></p>
+			<p class="has-icon icon-pdf has-background"><code>pdf</code></p>
+			<p class="has-icon icon-phone has-background"><code>phone</code></p>
+			<p class="has-icon icon-pinterest has-background"><code>pinterest</code></p>
+			<p class="has-icon icon-print has-background"><code>print</code></p>
+			<p class="has-icon icon-private has-background"><code>private</code></p>
+			<p class="has-icon icon-quote has-background"><code>quote</code></p>
+			<p class="has-icon icon-reply has-background"><code>reply</code></p>
+			<p class="has-icon icon-search has-background"><code>search</code></p>
+			<p class="has-icon icon-share has-background"><code>share</code></p>
+			<p class="has-icon icon-shipping has-background"><code>shipping</code></p>
+			<p class="has-icon icon-shopping-cart has-background"><code>shopping-cart</code></p>
+			<p class="has-icon icon-sign-in has-background"><code>sign-in</code></p>
+			<p class="has-icon icon-sign-out has-background"><code>sign-out</code></p>
+			<p class="has-icon icon-spinner has-background"><code>spinner</code></p>
+			<p class="has-icon icon-spotify has-background"><code>spotify</code></p>
+			<p class="has-icon icon-star has-background"><code>star</code></p>
+			<p class="has-icon icon-star-half has-background"><code>star-half</code></p>
+			<p class="has-icon icon-sticky has-background"><code>sticky</code></p>
+			<p class="has-icon icon-tags has-background"><code>tags</code></p>
+			<p class="has-icon icon-telegram has-background"><code>telegram</code></p>
+			<p class="has-icon icon-thumb has-background"><code>thumb</code></p>
+			<p class="has-icon icon-tiktok has-background"><code>tiktok</code></p>
+			<p class="has-icon icon-twitter has-background"><code>twitter</code></p>
+			<p class="has-icon icon-warning has-background"><code>warning</code></p>
+			<p class="has-icon icon-whatsapp has-background"><code>whatsapp</code></p>
+			<p class="has-icon icon-youtube has-background"><code>youtube</code></p>
+		</div>
+
+		
 
 		<p><small>Los íconos los voy agregando en base a la necesidad y/o utilidad
 			de cada proyecto nuevo que voy realizando.</small></p>
@@ -378,7 +458,9 @@ Y en CSS los siguientes estilos:
 		</ul>
 
 		<p>Las clases de color predeterminadas que vienen con este tema también
-			funcionan. Ejemplo:</p>
+			funcionan.</p>
+		
+		<p><strong>Ejemplo</strong>:</p>
 
 		<p>
 			<span style="font-size: 36px" class="has-icon icon-github has-secondary-color"></span>
@@ -388,11 +470,62 @@ Y en CSS los siguientes estilos:
 			<svg style="font-size: 36px" class="icon-github has-error-color" aria-hidden="true"><use xlink:href="#github"></use></svg>
 		</p>
 		<pre>
-&lt;p&gt;
-    &lt;span class="has-icon icon-github has-secondary-color"&gt;&lt;/span&gt;
-    - o -
-    &lt;svg class="icon-github has-accent-color"&gt;&lt;use xlink:href="#github"&gt;&lt;/use&gt;&lt;/svg&gt;
-&lt;/p&gt;</pre>
+&lt;span class="has-icon icon-github has-secondary-color"&gt;&lt;/span&gt;
+
+&lt;svg class="icon-github has-accent-color"&gt;&lt;use xlink:href="#github"&gt;&lt;/use&gt;&lt;/svg&gt;</pre>
+
+		<h3>Con fondo</h3>
+
+		<p>Agregando la clase <code>has-background</code> al <code>&lt;svg&gt;</code>
+			en linea o al elemento que ya tiene las clases <code>has-icon icon-[nombre ícono]</code>,
+			se le agregan estilos básicos para que el ícono tenga un fondo
+			predeterminado y una pequeña separación entre estos (ícono y fondo).</p>
+
+		<p>
+			<svg style="font-size: 36px; margin-right:15px" class="icon-github has-background" aria-hidden="true">
+				<use xlink:href="#github"></use>
+			</svg>
+			<span style="font-size: 36px" class="has-icon icon-github has-background"></span>
+		</p>
+		<pre>
+&lt;svg class="icon-github has-background" aria-hidden="true"&gt;
+    &lt;use xlink:href="#github"&gt;&lt;/use&gt;
+&lt;/svg&gt;
+
+&lt;span class="has-icon icon-github has-background"&gt;&lt;/span&gt;</pre>
+
+		<p>Por defecto, al agregar la clase <code>has-background</code>
+			se le agregan los estilos de color de fondo y texto (invertidos).
+			Pero se pueden usar todas las clases de color que vienen predefinidas
+			con este tema para personalizar el aspecto fácilmente. Para más información,
+			ver los archivos <code>app/assets/scss/components/_icons.scss</code> 
+			y <code>app/assets/scss/base/_utilities.scss#L236</code></p>
+
+		<p>Algunos ejemplos de colores:</p>
+
+		<p>
+			<svg style="font-size: 36px; margin-right:15px" class="icon-github has-background has-foreground-color has-secondary-background-color" aria-hidden="true"><use xlink:href="#github"></use></svg>
+			<svg style="font-size: 36px; margin-right:15px" class="icon-github has-background has-accent-background-color" aria-hidden="true"><use xlink:href="#github"></use></svg>
+			<svg style="font-size: 36px; margin-right:15px" class="icon-github has-background has-success-background-color" aria-hidden="true"><use xlink:href="#github"></use></svg>
+			<svg style="font-size: 36px; margin-right:15px" class="icon-github has-background has-warning-background-color" aria-hidden="true"><use xlink:href="#github"></use></svg>
+			<svg style="font-size: 36px;" class="icon-github has-background has-error-background-color" aria-hidden="true"><use xlink:href="#github"></use></svg>
+		</p>
+		<pre>
+&lt;svg class="icon-github has-background has-foreground-color has-secondary-background-color" aria-hidden="true"&gt;
+    &lt;use xlink:href="#github"&gt;&lt;/use&gt;
+&lt;/svg&gt;
+...</pre>
+
+		<p>
+			<span style="font-size: 36px; margin-right:2.5px" class="has-icon icon-github has-background has-foreground-color has-secondary-background-color"></span>
+			<span style="font-size: 36px; margin-right:2.5px" class="has-icon icon-github has-background has-accent-background-color"></span>
+			<span style="font-size: 36px; margin-right:2.5px" class="has-icon icon-github has-background has-success-background-color"></span>
+			<span style="font-size: 36px; margin-right:2.5px" class="has-icon icon-github has-background has-warning-background-color"></span>
+			<span style="font-size: 36px" class="has-icon icon-github has-background has-error-background-color"></span>
+		</p>
+		<pre>
+&lt;span class="has-icon icon-github has-background has-accent-background-color"&gt;&lt;/span&gt;
+...</pre>
 
 		<h3>Contorno</h3>
 
@@ -421,9 +554,9 @@ Y en CSS los siguientes estilos:
 		<p class="has-icon icon-cmt is-outline">Todavía no hay comentarios.</p>
 
 		<p>Sistema de valoración con estrellas:
-			<svg class="icon-star" style="stroke-width:3px" aria-hidden="true"><use xlink:href="#star"></use></svg>
-			<svg class="icon-star" style="stroke-width:3px" aria-hidden="true"><use xlink:href="#star"></use></svg>
-			<svg class="icon-star" style="stroke-width:3px" aria-hidden="true"><use xlink:href="#star"></use></svg>
+			<svg class="icon-star" aria-hidden="true"><use xlink:href="#star"></use></svg>
+			<svg class="icon-star" aria-hidden="true"><use xlink:href="#star"></use></svg>
+			<svg class="icon-star-half" aria-hidden="true"><use xlink:href="#star-half"></use></svg>
 			<svg class="icon-star is-outline" aria-hidden="true"><use xlink:href="#star"></use></svg>
 			<svg class="icon-star is-outline" aria-hidden="true"><use xlink:href="#star"></use></svg>
 		</p>
@@ -456,9 +589,6 @@ Y en CSS los siguientes estilos:
 			El menú está cerrado
 		</p>
 
-		<p>Y por supuesto, estas opciones se pueden controlar mejor directo desde
-			<a href="por-js">JavaScript</a>, agregando eventos de mouse, etc.</p>
-
 		<h3>Animación</h3>
 
 		<p>Por último dos clases simples para crear "spinners" o animaciones de carga.</p>
@@ -471,6 +601,46 @@ Y en CSS los siguientes estilos:
 		</p>
 
 		<p><small>* Se puede usar cualquier ícono, por supuesto.</small></p>
+
+		<br>
+
+		<p>Y por supuesto, estas opciones se pueden controlar mejor desde
+			<a href="por-js">JavaScript</a>, agregando eventos de mouse, etc.</p>
+
+		<p><strong>Ejemplos</strong>: click en los botones.</p>
+
+		<p>
+			<span id="test-menu-1" class="test-menu has-icon icon-thumb is-outline">Me gusta!</span>
+			<span id="test-menu-2" class="test-menu has-icon icon-arrow">Abrir menú</span>
+			<span id="test-menu-3" class="test-menu has-icon icon-cross">Ver más</span>
+			<span id="test-menu-4" class="test-menu has-icon icon-cog">Cargar contenido</span>
+		</p>
+		<pre>
+&lt;!-- HTML --&gt;
+&lt;span id="test-menu-1" class="test-menu has-icon icon-thumb is-outline"&gt;Me gusta!&lt;/span&gt;
+&lt;span id="test-menu-2" class="test-menu has-icon icon-arrow"&gt;Abrir menú&lt;/span&gt;
+&lt;span id="test-menu-3" class="test-menu has-icon icon-cross"&gt;Ver más&lt;/span&gt;
+&lt;span id="test-menu-4" class="test-menu has-icon icon-cog"&gt;Cargar contenido&lt;/span&gt;
+
+&lt;!-- CSS  --&gt;
+.test-menu svg { transition: transform .3s ease; } &lt;!-- Opcional. Solo para estos ejemplo. --&gt;
+
+&lt;!-- JS   --&gt;
+const testMenu1 = document.getElementById( 'test-menu-1' );
+testMenu1.addEventListener( 'click', () => {
+    testMenu1.classList.toggle( 'is-outline' );
+    testMenu1.firstElementChild.classList.toggle( 'has-primary-color' );
+} );
+
+const testMenu2 = document.getElementById( 'test-menu-2' );
+testMenu2.addEventListener( 'click', () => testMenu2.classList.toggle( 'is-top' ) );
+
+const testMenu3 = document.getElementById( 'test-menu-3' );
+testMenu3.addEventListener( 'click', () => testMenu3.classList.toggle( 'is-open' ) );
+
+const testMenu4 = document.getElementById( 'test-menu-4' );
+testMenu4.addEventListener( 'click', () => testMenu4.classList.toggle( 'is-animate' ) );
+</pre>
 
 	</main>
 
@@ -489,44 +659,44 @@ Y en CSS los siguientes estilos:
 		<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<style>:root>svg{display:none} :root>svg:target{display:block}</style>
 			<svg viewBox="0 0 32 32" id="archive" xmlns="http://www.w3.org/2000/svg"><path d="M9.598 3.75c-1.153 0-1.11.754-1.11 1.502h15.077c0-.712.024-1.502-1.11-1.502ZM6.95 6.789c-.862 0-1.558.507-1.558 1.798v1.33h21.139v-1.33c0-1.29-.694-1.798-1.556-1.798zM3.344 8.964c-1.416 0-2.517 1.423-2.322 2.643l2.32 14.5c.188 1.172.949 2.143 2.127 2.143h21.06c1.178 0 1.94-.97 2.127-2.143l2.322-14.5c.195-1.22-.91-2.643-2.326-2.643v2.486H3.344Zm6.596 6.18h2.109v2.4h7.867v-2.4h2.108v3.463c0 .586-.472 1.062-1.054 1.062h-9.976a1.059 1.059 0 0 1-1.054-1.062Z" /></svg>
-			<svg viewBox="0 0 32 32" id="arrow" xmlns="http://www.w3.org/2000/svg"><path d="M31 10.606c0 .314-.105.523-.315.732l-13.95 12.148c-.224.195-.525.314-.735.314-.21 0-.524-.105-.734-.314L1.315 11.338C1.09 11.144 1 10.92 1 10.606c0-.21.105-.418.315-.628L2.888 8.41c.105-.104.42-.209.63-.209.314 0 .524.105.734.21L16 18.464 27.748 8.409c.21-.104.42-.209.735-.209.21 0 .524.105.629.21l1.573 1.568c.21.21.315.419.315.628Z" /></svg>
+			<svg viewBox="0 0 32 32" id="arrow" xmlns="http://www.w3.org/2000/svg"><path d="M 1.5592026,9.066516 C 0.77809346,9.98514 0.77804352,11.13923 1.7957791,12.154755 L 14.603257,23.222303 c 0.814386,0.703596 2.016442,0.703596 2.830827,0 L 30.241563,12.154755 C 31.152716,11.367164 31.257723,9.984598 30.476118,9.066516 29.694355,8.1485695 28.322022,8.0427795 27.410734,8.8302128 L 16.018671,18.673466 4.6245858,8.8302128 C 3.6981313,7.90577 2.3167051,8.1612881 1.5592026,9.066516 Z" /></svg>
 			<svg viewBox="0 0 32 32" id="author" xmlns="http://www.w3.org/2000/svg"><path d="M15.394 1.25c-3.288 0-5.954 2.659-5.954 5.94 0 3.282 2.666 5.943 5.954 5.943s5.954-2.661 5.954-5.943c0-3.281-2.666-5.94-5.954-5.94zm11.824 10.944c-.404 0-.699.11-.956.366l-1.725 1.76 4.333 4.325 1.763-1.724c.257-.257.367-.586.367-.952 0-.367-.11-.659-.367-.952l-2.461-2.457a1.358 1.358 0 0 0-.954-.366Zm-11.824 2.732c-6.277 0-11.708 3.57-14.394 8.783a18.227 18.227 0 0 0 14.394 7.041c5.63 0 10.945-2.6 14.394-7.041-.57-1.107-1.024-1.811-1.824-2.752l-8.148 8.083-5.572-.036-.057-5.838 7.287-7.15c-1.956-.84-3.814-1.09-6.08-1.09Zm8.445.053-8.703 8.723v4.325h4.334l8.74-8.687zm.33 1.76c.184 0 .259.109.259.255 0 .073-.04.111-.076.184l-5.69 5.643c-.036.074-.11.074-.184.074-.147 0-.22-.074-.22-.22 0-.073 0-.109.073-.182l5.692-5.68a.278.278 0 0 1 .147-.074zm-6.756 6.56 2.461 2.456-.956.952h-1.1V25.35h-1.359v-1.098z" /></svg>
-			<svg viewBox="0 0 32 32" id="bank" xmlns="http://www.w3.org/2000/svg"><path d="M16.027 2 31 8.016v1.968h-2.022c0 .88-.34 1.04-1.038 1.04H4.115c-1.005 0-1.093-.362-1.093-1.04H1V8.016ZM5.044 12.008h3.989v11.976H11V12.008h3.99v11.976h2.02V12.008H21v11.976h2.022V12.008h3.989v11.976h.929c.823 0 1.038.377 1.038 1.04v.984H3.022v-.985c0-.728.45-1.039 1.093-1.039h.929Zm24.863 14.984c.882 0 1.093.339 1.093.985V30H1v-2.023c0-.69.268-.985 1.093-.985z" /></svg>
+			<svg viewBox="0 0 32 32" id="bank" xmlns="http://www.w3.org/2000/svg"><path d="M16.027 2 31 8.016v1.968h-2.022c0 .88-.34 1.04-1.038 1.04H4.115c-1.005 0-1.093-.362-1.093-1.04H1V8.016ZM6.011 12.008H10v11.976l3.977-.007V12h3.989v11.977l4.045.007V12.008H26v11.976h1.94c.823 0 1.038.377 1.038 1.04v.984H3.022v-.985c0-.728.45-1.039 1.093-1.039H6.01Zm23.896 14.984c.882 0 1.093.339 1.093.985V30H1v-2.023c0-.69.268-.985 1.093-.985z" /></svg>
 			<svg viewBox="0 0 32 32" id="calendar" xmlns="http://www.w3.org/2000/svg"><path d="M9 1C7.067 1 6.294 2.01 6.294 3.695v1.582H4.176C2.767 5.277 2 5.927 2 7.445v21.387C2 30.286 2.813 31 4.176 31h23.648C29.288 31 30 30.213 30 28.832V7.445c0-1.429-.958-2.168-2.176-2.168h-2.118V3.695C25.53 1.948 24.677 1 23 1h-1.059c-1.824 0-2.706.924-2.706 2.695v1.582h-6.47V3.695c0-1.979-.99-2.695-2.706-2.695zm0 2.168h1.059c.509 0 .588.212.588.527V8.5c0 .423-.19.527-.588.527H9c-.477 0-.53-.155-.53-.527V3.695c0-.438.204-.527.53-.527zm12.941 0H23c.453 0 .53.162.53.527V8.5c0 .446-.177.527-.53.527h-1.059c-.487 0-.588-.126-.588-.527V3.695c0-.46.244-.527.588-.527zM4.176 11.723H9v4.804H4.176Zm5.883 0h5.412v4.804h-5.412zm6.47 0h5.412v4.804H16.53zm6.471 0h4.824v4.804H23ZM4.176 17.582H9v5.39H4.176Zm5.883 0h5.412v5.39h-5.412zm12.941 0h4.824v5.39H23Zm-5 .623c.31-.084.448.037.448.435v3.19c0 .24-.196.434-.437.434a.435.435 0 0 1-.438-.434v-2.772c-.148.057-.317.071-.465.104a.387.387 0 0 1-.384-.379c0-.177.114-.325.292-.377.343-.092.685-.134.984-.201zm1.153.018h2.185c.248 0 .403.142.403.394a.969.969 0 0 1-.127.43l-1.616 2.92a.576.576 0 0 1-.485.32c-.236 0-.511-.266-.385-.485.167-.29 1.028-1.877 1.567-2.817h-1.542a.38.38 0 0 1-.384-.38c0-.211.171-.382.384-.382zM4.176 24.027H9v4.805H4.176Zm5.883 0h5.412v4.805h-5.412zm6.47 0h5.412v4.805H16.53zm6.471 0h4.824v4.805H23Z" /></svg>
 			<svg viewBox="0 0 32 32" id="cash" xmlns="http://www.w3.org/2000/svg"><path d="M22.01 2.05c-4.15 0-7.533 3.384-7.533 7.534 0 .59.072 1.163.201 1.715H4.087A3.1 3.1 0 0 0 1 14.386v12.475a3.101 3.101 0 0 0 3.087 3.089h23.826A3.101 3.101 0 0 0 31 26.86V14.387a3.096 3.096 0 0 0-1.74-2.771 7.492 7.492 0 0 0 .282-2.031c0-4.15-3.383-7.534-7.533-7.534zm0 1.799a5.72 5.72 0 0 1 5.732 5.735 5.719 5.719 0 0 1-5.733 5.733 5.72 5.72 0 0 1-5.734-5.733 5.722 5.722 0 0 1 5.734-5.735zm-17.923 9.25h11.267c1.266 2.386 3.775 4.019 6.655 4.019a7.544 7.544 0 0 0 6.562-3.841c.38.22.63.624.63 1.109v12.475c0 .729-.559 1.288-1.288 1.288H4.087c-.73 0-1.289-.559-1.289-1.288V14.386c0-.73.56-1.287 1.289-1.287zm11.806 2.69a4.813 4.813 0 0 0-4.807 4.809 4.815 4.815 0 0 0 4.807 4.812c2.651 0 4.81-2.16 4.81-4.812s-2.159-4.81-4.81-4.81zm0 .763a4.041 4.041 0 0 1 4.047 4.046 4.043 4.043 0 0 1-4.047 4.048 4.04 4.04 0 0 1-4.044-4.048 4.038 4.038 0 0 1 4.044-4.046zm0 .791c-.486.007-.514.265-.514.77-.713.176-1.31.618-1.31 1.505 0 1.236 2.79 1.355 2.79 2.108 0 .874-1.738.134-2.355-.156-.302-.079-.552.289-.509.598.07.495.854.822 1.384.93 0 .566.032.806.514.811.482.005.51-.289.51-.81.865-.112 1.573-.447 1.573-1.457 0-1.393-2.712-1.44-2.712-2.038 0-1.02 1.32-.322 1.976-.096.31.04.523-.154.523-.466 0-.498-.788-.782-1.36-.929 0-.481-.024-.777-.51-.77z" /></svg>
 			<svg viewBox="0 0 32 32" id="cash-alt" xmlns="http://www.w3.org/2000/svg"><path d="M16 1C7.73 1 1 7.73 1 16s6.73 15 15 15 15-6.73 15-15S24.27 1 16 1Zm0 2.381A12.601 12.601 0 0 1 28.619 16 12.601 12.601 0 0 1 16 28.619 12.601 12.601 0 0 1 3.381 16 12.601 12.601 0 0 1 16 3.381Zm-1.608 3.624v1.297c-2.223.548-3.842 2.145-3.842 4.909 0 2.763 2.537 3.61 4.683 4.24 1.69.515 3.074.985 3.074 1.83 0 .845-.573 1.339-1.832 1.303-2.644-.075-3.717-1.265-5.01-1.603-.941-.247-1.853.753-1.717 1.717.307 2.174 2.99 2.697 4.644 3.035v1.235c0 .884.712 1.596 1.597 1.596.884 0 1.596-.712 1.596-1.596v-1.11c2.702-.348 5.149-1.437 5.149-4.586 0-3.148-2.995-4.185-5.142-4.9-1.66-.573-3.12-.973-3.12-1.731 0-.759.544-1.218 1.603-1.218 1.62.103 2.778 1 4.122 1.174.965.125 1.746-.743 1.746-1.717 0-.744-.401-1.317-1.031-1.632a11.206 11.206 0 0 0-3.327-1.053v-1.19c0-.813-.654-1.469-1.596-1.469-.943 0-1.597.656-1.597 1.47z" /></svg>
-			<svg viewBox="0 0 32 32" id="cellphone" xmlns="http://www.w3.org/2000/svg"><path d="M9.959 1a3.43 3.43 0 0 0-3.436 3.42L6.5 27.56a3.424 3.424 0 0 0 3.428 3.426l12.11.014a3.43 3.43 0 0 0 3.437-3.421l.025-23.14a3.428 3.428 0 0 0-3.432-3.425Zm11.639 1.779a2.105 2.105 0 0 1 2.101 2.101l-.023 22.226c0 1.16-.943 2.096-2.108 2.094H10.37a2.098 2.098 0 0 1-2.103-2.094l.023-22.228c0-1.458 1.044-2.093 2.11-2.093zM11.005 23.233a1.72 1.72 0 0 0-1.723 1.718c0 .948.771 1.717 1.723 1.718a1.72 1.72 0 0 0 1.724-1.718 1.72 1.72 0 0 0-1.724-1.718zm5.003 0a1.72 1.72 0 0 0-1.725 1.718 1.72 1.72 0 0 0 1.725 1.718 1.72 1.72 0 0 0 1.724-1.718 1.72 1.72 0 0 0-1.724-1.718zm5 0a1.72 1.72 0 0 0-1.722 1.718c0 .948.771 1.717 1.723 1.718a1.72 1.72 0 0 0 1.724-1.718 1.72 1.72 0 0 0-1.724-1.718z" /></svg>
-			<svg viewBox="0 0 32 32" id="check" xmlns="http://www.w3.org/2000/svg"><path d="M31 9.032c0 .474-.136.947-.543 1.286-5.543 5.546-11.075 11.105-16.629 16.64-.407.34-.814.542-1.357.542-.476 0-.95-.203-1.29-.541l-9.638-9.606C1.136 16.947 1 16.54 1 16c0-2.843 1.874-4.465 4.48-4.465.475 0 .95.203 1.29.541l5.7 5.683L25.23 5.04c.34-.338.815-.541 1.29-.541C29.287 4.5 31 6.412 31 9.032Z" /></svg>
+			<svg viewBox="0 0 32 32" id="cellphone" xmlns="http://www.w3.org/2000/svg"><path d="M 9.9589844 1 C 8.0646473 0.99881 6.5267495 2.5290223 6.5234375 4.4199219 L 6.5 27.558594 C 6.4947 29.449285 8.0315653 30.984629 9.9277344 30.986328 L 22.037109 31 C 23.935329 30.9998 25.472903 29.469224 25.474609 27.578125 L 25.5 4.4394531 C 25.501401 2.5501784 23.964747 1.0132552 22.068359 1.0136719 L 9.9589844 1 z M 21.597656 2.7792969 C 22.760248 2.7863369 23.700925 3.7218643 23.699219 4.8808594 L 23.675781 27.105469 C 23.676024 28.264674 22.733412 29.200918 21.568359 29.199219 L 10.369141 29.199219 C 9.2057134 29.19946 8.264789 28.260824 8.265625 27.105469 L 8.2890625 4.8789062 C 8.2890625 3.4205488 9.3328102 2.7851563 10.398438 2.7851562 L 21.597656 2.7792969 z M 10.328125 3.734375 C 9.7315081 3.7348007 9.2478325 4.2160964 9.2480469 4.8105469 C 9.2478325 5.4049975 9.7315081 5.8882456 10.328125 5.8886719 C 10.925196 5.8888844 11.408417 5.4054488 11.408203 4.8105469 C 11.408417 4.2156451 10.925196 3.7341613 10.328125 3.734375 z M 11.005859 23.232422 C 10.054085 23.233101 9.2828611 24.002854 9.2832031 24.951172 C 9.2828611 25.89949 10.054085 26.669242 11.005859 26.669922 C 11.958357 26.670261 12.728858 25.90021 12.728516 24.951172 C 12.728858 24.002134 11.958357 23.232081 11.005859 23.232422 z M 16.007812 23.232422 C 15.055314 23.232081 14.282862 24.002134 14.283203 24.951172 C 14.282862 25.90021 15.055314 26.670261 16.007812 26.669922 C 16.960311 26.670261 17.732763 25.90021 17.732422 24.951172 C 17.732763 24.002134 16.960311 23.232081 16.007812 23.232422 z M 21.007812 23.232422 C 20.056038 23.233101 19.286768 24.002855 19.287109 24.951172 C 19.286768 25.89949 20.056038 26.669242 21.007812 26.669922 C 21.960311 26.670261 22.732763 25.90021 22.732422 24.951172 C 22.732763 24.002134 21.960311 23.232081 21.007812 23.232422 z" /></svg>
+			<svg viewBox="0 0 32 32" id="check" xmlns="http://www.w3.org/2000/svg"><path d="M 25.714349,5.9181209 12.323724,19.482574 6.3178646,13.209136 C 5.1387794,11.977478 3.1845604,11.934635 1.9526302,13.113436 0.72097093,14.29252 0.67812681,16.24674 1.8569272,17.478671 l 8.2031248,8.568359 c 1.202637,1.256567 3.205293,1.27247 4.427734,0.03516 L 30.10888,10.257965 C 31.307486,9.0445271 31.324275,7.1177752 30.08154,5.8907772 28.770853,4.5800897 26.989297,4.6431728 25.714349,5.9181209 Z" /></svg>
 			<svg viewBox="0 0 32 32" id="clock" xmlns="http://www.w3.org/2000/svg"><path d="M16 1C7.733 1 1 7.733 1 16s6.733 15 15 15 15-6.733 15-15S24.267 1 16 1zm0 2.977A12 12 0 0 1 28.023 16 12 12 0 0 1 16 28.023 12 12 0 0 1 3.977 16 12 12 0 0 1 16 3.977zm-.025 2.595c-.936 0-1.438.702-1.438 1.375l.002 5.983a2.54 2.54 0 0 0-.6.595h-2.707a1.49 1.49 0 0 0 .002 2.979l2.725-.002A2.54 2.54 0 0 0 16 18.541 2.54 2.54 0 0 0 18.541 16a2.54 2.54 0 0 0-1.027-2.041V7.947c0-.821-.615-1.375-1.54-1.375z" /></svg>
 			<svg viewBox="0 0 32 32" id="cmt" xmlns="http://www.w3.org/2000/svg"><path d="M31 14.01c0 7.812-10.262 11.275-17.446 10.482-2.235 1.926-4.325 3.154-7.266 3.912-.964.261-2.29.498-3.016.223-.323-.318-.177-.797.285-1.392 1.471-1.597 2.426-3.157 3.058-4.96C3.468 20.36 1 17.544 1 14.08 1 6.516 9.687 3.317 15.965 3.25 25.019 3.25 31 8.53 31 14.01Z" /></svg>
 			<svg viewBox="0 0 32 32" id="cmts" xmlns="http://www.w3.org/2000/svg"><path d="M14.829 3C9.027 3.062 1 6.013 1 12.989c0 3.194 2.282 5.79 5.189 7.555-.584 1.664-1.467 3.101-2.826 4.573-.427.549-.562.99-.264 1.285.671.254 1.897.035 2.788-.206 2.717-.7 4.648-1.831 6.713-3.607 6.638.731 16.122-2.462 16.122-9.667C28.722 7.87 23.196 3 14.829 3Zm15.024 10.935c-.011 6.887-8.594 10.71-14.709 10.19 1.372 1.25 5.946 2.202 7.155 2.082 1.47 1.263 2.845 2.069 4.777 2.566.634.172 1.506.327 1.984.146.212-.209.116-.523-.188-.913-.967-1.047-1.595-2.07-2.01-3.254 4.068-2.364 5.282-7.854 2.991-10.817z" /></svg>
 			<svg viewBox="0 0 32 32" id="cog" xmlns="http://www.w3.org/2000/svg"><path d="M13.808 1c-.429 0-.65.342-.708.757-.161 1.15-.33 2.373-.502 3.485-.622.198-1.221.45-1.792.749-.933-.682-1.861-1.387-2.825-2.113-.336-.252-.733-.339-1.036-.035l-3.102 3.1c-.304.303-.217.7.035 1.036.7.929 1.445 1.916 2.113 2.823-.3.573-.553 1.174-.752 1.797-1.138.173-2.29.332-3.482.5-.415.058-.757.279-.757.708v4.386c0 .43.342.65.757.708 1.15.161 2.374.33 3.486.502.2.621.452 1.22.751 1.79-.686.931-1.39 1.862-2.116 2.828-.253.335-.339.733-.035 1.036l3.102 3.1c.303.304.7.217 1.036-.035.932-.703 1.922-1.45 2.834-2.12.569.296 1.165.547 1.783.745.173 1.143.333 2.299.502 3.496.059.415.279.757.708.757h4.386c.429 0 .647-.342.706-.757.163-1.156.335-2.385.505-3.504a11.228 11.228 0 0 0 1.774-.744c.935.692 1.87 1.396 2.842 2.127.336.252.731.339 1.034.035l3.102-3.1c.304-.303.218-.7-.035-1.036-.705-.936-1.454-1.93-2.13-2.843.296-.565.546-1.158.743-1.773 1.148-.173 2.306-.334 3.508-.504.415-.058.757-.279.757-.708v-4.386c0-.43-.342-.65-.757-.708-1.156-.162-2.385-.333-3.504-.504a11.22 11.22 0 0 0-.743-1.777c.691-.934 1.396-1.868 2.126-2.839.253-.335.339-.733.035-1.036l-3.102-3.1c-.303-.304-.698-.217-1.034.035-.932.703-1.922 1.451-2.834 2.12a11.23 11.23 0 0 0-1.784-.749c-.172-1.142-.333-2.296-.503-3.492-.059-.415-.277-.757-.706-.757Zm2.181 9.709a5.242 5.242 0 0 1 5.287 5.285 5.244 5.244 0 0 1-5.287 5.288c-2.954 0-5.285-2.333-5.285-5.288a5.24 5.24 0 0 1 5.285-5.285z" /></svg>
 			<svg viewBox="0 0 32 32" id="cookie" xmlns="http://www.w3.org/2000/svg"><path d="M17.485 1.002C12.667.932 7.898 3.177 4.94 7.419c-4.732 6.788-3.06 16.158 3.727 20.89 6.787 4.732 16.156 3.06 20.888-3.728a1.083 1.083 0 0 0-.318-1.539c-.702-.436-1.463-.824-2.048-1.405-.585-.58-1.027-1.292-1.084-2.613a1.083 1.083 0 0 0-.672-.955c-1.657-.676-2.603-2.042-2.809-3.496-.207-1.454.304-2.968 1.79-4.05a1.083 1.083 0 0 0 .411-1.151c-.395-1.499.676-3.373 1.251-4.145a1.083 1.083 0 0 0-.249-1.535 14.918 14.918 0 0 0-8.343-2.69Zm-.04 2.153c2.135.032 4.262.66 6.216 1.795-.633 1.061-1.266 2.597-1.037 4.319-1.686 1.52-2.425 3.623-2.143 5.608.283 1.994 1.563 3.819 3.548 4.863.206 1.503.854 2.658 1.636 3.434.447.444.92.786 1.35 1.06-4.233 5.028-11.61 6.132-17.109 2.298A12.823 12.823 0 0 1 6.717 8.657a12.813 12.813 0 0 1 10.729-5.502Zm-.364 2.327a2.04 2.04 0 0 0-2.04 2.04 2.04 2.04 0 0 0 2.04 2.04 2.04 2.04 0 0 0 2.04-2.04 2.04 2.04 0 0 0-2.04-2.04zm-4.664 5.955a1.682 1.682 0 0 0-1.682 1.682 1.682 1.682 0 0 0 1.682 1.682 1.682 1.682 0 0 0 1.682-1.682 1.682 1.682 0 0 0-1.682-1.682zm-1.705 5.937a2.382 2.383 0 0 0-2.383 2.383 2.382 2.383 0 0 0 2.383 2.382 2.382 2.383 0 0 0 2.382-2.382 2.382 2.383 0 0 0-2.382-2.383zm7.356 4.127a2.165 2.166 0 0 0-2.166 2.165 2.165 2.166 0 0 0 2.166 2.166 2.165 2.166 0 0 0 2.165-2.166 2.165 2.166 0 0 0-2.165-2.165z" /></svg>
-			<svg viewBox="0 0 32 32" id="credit" xmlns="http://www.w3.org/2000/svg"><path d="M4.4 6C2.536 6 1 7.546 1 9.425v13.15C1 24.454 2.535 26 4.4 26h23.2c1.865 0 3.4-1.546 3.4-3.425V9.425C31 7.546 29.465 6 27.6 6Zm0 2.05h23.2c.773 0 1.364.596 1.364 1.375v.942H3.034v-.942c0-.78.593-1.374 1.367-1.374zm-1.366 6.638h25.93v7.887c0 .78-.59 1.376-1.365 1.376H4.401c-.774 0-1.367-.597-1.367-1.376zM7.2 19.277c-.258 0-.465.21-.465.522 0 .313.207.521.465.521h3.196c.258 0 .467-.208.467-.52 0-.313-.209-.523-.467-.523zm5.263 0c-.258 0-.467.21-.467.522 0 .313.21.521.467.521h3.197c.258 0 .466-.208.466-.52 0-.313-.208-.523-.466-.523zm5.264 0c-.258 0-.467.21-.467.522 0 .313.209.521.467.521h3.196c.258 0 .465-.208.465-.52 0-.313-.207-.523-.465-.523zm5.263 0c-.258 0-.467.21-.467.522 0 .313.21.521.467.521h3.197a.465.465 0 0 0 .464-.468v-.105c0-.26-.206-.47-.464-.47z" /></svg>
-			<svg viewBox="0 0 32 32" id="cross" xmlns="http://www.w3.org/2000/svg"><path d="M15.048 1c-.77 0-1.392.621-1.392 1.392v11.264H2.392c-.771 0-1.392.621-1.392 1.392v1.904c0 .77.621 1.392 1.392 1.392h11.264v11.264c0 .771.621 1.392 1.392 1.392h1.904c.77 0 1.392-.621 1.392-1.392V18.344h11.264c.771 0 1.392-.621 1.392-1.392v-1.904c0-.77-.621-1.392-1.392-1.392H18.344V2.392c0-.771-.621-1.392-1.392-1.392z" /></svg>
+			<svg viewBox="0 0 32 32" id="credit" xmlns="http://www.w3.org/2000/svg"><path d="M4.4 6C2.536 6 1 7.546 1 9.425v13.15C1 24.454 2.535 26 4.4 26h23.2c1.865 0 3.4-1.546 3.4-3.425V9.425C31 7.546 29.465 6 27.6 6Zm0 2.05h23.2c.773 0 1.364.596 1.364 1.375v.942H3.034v-.942c0-.78.593-1.374 1.367-1.374zm-1.366 6.638h25.93v7.887c0 .78-.59 1.376-1.365 1.376H4.401c-.774 0-1.367-.597-1.367-1.376zm5.054 4.589c-.258 0-.466.269-.466.67 0 .4.208.667.466.667h3.197c.258 0 .466-.267.466-.667 0-.401-.208-.67-.466-.67zm7.116 0c-.258 0-.467.269-.467.67 0 .4.209.667.467.667H18.4c.258 0 .465-.267.465-.667 0-.401-.207-.67-.465-.67zm7.113 0c-.258 0-.466.269-.466.67 0 .4.208.667.466.667h3.197c.258 0 .465-.267.465-.667 0-.401-.207-.67-.465-.67z" /></svg>
+			<svg viewBox="0 0 32 32" id="cross" xmlns="http://www.w3.org/2000/svg"><path d="M 16 1 A 2.25 2.25 0 0 0 13.75 3.25 L 13.75 13.75 L 3.25 13.75 A 2.25 2.25 0 0 0 1 16 A 2.25 2.25 0 0 0 3.25 18.25 L 13.75 18.25 L 13.75 28.75 A 2.25 2.25 0 0 0 16 31 A 2.25 2.25 0 0 0 18.25 28.75 L 18.25 18.25 L 28.75 18.25 A 2.25 2.25 0 0 0 31 16 A 2.25 2.25 0 0 0 28.75 13.75 L 18.25 13.75 L 18.25 3.25 A 2.25 2.25 0 0 0 16 1 z" /></svg>
 			<svg viewBox="0 0 32 32" id="csv" xmlns="http://www.w3.org/2000/svg"><path d="M4.778 1C3.702 1 3.2 1.753 3.2 2.582v26.836c0 .915.853 1.582 1.578 1.582h22.444c1.111 0 1.578-.666 1.578-1.582V10.082c0-1.109-.483-1.87-1.11-2.695l-5.202-5.274C21.666 1.416 20.722 1 19.74 1Zm.526 2.168h12.859v6.914c0 1.166.638 1.64 1.578 1.64h6.955v17.11H5.304Zm14.963.117c.32.008.518.129.701.352L26.17 8.91c.184.193.368.372.409.645h-6.312ZM8.179 19.913c-.868 0-1.567.702-1.567 1.577v4.57c0 .874.7 1.578 1.567 1.578h15.642a1.57 1.57 0 0 0 1.567-1.578v-4.57c0-.875-.7-1.577-1.567-1.577zm9.511 1.802c.65.35.307 1.076-.132.912-1.084-.406-2.282-.617-2.35-.015-.102.901 3.066.755 2.976 2.155-.08 1.244-1.156 1.423-1.872 1.446-.605 0-1.582-.093-2.047-.562-.522-.393 0-1.14.541-.866.527.23.789.396 1.31.396 1.312-.054.95-.598.417-.729-1.312-.218-2.438-.741-2.454-1.65-.029-1.58 2.077-1.723 3.611-1.087zm-6.574-.473c.838 0 1.617.432 1.987.863.318.383-.43 1.125-.835.796-.364-.295-.727-.49-1.097-.527-.812-.08-1.376.558-1.376 1.388 0 .83.56 1.388 1.376 1.388.419 0 .738-.28 1.097-.533.586-.41 1.135.44.828.8-.38.446-1.14.864-1.985.864-1.485 0-2.612-1.058-2.612-2.52 0-1.449 1.11-2.496 2.584-2.513a.107.107 0 0 1 .033-.004zm8.928.557c.234.656 1.021 2.374 1.154 2.664.138-.323.973-2.289 1.176-2.748.289-.677 1.32-.249 1.08.43a42.85 42.85 0 0 1-1.728 3.829c-.144.244-.364.352-.573.333-.21-.02-.401-.146-.543-.319-.727-1.298-1.472-3.188-1.682-3.721-.322-.856.825-1.148 1.116-.468z" /></svg>
 			<svg viewBox="0 0 32 32" id="discord" xmlns="http://www.w3.org/2000/svg"><path d="M13.906 17.103c0 1.832-1.325 3.318-2.96 3.318-1.634 0-2.959-1.486-2.959-3.318 0-1.833 1.325-3.319 2.96-3.319 1.634 0 2.959 1.486 2.959 3.319zm10.045 0c0 1.832-1.325 3.318-2.96 3.318-1.634 0-2.959-1.486-2.959-3.318 0-1.833 1.325-3.319 2.96-3.319 1.634 0 2.96 1.486 2.96 3.319zM11.745 4.15a32.451 32.451 0 0 0-6.197 1.979c-.215.215-2.597 2.938-3.71 7.826-1.092 4.803-.86 9.368-.704 9.637 2.25 2.045 4.255 3.017 7.507 4.258l1.779-3.071s-2.004-.871-2.444-1.179c-.256-.179-.077-.541.336-.493.287.257 1.85.832 2.868 1.114 3.346.864 6.553.773 9.635 0 1.025-.259 2.581-.857 2.868-1.114.413-.049.592.314.335.493-.44.308-2.443 1.179-2.443 1.179l1.78 3.071c2.848-1.217 5.13-2.014 7.506-4.258.168-.29.388-4.834-.705-9.637-1.112-4.888-3.39-7.442-3.71-7.732C24.41 5.21 22.56 4.639 20.25 4.15l-.61 1.635c-2.517-.181-4.675-.164-7.283 0z" /></svg>
 			<svg viewBox="0 0 32 32" id="dots" xmlns="http://www.w3.org/2000/svg"><path d="M4.516 12.484a3.516 3.516 0 1 0-.001 7.03 3.516 3.516 0 0 0 .001-7.03Zm11.484 0a3.516 3.516 0 1 0 0 7.032 3.516 3.516 0 1 0 0-7.032Zm11.484 0a3.516 3.516 0 1 0 .002 7.03 3.516 3.516 0 0 0-.002-7.03z" /></svg>
 			<svg viewBox="0 0 32 32" id="download" xmlns="http://www.w3.org/2000/svg"><path d="M13.668 2.2c-.315 0-.567.125-.756.314-.252.251-.379.504-.379.818v8.047h-4.6c-.504 0-.883.251-1.072.691-.189.503-.126.944.252 1.259l8.069 8.046c.252.252.503.378.818.378.315 0 .566-.126.818-.378l8.069-8.046c.378-.315.44-.756.252-1.259-.19-.44-.568-.691-1.073-.691h-4.6V3.332c0-.314-.126-.567-.378-.818a1.043 1.043 0 0 0-.756-.314ZM2.766 20.621c-.505 0-.884.126-1.262.503A1.607 1.607 0 0 0 1 22.318v5.72c0 .504.189.945.504 1.26.378.314.757.502 1.262.502h26.468c.505 0 .884-.188 1.262-.503.315-.314.504-.755.504-1.258v-5.72c0-.504-.189-.88-.504-1.195-.378-.377-.757-.503-1.262-.503h-8.318l-2.459 2.39c-.693.69-1.512 1.004-2.457 1.004-.945 0-1.764-.313-2.457-1.005l-2.397-2.389zm20.148 4.57a1.16 1.157 0 0 1 1.16 1.157 1.16 1.157 0 0 1-1.16 1.157 1.16 1.157 0 0 1-1.16-1.157 1.16 1.157 0 0 1 1.16-1.158zm4.61 0a1.16 1.157 0 0 1 1.16 1.157 1.16 1.157 0 0 1-1.16 1.157 1.16 1.157 0 0 1-1.16-1.157 1.16 1.157 0 0 1 1.16-1.158z" /></svg>
 			<svg viewBox="0 0 32 32" id="edit" xmlns="http://www.w3.org/2000/svg"><path d="m8.153 28.5 1.805-1.806-4.652-4.652L3.5 23.847v2.084h2.57V28.5Zm10.416-18.403c0-.278-.138-.486-.486-.486-.07 0-.208.07-.277.139L7.042 20.514c-.14.139-.14.208-.14.347 0 .278.14.417.417.417.14 0 .278 0 .348-.14L18.43 10.445c.069-.138.138-.208.138-.347zm-1.11-3.82 8.263 8.265L9.194 31H1v-8.194ZM31 8.154c0 .694-.208 1.32-.694 1.805l-3.334 3.264-8.194-8.194 3.264-3.334C22.528 1.208 23.083 1 23.847 1c.695 0 1.25.208 1.806.694l4.653 4.653c.486.556.694 1.111.694 1.806Z" /></svg>
 			<svg viewBox="0 0 32 32" id="error" xmlns="http://www.w3.org/2000/svg"><path d="M26.185 23.268c-1.067 1.648.724 4.156-.789 5.12-1.512.965-4.17-2.314-5.995-1.836-1.825.478-1.843 3.996-3.397 4.39-1.554.393-1.08-1.262-2.609-2.988-1.528-1.725-5.305 2.235-7.253.911-1.947-1.323 2.26-4.824 1.247-6.702-1.012-1.879-4.782.209-5.339-1.585-.557-1.794 3.692-2.616 3.762-4.634.07-2.017-4.041-2.851-3.762-4.633.28-1.781 3.273-1.045 4.55-2.316 1.278-1.272-.238-4.424.728-5.182.967-.76 3.393 1.959 5.157 1.28 1.765-.68 1.808-4.288 3.519-4.085 1.71.204 1.599 3.678 3.58 4.268 1.98.59 5.409-3.255 6.587-1.904 1.179 1.351-2.021 4.395-1.063 6.305.958 1.91 4.706.53 4.85 1.695.143 1.164-2.574 2.681-3.02 4.2-.445 1.52 3.251 3.812 3.054 4.993-.263 1.579-2.74 1.054-3.807 2.703zm-8.604-.8v-3.232h-3.154v3.232h3.154m0-4.939V9.36h-3.154v8.17h3.154" /></svg>
-			<svg viewBox="0 0 32 32" id="facebook" xmlns="http://www.w3.org/2000/svg"><path d="M4.575 1A3.567 3.567 0 0 0 1 4.575v22.85A3.567 3.567 0 0 0 4.575 31h8.909V20.73H9.18v-4.773h4.304v-3.635c0-6.173 4.721-7.018 9.836-6.018v4.026c-4.976-.241-4.94 1.153-4.857 5.627h4.662L22.4 20.73h-3.937V31h8.962A3.567 3.567 0 0 0 31 27.425V4.575A3.567 3.567 0 0 0 27.425 1Z" /></svg>
+			<svg viewBox="0 0 32 32" id="facebook" xmlns="http://www.w3.org/2000/svg"><path d="M 12.657973,30.988199 V 18.861551 H 7.4561188 V 13.09325 H 12.657973 V 8.7009412 c 0,-7.4595995 5.706014,-8.48012217 11.885908,-7.2717414 V 6.2935492 C 18.531492,6.0025362 18.57252,7.6873762 18.674095,13.09325 h 5.633769 l -0.87563,5.768301 H 18.674095 V 31 Z" /></svg>
 			<svg viewBox="0 0 32 32" id="github" xmlns="http://www.w3.org/2000/svg"><path d="M16 1.4C7.717 1.4 1 8.102 1 16.37c0 6.614 4.298 12.225 10.258 14.204.75.139 1.025-.324 1.025-.72 0-.357-.014-1.536-.02-2.787-4.173.906-5.054-1.767-5.054-1.767-.682-1.73-1.666-2.19-1.666-2.19-1.361-.93.102-.91.102-.91 1.507.105 2.3 1.543 2.3 1.543 1.338 2.289 3.51 1.627 4.365 1.245.135-.967.524-1.63.953-2.003-3.332-.378-6.834-1.661-6.834-7.397 0-1.634.586-2.97 1.545-4.019-.155-.377-.67-1.9.145-3.961 0 0 1.261-.402 4.127 1.535A14.41 14.41 0 0 1 16 8.638c1.275.007 2.559.173 3.757.505 2.863-1.937 4.122-1.535 4.122-1.535.817 2.062.302 3.584.147 3.961.961 1.049 1.543 2.385 1.543 4.019 0 5.75-3.508 7.015-6.848 7.386.538.465 1.016 1.376 1.016 2.772 0 2.003-.016 3.615-.016 4.108 0 .399.268.865 1.029.718C26.707 28.591 31 22.982 31 16.37 31 8.102 24.284 1.4 16 1.4ZM6.282 22.69c-.049.066.033.2.142.25.106.05.225.028.258-.046.037-.075-.031-.166-.134-.227-.13-.077-.223-.037-.266.022zm.7.81c.095.105.236.136.308.07.074-.067.054-.207-.044-.313-.07-.075-.16-.112-.27-.056-.11.056-.092.195.006.3zm.562.803c.093.132.245.192.337.128.094-.066.094-.225.001-.36-.07-.1-.17-.157-.3-.109-.129.048-.13.207-.038.34zm.762.904c.128.124.302.147.384.057.088-.09.048-.262-.082-.382-.08-.077-.213-.138-.358-.064-.145.075-.075.269.056.39zm.88.355c-.034.118.078.255.248.307.17.05.339-.004.375-.121.035-.12-.067-.296-.285-.328-.217-.032-.313.06-.337.142zm2.355.197c.023.12.183.193.357.161.178-.033.302-.156.28-.276-.02-.107-.145-.195-.34-.173-.195.022-.318.165-.297.288zm-.83-.14c-.178.003-.32.105-.32.23.003.121.147.22.326.217.179-.003.323-.105.319-.228 0-.123-.146-.223-.324-.22z" /></svg>
 			<svg viewBox="0 0 32 32" id="google" xmlns="http://www.w3.org/2000/svg"><path d="M1.305 16c0 8.284 6.94 15 14.705 15 8.995 0 14.685-6.198 14.685-15 0-.72-.052-1.444-.155-2.156-4.775-.007-9.533 0-14.32 0v5.102h8.689c-1.09 4.477-4.68 6.55-8.79 6.55-4.844 0-9.146-4.252-9.146-9.496 0-4.964 4.47-9.435 9.037-9.434 3.175 0 4.56.789 6.296 2.328l3.95-3.849A14.886 14.886 0 0 0 16.01 1C7.638 1 1.305 8.193 1.305 16Z" /></svg>
 			<svg viewBox="0 0 32 32" id="heart" xmlns="http://www.w3.org/2000/svg"><path d="M9.027 3.2c-2.52 0-4.511.643-5.918 2.046C1.703 6.648 1 8.519 1 10.974c.047 2.304.662 4.22 2.402 5.961 3.69 4.084 7.865 7.745 11.836 11.573.235.234.469.292.762.292.293 0 .527-.058.762-.292l10.43-9.995C29.71 15.942 31 13.428 31 10.973c0-2.454-.703-4.325-2.11-5.727C27.485 3.843 25.493 3.2 22.974 3.2c-2.826.091-4.994 1.781-6.973 3.565-1.998-1.976-4.213-3.28-6.973-3.565Zm-.716 10.148 7.727 8.22c.518.552.55 1.405.057 1.93-.492.524-1.293.489-1.81-.062l-7.728-8.221c-.518-.552-.608-1.352-.051-1.942.556-.59 1.374-.357 1.805.075z" /></svg>
 			<svg viewBox="0 0 32 32" id="help" xmlns="http://www.w3.org/2000/svg"><path d="M16 1C7.728 1 1 7.728 1 16s6.728 15 15 15 15-6.728 15-15S24.272 1 16 1Zm0 2.009c2.181 0 4.233.537 6.036 1.483l-3.47 3.47a8.396 8.396 0 0 0-5.248.042L9.861 4.545A12.953 12.953 0 0 1 16 3.009Zm0 6.562A6.415 6.415 0 0 1 22.43 16 6.416 6.416 0 0 1 16 22.43 6.415 6.415 0 0 1 9.571 16 6.413 6.413 0 0 1 16 9.571zm11.48.342A12.951 12.951 0 0 1 28.992 16c0 2.22-.556 4.308-1.534 6.135L24 18.678a8.387 8.387 0 0 0 .018-5.303zm-23.013.102 3.476 3.478v.002A8.398 8.398 0 0 0 7.563 16c0 .896.14 1.76.401 2.572l-3.47 3.47A12.953 12.953 0 0 1 3.009 16c0-2.161.528-4.195 1.458-5.985zM13.38 24.02a8.387 8.387 0 0 0 5.134.035l3.476 3.477A12.952 12.952 0 0 1 16 28.992c-2.2 0-4.27-.546-6.084-1.508z" /></svg>
 			<svg viewBox="0 0 32 32" id="home" xmlns="http://www.w3.org/2000/svg"><path d="M16 1c-1.155 0-1.52.47-2.239 1.099-.196.171-9.657 9.734-10.757 10.825-.43.428-1.713 1.912-1.922 2.685-.208.773-.073 1.76 1.023 2.051 1.096.291 1.724.23 2.722.23v10c0 1.632.057 3.11 2.402 3.11 2.324 0 2.967-.013 5.945 0l.017-9.9c0-.561-.13-1.336.79-1.336h4.038c.92 0 .79.775.79 1.336l.017 9.9c2.978-.013 3.621 0 5.945 0 2.345 0 2.4-1.478 2.4-3.11v-10c.998 0 1.628.061 2.724-.23 1.096-.291 1.231-1.278 1.023-2.051-.21-.773-1.493-2.257-1.924-2.685-1.1-1.09-10.56-10.654-10.755-10.825C17.52 1.47 17.153 1 15.999 1Z" /></svg>
 			<svg viewBox="0 0 32 32" id="info" xmlns="http://www.w3.org/2000/svg"><path d="M11.642 5.111c0 2.276 1.943 4.12 4.34 4.12s4.34-1.844 4.34-4.12c0-2.275-1.943-4.12-4.35-4.111-2.407.009-4.33 1.848-4.33 4.111zm-1.378 6.817c-.392 0-.707.15-1.02.373-.956.907-1.027 3.72 0 4.694.313.223.628.373 1.02.373h1.413v8.194c-1.05 0-1.913-.024-2.443.543C8.37 27.03 8.189 31 10.264 31H21.72c2.243 0 2.086-3.987 1.056-4.943-.724-.576-.976-.495-2.469-.495V13.269c0-.937-.552-1.341-1.413-1.341z" /></svg>
-			<svg viewBox="0 0 32 32" id="instagram" xmlns="http://www.w3.org/2000/svg"><path d="M4.823 1C2.734 1 1 2.743 1 4.845v22.31C1 29.257 2.734 31 4.823 31h22.354C29.266 31 31 29.257 31 27.155V4.845C31 2.743 29.266 1 27.177 1Zm18.03 3.247h3.407c.749 0 1.353.606 1.353 1.36v3.286c0 .754-.604 1.36-1.353 1.36h-3.407c-.749 0-1.351-.606-1.351-1.36V5.607c0-.754.602-1.36 1.351-1.36zM16 10.073c3.273 0 5.891 2.634 5.891 5.927 0 3.293-2.618 5.927-5.891 5.927S10.109 19.293 10.109 16c0-3.293 2.618-5.927 5.891-5.927zM4.305 13.707h2.711A9.32 9.32 0 0 0 6.732 16c0 5.13 4.169 9.325 9.268 9.325 5.1 0 9.268-4.194 9.268-9.325a9.32 9.32 0 0 0-.284-2.293h2.711v13.059c0 .316-.49.909-.8.909H4.823c-.31 0-.518-.593-.518-.91z" /></svg>
+			<svg viewBox="0 0 32 32" id="instagram" xmlns="http://www.w3.org/2000/svg"><path d="m 9.6729794,1.1060528 c -4.87519,0 -8.5511,3.52042 -8.5511,8.56927 0,0 -0.12188005,4.0987602 -0.12188005,6.2071902 0,2.10844 0.12188005,6.44105 0.12188005,6.44105 0,5.02125 3.7129,8.59055 8.5511,8.59055 0,0 4.3198596,0.0872 6.4292596,0.0859 2.1094,-10e-4 6.22478,-0.0859 6.22478,-0.0859 5.15778,0 8.5511,-3.78733 8.5511,-8.59055 0,0 0.1214,-4.33261 0.12188,-6.44105 4.6e-4,-2.10843 -0.12188,-6.2071902 -0.12188,-6.2071902 0,-5.13987 -3.65067,-8.56927 -8.5511,-8.56927 0,0 -4.11538,-0.10608 -6.22478,-0.10608 -2.1094,0 -6.4292596,0.10608 -6.4292596,0.10608 z m 0,2.65548 c 0,0 4.3199896,-0.11716 6.4292596,-0.11681 2.10927,3.7e-4 6.22478,0.11681 6.22478,0.11681 3.28351,0.0528 5.83416,2.61543 5.88658,5.91379 0,0 0.10052,4.0988802 0.10052,6.2071902 0,2.10831 -0.10052,6.44105 -0.10052,6.44105 -0.0524,3.29836 -2.60308,5.85997 -5.88658,5.91379 0,0 -4.11551,0.0998 -6.22478,0.10072 -2.10927,9.7e-4 -6.4292596,-0.10072 -6.4292596,-0.10072 -3.28352,-0.0508 -5.8366,-2.61539 -5.88658,-5.91379 0,0 -0.10216,-4.33274 -0.10052,-6.44105 0.002,-2.10831 0.10052,-6.2071902 0.10052,-6.2071902 0.0551,-3.29831 2.60306,-5.86206 5.88658,-5.91379 z m 14.3013296,2.43002 c -0.98938,-1e-5 -1.79143,0.80572 -1.79141,1.79964 -2e-5,0.99392 0.80203,1.79966 1.79141,1.79964 0.98938,2e-5 1.79143,-0.80572 1.79142,-1.79964 10e-6,-0.99392 -0.80204,-1.79965 -1.79142,-1.79964 z m -7.87207,2.12294 c -4.2092,0 -7.7520596,3.3394902 -7.7520596,7.5680202 0,4.22853 3.5428596,7.80188 7.7520596,7.80188 4.2092,0 7.54758,-3.57335 7.54758,-7.80188 0,-4.22853 -3.33838,-7.5680202 -7.54758,-7.5680202 z m 0,2.6580202 c 2.77927,0 4.90171,2.11797 4.90171,4.91 0,2.79203 -2.12244,5.14386 -4.90171,5.14386 -2.77927,0 -5.10619,-2.35183 -5.10619,-5.14386 0,-2.79203 2.32692,-4.91 5.10619,-4.91 z" /></svg>
 			<svg viewBox="0 0 32 32" id="language" xmlns="http://www.w3.org/2000/svg"><path d="M3.748 1C1.988 1 1 2.122 1 3.638V31s5.91-5.56 6.445-6.105c.673-.683 1.118-.561 1.988-.561l17.871.001c2.403 0 3.696-1.407 3.696-3.655V4.26c0-2-1.54-3.258-3.373-3.258L3.747 1Zm9.595 1.95h14.284c.981 0 1.453.508 1.453 1.31v16.42c0 1.269-.85 1.706-1.776 1.706h-9.238zm8.527 3.908v1.535h-3.961v1.948h6.214c-.41.752-.958 1.513-1.562 2.221-.869-.958-1.24-1.622-1.24-1.622l-1.666.968s.498.859 1.59 2.046c-1.337 1.29-2.523 2.151-2.523 2.151l1.107 1.592s1.33-.96 2.806-2.396a20.796 20.796 0 0 0 3.405 2.468l.952-1.693a19.416 19.416 0 0 1-3.027-2.16c.921-1.048 1.776-2.256 2.297-3.575h1.498V8.393h-3.97V6.858ZM7.74 7.31H9.4c1.552 2.727 3.26 6.956 3.26 10.327h-1.92c0-.46-.051-.964-.123-1.485H6.523a11.01 11.01 0 0 0-.122 1.485h-1.92c0-3.333 1.706-7.6 3.258-10.327zm.83 2.156a29.092 29.092 0 0 0-1.66 4.738h3.32a29.105 29.105 0 0 0-1.66-4.738Z" /></svg>
-			<svg viewBox="0 0 32 32" id="link" xmlns="http://www.w3.org/2000/svg"><path d="M15.237 30.98a15.027 15.027 0 0 1-11.393-6.196 15.011 15.011 0 0 1-2.816-9.69c.293-4.685 2.689-8.881 6.584-11.533C11.997.575 17.798.168 22.57 2.509c2.375 1.273 4.235 2.804 5.667 4.807 2.303 3.246 3.21 7.22 2.553 11.183-.677 4.082-3.063 7.736-6.557 10.04a15.088 15.088 0 0 1-8.997 2.44zm-2.572-5.644c2.205-1.868 2.682-2.374 5.19-4.878-1.028.426-2.12.294-2.959-.047-1.164 1.126-2.057 1.982-3.208 2.923-2.078 1.7-4.569-1.54-3.051-3.147 2.03-2.15 2.33-2.542 5.015-5.097 1.18-1.168 2.71-.126 3.797.512.45.268.99 0 1.178-.381.116-.235.227-.735-.203-1.122-1.59-1.347-3.413-1.916-4.778-1.388-.655.213-1.14.502-1.716 1.028-.754.685-4.764 4.746-4.989 5.05-.763 1.114-.867 2.106-.818 3.4a4.51 4.51 0 0 0 3.445 3.627c1.15.224 2.24.246 3.097-.48zm4.998-5.89c.933-.15 1.65-.505 2.407-1.191.361-.328 4.697-4.737 4.891-4.93 1.35-1.35 1.261-3.097.568-4.63-.588-1.299-1.876-2.374-3.297-2.672-1.295-.265-2.544.098-3.348.855-1.817 1.71-2.743 2.617-4.75 4.644.907-.492 1.989-.384 2.904.04 1.146-.989 1.82-1.753 3.138-2.97 1.743-1.83 4.975 1.016 3.286 3.151-1.914 1.969-3.072 3.314-5.392 5.341-1.57.512-2.534-.312-3.467-.893-.285-.177-.814.072-1.046.325-.293.32-.363.775-.18 1.155.236.487 1.16 1.208 1.927 1.505.794.307 1.57.396 2.36.27z" /></svg>
-			<svg viewBox="0 0 32 32" id="linkedin" xmlns="http://www.w3.org/2000/svg"><path d="M4.273 1C2.465 1 .999 2.349 1 4.196c0 1.846 1.465 3.193 3.273 3.193 1.807 0 3.273-1.347 3.273-3.193C7.546 2.349 6.08 1 4.273 1Zm19.248 9.202c-2.459.123-4.444 1.108-5.888 3.595v-3.093h-6.505V31h6.505V19.467c0-4.347 6.795-5.03 6.857 0V31H31V19.467c0-2.94-.623-5.392-2.008-6.97-1.385-1.506-3.186-2.295-5.47-2.295Zm-22.502.502V31h6.508V10.704Z" /></svg>
+			<svg viewBox="0 0 32 32" id="link" xmlns="http://www.w3.org/2000/svg"><path d="m 10.873779,30.073617 c 3.322525,-2.799788 4.04139,-3.557439 7.821198,-7.310159 -1.549358,0.638487 -3.195627,0.44078 -4.459064,-0.07109 -1.75513,1.687448 -3.100527,2.971683 -4.8340167,4.381157 -3.132079,2.546652 -6.8850396,-2.307438 -4.5980337,-4.716059 3.0591957,-3.221869 3.5118977,-3.810598 7.5561974,-7.639551 1.77735,-1.750845 4.085455,-0.188773 5.721792,0.767381 0.677881,0.401418 1.492668,-3.56e-4 1.7754,-0.57102 0.174604,-0.352421 0.342636,-1.100834 -0.305361,-1.681791 -2.395256,-2.018955 -5.142828,-2.871915 -7.199904,-2.079297 -0.98741,0.318039 -1.716857,0.752181 -2.5865297,1.539411 -1.135503,1.027863 -7.1779665,7.113892 -7.5163744,7.570567 -1.1510461,1.668747 -1.30750505,3.155331 -1.2336239,5.094486 0.4634727,2.68178 2.5338864,4.849812 5.1909813,5.435738 1.732728,0.335389 3.376035,0.368362 4.6673387,-0.719778 z M 22.031353,19.460928 C 22.57611,18.969607 29.109319,12.362277 29.401762,12.071406 31.435287,10.04881 31.3021,7.4305231 30.256974,5.1333951 29.371578,3.1873502 27.43012,1.5762513 25.289737,1.1289682 23.338021,0.73237766 21.45609,1.2759247 20.244784,2.4096085 c -2.73846,2.5629782 -4.13391,3.9228786 -7.158825,6.9612496 1.367226,-0.737116 2.998107,-0.57582 4.376315,0.05932 1.727631,-1.481526 2.74398,-2.626404 4.729074,-4.4499789 2.625982,-2.7430208 7.496674,1.5211199 4.951684,4.7222139 -2.884588,2.9499629 -4.62849,4.9658359 -8.124852,8.0045119 -2.366332,0.767614 -3.818335,-0.46865 -5.224983,-1.338858 -0.429088,-0.265452 -1.226505,0.108105 -1.575375,0.487737 -0.441067,0.479956 -0.547447,1.161045 -0.270291,1.730452 0.355007,0.729333 1.745762,1.810035 2.902037,2.25506 2.670197,0.881961 5.216321,0.362766 7.181785,-1.380388 z" /></svg>
+			<svg viewBox="0 0 32 32" id="linkedin" xmlns="http://www.w3.org/2000/svg"><path d="M 4.658536,1 C 6.679998,1 8.317073,2.6370752 8.317073,4.6585365 8.317073,6.679998 6.679998,8.317073 4.658536,8.317073 2.6370753,8.317073 1,6.679998 1,4.6585365 1,2.6370752 2.6370753,1 4.658536,1 Z M 23.461891,11.243902 C 29.356516,11.243902 31,14.37214 31,20.169207 V 31 h -5.853659 v -9.76372 c 0,-2.595119 -1.036954,-4.870427 -3.460366,-4.870427 -2.942435,0 -4.344511,1.992717 -4.344511,5.262958 V 31 h -5.85366 V 11.487804 h 5.556537 v 2.863825 c 0.449077,-0.758047 3.346332,-3.107727 6.41755,-3.107727 z M 1.7317069,11.487804 H 7.585366 V 31 H 1.7317069 Z" /></svg>
 			<svg viewBox="0 0 32 32" id="location" xmlns="http://www.w3.org/2000/svg"><path d="M16 1C10.477 1 6 5.464 6 10.97c.008 1.118.204 2.292.58 3.344 2.25 5.312 5.246 10.487 7.724 15.818.296.632 1.12.884 1.696.867.576.017 1.383-.243 1.696-.867 2.664-5.316 5.474-10.506 7.724-15.818.376-1.052.572-2.226.58-3.344C26 5.464 21.523 1 16 1Zm0 5.057a5.065 5.05 0 0 1 5.066 5.048A5.065 5.05 0 0 1 16 16.155a5.065 5.05 0 0 1-5.066-5.05A5.065 5.05 0 0 1 16 6.057Z" /></svg>
 			<svg viewBox="0 0 32 32" id="lock" xmlns="http://www.w3.org/2000/svg"><path d="M16 1c-2.653 0-4.925.896-6.82 2.761-1.893 1.866-2.877 4.18-2.877 6.792v4.03c-1.858 0-2.803.636-2.803 2.089v12.239C3.5 30.242 4.432 31 5.621 31h20.758c1.558 0 2.121-.821 2.121-2.09V16.673c0-1.886-1.398-2.09-2.803-2.09v-4.03c0-2.611-.986-4.925-2.88-6.79C20.923 1.895 18.651 1 16 1Zm0 4.03c1.514 0 2.803.596 3.94 1.64C21 7.717 21.53 8.986 21.53 10.554v4.03H10.47v-4.03c0-1.568.53-2.837 1.591-3.882 1.137-1.045 2.424-1.64 3.94-1.64zM8.105 16.712c.734 0 1.326.67 1.326 1.197v9.817c0 .527-.592 1.196-1.326 1.196-.735 0-1.325-.669-1.325-1.196v-9.817c0-.528.59-1.197 1.325-1.197z" /></svg>
 			<svg viewBox="0 0 32 32" id="login" xmlns="http://www.w3.org/2000/svg"><path d="M16 1C7.727 1 1 7.727 1 16.001S7.727 31 16 31s15-6.725 15-14.999C31 7.727 24.273 1 16 1Zm0 1.82c7.29 0 13.18 5.89 13.18 13.181 0 2.815-.881 5.42-2.38 7.56A13.232 13.232 0 0 0 16 17.967a13.231 13.231 0 0 0-10.785 5.615 13.13 13.13 0 0 1-2.395-7.581c0-7.29 5.89-13.18 13.18-13.18Zm0 3.978a4.794 4.794 0 0 0-4.794 4.794A4.794 4.794 0 0 0 16 16.387a4.794 4.794 0 0 0 4.794-4.795A4.794 4.794 0 0 0 16 6.798Z" /></svg>
 			<svg viewBox="0 0 32 32" id="logout" xmlns="http://www.w3.org/2000/svg"><path d="M15.02 1c-.813 0-1.47.652-1.47 1.46v14.296c0 .81.657 1.46 1.47 1.46h1.96c.813 0 1.47-.65 1.47-1.46V2.46c0-.81-.657-1.461-1.47-1.461h-1.96ZM8.184 4.154c-.24.012-.486.09-.733.25-3.62 2.594-6.2 6.602-6.201 11.909C1.25 24.425 7.854 31 16 31s14.75-6.575 14.75-14.688c0-5.306-2.581-9.314-6.201-11.908a1.453 1.453 0 0 0-.733-.25c-1.679-.078-3.032 3.102-1.78 3.815 2.453 1.475 4.423 4.619 4.423 8.343 0 5.753-4.683 10.415-10.459 10.415S5.54 22.065 5.541 16.312c0-3.724 1.97-6.868 4.424-8.343 1.25-.713-.102-3.893-1.781-3.815Z" /></svg>
-			<svg viewBox="0 0 32 32" id="mail" xmlns="http://www.w3.org/2000/svg"><path d="M1 7.292C1 4.36 2.41 4.247 4.72 4.247h22.566c2.473 0 3.714.094 3.714 3.045 0 0-12.699 9.597-14.997 9.597C13.704 16.89 1 7.292 1 7.292zm0 2.236V23.44l9.318-7.399Zm11.12 7.595L1 25.508c0 2.173 1.895 2.24 3.349 2.239h23.267c1.454 0 3.384-.088 3.384-2.24l-11.025-8.384s-2.83 1.86-3.972 1.86c-1.143 0-3.145-1.498-3.884-1.86zm9.658-1.082 9.222 7.4V9.527c-3.62 2.482-5.604 4.03-9.222 6.513z" /></svg>
-			<svg viewBox="0 0 32 32" id="mail-alt" xmlns="http://www.w3.org/2000/svg"><path d="M16 1C7.73 1 1 7.73 1 16s6.73 15 15 15c3.482 0 6.827-1.25 9.376-3.25-.432.056-2.034-.027-2.641-.201-.608-.174-1.507-.698-1.994-1.013-1.657.888-2.725 1.093-4.741 1.093-6.522 0-11.734-5.107-11.734-11.629A11.681 11.681 0 0 1 16 4.266 11.681 11.681 0 0 1 27.734 16c0 2.356-.35 4.079-.8 5.4-.655 1.93-3.722 1.918-4.286-.056-.257-.975-.278-4.515-.278-6.897 0-2.382-.282-3.64-1.33-4.913-2.394-2.488-6.24-2.131-9.62-.897-1.34.65-.622 3.001 1.077 2.602 1.164-.116 2.401-.603 4.607-.408 2.206.195 2.156 1.278 2.199 3.17-1.136-.388-2.502-.426-4.115-.426-3.794 0-6.412 2.02-6.412 5.623 0 3.604 3.435 5.373 5.79 5.428 2.212 0 4.07-1.204 5.175-2.429.715 4.18 5.419 5.33 8.316 2.625C30.633 22.452 30.95 18.77 31 16c0-8.27-6.73-15-15-15Zm-.766 15.284c1.858 0 3.191.33 3.191 2.285 0 2-1.494 2.973-3.545 2.973-1.747 0-2.84-.74-2.84-2.552 0-2.074 1.97-2.677 3.194-2.706z" /></svg>
+			<svg viewBox="0 0 32 32" id="mail" xmlns="http://www.w3.org/2000/svg"><path d="m 1.0534488,7.9943617 c 0,-2.8830108 1.4055365,-2.9945204 3.7066077,-2.9943613 H 27.245776 c 2.46424,0 3.700775,0.092952 3.700775,2.9943613 0,0 -12.653293,9.0150553 -14.943634,9.0150573 -2.290342,0 -14.9494682,-9.0150573 -14.9494682,-9.0150573 z m -0.053449,2.1990743 v 12.572073 l 9.2844249,-6.589923 z m 11.1329839,7.04629 -11.0795352,7.559253 c 0,2.136202 1.8881091,2.202428 3.3370437,2.201 H 27.574278 c 1.448686,3.32e-4 3.372273,-0.08596 3.372273,-2.202925 L 19.960589,17.239726 c 0,0 -2.819173,1.828292 -3.957672,1.828292 -1.1385,0 -3.869933,-1.828292 -3.869933,-1.828292 z M 21.811022,16.175586 31,22.765509 V 10.193436 Z" /></svg>
+			<svg viewBox="0 0 32 32" id="mail-alt" xmlns="http://www.w3.org/2000/svg"><path d="m 16.008017,1 c -8.2682221,-1.2e-7 -15.00801797,6.736195 -15.00801707,15 0,8.263805 6.73979497,15 15.00801707,15 5.453118,0 9.558456,-2.983081 11.475169,-5.186745 -1.93321,1.116139 -4.602887,1.216632 -6.027007,0.394416 C 20.873745,26.46302 18.687851,27.5625 16.008017,27.5625 9.5988163,27.5625 4.4393373,22.405778 4.4393373,16 c 0,-6.4057775 5.159479,-11.5625001 11.5686797,-11.5625 6.359493,0 9.712906,4.2760882 10.9654,7.946598 1.252494,3.670509 0.701844,6.117215 -0.664563,7.240878 -0.850611,0.6995 -2.662261,1.15874 -3.843713,-0.274371 -0.694909,-0.84293 -0.544828,-3.496787 -0.309689,-4.81977 0.219693,-1.176236 0.865702,-4.315277 1.036093,-5.4136055 -3.20522,-0.6014837 -6.945543,-0.6865972 -9.667323,0.5155832 -2.725845,1.2315373 -4.5440523,3.6238533 -5.1062425,7.1230463 -0.3805674,2.878307 0.7864951,5.982687 4.0353585,6.316407 2.231934,0.190224 4.743264,-1.432114 6.399903,-3.333985 1.251521,2.566799 3.103714,3.767444 5.950445,3.771485 2.864036,0.0041 4.76953,-1.572534 5.681145,-3.94602 0.911614,-2.373485 0.335741,-5.870387 0.335741,-5.870387 C 29.490658,5.7012881 22.613591,1 16.008017,1 Z m 2.782737,10.605469 c -0.612877,3.336271 -1.30707,6.301303 -2.61077,7.113281 -1.572166,0.979187 -2.963181,0.455706 -3.474512,-0.324219 -0.765574,-1.167719 0.101209,-3.245999 0.969267,-4.365234 0.868059,-1.119235 2.698227,-2.248194 5.116015,-2.423828 z" /></svg>
 			<svg viewBox="0 0 32 32" id="pdf" xmlns="http://www.w3.org/2000/svg"><path d="M27.69 7.387c.76.796 1.11 1.629 1.11 2.695v19.336c0 1.085-.656 1.582-1.578 1.582H4.778C3.766 31 3.2 30.34 3.2 29.418V2.582C3.2 1.494 3.84 1 4.778 1h14.963c1.279 0 2.034.39 2.747 1.113zm-7.423-4.102v6.27h6.312c-.117-.293-.234-.528-.41-.645l-5.201-5.273c-.117-.117-.35-.235-.701-.352Zm6.429 25.547v-17.11H19.74c-1.041 0-1.578-.748-1.578-1.64V3.168H5.304v25.664Zm-7.19-8.965c.644-.058 1.287-.117 1.93-.117 1.636 0 2.63.293 2.98.82.176.235.176.528.059.88-.296.529-.87.661-1.378.659-1.478-.006-2.775-.592-4-1.187-2.454.293-4.617.762-6.545 1.406-1.695 2.93-3.04 4.395-4.033 4.395-.731-.051-1.219-.488-1.052-.996.502-1.535 1.922-2.463 3.156-3.164.231-.17.337-.041.409.175 1.433-2.486 2.733-5.054 3.507-7.675a24.294 24.294 0 0 1-.526-2.696c-.12-1.246-.029-2.665.818-2.812.864-.147 1.146.736 1.169 1.856.023 1.12-.196 2.38-.35 3.534.81 2.386 2.024 3.774 3.857 4.922zM8.46 25.785c.55-.307 1.345-1.113 2.338-2.637-.99.767-1.763 1.513-2.338 2.637zm6.663-13.183c.248-.931.357-1.517 0-2.286-.403.487-.325 1.294 0 2.286zm-2.045 8.847a23.41 23.41 0 0 1 4.734-1.347c-.8-.104-2.067-2.198-2.63-3.34-.574 1.832-1.22 3.083-2.104 4.687zm8.161-.649c.82.26 1.916.474 2.732.48-.66-.626-1.938-.746-2.732-.48z" /></svg>
 			<svg viewBox="0 0 32 32" id="phone" xmlns="http://www.w3.org/2000/svg"><path d="M3.865 2.262C2.212 3.559 1.137 6.047 1 8.345c-.146 7.121 14.034 21.473 22.622 21.898 2.078.103 4.776-.868 6.678-3.516.367-.512.991-3.19.543-3.513-.647-.468-6.366-3.596-7.22-3.784-.854-.188-3.632 3.713-4.089 3.784-3.481-1.678-9.028-6.507-10.902-10.003.945-1.475 2.53-3.462 2.586-4.088.058-.65-2.688-6.68-3.134-7.153-.473-.502-3.81-.031-4.22.292Z" /></svg>
 			<svg viewBox="0 0 32 32" id="pinterest" xmlns="http://www.w3.org/2000/svg"><path d="M16 1C7.716 1 1 7.716 1 16a15 15 0 0 0 8.973 13.72c0-.137.007-2.513.273-3.378l1.918-8.219c-1.364-2.819.256-6.29 2.398-6.3 1.824.075 1.968.833 2.055 2.327-.195 1.889-.827 3.356-1.37 5.274-.4 1.561.561 2.735 2.398 2.945 3.274-.073 4.865-4.868 4.793-8.013-.097-4.253-3.116-5.645-6.301-5.752-4.735.209-6.549 2.784-7.317 5.9-.28 1.13.107 3.574.948 4.236.569.694.043 2.848-.76 2.44-3.297-1.267-3.486-5.616-2.735-8.399C8.121 7.646 12.204 6.278 16.55 6c3.222.027 6.396 1.496 8.355 4.451 1.686 2.734 1.331 6.795.205 9.453-1.126 2.659-3.752 4.934-7.123 5.069-1.487-.09-2.803-.59-3.699-1.918-.548 2.328-.89 3.698-1.027 4.11-.274.958-1.506 3.218-1.506 3.218 1.01.274 3.086.608 4.246.617 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15Z" /></svg>
@@ -543,7 +713,7 @@ Y en CSS los siguientes estilos:
 			<svg viewBox="0 0 32 32" id="spinner" xmlns="http://www.w3.org/2000/svg"><path d="M14.455 1C6.917 1.78 1 8.203 1 15.96 1 24.24 7.742 31 16 31s15-6.76 15-15.04C31 8.607 25.684 2.455 18.71 1.17l-.85 4.28a10.627 10.627 0 0 1 8.784 10.511c0 5.92-4.74 10.672-10.644 10.672A10.625 10.625 0 0 1 5.356 15.96c0-5.071 3.48-9.287 8.188-10.39z" /></svg>
 			<svg viewBox="0 0 32 32" id="spotify" xmlns="http://www.w3.org/2000/svg"><path d="M16 1C7.716 1 1 7.716 1 16c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15Zm10.576 11.162a1.363 1.363 0 0 1-.005 1.947c-.318.313-.777.46-1.214.388-5.32-2.854-12.542-3.453-17.778-1.924-.486.14-.787.124-1.167-.06-.998-.68-.93-1.496-.357-2.202.2-.195.413-.303.83-.42 4.847-1.563 14.637-1.192 19.691 2.27Zm-2.09 4.894c.29.247.441.658.382 1.036-.07.443-.447.846-.882.945-.453.104-.767-.125-1.117-.276-5.087-2.706-10.291-2.824-14.548-1.635-.346.096-.58.113-.793.057a1.151 1.151 0 0 1-.868-1.104c.097-.76.53-.93 1.049-1.178 5.38-1.58 12.427-.658 16.777 2.155zm-2.077 4.133c.373.22.534.423.587.74.066.392-.162.806-.538.977-.173.08-.524.096-.682.032-4.66-2.769-9.32-2.341-13.125-1.56-.353.076-.556.082-.735.021-.765-.338-.785-1.067-.378-1.5.204-.212.305-.247 1.256-.436 4.52-.966 9.495-.73 13.615 1.726Z" /></svg>
 			<svg viewBox="0 0 32 32" id="star" xmlns="http://www.w3.org/2000/svg"><path d="M15.998 1.75a.7.7 0 0 0-.625.389l-4.257 8.593-9.517 1.377a.697.697 0 0 0-.387 1.19l6.886 6.688-1.627 9.445a.7.7 0 0 0 1.016.736L16 25.708l8.51 4.46a.7.7 0 0 0 1.015-.734L23.9 19.989l6.886-6.687a.697.697 0 0 0-.386-1.191l-9.517-1.38-4.256-8.592a.7.7 0 0 0-.629-.389Z" /></svg>
-			<svg viewBox="0 0 32 32" id="star-half" xmlns="http://www.w3.org/2000/svg"><path d="M15.998 1.75a.7.697.388 0 0-.625.389l-4.258 8.593-9.517 1.377a.7.697.388 0 0-.387 1.19l6.887 6.69-1.627 9.444a.7.697.388 0 0 1.016.737L16 25.709l8.51 4.46a.7.697.388 0 0 1.015-.734L23.9 19.99l6.887-6.687a.7.697.388 0 0-.387-1.192l-9.517-1.379-4.256-8.593a.7.697.388 0 0-.629-.389Zm0 2.274 3.791 7.656a.7.697.388 0 0 .527.379l8.48 1.23-6.134 5.957a.7.697.388 0 0-.203.617l1.447 8.416-7.582-3.973a.7.697.388 0 0-.324-.08z" /></svg>
+			<svg viewBox="0 0 32 32" id="star-half" xmlns="http://www.w3.org/2000/svg"><path d="m 15.824226,1.8758278 c 0,0 -0.71197,-0.034343 -1.082409,0.9400287 l -3.744078,7.9580815 -9.4058574,1.361069 c -0.5667021,0.08304 -0.7924063,0.777261 -0.3822577,1.175732 l 6.8053459,6.610356 -1.6081853,9.336356 c -0.098,0.563662 0.4959026,0.922792 1.0039092,0.656386 l 8.4135323,-4.3361 c 1.702458,1.085261 5.046955,2.888747 7.294509,4.3361 1.440691,0.760168 3.284748,-0.656569 3.013274,-2.257771 v -0.002 l -1.325388,-7.757856 5.611182,-5.486572 c 1.16992,-1.137033 0.46954,-3.312773 -1.147913,-3.547582 L 21.464834,9.7236948 17.42578,2.928896 C 16.764889,1.8052823 15.824226,1.8758278 15.824226,1.8758278 Z m 0.0019,3.7304906 3.814855,6.5975856 7.781166,1.135724 -5.670855,5.546607 1.206932,7.412348 -7.134028,-4.33276 z" /></svg>
 			<svg viewBox="0 0 32 32" id="sticky" xmlns="http://www.w3.org/2000/svg"><path d="M14.346 14.263V6.266c-.006-.454-.245-.655-.63-.655-.384 0-.567.259-.567.655v7.997c-.013.416.218.569.567.569s.63-.198.63-.569zM26.35 20.58c0 .8-.49 1.2-1.197 1.2H17.56l-.945 8.716c-.051.423-.373.505-.567.505-.315 0-.504-.19-.567-.505l-1.387-8.716H6.847c-.812 0-1.197-.524-1.197-1.2 0-3.094 1.742-5.747 4.663-5.747V5.61c-1.633 0-2.331-1.03-2.331-2.337C7.982 1.774 9 1 10.313 1h11.47c1.522 0 2.331.97 2.331 2.274 0 1.509-1.074 2.337-2.332 2.337v9.22c2.89 0 4.523 2.373 4.568 5.748z" /></svg>
 			<svg viewBox="0 0 32 32" id="tags" xmlns="http://www.w3.org/2000/svg"><path d="M2.985 4c-.551 0-.992.165-1.378.551C1.166 4.993 1 5.436 1 5.988v6.573c0 1.322.155 2.148 1.435 3.424l11.252 11.324c.9.898 1.923.944 2.869 0l7.722-7.788c.92-.918.884-1.936 0-2.818L13.025 5.437C12.031 4.445 11.065 4 9.551 4Zm9.102 0c1.27.156 2.245.265 3.42 1.437l11.309 11.266c.82.819 1.019 1.801 0 2.818l-7.447 7.456c.55.541 1.001.881 1.765.884.552 0 1.048-.165 1.435-.552l7.778-7.788c.845-.844.896-1.923 0-2.818L19.037 5.437C18.178 4.577 16.994 4 15.618 4Zm-6.03 3.014a2.01 2.004 0 0 1 2.009 2.004 2.01 2.004 0 0 1-2.01 2.005 2.01 2.004 0 0 1-2.01-2.005 2.01 2.004 0 0 1 2.01-2.004Z" /></svg>
 			<svg viewBox="0 0 32 32" id="telegram" xmlns="http://www.w3.org/2000/svg"><path d="M26.41 27.259c.045-.173 4.123-19.729 4.499-21.523.192-1.08.092-1.698-.405-2.204-.5-.32-1.02.033-1.319.117C20.11 7.109 9.891 11.171 1.58 14.383c-.913.378-.72.996.383 1.459 2.334.722 4.624 1.39 6.716 2.067.403.131.734-.066.848-.14 5.934-2.921 11.714-7.244 14.68-8.935.557-.318.629.207.46.373-3.962 3.91-11.347 10.134-11.615 10.385-.265.247-.027.545.105.65 3.983 2.93 7.103 5.379 10.984 8.093 1.027.59 1.933.176 2.27-1.076z" /></svg>
@@ -564,6 +734,18 @@ Y en CSS los siguientes estilos:
 			jsError.innerHTML = '<p>Ups! Si estas viendo esto es porque los scripts no están cargando bien.</p><p>Revisa que exista la carpeta <code>app/js</code> y que dentro esté el archivo <code>main.js</code></p><p>Si no es así, utiliza el comando <code>npm run dev</code> o <code>npm run watch</code> o <code>npm run build</code></p>';
 			document.body.insertAdjacentElement('afterbegin', jsError);
 		}
+
+		var testMenu1 = document.getElementById('test-menu-1');
+		testMenu1.addEventListener( 'click', () => {
+			testMenu1.classList.toggle('is-outline');
+			testMenu1.firstElementChild.classList.toggle('has-primary-color');
+		} );
+		var testMenu2 = document.getElementById('test-menu-2');
+		testMenu2.addEventListener( 'click', () => testMenu2.classList.toggle('is-top') );
+		var testMenu3 = document.getElementById('test-menu-3');
+		testMenu3.addEventListener( 'click', () => testMenu3.classList.toggle('is-open') );
+		var testMenu4 = document.getElementById('test-menu-4');
+		testMenu4.addEventListener( 'click', () => testMenu4.classList.toggle('is-animate') );
 	</script>
 </body>
 

@@ -20,6 +20,20 @@
 	transform-origin: center;
 }
 
+// Con fondo
+// ----------------------------------------------
+svg.has-background,
+[class*="has-icon"].has-background svg {
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: -0.455em;
+	padding: 0.25em;
+}
+
+[class*="has-icon"].has-background:where([class*="-background-color"]) {
+	background-color: transparent;
+}
+
 //
 // Separaciones
 // ----------------------------------------------
@@ -35,10 +49,11 @@
 //
 // Contorno
 // ----------------------------------------------
-[class*="icon-"].is-outline,
+svg.is-outline,
 [class*="has-icon"].is-outline svg {
 	fill: transparent;
 	stroke-width: 3px;
+	scale: 0.9;
 }
 
 //

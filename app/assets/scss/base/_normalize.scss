@@ -481,8 +481,8 @@ template,
 	outline: 0;
 }
 
-// Elementos con fondo. Excluir botones.
-.has-background:where(:not([class*="button"])) {
+// Elementos con fondo. Excluir botones y SVGs.
+.has-background:where(:not(svg, [class*="has-icon"], [class*="button"])) {
 	padding: var(--startwp--gap--content) !important; // Override: wp-styles.
 }
 
