@@ -12,7 +12,7 @@
 export default class InlineIcons {
 	constructor() {
 		this.iconSelectors = document.querySelectorAll(
-			'[class*="has-icon"][class*="icon-"]:where(:not(svg):not([class*="icon-button"]):not([class*="wp-block-social-links"]))'
+			'[class*="has-icon"][class*="icon-"]:where(:not(svg):not([class*="icon-button"]):not([class*="wp-block-social-links"]))',
 		);
 
 		if ( this.iconSelectors ) {
@@ -39,7 +39,7 @@ export default class InlineIcons {
 	 * Crear elemento SVG en linea.
 	 *
 	 * @param { string } iconClass El nombre del ícono.
-	 * @return { SVGElement }
+	 * @return { SVGElement } Elemento SVG.
 	 */
 	createSvgIcon( iconClass ) {
 		const iconSVG = document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' );

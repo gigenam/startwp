@@ -12,6 +12,12 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.9.1 - 2022-12-10 :
+
+- [+] Agregado de sprites `messenger.svg`, `trash.svg` y `twitch.svg`.
+- [!] Remplazo de archivo `eslint` para formatear mejor los archivos `.js`.
+  Se eliminó el archivo `.eslintrc` en remplazo de [.eslintrc.cjs](.eslintrc.cjs)
+
 ## Ver 1.9.0 - 2022-12-05 :
 
 - [+] Agregada clase para íconos con [fondo](app/assets/img/sprites/demo.html#L477).

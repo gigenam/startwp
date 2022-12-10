@@ -70,6 +70,7 @@ export default class MainNav {
 	toggleMenu() {
 		/**
 		 * Comentar en caso de usar estilos flotante o lateral.
+		 *
 		 * @see /assets/scss/components/_menus.scss#L138
 		 */
 		document.documentElement.style.setProperty( '--startwp--nav-primary--height', `${ this.menuPrimary.getBoundingClientRect().height }px` );
