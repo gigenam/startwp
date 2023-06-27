@@ -1,7 +1,7 @@
 /**
  * Flexgrid framework
  *
- * @version 6.0.0
+ * @version 7.0.0
  * @since   1.0.0
  */
 // @dependency ../abstracts/_breakpoints.scss
@@ -9,6 +9,9 @@
 
 // Config flexgrid.
 $flexrow-columns: 12;
+$flexgrid-columns: 12;
+$flexgrid-rows: 12;
+
 $flexrow-gap: var(--startwp--gap--content);
 
 @import "../flexgrid/rows";

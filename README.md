@@ -67,7 +67,7 @@ otros editores populares):
 
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - [Configurar prettierrc](.prettierrc).
 - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) - [Configurar editorconfig](.editorconfig).
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - [Configurar eslintrc](.eslintrc) y [eslintignore](.eslintignore).
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - [Configurar eslintrc.cjs](.eslintrc.cjs) y [eslintignore](.eslintignore).
 - [PHP Sniffer & Beautifier](https://marketplace.visualstudio.com/items?itemName=ValeryanM.vscode-phpsab) - [Configurar composer.json](composer.json).
 - [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss) y [SCSS Formatter](https://marketplace.visualstudio.com/items?itemName=sibiraj-s.vscode-scss-formatter)
 - [WordPress Snippets](https://marketplace.visualstudio.com/items?itemName=wordpresstoolbox.wordpress-toolbox) (actions, filters, functions, etc.).
@@ -126,7 +126,7 @@ Por último abre la carpeta del tema en tu editor y utiliza la funcionalidad de
 llamadas con **startwp**.
 
 Que las búsquedas seas sensibles a mayúsculas ya que necesitaras cambiar varios
-tipos (`startwp`, `Startwp`, `StartWP`).
+tipos (startwp, Startwp, StartWP).
 
 > Todos los archivos `README.md` del tema tienen mis datos y la descripción
 > genérica, también puedes buscar y remplazar esos textos. Se agradece cualquier
@@ -140,15 +140,15 @@ comando `npm run start` para instalar todas las dependencias de desarrollo.
 
 \*\* Los archivos [CHANGELOG.md](CHANGELOG.md) y [manifest.json](manifest.json)
 en la raíz del proyecto son solo para mostrar [cierta información](index.js) y
-llevar registro de la versión y los cambios del repositorio. Para registrar tus
-propios cambios, utiliza el archivo [CHANGELOG.md](app/CHANGELOG.md) dentro de
-`app/`.
+llevar registro de la versión y los cambios de este repositorio. Para registrar
+tus propios cambios, utiliza el archivo [CHANGELOG.md](app/CHANGELOG.md) dentro
+de `app/`.
 
 <br>
 
 ## Configuración adicional de plugins
 
-Para auto formatear todos los archivos utilizando los [mismos plugins en VSCode](#extensiones-recomendadas),
+Para auto formatear todos los archivos utilizando los [mismos plugins en VS Code](#extensiones-recomendadas),
 puedes agregar los siguientes parametros a tu configuración.
 
 Abre la paleta de comandos (`control + shift + p`) y busca `settings.json`.

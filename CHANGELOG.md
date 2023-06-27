@@ -12,6 +12,10 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.9.2 - 202X-XX-XX :
+
+- [!] Correcciones menores de documentación.
+
 ## Ver 1.9.1 - 2022-12-10 :
 
 - [+] Agregado de sprites `messenger.svg`, `trash.svg` y `twitch.svg`.

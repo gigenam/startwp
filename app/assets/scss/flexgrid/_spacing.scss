@@ -82,3 +82,28 @@
 
 	@include flex-gap();
 }
+
+// Grid gap
+// @since 7.0.0
+// ----------------------------------------------
+.flexgrid {
+	&.has-gap {
+		gap: $flexrow-gap;
+
+		&-doble {
+			gap: calc(#{$flexrow-gap} * 2);
+		}
+	}
+
+	@each $key, $val in $breakpoints {
+		@include from($key) {
+			&.has-gap-#{$key} {
+				gap: $flexrow-gap;
+
+				&-doble {
+					gap: calc(#{$flexrow-gap} * 2);
+				}
+			}
+		}
+	}
+}

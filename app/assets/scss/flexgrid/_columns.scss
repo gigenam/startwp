@@ -79,3 +79,51 @@
 
 	@include flex-cols();
 }
+
+// Grid columns
+// @since 7.0.0
+// ----------------------------------------------
+.flexgrid {
+	// Si no hay tamaños asignados, los hijos ocupan el 100%.
+	> * {
+		grid-column: span $flexgrid-columns;
+	}
+
+	@for $i from 1 through $flexgrid-columns {
+		@if ($i==1) {
+			&.cols-1 > * {
+				grid-column: span $flexgrid-columns;
+			}
+			@each $key, $val in $breakpoints {
+				@include from($key) {
+					&.cols-#{$key}-1 > * {
+						grid-column: span $flexgrid-columns;
+					}
+				}
+			}
+		} @else if ($flexgrid-columns % $i==0) {
+			&.cols-#{$i} > * {
+				grid-column: span round(math.div($flexgrid-columns, $i));
+			}
+			@each $key, $val in $breakpoints {
+				@include from($key) {
+					&.cols-#{$key}-#{$i} > * {
+						grid-column: span round(math.div($flexgrid-columns, $i));
+					}
+				}
+			}
+		}
+
+		// Columnas individuales.
+		> .col-#{$i} {
+			grid-column: span $i;
+		}
+		@each $key, $val in $breakpoints {
+			@include from($key) {
+				> .col-#{$key}-#{$i} {
+					grid-column: span $i;
+				}
+			}
+		}
+	}
+}

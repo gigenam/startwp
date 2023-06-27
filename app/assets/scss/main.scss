@@ -7,9 +7,14 @@
 @import "abstracts/breakpoints";
 @import "abstracts/variables";
 
+@import "base/normalize";
+
 @import "flexgrid/flexgrid";
 
-@import "base/normalize";
+@import "layouts/header";
+@import "layouts/main-content";
+@import "layouts/posts";
+@import "layouts/footer";
 
 @import "components/alerts";
 @import "components/icons";
@@ -17,11 +22,6 @@
 @import "components/menus";
 @import "components/headings";
 // @import "components/comments";
-
-@import "layouts/header";
-@import "layouts/main-content";
-@import "layouts/posts";
-@import "layouts/footer";
 
 // @import "plugins/contact-form";
 // @import "plugins/metaslider";

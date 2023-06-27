@@ -36,4 +36,47 @@
 	&.is-nowrap {
 		flex-wrap: nowrap;
 	}
+
+	// @since 7.0.0
+	&.is-inline {
+		display: inline-flex;
+	}
+}
+
+// Grid container
+// @since 7.0.0
+// ----------------------------------------------
+@mixin grid($rows: auto, $columns: auto, $gap: 1em) {
+	display: grid;
+	grid-template-rows: $rows;
+	grid-template-columns: $columns;
+
+	@if ($gap != "") {
+		margin-bottom: $gap;
+	}
+}
+
+.flexgrid {
+	@include grid(auto, repeat(#{$flexgrid-columns}, 1fr));
+
+	@for $i from 1 through $flexgrid-rows {
+		&.rows-#{$i} {
+			grid-template-rows: repeat(#{$i}, 1fr);
+		}
+
+		> .row-#{$i} {
+			grid-row: span $i;
+		}
+
+		// @each $key, $val in $breakpoints {
+		// 	@include from($key) {
+		// 		&.rows-#{$key}-#{$i} {
+		// 			grid-template-rows: repeat(#{$i}, 1fr);
+		// 		}
+		// 		> .row-#{$key}-#{$i} {
+		// 			grid-row: span $i;
+		// 		}
+		// 	}
+		// }
+	}
 }

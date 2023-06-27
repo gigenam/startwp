@@ -22,7 +22,8 @@
 	align-self: $self;
 }
 
-.flexrow {
+.flexrow,
+.flexgrid {
 	// Main axis.
 	&.main-start {
 		@include align-main(flex-start);

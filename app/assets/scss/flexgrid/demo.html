@@ -8,7 +8,10 @@
 	<link rel="stylesheet" href="../../../css/main.css">
 	<title>Demo Flexgrid</title>
 	<style>
-		:root {--startwp--content-width--main: 900px}
+		:root {
+			--startwp--content-width--main: 900px
+		}
+
 		.error {
 			width: 100%;
 			position: fixed;
@@ -21,32 +24,77 @@
 			font-size: 17px;
 			text-align: center;
 		}
-		.error p:first-child {font-size: 20px}
+
+		.error p:first-child {
+			font-size: 20px
+		}
+
 		.error code {
 			padding: 0 5px 1px;
 			color: black;
 			background-color: white;
 			font-size: .84em;
 		}
-		.site-header {border-bottom: 1px solid #ddd}
-		.site-header .site-branding {width: 100%}
-		.demo-row {background-color: #eee}
-		.demo-item {background-color: #fdfdfd; border: 1px solid #ececec}
-		.demo-item[class*="is-order"] {background-color: #cacaca}
+
+		.site-header {
+			border-bottom: 1px solid #ddd
+		}
+
+		.site-header .site-branding {
+			margin-left: 0;
+		}
+
+		.site-header .version {
+			margin-right: 0;
+			text-align: right;
+		}
+
+		.demo-row {
+			background-color: #eee
+		}
+
+		.demo-item {
+			background-color: #fdfdfd;
+			border: 1px solid #ececec
+		}
+
+		.demo-item[class*="is-order"] {
+			background-color: #cacaca
+		}
+
 		/* small */
 		@media screen and (min-width: 429px) {
+
 			[class*="small"] .demo-item,
-			[class*="small"].demo-item {background-color: #b8d5fa}
+			[class*="small"].demo-item {
+				background-color: #b8d5fa
+			}
 		}
+
 		/* medium */
 		@media screen and (min-width: 599px) {
+
 			[class*="medium"] .demo-item,
-			[class*="medium"].demo-item {background-color: #bdfde8}
+			[class*="medium"].demo-item {
+				background-color: #bdfde8
+			}
 		}
+
 		/* large */
 		@media screen and (min-width: 959px) {
+
 			[class*="large"] .demo-item,
-			[class*="large"].demo-item {background-color: #ffdbc6}
+			[class*="large"].demo-item {
+				background-color: #ffdbc6
+			}
+		}
+
+		@media screen and (max-width: 599px) {
+
+			.site-header .site-branding,
+			.site-header .version {
+				width: 100%
+			}
 		}
 	</style>
 </head>
@@ -55,7 +103,9 @@
 	<div class="hidden error">
 		<p>Ups! Si estas viendo esto es porque los estilos no están cargando bien.</p>
 		<p>Revisa que exista la carpeta <code>app/css</code> y que dentro esté el archivo <code>main.css</code></p>
-		<p>Si no es así, utiliza el comando <code>npm run dev</code> o <code>npm run watch</code> o <code>npm run build</code></p>
+		<p>Si no es así, utiliza el comando <code>npm run dev</code> o <code>npm run watch</code> o
+			<code>npm run build</code>
+		</p>
 	</div>
 
 	<header id="site-header" class="site-header flexrow main-between padding wrapper">
@@ -67,6 +117,7 @@
 				Muestra de uso
 			</p>
 		</div>
+		<p class="version">Versión actual<br>7.0.0</p>
 	</header>
 
 	<main class="site-main wrapper">
@@ -75,6 +126,8 @@
 			interfaces fáciles con flexbox. Se puede usar por clases en los
 			archivos HTML/PHP o mediante algunos <code>@mixins</code> en otros
 			archivos SCSS.</p>
+
+		<h2>Flexbox</h2>
 
 		<h2>Contenedores (rows)</h2>
 
@@ -113,7 +166,8 @@
 
 		<p>En el ejemplo se ve como por defecto y solo asignando la clase
 			<code>flexrow</code> los hijos directos se posicionan de forma
-			horizontal y el tamaño de estos es determinado por el contenido.</p>
+			horizontal y el tamaño de estos es determinado por el contenido.
+		</p>
 
 		<p>En caso de que los hijos sean demasiados o tengan suficiente contenido
 			para que no puedan entrar todos en linea, estos van a saltar de linea
@@ -156,9 +210,9 @@
 
 		<h3>is-column</h3>
 
-		<p>Para terminar con las clases principales de flexbox. También se pueden
-			alinear los elementos de forma vertical. Para eso se usa la clase
-			<code>is-column</code>.</p>
+		<p>También se pueden alinear los elementos de forma vertical. Para eso
+			se usa la clase <code>is-column</code>.
+		</p>
 
 		<div class="flexrow is-column demo-row">
 			<div class="demo-item">Ítem</div>
@@ -171,6 +225,35 @@
     ...
 &lt;/div&gt;</pre>
 
+		<h3>is-inline</h3>
+
+		<p>Para alinear múlitples contenedores en linea, se puede usar
+			<code>is-inline</code>.
+		</p>
+		<div>
+			<div class="flexrow is-inline demo-row">
+				<div class="demo-item">Ítem</div>
+				<div class="demo-item">Ítem</div>
+				<div class="demo-item">Ítem</div>
+			</div>
+			<div class="flexrow is-inline demo-row">
+				<div class="demo-item">Ítem</div>
+				<div class="demo-item">Ítem</div>
+				<div class="demo-item">Ítem</div>
+			</div>
+			<div class="flexrow is-inline demo-row">
+				<div class="demo-item">Ítem</div>
+				<div class="demo-item">Ítem</div>
+				<div class="demo-item">Ítem</div>
+			</div>
+		</div>
+		<pre>
+&lt;div&gt;
+    &lt;div class="flexrow is-inline"&gt;...&lt;/div&gt;
+    &lt;div class="flexrow is-inline"&gt;...&lt;/div&gt;
+    &lt;div class="flexrow is-inline"&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+
 		<h2>Hijos (columns)</h2>
 
 		<p>El tamaño de los hijos se puede controlar de dos formas. Asignando el
@@ -181,7 +264,8 @@
 
 		<p>Para controlar cuanto espacio van a ocupar los hijos directos de forma
 			genérica, hay que asignar al padre una de las clases
-			<code>cols-[pantalla]-[tamaño]</code>.</p>
+			<code>cols-[pantalla]-[tamaño]</code>.
+		</p>
 
 		<ul>
 			<li><code>cols</code> : se refiere a las columnas hijas.</li>
@@ -190,7 +274,8 @@
 				pueden ser <code>nada | small | medium | large</code> <sup>1</sup>.</li>
 			<li><code>[tamaño]</code> : se refiere a cuantas columnas por fila
 				van a entrar. Los valores pueden ser <code>entre 1 y 12 | flex</code>
-				<sup>2</sup>.</li>
+				<sup>2</sup>.
+			</li>
 		</ul>
 
 		<blockquote>
@@ -350,7 +435,7 @@
     &lt;div class="col-large-flex"&gt;Ítem&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-		<p>Y para terminar una prueba combinando tamaños genéricos y específicos.
+		<p>Y para terminar, una prueba combinando tamaños genéricos y específicos.
 			Es importante tener cuidado cuando se van agregando múltiples opciones
 			o modificadores.</p>
 
@@ -529,7 +614,8 @@
 
 		<p>Por último se puede controlar elementos de forma individual con
 			<code>self-[opción]</code> y tienen las mismas opciones que
-			<code>cross-*</code>. Las clases se agregan a los hijos.</p>
+			<code>cross-*</code>. Las clases se agregan a los hijos.
+		</p>
 
 		<div class="flexrow cols-8 demo-row" style="height: 65px">
 			<div class="demo-item">Ítem</div>
@@ -580,7 +666,8 @@
 		<p>Para separar elementos de forma individual o el contenedor del contenido
 			es recomendable utilizar las clases utilitarias de <code>margin</code>
 			y <code>padding</code> que vienen con este tema en
-			<code>/assets/scss/base/_utilities.scss</code>.</p>
+			<code>/assets/scss/base/_utilities.scss</code>.
+		</p>
 
 		<p>Para separar a los hijo, hay que agregar la clase <code>has-gap</code>
 			al contenedor.</p>
@@ -655,12 +742,14 @@
 		<blockquote>
 			<p class="margin-bottom-none">Estas opciones están desactivadas por
 				defecto. Para utilizarlas revisa el archivo
-				<code>/assets/scss/flexgrid/_flexgrid.scss</code>.</p>
+				<code>/assets/scss/flexgrid/_flexgrid.scss</code>.
+			</p>
 		</blockquote>
 
 		<p>Algunas clases para cambiar el orden de los hijos sin importar su
 			ubicación en el DOM. Las opciones pueden ser 3 y las clases son
-			<code>is-order-[pantalla]-[orden]</code>.</p>
+			<code>is-order-[pantalla]-[orden]</code>.
+		</p>
 
 		<ul>
 			<li><code>[pantalla]</code> : se refiere a cuando van a tomar efecto
@@ -673,7 +762,8 @@
 		<h3>Primero (first)</h3>
 
 		<p>Para poner un hijo al principio del bloque, hay que agregarle la clase
-			<code>is-order-[pantalla]-first</code>.</p>
+			<code>is-order-[pantalla]-first</code>.
+		</p>
 
 		<div class="flexrow cols-5 demo-row">
 			<div class="demo-item">Ítem 1</div>
@@ -694,7 +784,8 @@
 		<h3>Último (last)</h3>
 
 		<p>Para poner un hijo al final del bloque, hay que agregarle la clase
-			<code>is-order-[pantalla]-last</code>.</p>
+			<code>is-order-[pantalla]-last</code>.
+		</p>
 
 		<div class="flexrow cols-5 demo-row">
 			<div class="demo-item">Ítem 1</div>
@@ -716,7 +807,8 @@
 
 		<p>Para poner un hijo en su posición original, hay que agregarle la clase
 			<code>is-order-[pantalla]-reset</code>. <br>Esta clase sirve únicamente
-			si ya se cambió el orden. Por ejemplo en un tamaño específico de pantalla.</p>
+			si ya se cambió el orden. Por ejemplo en un tamaño específico de pantalla.
+		</p>
 
 		<div class="flexrow cols-5 demo-row">
 			<div class="demo-item">Ítem 1</div>
@@ -733,6 +825,253 @@
     &lt;div&gt;Ítem 4&lt;/div&gt;
     &lt;div&gt;Ítem 5&lt;/div&gt;
 &lt;/div&gt;</pre>
+
+		<h2>Flexgrid</h2>
+
+		<p>Control de interfaces con las propiedades de CSS Grid. Si se quiere
+			diseños más fluidos o "flexibles" dependiendo el contenido, es recomendable
+			usar flexbox, pero para diseños genéricos es mucho mejor grid (más
+			ejemplo debajo).</p>
+
+		<h2>Contenedores</h2>
+
+		<p>Flexgrid también funciona en una relación de padre (contenedor) e hijos
+			directos (ítems). El contenedor es al que se le asigna las clases que
+			determinan que los hijos van a ser flexibles.</p>
+
+		<p>Un extra que tiene grid es el poder definir múltiples filas en un mismo
+			contenedor (poder crear una grilla). Las opciones de filas vienen
+			limitadas por defecto. En caso de querer utilizar todas las opciones,
+			revisar el archivo <code>app/assets/scss/flexgrid/_rows.scss#L62</code></p>
+
+		<p>Para empezar a trabajar hay que crear un contenedor y asignarle la
+			clase <code>flexgrid</code>. No se recomienda agregarle estilos
+			visuales a este, es mejor a los hijos (ver sección <a href="#separaciones">separaciones</a>).
+			El contenedor puede ser un <code>div</code>, <code>p</code>, o
+			cualquier elemento HTML.</p>
+
+		<div class="flexgrid demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+		</div>
+		<pre>
+		&lt;div class="flexgrid"&gt;
+		    &lt;div&gt;Ítem&lt;/div&gt;
+		    ...
+		&lt;/div&gt;</pre>
+
+		<p>Por defecto, <code>flexgrid</code> tiene un diseño de 12 columnas Y
+			si no tiene ningún tamaño asignado, cada hijo ocupa las 12.</p>
+
+		<h2>Hijos</h2>
+
+		<p>El tamaño de los hijos se puede controlar de dos formas. Asignando el
+			tamaño que todos van a tener por igual en el padre o individualmente
+			a cada hijo. Empecemos por el padre.</p>
+
+		<h3>cols-*</h3>
+
+		<p>Para controlar cuanto espacio van a ocupar los hijos directos de forma
+			genérica, hay que asignar al padre una de las clases
+			<code>cols-[pantalla]-[tamaño]</code>.
+		</p>
+
+		<ul>
+			<li><code>cols</code> : se refiere a la cantidad de columnas por fila.</li>
+			<li><code>[pantalla]</code> : se refiere a cuando van a tomar efecto
+				las dimensiones dependiendo del tamaño del navegador. Los valores
+				pueden ser <code>nada | small | medium | large</code> <sup>1</sup>.</li>
+			<li><code>[tamaño]</code> : se refiere a cuantas columnas por fila
+				van a entrar. Los valores pueden ser <code>entre 1 y 12 | flex</code>
+				<sup>2</sup>.
+			</li>
+		</ul>
+
+		<blockquote>
+			<p>1. Se pueden agregar o personalizar más tamaños desde los archivos
+				SCSS.</p>
+			<p class="margin-bottom-none">2. Flex significa que todos los elementos
+				va a ocupar todo el espacio disponible.</p>
+		</blockquote>
+
+		<h3>cols-[tamaño]</h3>
+
+		<p>Algunas pruebas con diferentes tamaños.</p>
+
+		<div class="flexgrid cols-2 demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+		</div>
+		<div class="flexgrid cols-4 demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+		</div>
+
+		<pre>
+&lt;div class="flexgrid cols-2"&gt; &lt;!-- solo dos columnas por fila. --&gt;
+	&lt;div&gt;Ítem&lt;/div&gt;
+	...
+&lt;/div&gt;
+
+&lt;div class="flexgrid cols-4"&gt; &lt;!-- solo cuatro columnas por fila. --&gt;
+	&lt;div&gt;Ítem&lt;/div&gt;
+	...
+&lt;/div&gt;</pre>
+
+		<h3>cols-[pantalla]-*</h3>
+
+		<p>Y con tamaños de pantalla definidos (achica y agranda la ventana del
+			navegador). Al asignar un tamaño, por ejemplo <code>medium</code>,
+			significa que por debajo de este los hijos siempre van a ocupar el
+			100% del ancho.</p>
+
+		<div class="flexgrid cols-small-2 demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+		</div>
+		<div class="flexgrid cols-medium-3 demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+		</div>
+		<div class="flexgrid cols-large-6 demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+		</div>
+		<pre>
+&lt;div class="flexgrid cols-small-2"&gt;
+	&lt;div&gt;Ítem&lt;/div&gt;
+	...
+&lt;/div&gt;
+
+&lt;div class="flexgrid cols-medium-3"&gt;
+	&lt;div&gt;Ítem&lt;/div&gt;
+	...
+&lt;/div&gt;
+
+&lt;div class="flexgrid cols-large-6"&gt;
+	&lt;div&gt;Ítem&lt;/div&gt;
+	...
+&lt;/div&gt;</pre>
+
+		<h3>col-*</h3>
+
+		<p>Ahora con los tamaños definidos en los hijos. Para controlar cuanto
+			espacio van a ocupar los hijos directos, hay que asignarles una de
+			las clases <code>col-[pantalla]-[tamaño]</code>.</p>
+
+		<ul>
+			<li><code>col</code> : se refiere a la columna individual.</li>
+			<li><code>[pantalla]</code> : se refiere a cuando van a tomar efecto
+				las dimensiones dependiendo del tamaño del navegador. Los valores
+				pueden ser <code>nada | small | medium | large</code> <sup>1</sup>.</li>
+			<li><code>[tamaño]</code> : se refiere a cuanto ocupara la columna
+				en porcentaje de 12 columnas, donde <code>1 = 8%</code> y <code>12 = 100%</code>.
+				Los valores pueden ser <code>entre 1 y 12 | flex</code> <sup>2</sup>.</li>
+		</ul>
+
+		<blockquote>
+			<p>1. Se pueden agregar o personalizar más tamaños desde los archivos
+				SCSS.</p>
+			<p class="margin-bottom-none">2. Flex significa que los elementos va
+				a ocupar todo el espacio disponible.</p>
+		</blockquote>
+
+		<h3>col-[tamaño]</h3>
+
+		<p>Algunas pruebas con diferentes tamaños.</p>
+
+		<div class="flexgrid demo-row">
+			<div class="demo-item col-3">Ítem</div>
+			<div class="demo-item col-6">Ítem</div>
+			<div class="demo-item col-9">Ítem</div>
+		</div>
+		<pre>
+&lt;div class="flexrow"&gt;
+	&lt;div class="col-3"&gt;Ítem&lt;/div&gt;
+	&lt;div class="col-6"&gt;Ítem&lt;/div&gt;
+	&lt;div class="col-9"&gt;Ítem&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+		<h3>col-[pantalla]-*</h3>
+
+		<p>Y con tamaños de pantalla definidos (achica y agranda la ventana del
+			navegador). Al asignar un tamaño, por ejemplo <code>medium</code>,
+			significa que por debajo de este los hijos siempre van a ocupar el
+			100% del ancho.</p>
+
+		<div class="flexgrid demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item col-small-3">Ítem</div>
+		</div>
+		<div class="flexgrid demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item col-medium-6">Ítem</div>
+		</div>
+		<div class="flexgrid demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item col-large-9">Ítem</div>
+		</div>
+		<pre>
+&lt;div class="flexgrid"&gt;
+	...
+	&lt;div class="col-small-3"&gt;Ítem&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="flexgrid"&gt;
+	...
+	&lt;div class="col-medium-3"&gt;Ítem&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="flexgrid"&gt;
+	...
+	&lt;div class="col-large-9"&gt;Ítem&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+		<p>Y para terminar, una prueba combinando tamaños genéricos y específicos.</p>
+
+		<div class="flexgrid cols-3 demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item col-medium-12">Ítem</div>
+			<div class="demo-item">Ítem</div>
+		</div>
+		<pre>
+&lt;div class="flexrow cols-3"&gt;
+	&lt;div&gt;Ítem&lt;/div&gt;
+	&lt;div class="col-medium-12"&gt;Ítem&lt;/div&gt;
+	&lt;div&gt;Ítem&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+		<p>Última nota sobre tamaños en base a la pantalla. Se pueden agregar
+			múltiples clases para que los elementos tengan diferentes tamaños.</p>
+
+		<p>Por simplificación, en el siguiente ejemplo se agregan las clases
+			al contenedor, pero se puede hacer lo mismo a cada columna individual.</p>
+
+		<div class="flexgrid cols-small-2 cols-medium-3 cols-large-4 demo-row">
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+			<div class="demo-item">Ítem</div>
+		</div>
+		<pre>
+&lt;div class="flexgrid cols-small-2 cols-medium-3 cols-large-4"&gt;
+	&lt;div&gt;Ítem&lt;/div&gt;
+	...
+	&lt;!--
+		En el ejemplo debe ocurrir lo siguiente:
+			- Arranca en una columna.
+			- A partir de "small"  pasa a dos columnas.
+			- A partir de "medium" pasa a tres columnas.
+			- A partir de "large"  todo lo que pueda entrar en una fila.
+	--&gt;
+&lt;/div&gt;</pre>
+
 
 	</main>
 
