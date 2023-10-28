@@ -12,8 +12,9 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
-## Ver 1.9.2 - 202X-XX-XX :
+## Ver 1.9.2 - 2023-10-28 :
 
+- [!] Actualización de dependencias.
 - [!] Correcciones menores de documentación.
 
 ## Ver 1.9.1 - 2022-12-10 :
