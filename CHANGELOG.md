@@ -12,6 +12,12 @@ License URI : https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 [ + ] Agregado -- [ - ] Quitado -- [ ! ] Arreglado/Modificado.
 
+## Ver 1.9.3 - 2023-12-29 :
+
+- [+] Agregado recordatorio de las nuevas dimensiones recomendadas para Open Graph.
+- [!] Corrección menor para que no se muestren los SVG agregados al footer en
+  `app/inc/core/class-enqueue.php#L109` de ninguna manera.
+
 ## Ver 1.9.2 - 2023-10-28 :
 
 - [!] Actualización de dependencias.

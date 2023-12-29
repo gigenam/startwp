@@ -106,7 +106,7 @@ if ( ! class_exists( 'Startwp_Enqueues' ) ) {
 				 * problemas con algunos ícono, puedes escapar más propiedades
 				 * como 'clipPath' o 'circle', etc.
 				 */
-				echo '<div class="svg-sprites hidden">' . wp_kses(
+				echo '<div class="svg-sprites" style="display:none !important">' . wp_kses(
 					$response['body'],
 					array(
 						'svg'   => array(
